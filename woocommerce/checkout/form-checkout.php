@@ -9,30 +9,30 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-global $smof_data, $woocommerce, $current_user;
+global $zdata, $woocommerce, $current_user;
 ?>
-<div class="avada_myaccount_user">
+<div class="zhane_myaccount_user">
 	<span class="myaccount_user_container">
 		<span class="username">
 		<?php
 		printf(
-			__( 'Hello, %s:', 'Avada' ),
+			__( 'Hello, %s:', 'Zhane' ),
 			$current_user->display_name
 		);
 		?>
 		</span>
-		<?php if($smof_data['woo_acc_msg_1']): ?>
+		<?php if($zdata['woo_acc_msg_1']): ?>
 		<span class="msg">
-			<?php echo $smof_data['woo_acc_msg_1']; ?>
+			<?php echo $zdata['woo_acc_msg_1']; ?>
 		</span>
 		<?php endif; ?>
-		<?php if($smof_data['woo_acc_msg_2']): ?>
+		<?php if($zdata['woo_acc_msg_2']): ?>
 		<span class="msg">
-			<?php echo $smof_data['woo_acc_msg_2']; ?>
+			<?php echo $zdata['woo_acc_msg_2']; ?>
 		</span>
 		<?php endif; ?>
 		<span class="view-cart">
-			<a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('View Cart', 'Avada'); ?></a>
+			<a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('View Cart', 'Zhane'); ?></a>
 		</span>
 	</span>
 </div>

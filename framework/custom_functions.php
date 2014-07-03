@@ -42,7 +42,7 @@ function get_related_projects($post_id, $number_posts = 8) {
         'post__not_in' => array($post_id),
         'ignore_sticky_posts' => 0,
         'meta_key' => '_thumbnail_id',
-        'post_type' => 'avada_portfolio',
+        'post_type' => 'zhane_portfolio',
         'tax_query' => array(
             array(
                 'taxonomy' => 'portfolio_category',
@@ -83,10 +83,10 @@ function fusion_attr( $slug, $attributes = array() ) {
 
 } // end attr()
 
-if(!function_exists('themefusion_pagination')):
-function themefusion_pagination($pages = '', $range = 2, $current_query = '')
+if(!function_exists('idh_pagination')):
+function idh_pagination($pages = '', $range = 2, $current_query = '')
 {
-	global $smof_data;
+	global $zdata;
 
 	$showitems = ($range * 2)+1;
 
@@ -111,13 +111,13 @@ function themefusion_pagination($pages = '', $range = 2, $current_query = '')
 
      if(1 != $pages)
      {
-     	if ( ( $smof_data['blog_pagination_type'] == 'Infinite Scroll' && is_home() ) || ( $smof_data['grid_pagination_type'] == 'Infinite Scroll' && is_page_template('portfolio-grid.php') ) ) {
+     	if ( ( $zdata['blog_pagination_type'] == 'Infinite Scroll' && is_home() ) || ( $zdata['grid_pagination_type'] == 'Infinite Scroll' && is_page_template('portfolio-grid.php') ) ) {
         	echo "<div class='pagination infinite-scroll clearfix'>";
         } else {
         	echo "<div class='pagination clearfix'>";
         }
          //if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a href='".get_pagenum_link(1)."'><span class='arrows'>&laquo;</span> First</a>";
-         if($paged > 1) echo "<a class='pagination-prev' href='".get_pagenum_link($paged - 1)."'><span class='page-prev'></span>".__('Previous', 'Avada')."</a>";
+         if($paged > 1) echo "<a class='pagination-prev' href='".get_pagenum_link($paged - 1)."'><span class='page-prev'></span>".__('Previous', 'Zhane')."</a>";
 
          for ($i=1; $i <= $pages; $i++)
          {
@@ -127,7 +127,7 @@ function themefusion_pagination($pages = '', $range = 2, $current_query = '')
              }
          }
 
-         if ($paged < $pages) echo "<a class='pagination-next' href='".get_pagenum_link($paged + 1)."'>".__('Next', 'Avada')."<span class='page-next'></span></a>";
+         if ($paged < $pages) echo "<a class='pagination-next' href='".get_pagenum_link($paged + 1)."'>".__('Next', 'Zhane')."<span class='page-next'></span></a>";
          //if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>Last <span class='arrows'>&raquo;</span></a>";
          echo "</div>\n";
      }
@@ -145,28 +145,28 @@ function string_limit_words($string, $word_limit)
 	return implode(' ', $words);
 }
 
-if(!function_exists('themefusion_breadcrumb')):
-function themefusion_breadcrumb() {
-        global $smof_data,$post;
+if(!function_exists('idh_breadcrumb')):
+function idh_breadcrumb() {
+        global $zdata,$post;
         echo '<ul class="breadcrumbs">';
 
          if ( !is_front_page() ) {
-        echo '<li>'.$smof_data['breacrumb_prefix'].' <a href="';
+        echo '<li>'.$zdata['breacrumb_prefix'].' <a href="';
         echo home_url();
-        echo '">'.__('Home', 'Avada');
+        echo '">'.__('Home', 'Zhane');
         echo "</a></li>";
         }
 
         $params['link_none'] = '';
         $separator = '';
 
-        if (is_category() && !is_singular('avada_portfolio')) {
+        if (is_category() && !is_singular('zhane_portfolio')) {
             $category = get_the_category();
             $ID = $category[0]->cat_ID;
             echo is_wp_error( $cat_parents = get_category_parents($ID, TRUE, '', FALSE ) ) ? '' : '<li>'.$cat_parents.'</li>';
         }
 
-        if(is_singular('avada_portfolio')) {
+        if(is_singular('zhane_portfolio')) {
             echo get_the_term_list($post->ID, 'portfolio_category', '<li>', '&nbsp;/&nbsp;&nbsp;', '</li>');
             echo '<li>'.get_the_title().'</li>';
         }
@@ -184,7 +184,7 @@ function themefusion_breadcrumb() {
             echo '<li>'.$term->name.'</li>';
         }
 
-        if(is_home()) { echo '<li>'.$smof_data['blog_title'].'</li>'; }
+        if(is_home()) { echo '<li>'.$zdata['blog_title'].'</li>'; }
         if(is_page() && !is_front_page()) {
             $parents = array();
             $parent_id = $post->post_parent;
@@ -200,7 +200,7 @@ function themefusion_breadcrumb() {
             echo join( '', $parents );
             echo '<li>'.get_the_title().'</li>';
         }
-        if(is_single() && !is_singular('avada_portfolio')  && !is_singular('event')) {
+        if(is_single() && !is_singular('zhane_portfolio')  && !is_singular('event')) {
             $categories_1 = get_the_category($post->ID);
             if($categories_1):
                 foreach($categories_1 as $cat_1):
@@ -223,8 +223,8 @@ function themefusion_breadcrumb() {
             echo '<li>'.get_the_title().'</li>';
         }
         if(is_tag()){ echo '<li>'."Tag: ".single_tag_title('',FALSE).'</li>'; }
-        if(is_404()){ echo '<li>'.__("404 - Page not Found", 'Avada').'</li>'; }
-        if(is_search()){ echo '<li>'.__("Search", 'Avada').'</li>'; }
+        if(is_404()){ echo '<li>'.__("404 - Page not Found", 'Zhane').'</li>'; }
+        if(is_search()){ echo '<li>'.__("Search", 'Zhane').'</li>'; }
         if(is_year()){ echo '<li>'.get_the_time('Y').'</li>'; }
 
         echo "</ul>";
@@ -242,8 +242,8 @@ function tf_checkIfMenuIsSetByLocation($menu_location = '') {
 // Custom RSS Link
 add_filter('feed_link','pyre_feed_link', 1, 2);
 function pyre_feed_link($output, $feed) {
-    if( isset( $smof_data['rss_link'] ) && $smof_data['rss_link'] ) {
-        $feed_url = $smof_data['rss_link'];
+    if( isset( $zdata['rss_link'] ) && $zdata['rss_link'] ) {
+        $feed_url = $zdata['rss_link'];
 
         $feed_array = array('rss' => $feed_url, 'rss2' => $feed_url, 'atom' => $feed_url, 'rdf' => $feed_url, 'comments_rss2' => '');
         $feed_array[$feed] = $feed_url;
@@ -308,7 +308,7 @@ function getClassAlign($post_count)
         return " align-right ";
 }
 
-function avada_hex2rgb( $hex ) {
+function zhane_hex2rgb( $hex ) {
 	if ( strpos( $hex,'rgb' ) !== false ) {
 
 		$rgb_part = strstr( $hex, '(' );
@@ -339,15 +339,15 @@ function avada_hex2rgb( $hex ) {
 	return $rgb; // returns an array with the rgb values
 }
 
-add_action('wp_head', 'avada_set_post_views');
-function avada_set_post_views() {
+add_action('wp_head', 'zhane_set_post_views');
+function zhane_set_post_views() {
     global $post;
 
     if('post' == get_post_type() && is_single()) {
         $postID = $post->ID;
 
         if(!empty($postID)) {
-            $count_key = 'avada_post_views_count';
+            $count_key = 'zhane_post_views_count';
             $count = get_post_meta($postID, $count_key, true);
 
             if($count == '') {
@@ -373,8 +373,8 @@ function tf_get_forum_pagination_links() {
 	$pagination_links = str_replace( 'prev inactive', 'pagination-prev', $pagination_links );
 	$pagination_links = str_replace( 'next inactive', 'pagination-next', $pagination_links );
 
-	$pagination_links = str_replace( '&larr;', __('Previous', 'Avada').'<span class="page-prev"></span>', $pagination_links );
-	$pagination_links = str_replace( '&rarr;', __('Next', 'Avada').'<span class="page-next"></span>', $pagination_links );
+	$pagination_links = str_replace( '&larr;', __('Previous', 'Zhane').'<span class="page-prev"></span>', $pagination_links );
+	$pagination_links = str_replace( '&rarr;', __('Next', 'Zhane').'<span class="page-next"></span>', $pagination_links );
 
 	return $pagination_links;
 }
@@ -393,8 +393,8 @@ function tf_get_topic_pagination_links() {
 	$pagination_links = str_replace( 'prev inactive', 'pagination-prev', $pagination_links );
 	$pagination_links = str_replace( 'next inactive', 'pagination-next', $pagination_links );
 
-	$pagination_links = str_replace( '&larr;', __('Previous', 'Avada').'<span class="page-prev"></span>', $pagination_links );
-	$pagination_links = str_replace( '&rarr;', __('Next', 'Avada').'<span class="page-next"></span>', $pagination_links );
+	$pagination_links = str_replace( '&larr;', __('Previous', 'Zhane').'<span class="page-prev"></span>', $pagination_links );
+	$pagination_links = str_replace( '&rarr;', __('Next', 'Zhane').'<span class="page-next"></span>', $pagination_links );
 
 	return $pagination_links;
 }
@@ -410,13 +410,13 @@ function tf_get_search_pagination_links() {
 	$pagination_links = str_replace( 'prev inactive', 'pagination-prev', $pagination_links );
 	$pagination_links = str_replace( 'next inactive', 'pagination-next', $pagination_links );
 
-	$pagination_links = str_replace( '&larr;', __('Previous', 'Avada').'<span class="page-prev"></span>', $pagination_links );
-	$pagination_links = str_replace( '&rarr;', __('Next', 'Avada').'<span class="page-next"></span>', $pagination_links );
+	$pagination_links = str_replace( '&larr;', __('Previous', 'Zhane').'<span class="page-prev"></span>', $pagination_links );
+	$pagination_links = str_replace( '&rarr;', __('Next', 'Zhane').'<span class="page-next"></span>', $pagination_links );
 
 	return $pagination_links;
 }
 
-function avada_slider_name( $name ) {
+function zhane_slider_name( $name ) {
     $type = '';
     
 	switch( $name ) {
@@ -437,14 +437,14 @@ function avada_slider_name( $name ) {
 	return $type;
 }
 
-function avada_get_slider_type( $post_id ) {
+function zhane_get_slider_type( $post_id ) {
 	$get_slider_type = get_post_meta($post_id, 'pyre_slider_type', true);
 
 	return $get_slider_type;
 }
 
-function avada_get_slider( $post_id, $type ) {
-	$type = avada_slider_name( $type );
+function zhane_get_slider( $post_id, $type ) {
+	$type = zhane_slider_name( $type );
 
 	if( $type ) {
 		$get_slider = get_post_meta( $post_id, 'pyre_' . $type, true );
@@ -455,30 +455,30 @@ function avada_get_slider( $post_id, $type ) {
 	}
 }
 
-function avada_slider( $post_id ) {
-	$slider_type = avada_get_slider_type( $post_id );
-	$slider = avada_get_slider( $post_id, $slider_type );
+function zhane_slider( $post_id ) {
+	$slider_type = zhane_get_slider_type( $post_id );
+	$slider = zhane_get_slider( $post_id, $slider_type );
 
 	if( $slider ) {
-		$slider_name = avada_slider_name( $slider_type );
+		$slider_name = zhane_slider_name( $slider_type );
 
 		if( $slider_name == 'slider' ) {
 			$slider_name = 'layerslider';
 		}
 
-		$function = 'avada_' . $slider_name;
+		$function = 'zhane_' . $slider_name;
 
 		$function( $slider );
 	}
 }
 
-function avada_revslider( $name ) {
+function zhane_revslider( $name ) {
     if( function_exists('putRevSlider') ) {
 	   putRevSlider( $name );
     }
 }
 
-function avada_layerslider( $id ) {
+function zhane_layerslider( $id ) {
 	global $wpdb;
 
 	// Get slider
@@ -491,11 +491,11 @@ function avada_layerslider( $id ) {
 	</style>
 	<div id="layerslider-container">
 		<div id="layerslider-wrapper">
-			<?php if($ls_slider['properties']['skin'] == 'avada'): ?>
+			<?php if($ls_slider['properties']['skin'] == 'zhane'): ?>
 				<div class="ls-shadow-top"></div>
 			<?php endif; ?>
 			<?php echo do_shortcode('[layerslider id="' . $id . '"]'); ?>
-			<?php if($ls_slider['properties']['skin'] == 'avada'): ?>
+			<?php if($ls_slider['properties']['skin'] == 'zhane'): ?>
 				<div class="ls-shadow-bottom"></div>
 			<?php endif; ?>
 		</div>
@@ -503,17 +503,17 @@ function avada_layerslider( $id ) {
 <?php
 }
 
-function avada_elasticslider( $term ) {
-	global $smof_data;
+function zhane_elasticslider( $term ) {
+	global $zdata;
 
-	if( ! $smof_data['status_eslider'] ) {
+	if( ! $zdata['status_eslider'] ) {
 		$args                = array(
-			'post_type'        => 'themefusion_elastic',
+			'post_type'        => 'idh_elastic',
 			'posts_per_page'   => - 1,
 			'suppress_filters' => 0
 		);
 		$args['tax_query'][] = array(
-			'taxonomy' => 'themefusion_es_groups',
+			'taxonomy' => 'idh_es_groups',
 			'field'    => 'slug',
 			'terms'    => $term
 		);
@@ -554,10 +554,10 @@ function avada_elasticslider( $term ) {
 	}
 }
 
-function avada_wooslider( $term ) {
-	global $smof_data;
+function zhane_wooslider( $term ) {
+	global $zdata;
 
-    if( ! $smof_data['status_fusion_slider'] ) {
+    if( ! $zdata['status_fusion_slider'] ) {
         $term_details = get_term_by( 'slug', $term, 'slide-page' );
 
         $slider_settings = get_option( 'taxonomy_' . $term_details->term_id );
@@ -674,7 +674,7 @@ function avada_wooslider( $term ) {
                             $video_bg_color = '';
 
                             if( isset ( $metadata['pyre_video_bg_color'][0] ) && $metadata['pyre_video_bg_color'][0] ) {
-                                $video_bg_color_hex = avada_hex2rgb( $metadata['pyre_video_bg_color'][0]  );
+                                $video_bg_color_hex = zhane_hex2rgb( $metadata['pyre_video_bg_color'][0]  );
                                 $video_bg_color = 'background-color: rgba(' . $video_bg_color_hex[0] . ', ' . $video_bg_color_hex[1] . ', ' . $video_bg_color_hex[2] . ', 0.4);';
                             }
 
@@ -773,8 +773,8 @@ function avada_wooslider( $term ) {
     }
 }
 
-/*function avada_flexslider( $term ) {
-	global $smof_data;
+/*function zhane_flexslider( $term ) {
+	global $zdata;
 
 	$slider_page_id = '';
 
@@ -782,11 +782,11 @@ function avada_wooslider( $term ) {
 		$slider_page_id = $term;
 	}
 
-	if($smof_data[$term]):
+	if($zdata[$term]):
 	?>
-		<div class="tfs-slider flexslider main-flex" style="max-width:<?php echo $smof_data['flexslider_width']; ?>;">
-			<ul class="slides" style="width:<?php echo $smof_data['flexslider_width']; ?>;">
-				<?php foreach($smof_data[$term] as $slide): ?>
+		<div class="tfs-slider flexslider main-flex" style="max-width:<?php echo $zdata['flexslider_width']; ?>;">
+			<ul class="slides" style="width:<?php echo $zdata['flexslider_width']; ?>;">
+				<?php foreach($zdata[$term] as $slide): ?>
 					<?php if($slide['title'] || ($slide['url'] || $slide['description'])): ?>
 						<li style="position:relative;">
 							<?php if($slide['link']): ?>
@@ -815,7 +815,7 @@ function avada_wooslider( $term ) {
 }*/
 
 
-function avada_page_title_bar( $title, $subtitle, $secondary_content ) {
+function zhane_page_title_bar( $title, $subtitle, $secondary_content ) {
 ?>
 	<div class="page-title-container">
 		<div class="page-title">
@@ -834,12 +834,12 @@ function avada_page_title_bar( $title, $subtitle, $secondary_content ) {
 	</div>
 <?php }
 
-function avada_current_page_title_bar( $post_id ) {
-	global $smof_data;
+function zhane_current_page_title_bar( $post_id ) {
+	global $zdata;
 
 	ob_start();
-	if( $smof_data['breadcrumb'] ) {
-		if ( $smof_data['page_title_bar_bs'] == 'Breadcrumbs' ) {
+	if( $zdata['breadcrumb'] ) {
+		if ( $zdata['page_title_bar_bs'] == 'Breadcrumbs' ) {
 			if( ( class_exists( 'Woocommerce' ) && is_woocommerce() ) || ( is_tax( 'product_cat' ) || is_tax( 'product_tag' ) ) ) {
 				woocommerce_breadcrumb(array(
 					'wrap_before' => '<ul class="breadcrumbs">',
@@ -849,9 +849,9 @@ function avada_current_page_title_bar( $post_id ) {
 					'delimiter' => ''
 				));
 			} else if( class_exists( 'bbPress' ) && is_bbpress() ) {
-				bbp_breadcrumb( array ( 'before' => '<ul class="breadcrumbs">', 'after' => '</ul>', 'sep' => ' ', 'crumb_before' => '<li>', 'crumb_after' => '</li>', 'home_text' => __('Home', 'Avada')) );
+				bbp_breadcrumb( array ( 'before' => '<ul class="breadcrumbs">', 'after' => '</ul>', 'sep' => ' ', 'crumb_before' => '<li>', 'crumb_after' => '</li>', 'home_text' => __('Home', 'Zhane')) );
 			} else {
-				themefusion_breadcrumb();
+				idh_breadcrumb();
 			}
 		} else {
 			get_search_form();
@@ -875,24 +875,24 @@ function avada_current_page_title_bar( $post_id ) {
 		$title = get_the_title();
 
 		if( is_home() ) {
-			$title = $smof_data['blog_title'];
+			$title = $zdata['blog_title'];
 		}
 
 		if( is_search() ) {
-			$title = __('Search results for:', 'Avada') . get_search_query();
+			$title = __('Search results for:', 'Zhane') . get_search_query();
 		}
 
 		if( is_404() ) {
-			$title = __('Error 404 Page', 'Avada');
+			$title = __('Error 404 Page', 'Zhane');
 		}
 
 		if( is_archive() ) {
 			if ( is_day() ) {
-				$title = __( 'Daily Archives: %s', 'Avada' ) . '<span>' . get_the_date() . '</span>';
+				$title = __( 'Daily Archives: %s', 'Zhane' ) . '<span>' . get_the_date() . '</span>';
 			} else if ( is_month() ) {
-				$title = __( 'Monthly Archives: %s', 'Avada' ) . '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'Avada' ) ) . '</span>';
+				$title = __( 'Monthly Archives: %s', 'Zhane' ) . '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'Zhane' ) ) . '</span>';
 			} elseif ( is_year() ) {
-				$title = __( 'Yearly Archives: %s', 'Avada' ) . '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'Avada' ) ) . '</span>';
+				$title = __( 'Yearly Archives: %s', 'Zhane' ) . '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'Zhane' ) ) . '</span>';
 			} elseif ( is_author() ) {
 				$curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug', $_GET['author_name'] ) : get_user_by(  'id', get_the_author_meta('ID') );
 				$title = $curauth->nickname;
@@ -910,13 +910,13 @@ function avada_current_page_title_bar( $post_id ) {
 
 	if ( ! $subtitle ) {
 		if( is_home() && ! is_front_page() ) {
-			$subtitle = $smof_data['blog_subtitle'];
+			$subtitle = $zdata['blog_subtitle'];
 		}
 	}
 	
 	if( ! is_archive() && ! is_search() && ! ( is_home() && ! is_front_page() ) ) {
 		if( get_post_meta( $post_id, 'pyre_page_title', true ) == 'yes' ||
-			( $smof_data['page_title_bar'] && get_post_meta( $post_id, 'pyre_page_title', true ) == 'default' )
+			( $zdata['page_title_bar'] && get_post_meta( $post_id, 'pyre_page_title', true ) == 'default' )
 		) {
 
 			if( get_post_meta( $post_id, 'pyre_page_title_text', true ) == 'no' ) {
@@ -924,17 +924,17 @@ function avada_current_page_title_bar( $post_id ) {
 				$subtitle = '';
 			}
 		
-			avada_page_title_bar( $title, $subtitle, $secondary_content );
+			zhane_page_title_bar( $title, $subtitle, $secondary_content );
 			
 		}
 	} else {
-		if( $smof_data['page_title_bar'] ) {
-			avada_page_title_bar( $title, $subtitle, $secondary_content );
+		if( $zdata['page_title_bar'] ) {
+			zhane_page_title_bar( $title, $subtitle, $secondary_content );
 		}
 	}
 }
 
-class Avada_GoogleMap {
+class Zhane_GoogleMap {
 
     private $map_id;
 
@@ -945,8 +945,8 @@ class Avada_GoogleMap {
      */
     public function __construct() {
 
-        add_filter( 'fusion_attr_avada-google-map-shortcode', array( $this, 'attr' ) );
-        add_shortcode( 'avada_map', array( $this, 'render' ) );
+        add_filter( 'fusion_attr_zhane-google-map-shortcode', array( $this, 'attr' ) );
+        add_shortcode( 'zhane_map', array( $this, 'render' ) );
 
     }
 
@@ -989,7 +989,7 @@ class Avada_GoogleMap {
         ) {
             $brightness_level = 0;
         } elseif( strpos( $color, '#' ) === 0 ) {
-            $color = avada_hex2rgb( $color );
+            $color = zhane_hex2rgb( $color );
 
             $brightness_level = sqrt( pow( $color[0], 2) * 0.299 + pow( $color[1], 2) * 0.587 + pow( $color[2], 2) * 0.114 );           
         } else {
@@ -1032,7 +1032,7 @@ class Avada_GoogleMap {
      * @return string          HTML output
      */
     function render( $args, $content = '' ) {
-        global $smof_data;
+        global $zdata;
 
         $defaults = $this->set_shortcode_defaults(
             array(
@@ -1112,10 +1112,10 @@ class Avada_GoogleMap {
                 $icon = 'theme';
                 $animation = 'yes';
                 $infobox = 'custom';
-                $infobox_background_color = avada_hex2rgb( $smof_data['primary_color'] );
+                $infobox_background_color = zhane_hex2rgb( $zdata['primary_color'] );
                 $infobox_background_color = 'rgba(' . $infobox_background_color[0] . ', ' . $infobox_background_color[1] . ', ' . $infobox_background_color[2] . ', 0.8)';
-                $overlay_color = $smof_data['primary_color'];
-                $brightness_level = $this->calc_color_brightness( $smof_data['primary_color'] );
+                $overlay_color = $zdata['primary_color'];
+                $brightness_level = $this->calc_color_brightness( $zdata['primary_color'] );
 
                 if( $brightness_level > 140 ) {
                     $infobox_text_color = '#fff';
@@ -1126,7 +1126,7 @@ class Avada_GoogleMap {
             
             if( $icon == 'theme' && $map_style == 'custom' ) {
                 for( $i = 0; $i < $num_of_addresses; $i++ ) {
-                    $icon_array[$i] = get_bloginfo( 'template_directory' ) . '/images/avada_map_marker.png';                
+                    $icon_array[$i] = get_bloginfo( 'template_directory' ) . '/images/zhane_map_marker.png';                
                 }
             }           
 
@@ -1286,9 +1286,9 @@ class Avada_GoogleMap {
             </script>
             <?php
             if( $defaults['id'] ) {
-                $html = ob_get_clean() . sprintf( '<div id="%s"><div %s></div></div>', $defaults['id'], $this->attributes( 'avada-google-map-shortcode' ) );
+                $html = ob_get_clean() . sprintf( '<div id="%s"><div %s></div></div>', $defaults['id'], $this->attributes( 'zhane-google-map-shortcode' ) );
             } else {
-                $html = ob_get_clean() . sprintf( '<div %s></div>', $this->attributes( 'avada-google-map-shortcode' ) );
+                $html = ob_get_clean() . sprintf( '<div %s></div>', $this->attributes( 'zhane-google-map-shortcode' ) );
             }
 
         }
@@ -1299,7 +1299,7 @@ class Avada_GoogleMap {
 
     function attr() {
     
-        $attr['class'] = 'shortcode-map fusion-google-map avada-google-map';
+        $attr['class'] = 'shortcode-map fusion-google-map zhane-google-map';
 
         if( self::$args['class'] ) {
             $attr['class'] .= ' ' . self::$args['class'];
@@ -1352,15 +1352,15 @@ class Avada_GoogleMap {
                     $data = $cache_value;
 
                 } elseif ( $data->status === 'ZERO_RESULTS' ) {
-                    return __( 'No location found for the entered address.', 'Avada' );
+                    return __( 'No location found for the entered address.', 'Zhane' );
                 } elseif( $data->status === 'INVALID_REQUEST' ) {
-                    return __( 'Invalid request. Did you enter an address?', 'Avada' );
+                    return __( 'Invalid request. Did you enter an address?', 'Zhane' );
                 } else {
-                    return __( 'Something went wrong while retrieving your map, please ensure you have entered the short code correctly.', 'Avada' );
+                    return __( 'Something went wrong while retrieving your map, please ensure you have entered the short code correctly.', 'Zhane' );
                 }
 
             } else {
-                return __( 'Unable to contact Google API service.', 'Avada' );
+                return __( 'Unable to contact Google API service.', 'Zhane' );
             }
 
         } else {
@@ -1374,4 +1374,4 @@ class Avada_GoogleMap {
 
 }
 
-new Avada_GoogleMap();
+new Zhane_GoogleMap();

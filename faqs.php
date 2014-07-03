@@ -15,10 +15,10 @@ get_header(); ?>
 		$content_css = 'float:left;';
 		$sidebar_css = 'float:right;';
 	} elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'default') {
-		if($smof_data['default_sidebar_pos'] == 'Left') {
+		if($zdata['default_sidebar_pos'] == 'Left') {
 			$content_css = 'float:right;';
 			$sidebar_css = 'float:left;';
-		} elseif($smof_data['default_sidebar_pos'] == 'Right') {
+		} elseif($zdata['default_sidebar_pos'] == 'Right') {
 			$content_css = 'float:left;';
 			$sidebar_css = 'float:right;';
 		}
@@ -39,7 +39,7 @@ get_header(); ?>
 		if($portfolio_category):
 		?>
 		<ul class="faq-tabs clearfix">
-			<li class="active"><a data-filter="*" href="#"><?php echo __('All', 'Avada'); ?></a></li>
+			<li class="active"><a data-filter="*" href="#"><?php echo __('All', 'Zhane'); ?></a></li>
 			<?php foreach($portfolio_category as $portfolio_cat): ?>
 			<li><a data-filter=".<?php echo urldecode($portfolio_cat->slug); ?>" href="#"><?php echo $portfolio_cat->name; ?></a></li>
 			<?php endforeach; ?>
@@ -50,7 +50,7 @@ get_header(); ?>
 				<div class="panel-group" id="accordian-one">
 					<?php
 					$args = array(
-						'post_type' => 'avada_faq',
+						'post_type' => 'zhane_faq',
 						'nopaging' => true
 					);
 					$gallery = new WP_Query($args);
@@ -77,7 +77,7 @@ get_header(); ?>
 						<div id="collapse-<?php the_ID(); ?>" class="panel-collapse collapse">
 							<div class="panel-body toggle-content post-content">
 								<?php
-								if($smof_data['faq_featured_image']):
+								if($zdata['faq_featured_image']):
 								if(has_post_thumbnail()):
 								?>
 								<div class="flexslider post-slideshow">

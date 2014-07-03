@@ -95,7 +95,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 						<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 							<td class="product-name">
 
-								<?php // Avada edit ?>
+								<?php // Zhane edit ?>
 								<span class="product-thumbnail">
 									<?php
 										$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
@@ -107,7 +107,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 									?>
 								</span>
 								<div class="product-info">
-									<?php // Avada edit ?>
+									<?php // Zhane edit ?>
 									<?php echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ); ?>
 									<?php echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' <strong class="product-quantity">' . sprintf( '&times; %s', $cart_item['quantity'] ) . '</strong>', $cart_item, $cart_item_key ); ?>
 									<?php echo WC()->cart->get_item_data( $cart_item ); ?>
@@ -192,10 +192,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 				$terms_is_checked = apply_filters( 'woocommerce_terms_is_checked_default', isset( $_POST['terms'] ) );
 				?>
 				<p class="form-row terms">
-					<?php // Avada edit ?>
+					<?php // Zhane edit ?>
 					<input type="checkbox" class="input-checkbox" name="terms" <?php checked( $terms_is_checked, true ); ?> id="terms" />
-					<label for="terms" class="checkbox"><?php _e( 'I have read and accept the', 'Avada' ); ?> <a href="<?php echo esc_url( get_permalink(wc_get_page_id('terms')) ); ?>" target="_blank"><?php _e( 'terms &amp; conditions', 'Avada' ); ?></a></label>
-					<?php // End Avada edit ?>
+					<label for="terms" class="checkbox"><?php _e( 'I have read and accept the', 'Zhane' ); ?> <a href="<?php echo esc_url( get_permalink(wc_get_page_id('terms')) ); ?>" target="_blank"><?php _e( 'terms &amp; conditions', 'Zhane' ); ?></a></label>
+					<?php // End Zhane edit ?>
 				</p>
 			<?php } ?>
 

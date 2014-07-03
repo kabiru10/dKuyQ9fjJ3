@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Thème Avada 3.2.1\n"
+"Project-Id-Version: Thème Zhane 3.2.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2014-05-01 04:44+0500\n"
@@ -23,7 +23,7 @@ msgid "Previous Post"
 msgstr "Précédent"
 
 # 'sbg_box',
-# __( 'Sidebar', 'Avada' ),
+# __( 'Sidebar', 'Zhane' ),
 # array('sidebar_generator', 'edit_form'),
 # wpml-name: 219ff7705d67d0c798779951dcf82e95
 msgid "Sidebar"
@@ -108,7 +108,7 @@ msgid "Fax:"
 msgstr "Fax :"
 
 # <?php if($instance['mobile']): ?>
-# <p class="mobile"><?php _e('Mobile:', 'Avada'); ?> <?php echo $instance['mobile']; ?></p>
+# <p class="mobile"><?php _e('Mobile:', 'Zhane'); ?> <?php echo $instance['mobile']; ?></p>
 # <?php endif; ?>
 msgid "Mobile:"
 msgstr "Mobile :"
@@ -150,7 +150,7 @@ msgid "Project Description"
 msgstr "Description du projet"
 
 # <?php if(is_page($post_parent)): ?><?php endif; ?>
-# <li <?php if(is_page($post_parent)): ?>class="current_page_item"<?php endif; ?>><a href="<?php echo get_permalink($post_parent); ?>" title="<?php echo __('Back to Parent Page', 'Avada'); ?>"><?php echo get_the_title($post_parent); ?></a></li>
+# <li <?php if(is_page($post_parent)): ?>class="current_page_item"<?php endif; ?>><a href="<?php echo get_permalink($post_parent); ?>" title="<?php echo __('Back to Parent Page', 'Zhane'); ?>"><?php echo get_the_title($post_parent); ?></a></li>
 # <?php
 # wpml-name: 13a1c246a6d1a5ae1a40f5260a99ac1e
 msgid "Back to Parent Page"
@@ -192,8 +192,8 @@ msgstr "Articles connexes"
 msgid "Shopping Cart"
 msgstr "Adresse de livraison"
 
-# wp_localize_script('avada', 'js_local_vars', array(
-# 'dropdown_goto' => __('Go to...', 'Avada')
+# wp_localize_script('zhane', 'js_local_vars', array(
+# 'dropdown_goto' => __('Go to...', 'Zhane')
 # )
 msgid "Go to..."
 msgstr "Aller à..."
@@ -205,7 +205,7 @@ msgid "Your comment is awaiting moderation."
 msgstr "Votre commentaire est en attente de validation."
 
 # <strong><?php echo get_comment_author_link() ?></strong>
-# <?php printf(__('%1$s at %2$s', 'Avada'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__(' - Edit', 'Avada'),'  ','') ?><?php comment_reply_link(array_merge( $args, array('reply_text' => __(' - Reply', 'Avada'), 'add_below' => 'comment', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+# <?php printf(__('%1$s at %2$s', 'Zhane'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__(' - Edit', 'Zhane'),'  ','') ?><?php comment_reply_link(array_merge( $args, array('reply_text' => __(' - Reply', 'Zhane'), 'add_below' => 'comment', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 # </div>
 msgid " - Reply"
 msgstr " - Répondre"
@@ -244,7 +244,7 @@ msgid "Billing Address"
 msgstr "Adresse de facturation"
 
 #
-# <input name="coupon_code" class="input-text" id="coupon_code" value="" /> <input type="submit" class="button comment-submit small" name="apply_coupon" value="<?php _e( 'Apply', 'Avada' ); ?>" />
+# <input name="coupon_code" class="input-text" id="coupon_code" value="" /> <input type="submit" class="button comment-submit small" name="apply_coupon" value="<?php _e( 'Apply', 'Zhane' ); ?>" />
 #
 msgid "Apply"
 msgstr "Appliquer"
@@ -259,13 +259,13 @@ msgid "You Have %d Items In Your Cart"
 msgstr "Vous avez %d article(s) dans votre panier"
 
 # <i class="fontawesome-icon medium circle-yes icon-envelope-alt"></i>
-# <span><?php echo __('Mail This', 'Avada'); ?></span><?php echo __('Product', 'Avada'); ?>
+# <span><?php echo __('Mail This', 'Zhane'); ?></span><?php echo __('Product', 'Zhane'); ?>
 # </a>
 msgid "Mail This"
 msgstr "Envoyer ce"
 
 # <i class="fontawesome-icon medium circle-yes icon-pinterest"></i>
-# <span><?php echo __('Pin This', 'Avada'); ?></span><?php echo __('Product', 'Avada'); ?>
+# <span><?php echo __('Pin This', 'Zhane'); ?></span><?php echo __('Product', 'Zhane'); ?>
 # </a>
 msgid "Pin This"
 msgstr "Epingler ce"
@@ -274,13 +274,13 @@ msgid "Product"
 msgstr "Produit"
 
 # <i class="fontawesome-icon medium circle-yes icon-twitter"></i>
-# <span><?php echo __('Tweet This', 'Avada'); ?></span><?php echo __('Product', 'Avada'); ?>
+# <span><?php echo __('Tweet This', 'Zhane'); ?></span><?php echo __('Product', 'Zhane'); ?>
 # </a>
 msgid "Tweet This"
 msgstr "Tweeter ce"
 
 # <i class="fontawesome-icon medium circle-yes icon-facebook"></i>
-# <span><?php echo __('Share On', 'Avada'); ?></span>Facebook
+# <span><?php echo __('Share On', 'Zhane'); ?></span>Facebook
 # </a>
 msgid "Share On"
 msgstr "Partager sur"
@@ -292,13 +292,13 @@ msgid " Products"
 msgstr " Produits"
 
 # $html .= '<li>';
-# $html .= '<span class="current-li"><a>'.__('Show', 'Avada').' <strong>'.$per_page.' '.__(' Products', 'Avada').'</strong></a></span>';
+# $html .= '<span class="current-li"><a>'.__('Show', 'Zhane').' <strong>'.$per_page.' '.__(' Products', 'Zhane').'</strong></a></span>';
 # $html .= '<ul>';
 msgid "Show"
 msgstr "Afficher"
 
-# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Avada').' <strong>'.__('Date', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'rating') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'rating').'">'.__('Sort by', 'Avada').' <strong>'.__('Rating', 'Avada').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Zhane').' <strong>'.__('Date', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'rating') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'rating').'">'.__('Sort by', 'Zhane').' <strong>'.__('Rating', 'Zhane').'</strong></a></li>';
 # $html .= '</ul>';
 msgid "Rating"
 msgstr "classement"
@@ -306,21 +306,21 @@ msgstr "classement"
 msgid "Popularity"
 msgstr "Populaire"
 
-# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Avada').' <strong>'.__('Price', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Avada').' <strong>'.__('Date', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'rating') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'rating').'">'.__('Sort by', 'Avada').' <strong>'.__('Rating', 'Avada').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Zhane').' <strong>'.__('Price', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Zhane').' <strong>'.__('Date', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'rating') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'rating').'">'.__('Sort by', 'Zhane').' <strong>'.__('Rating', 'Zhane').'</strong></a></li>';
 msgid "Date"
 msgstr "date"
 
-# $html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Avada').' <strong>'.__('Name', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Avada').' <strong>'.__('Price', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Avada').' <strong>'.__('Date', 'Avada').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Zhane').' <strong>'.__('Name', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Zhane').' <strong>'.__('Price', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Zhane').' <strong>'.__('Date', 'Zhane').'</strong></a></li>';
 msgid "Price"
 msgstr "prix"
 
-# $html .= '<li class="'.(($pob == 'default') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'default').'">'.__('Sort by', 'Avada').' <strong>'.__('Default Order', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Avada').' <strong>'.__('Name', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Avada').' <strong>'.__('Price', 'Avada').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'default') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'default').'">'.__('Sort by', 'Zhane').' <strong>'.__('Default Order', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Zhane').' <strong>'.__('Name', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Zhane').' <strong>'.__('Price', 'Zhane').'</strong></a></li>';
 msgid "Name"
 msgstr "nom"
 
@@ -328,7 +328,7 @@ msgid "Default Order"
 msgstr "défaut"
 
 # $html .= '<li>';
-# $html .= '<span class="current-li"><a>'.__('Sort by', 'Avada').' <strong>'.__('Default Order', 'Avada').'</strong></a></span>';
+# $html .= '<span class="current-li"><a>'.__('Sort by', 'Zhane').' <strong>'.__('Default Order', 'Zhane').'</strong></a></span>';
 # $html .= '<ul>';
 msgid "Sort by"
 msgstr "Trier par"
@@ -355,7 +355,7 @@ msgid "Logout"
 msgstr "Déconnexion"
 
 # <p class="submit">
-# <input type="submit" name="wp-submit" id="wp-submit" class="button small default comment-submit" value="<?php _e('Log In', 'Avada'); ?>">
+# <input type="submit" name="wp-submit" id="wp-submit" class="button small default comment-submit" value="<?php _e('Log In', 'Zhane'); ?>">
 # <input type="hidden" name="redirect_to" value="<?php echo $_SERVER['HTTP_REFERER']; ?>">
 msgid "Log In"
 msgstr "Identification"
@@ -373,13 +373,13 @@ msgid "Username"
 msgstr "Identifiant"
 
 # <?php elseif ( is_year() ) : ?>
-# <?php printf( __( 'Yearly Archives: %s', 'Avada' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'Avada' ) ) . '</span>' ); ?>
+# <?php printf( __( 'Yearly Archives: %s', 'Zhane' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'Zhane' ) ) . '</span>' ); ?>
 # <?php elseif ( is_author() ) : ?>
 msgid "Y"
 msgstr "Y"
 
 # <?php elseif ( is_month() ) : ?>
-# <?php printf( __( 'Monthly Archives: %s', 'Avada' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'Avada' ) ) . '</span>' ); ?>
+# <?php printf( __( 'Monthly Archives: %s', 'Zhane' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'Zhane' ) ) . '</span>' ); ?>
 # <?php elseif ( is_year() ) : ?>
 msgid "F Y"
 msgstr "F Y"
@@ -608,9 +608,9 @@ msgstr "Sujet"
 msgid "Email:"
 msgstr "Email :"
 
-# $html .= '<li class="'.(($pob == 'default') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'default').'">'.__('Sort by', 'Avada').' <strong>'.__('Default Order', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Avada').' <strong>'.__('Name', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Avada').' <strong>'.__('Price', 'Avada').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'default') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'default').'">'.__('Sort by', 'Zhane').' <strong>'.__('Default Order', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Zhane').' <strong>'.__('Name', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Zhane').' <strong>'.__('Price', 'Zhane').'</strong></a></li>';
 msgid "Name:"
 msgstr "nom"
 
@@ -658,21 +658,21 @@ msgstr ""
 "Cet article est protégé par un mot de passe. Saisissez le mot de passe pour "
 "lire les commentaires."
 
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
-# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Avada' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Zhane' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
 # </div>
 msgid "Replies Created:"
 msgstr "Réponses créées :"
 
-# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Avada' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
-# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Avada' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
+# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Zhane' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Zhane' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
 msgid "Topics Started:"
 msgstr "Sujets débutés :"
 
 #
-# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Avada' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Zhane' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
 msgid "Forum Role:"
 msgstr "Role dans le forum :"
 
@@ -680,7 +680,7 @@ msgid "Post count: %s"
 msgstr "Nombre de sujet : %s"
 
 #
-# <?php bbp_topic_tag_list( bbp_get_topic_id(), array( 'before' => '<div class="bbp-topic-tags"><p>' . esc_html__( 'Tags:', 'Avada' ) . '&nbsp;', 'sep'    => ', ', 'after'  => '</p></div>' ) ); ?>
+# <?php bbp_topic_tag_list( bbp_get_topic_id(), array( 'before' => '<div class="bbp-topic-tags"><p>' . esc_html__( 'Tags:', 'Zhane' ) . '&nbsp;', 'sep'    => ', ', 'after'  => '</p></div>' ) ); ?>
 #
 msgid "Tags:"
 msgstr "Mots clés :"
@@ -688,8 +688,8 @@ msgstr "Mots clés :"
 msgid "Search the Forum..."
 msgstr "Rechercher dans le forum..."
 
-# <h2><?php echo __('Need a new search?', 'Avada'); ?></h2>
-# <p><?php echo __('If you didn\'t find what you were looking for, try a new search!', 'Avada'); ?></p>
+# <h2><?php echo __('Need a new search?', 'Zhane'); ?></h2>
+# <p><?php echo __('If you didn\'t find what you were looking for, try a new search!', 'Zhane'); ?></p>
 # <form class="seach-form" role="search" method="get" action="<?php echo home_url( '/' ); ?>">
 msgid "If you didn't find what you were looking for, try a new search!"
 msgstr ""
@@ -699,13 +699,13 @@ msgid "Need a new search?"
 msgstr "Besoin d'un nouvelle recherche ?"
 
 # <div class="author_description">
-# <h3 class='author_title'><?php echo __("About",'Avada').' '.$name; ?>
+# <h3 class='author_title'><?php echo __("About",'Zhane').' '.$name; ?>
 # <?php if(current_user_can('edit_users') || get_current_user_id() == $author_id): ?>
 msgid "About"
 msgstr "A propos"
 
 # if(empty($description)) {
-# $description  = __("This author has not yet filled in any details.",'Avada');
+# $description  = __("This author has not yet filled in any details.",'Zhane');
 # $description .= '</br>'.sprintf( __( 'So far %s has created %s entries.' ), $name, count_user_posts( $author_id ) );
 msgid "This author has not yet filled in any details."
 msgstr "Cet auteur n'a pas encore renseigné de détails."
@@ -809,8 +809,8 @@ msgstr "Oups, la page n'existe pas ou plus…"
 #~ msgstr "Besoin d'un nouvelle recherche ?"
 
 #
-# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Avada' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Zhane' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
 #~ msgid "Forum:"
 #~ msgstr "Role dans le forum :"
 
@@ -820,9 +820,9 @@ msgstr "Oups, la page n'existe pas ou plus…"
 #~ msgid "Topic Type:"
 #~ msgstr "Type"
 
-# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Avada' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
-# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Avada' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
+# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Zhane' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Zhane' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
 #~ msgid "Topic Status:"
 #~ msgstr "Statut"
 
@@ -830,16 +830,16 @@ msgstr "Oups, la page n'existe pas ou plus…"
 #~ msgstr "Vous devez être %sidentifié sur%s pour poster un commentaire."
 
 #
-# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Avada' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Zhane' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
 #~ msgid "Forum"
 #~ msgstr "Role dans le forum :"
 
 #~ msgid "Topics"
 #~ msgstr "Sujets débutés :"
 
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
-# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Avada' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Zhane' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
 # </div>
 #~ msgid "Replies"
 #~ msgstr "Réponses créées :"
@@ -848,8 +848,8 @@ msgstr "Oups, la page n'existe pas ou plus…"
 #~ msgstr "Articles connexes"
 
 #
-# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Avada' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Zhane' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
 #~ msgid "Forum: "
 #~ msgstr "Role dans le forum :"
 
@@ -877,14 +877,14 @@ msgstr "Oups, la page n'existe pas ou plus…"
 #~ msgid "in: <a href=\"%1$s\">%2$s</a>"
 #~ msgstr "%1$s à %2$s"
 
-# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Avada' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
-# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Avada' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
+# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Zhane' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Zhane' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
 #~ msgid "Topics Started"
 #~ msgstr "Sujets débutés :"
 
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
-# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Avada' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Zhane' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
 # </div>
 #~ msgid "Replies Created"
 #~ msgstr "Réponses créées :"
@@ -1034,9 +1034,9 @@ msgstr "Oups, la page n'existe pas ou plus…"
 #~ msgid "Order:"
 #~ msgstr "défaut"
 
-# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Avada').' <strong>'.__('Price', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Avada').' <strong>'.__('Date', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'rating') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'rating').'">'.__('Sort by', 'Avada').' <strong>'.__('Rating', 'Avada').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Zhane').' <strong>'.__('Price', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Zhane').' <strong>'.__('Date', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'rating') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'rating').'">'.__('Sort by', 'Zhane').' <strong>'.__('Rating', 'Zhane').'</strong></a></li>';
 #~ msgid "Date:"
 #~ msgstr "date"
 

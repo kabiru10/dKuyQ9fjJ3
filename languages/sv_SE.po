@@ -23,154 +23,154 @@ msgid "Previous Post"
 msgstr "Föregående"
 
 # 'sbg_box',
-# __( 'Sidebar', 'Avada' ),
+# __( 'Sidebar', 'Zhane' ),
 # array('sidebar_generator', 'edit_form'),
 # wpml-name: 219ff7705d67d0c798779951dcf82e95
 msgid "Sidebar"
 msgstr ""
 
 # </p>
-# <a href="#" id="fusion-media-upload-<?php echo $item_id; ?>" class="fusion-open-media button button-primary fusion-megamenu-upload-thumbnail"><?php _e( 'Set Thumbnail', 'Avada' ); ?></a>
+# <a href="#" id="fusion-media-upload-<?php echo $item_id; ?>" class="fusion-open-media button button-primary fusion-megamenu-upload-thumbnail"><?php _e( 'Set Thumbnail', 'Zhane' ); ?></a>
 # <p class="field-megamenu-thumbnail description description-wide">
 # wpml-name: 35e9cfa14322e1b3a7d13391e53477ac
 msgid "Set Thumbnail"
 msgstr ""
 
 # <label for="edit-menu-item-megamenu-icon-<?php echo $item_id; ?>">
-# <?php _e( 'Mega Menu Icon (use full font awesome name)', 'Avada' ); ?>
+# <?php _e( 'Mega Menu Icon (use full font awesome name)', 'Zhane' ); ?>
 # <input type="text" id="edit-menu-item-megamenu-icon-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-icon" name="menu-item-fusion-megamenu-icon[<?php echo $item_id; ?>]" value="<?php echo $item->fusion_megamenu_icon; ?>" />
 # wpml-name: ed337b2d405b51264196ba53c363a9f3
 msgid "Mega Menu Icon (use full font awesome name)"
 msgstr ""
 
 # <select id="edit-menu-item-megamenu-widgetarea-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-widgetarea" name="menu-item-fusion-megamenu-widgetarea[<?php echo $item_id; ?>]">
-# <option value="0"><?php _e( 'Select Widget Area', 'Avada' ); ?></option>
+# <option value="0"><?php _e( 'Select Widget Area', 'Zhane' ); ?></option>
 # <?php
 # wpml-name: dd45b8e59a8c54710a6cdba027c9e350
 msgid "Select Widget Area"
 msgstr ""
 
 # <label for="edit-menu-item-megamenu-widgetarea-<?php echo $item_id; ?>">
-# <?php _e( 'Mega Menu Widget Area', 'Avada' ); ?>
+# <?php _e( 'Mega Menu Widget Area', 'Zhane' ); ?>
 # <select id="edit-menu-item-megamenu-widgetarea-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-widgetarea" name="menu-item-fusion-megamenu-widgetarea[<?php echo $item_id; ?>]">
 # wpml-name: 035f4cf9c1c508c76ba0f981287f3ce2
 msgid "Mega Menu Widget Area"
 msgstr ""
 
 # <input type="checkbox" id="edit-menu-item-megamenu-title-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-title" name="menu-item-fusion-megamenu-title[<?php echo $item_id; ?>]" value="disabled" <?php checked( $item->fusion_megamenu_title, 'disabled' ); ?> />
-# <?php _e( 'Disable Mega Menu Column Title', 'Avada' ); ?>
+# <?php _e( 'Disable Mega Menu Column Title', 'Zhane' ); ?>
 # </label>
 # wpml-name: 327be4f1954415dad7cc90cbdffe2ff4
 msgid "Disable Mega Menu Column Title"
 msgstr ""
 
 # <select id="edit-menu-item-megamenu-columns-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-columns" name="menu-item-fusion-megamenu-columns[<?php echo $item_id; ?>]">
-# <option value="auto" <?php selected( $item->fusion_megamenu_columns, 'auto' ); ?>><?php _e( 'Auto', 'Avada' ); ?></option>
+# <option value="auto" <?php selected( $item->fusion_megamenu_columns, 'auto' ); ?>><?php _e( 'Auto', 'Zhane' ); ?></option>
 # <option value="1" <?php selected( $item->fusion_megamenu_columns, '1' ); ?>>1</option>
 # wpml-name: 06b9281e396db002010bde1de57262eb
 msgid "Auto"
 msgstr ""
 
 # <label for="edit-menu-item-megamenu-columns-<?php echo $item_id; ?>">
-# <?php _e( 'Mega Menu Number of Columns', 'Avada' ); ?>
+# <?php _e( 'Mega Menu Number of Columns', 'Zhane' ); ?>
 # <select id="edit-menu-item-megamenu-columns-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-columns" name="menu-item-fusion-megamenu-columns[<?php echo $item_id; ?>]">
 # wpml-name: 03d959e709ff7835f42c19e71afd281e
 msgid "Mega Menu Number of Columns"
 msgstr ""
 
 # <input type="checkbox" id="edit-menu-item-megamenu-width-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-width" name="menu-item-fusion-megamenu-width[<?php echo $item_id; ?>]" value="fullwidth" <?php checked( $item->fusion_megamenu_width, 'fullwidth' ); ?> />
-# <?php _e( 'Full Width Mega Menu', 'Avada' ); ?>
+# <?php _e( 'Full Width Mega Menu', 'Zhane' ); ?>
 # </label>
 # wpml-name: 9e2661888f17b075b9ebd47f834268df
 msgid "Full Width Mega Menu"
 msgstr ""
 
 # <input type="checkbox" id="edit-menu-item-megamenu-status-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-status" name="menu-item-fusion-megamenu-status[<?php echo $item_id; ?>]" value="enabled" <?php checked( $item->fusion_megamenu_status, 'enabled' ); ?> />
-# <strong><?php _e( 'Enable Fusion Mega Menu', 'Avada' ); ?></strong>
+# <strong><?php _e( 'Enable Fusion Mega Menu', 'Zhane' ); ?></strong>
 # </label>
 # wpml-name: 1d548d28b4394500d23817f71e43510a
 msgid "Enable Fusion Mega Menu"
 msgstr ""
 
 # <input type="checkbox" class="input-checkbox" name="terms" <?php checked( $terms_is_checked, true ); ?> id="terms" />
-# <label for="terms" class="checkbox"><?php _e( 'I have read and accept the', 'Avada' ); ?> <a href="<?php echo esc_url( get_permalink(wc_get_page_id('terms')) ); ?>" target="_blank"><?php _e( 'terms &amp; conditions', 'Avada' ); ?></a></label>
-# <?php // End Avada edit ?>
+# <label for="terms" class="checkbox"><?php _e( 'I have read and accept the', 'Zhane' ); ?> <a href="<?php echo esc_url( get_permalink(wc_get_page_id('terms')) ); ?>" target="_blank"><?php _e( 'terms &amp; conditions', 'Zhane' ); ?></a></label>
+# <?php // End Zhane edit ?>
 # wpml-name: 4ab1891a1bb56bcdc29d3c4238df3027
 msgid "terms &amp; conditions"
 msgstr ""
 
 # <input type="checkbox" class="input-checkbox" name="terms" <?php checked( $terms_is_checked, true ); ?> id="terms" />
-# <label for="terms" class="checkbox"><?php _e( 'I have read and accept the', 'Avada' ); ?> <a href="<?php echo esc_url( get_permalink(wc_get_page_id('terms')) ); ?>" target="_blank"><?php _e( 'terms &amp; conditions', 'Avada' ); ?></a></label>
-# <?php // End Avada edit ?>
+# <label for="terms" class="checkbox"><?php _e( 'I have read and accept the', 'Zhane' ); ?> <a href="<?php echo esc_url( get_permalink(wc_get_page_id('terms')) ); ?>" target="_blank"><?php _e( 'terms &amp; conditions', 'Zhane' ); ?></a></label>
+# <?php // End Zhane edit ?>
 # wpml-name: 9258cdb88f76574c5b600b603315b9e5
 msgid "I have read and accept the"
 msgstr ""
 
 # if( $difference != 1 ) {
-# $periods[$j] .= __( 's', 'Avada' );
+# $periods[$j] .= __( 's', 'Zhane' );
 # }
 # wpml-name: 03c7c0ace395d80182db07ae2c30f034
 msgid "s"
 msgstr ""
 
 # $difference = $now - $time;
-# $tense = __( 'ago', 'Avada' );
+# $tense = __( 'ago', 'Zhane' );
 #
 # wpml-name: 6d0a578ca2f2c0e792fc923002fccbe3
 msgid "ago"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 2787910b1b16428d65412fca2718a92e
 msgid "decade"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 84cdc76cabf41bd7c961f6ab12f117d8
 msgid "year"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 7436f942d5ea836cb84f1bb2527d8286
 msgid "month"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 172a8327fcd3685ab3c0f740d031da09
 msgid "week"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 628b7db04235f228d40adc671413a8c8
 msgid "day"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 896c55cc5e46fab38ce9f51ebf7bfcd3
 msgid "hour"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 0a7d55be9d12a369a6a8da0fb517fba4
 msgid "minute"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: a9f0e61a137d86aa9db53465e0801612
 msgid "second"
@@ -192,7 +192,7 @@ msgid "Fax:"
 msgstr "Fax:"
 
 # <?php if($instance['mobile']): ?>
-# <p class="mobile"><?php _e('Mobile:', 'Avada'); ?> <?php echo $instance['mobile']; ?></p>
+# <p class="mobile"><?php _e('Mobile:', 'Zhane'); ?> <?php echo $instance['mobile']; ?></p>
 # <?php endif; ?>
 msgid "Mobile:"
 msgstr "Mobil:"
@@ -234,7 +234,7 @@ msgid "Project Description"
 msgstr "Projektbeskrivning"
 
 # <?php if(is_page($post_parent)): ?><?php endif; ?>
-# <li <?php if(is_page($post_parent)): ?>class="current_page_item"<?php endif; ?>><a href="<?php echo get_permalink($post_parent); ?>" title="<?php echo __('Back to Parent Page', 'Avada'); ?>"><?php echo get_the_title($post_parent); ?></a></li>
+# <li <?php if(is_page($post_parent)): ?>class="current_page_item"<?php endif; ?>><a href="<?php echo get_permalink($post_parent); ?>" title="<?php echo __('Back to Parent Page', 'Zhane'); ?>"><?php echo get_the_title($post_parent); ?></a></li>
 # <?php
 # wpml-name: 13a1c246a6d1a5ae1a40f5260a99ac1e
 msgid "Back to Parent Page"
@@ -259,36 +259,36 @@ msgid "Learn More"
 msgstr "Lär Dig Mer"
 
 #
-# .woocommerce-invalid:after { content: '<?php echo __('Please enter correct details for this required field.', 'Avada'); ?>'; display: inline-block; margin-top: 7px; color: red; }
+# .woocommerce-invalid:after { content: '<?php echo __('Please enter correct details for this required field.', 'Zhane'); ?>'; display: inline-block; margin-top: 7px; color: red; }
 # </style>
 # wpml-name: 158f1bc10f611d14543e1426abfed743
 msgid "Please enter correct details for this required field."
 msgstr ""
 
-# 'portfolio_loading_text' => '<em>'. __('Loading Portfolio Items...', 'Avada').'</em>',
-# 'faqs_loading_text' => '<em>'. __('Loading FAQ Items...', 'Avada').'</em>',
-# 'order_actions' =>  __('Details', 'Avada')
+# 'portfolio_loading_text' => '<em>'. __('Loading Portfolio Items...', 'Zhane').'</em>',
+# 'faqs_loading_text' => '<em>'. __('Loading FAQ Items...', 'Zhane').'</em>',
+# 'order_actions' =>  __('Details', 'Zhane')
 # wpml-name: 3b340ac59e178c70f764a4c1313b6a0a
 msgid "Loading FAQ Items..."
 msgstr ""
 
-# 'infinite_blog_text' => '<em>'. __('Loading the next set of posts...', 'Avada').'</em>',
-# 'portfolio_loading_text' => '<em>'. __('Loading Portfolio Items...', 'Avada').'</em>',
-# 'faqs_loading_text' => '<em>'. __('Loading FAQ Items...', 'Avada').'</em>',
+# 'infinite_blog_text' => '<em>'. __('Loading the next set of posts...', 'Zhane').'</em>',
+# 'portfolio_loading_text' => '<em>'. __('Loading Portfolio Items...', 'Zhane').'</em>',
+# 'faqs_loading_text' => '<em>'. __('Loading FAQ Items...', 'Zhane').'</em>',
 # wpml-name: e06645be9f00d5cb266104d208c82320
 msgid "Loading Portfolio Items..."
 msgstr ""
 
-# 'infinite_blog_finished_msg' => '<em>'.__('All posts displayed', 'Avada').'</em>',
-# 'infinite_blog_text' => '<em>'. __('Loading the next set of posts...', 'Avada').'</em>',
-# 'portfolio_loading_text' => '<em>'. __('Loading Portfolio Items...', 'Avada').'</em>',
+# 'infinite_blog_finished_msg' => '<em>'.__('All posts displayed', 'Zhane').'</em>',
+# 'infinite_blog_text' => '<em>'. __('Loading the next set of posts...', 'Zhane').'</em>',
+# 'portfolio_loading_text' => '<em>'. __('Loading Portfolio Items...', 'Zhane').'</em>',
 # wpml-name: 9a1dc1e92f772868a9fd98b5bf52ad2c
 msgid "Loading the next set of posts..."
 msgstr ""
 
 # 'language_flag' => $language_code,
-# 'infinite_blog_finished_msg' => '<em>'.__('All posts displayed', 'Avada').'</em>',
-# 'infinite_blog_text' => '<em>'. __('Loading the next set of posts...', 'Avada').'</em>',
+# 'infinite_blog_finished_msg' => '<em>'.__('All posts displayed', 'Zhane').'</em>',
+# 'infinite_blog_text' => '<em>'. __('Loading the next set of posts...', 'Zhane').'</em>',
 # wpml-name: 89d2d6748d3d718e6a99fb666368fb84
 msgid "All posts displayed"
 msgstr ""
@@ -297,8 +297,8 @@ msgstr ""
 msgid "Shopping Cart"
 msgstr "Ordernoteringar"
 
-# wp_localize_script('avada', 'js_local_vars', array(
-# 'dropdown_goto' => __('Go to...', 'Avada')
+# wp_localize_script('zhane', 'js_local_vars', array(
+# 'dropdown_goto' => __('Go to...', 'Zhane')
 # )
 msgid "Go to..."
 msgstr "Gå till..."
@@ -310,7 +310,7 @@ msgid "Your comment is awaiting moderation."
 msgstr "Din kommentar väntar på godkännande."
 
 # <strong><?php echo get_comment_author_link() ?></strong>
-# <?php printf(__('%1$s at %2$s', 'Avada'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__(' - Edit', 'Avada'),'  ','') ?><?php comment_reply_link(array_merge( $args, array('reply_text' => __(' - Reply', 'Avada'), 'add_below' => 'comment', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+# <?php printf(__('%1$s at %2$s', 'Zhane'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__(' - Edit', 'Zhane'),'  ','') ?><?php comment_reply_link(array_merge( $args, array('reply_text' => __(' - Reply', 'Zhane'), 'add_below' => 'comment', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 # </div>
 msgid " - Reply"
 msgstr " - Svara"
@@ -342,7 +342,7 @@ msgid "Review &amp; Payment"
 msgstr "Översikt &amp; Betalning"
 
 # <a data-name="col-2" href="#">
-# <?php _e('Additional Information' , 'Avada'); ?>
+# <?php _e('Additional Information' , 'Zhane'); ?>
 # </a>
 # wpml-name: 092bf78f9c97ba171b8232ddff585392
 msgid "Additional Information"
@@ -355,7 +355,7 @@ msgid "Billing Address"
 msgstr "Faktureringsadress"
 
 #
-# <input name="coupon_code" class="input-text" id="coupon_code" value="" /> <input type="submit" class="button comment-submit small" name="apply_coupon" value="<?php _e( 'Apply', 'Avada' ); ?>" />
+# <input name="coupon_code" class="input-text" id="coupon_code" value="" /> <input type="submit" class="button comment-submit small" name="apply_coupon" value="<?php _e( 'Apply', 'Zhane' ); ?>" />
 #
 msgid "Apply"
 msgstr "Genomför"
@@ -371,13 +371,13 @@ msgid "You Have %d Items In Your Cart"
 msgstr "Du har %d artiklar i din varukorg"
 
 # <i class="fontawesome-icon medium circle-yes icon-envelope-alt"></i>
-# <span><?php echo __('Mail This', 'Avada'); ?></span><?php echo __('Product', 'Avada'); ?>
+# <span><?php echo __('Mail This', 'Zhane'); ?></span><?php echo __('Product', 'Zhane'); ?>
 # </a>
 msgid "Mail This"
 msgstr "E-posta"
 
 # <i class="fontawesome-icon medium circle-yes icon-pinterest"></i>
-# <span><?php echo __('Pin This', 'Avada'); ?></span><?php echo __('Product', 'Avada'); ?>
+# <span><?php echo __('Pin This', 'Zhane'); ?></span><?php echo __('Product', 'Zhane'); ?>
 # </a>
 msgid "Pin This"
 msgstr "Pinna"
@@ -386,13 +386,13 @@ msgid "Product"
 msgstr "Produkt"
 
 # <i class="fontawesome-icon medium circle-yes icon-twitter"></i>
-# <span><?php echo __('Tweet This', 'Avada'); ?></span><?php echo __('Product', 'Avada'); ?>
+# <span><?php echo __('Tweet This', 'Zhane'); ?></span><?php echo __('Product', 'Zhane'); ?>
 # </a>
 msgid "Tweet This"
 msgstr "Tweeta"
 
 # <i class="fontawesome-icon medium circle-yes icon-facebook"></i>
-# <span><?php echo __('Share On', 'Avada'); ?></span>Facebook
+# <span><?php echo __('Share On', 'Zhane'); ?></span>Facebook
 # </a>
 msgid "Share On"
 msgstr "Dela på"
@@ -404,13 +404,13 @@ msgid " Products"
 msgstr " Produkter"
 
 # $html .= '<li>';
-# $html .= '<span class="current-li"><a>'.__('Show', 'Avada').' <strong>'.$per_page.' '.__(' Products', 'Avada').'</strong></a></span>';
+# $html .= '<span class="current-li"><a>'.__('Show', 'Zhane').' <strong>'.$per_page.' '.__(' Products', 'Zhane').'</strong></a></span>';
 # $html .= '<ul>';
 msgid "Show"
 msgstr "Visa"
 
-# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Avada').' <strong>'.__('Date', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'rating') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'rating').'">'.__('Sort by', 'Avada').' <strong>'.__('Rating', 'Avada').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Zhane').' <strong>'.__('Date', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'rating') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'rating').'">'.__('Sort by', 'Zhane').' <strong>'.__('Rating', 'Zhane').'</strong></a></li>';
 # $html .= '</ul>';
 msgid "Rating"
 msgstr "Klassning"
@@ -419,21 +419,21 @@ msgstr "Klassning"
 msgid "Popularity"
 msgstr "Populära"
 
-# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Avada').' <strong>'.__('Price', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Avada').' <strong>'.__('Date', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'rating') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'rating').'">'.__('Sort by', 'Avada').' <strong>'.__('Rating', 'Avada').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Zhane').' <strong>'.__('Price', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Zhane').' <strong>'.__('Date', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'rating') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'rating').'">'.__('Sort by', 'Zhane').' <strong>'.__('Rating', 'Zhane').'</strong></a></li>';
 msgid "Date"
 msgstr "Datum"
 
-# $html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Avada').' <strong>'.__('Name', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Avada').' <strong>'.__('Price', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Avada').' <strong>'.__('Date', 'Avada').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Zhane').' <strong>'.__('Name', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Zhane').' <strong>'.__('Price', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Zhane').' <strong>'.__('Date', 'Zhane').'</strong></a></li>';
 msgid "Price"
 msgstr "Pris"
 
-# $html .= '<li class="'.(($pob == 'default') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'default').'">'.__('Sort by', 'Avada').' <strong>'.__('Default Order', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Avada').' <strong>'.__('Name', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Avada').' <strong>'.__('Price', 'Avada').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'default') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'default').'">'.__('Sort by', 'Zhane').' <strong>'.__('Default Order', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Zhane').' <strong>'.__('Name', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Zhane').' <strong>'.__('Price', 'Zhane').'</strong></a></li>';
 msgid "Name"
 msgstr "Namn"
 
@@ -441,7 +441,7 @@ msgid "Default Order"
 msgstr "Senaste"
 
 # $html .= '<li>';
-# $html .= '<span class="current-li"><a>'.__('Sort by', 'Avada').' <strong>'.__('Default Order', 'Avada').'</strong></a></span>';
+# $html .= '<span class="current-li"><a>'.__('Sort by', 'Zhane').' <strong>'.__('Default Order', 'Zhane').'</strong></a></span>';
 # $html .= '<ul>';
 msgid "Sort by"
 msgstr "Sortera"
@@ -470,7 +470,7 @@ msgid "Logout"
 msgstr "Logga ut"
 
 # <p class="submit">
-# <input type="submit" name="wp-submit" id="wp-submit" class="button small default comment-submit" value="<?php _e('Log In', 'Avada'); ?>">
+# <input type="submit" name="wp-submit" id="wp-submit" class="button small default comment-submit" value="<?php _e('Log In', 'Zhane'); ?>">
 # <input type="hidden" name="redirect_to" value="<?php echo $_SERVER['HTTP_REFERER']; ?>">
 msgid "Log In"
 msgstr "Logga in"
@@ -488,13 +488,13 @@ msgid "Username"
 msgstr "Användarnamn"
 
 # <?php elseif ( is_year() ) : ?>
-# <?php printf( __( 'Yearly Archives: %s', 'Avada' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'Avada' ) ) . '</span>' ); ?>
+# <?php printf( __( 'Yearly Archives: %s', 'Zhane' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'Zhane' ) ) . '</span>' ); ?>
 # <?php elseif ( is_author() ) : ?>
 msgid "Y"
 msgstr ""
 
 # <?php elseif ( is_month() ) : ?>
-# <?php printf( __( 'Monthly Archives: %s', 'Avada' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'Avada' ) ) . '</span>' ); ?>
+# <?php printf( __( 'Monthly Archives: %s', 'Zhane' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'Zhane' ) ) . '</span>' ); ?>
 # <?php elseif ( is_year() ) : ?>
 msgid "F Y"
 msgstr ""
@@ -717,9 +717,9 @@ msgstr "Ämne"
 msgid "Email:"
 msgstr "E-post:"
 
-# $html .= '<li class="'.(($pob == 'default') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'default').'">'.__('Sort by', 'Avada').' <strong>'.__('Default Order', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Avada').' <strong>'.__('Name', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Avada').' <strong>'.__('Price', 'Avada').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'default') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'default').'">'.__('Sort by', 'Zhane').' <strong>'.__('Default Order', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Zhane').' <strong>'.__('Name', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Zhane').' <strong>'.__('Price', 'Zhane').'</strong></a></li>';
 #, fuzzy
 msgid "Name:"
 msgstr "Namn"
@@ -767,21 +767,21 @@ msgid "This post is password protected. Enter the password to view comments."
 msgstr ""
 "Inlägget är lösenordsskyddat. Skriv in lösenordet för att se Kommentarerna."
 
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
-# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Avada' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Zhane' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
 # </div>
 msgid "Replies Created:"
 msgstr "Svar Skapades:"
 
-# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Avada' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
-# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Avada' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
+# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Zhane' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Zhane' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
 msgid "Topics Started:"
 msgstr "Ämne Startat:"
 
 #
-# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Avada' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Zhane' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
 msgid "Forum Role:"
 msgstr "Forum Roll"
 
@@ -789,7 +789,7 @@ msgid "Post count: %s"
 msgstr "Antal poster: %s"
 
 #
-# <?php bbp_topic_tag_list( bbp_get_topic_id(), array( 'before' => '<div class="bbp-topic-tags"><p>' . esc_html__( 'Tags:', 'Avada' ) . '&nbsp;', 'sep'    => ', ', 'after'  => '</p></div>' ) ); ?>
+# <?php bbp_topic_tag_list( bbp_get_topic_id(), array( 'before' => '<div class="bbp-topic-tags"><p>' . esc_html__( 'Tags:', 'Zhane' ) . '&nbsp;', 'sep'    => ', ', 'after'  => '</p></div>' ) ); ?>
 #
 msgid "Tags:"
 msgstr "Taggar:"
@@ -797,26 +797,26 @@ msgstr "Taggar:"
 msgid "Search the Forum..."
 msgstr "Sök ..."
 
-# <h2><?php echo __('Need a new search?', 'Avada'); ?></h2>
-# <p><?php echo __('If you didn\'t find what you were looking for, try a new search!', 'Avada'); ?></p>
+# <h2><?php echo __('Need a new search?', 'Zhane'); ?></h2>
+# <p><?php echo __('If you didn\'t find what you were looking for, try a new search!', 'Zhane'); ?></p>
 # <form class="seach-form" role="search" method="get" action="<?php echo home_url( '/' ); ?>">
 msgid "If you didn't find what you were looking for, try a new search!"
 msgstr "Om du inte hittade vad du sökte, försök med ny sökning!"
 
 # <div class="search-page-search-form">
-# <h2><?php echo __('Need a new search?', 'Avada'); ?></h2>
-# <p><?php echo __('If you didn\'t find what you were looking for, try a new search!', 'Avada'); ?></p>
+# <h2><?php echo __('Need a new search?', 'Zhane'); ?></h2>
+# <p><?php echo __('If you didn\'t find what you were looking for, try a new search!', 'Zhane'); ?></p>
 msgid "Need a new search?"
 msgstr "En ny sökning?"
 
 # <div class="author_description">
-# <h3 class='author_title'><?php echo __("About",'Avada').' '.$name; ?>
+# <h3 class='author_title'><?php echo __("About",'Zhane').' '.$name; ?>
 # <?php if(current_user_can('edit_users') || get_current_user_id() == $author_id): ?>
 msgid "About"
 msgstr "Om"
 
 # if(empty($description)) {
-# $description  = __("This author has not yet filled in any details.",'Avada');
+# $description  = __("This author has not yet filled in any details.",'Zhane');
 # $description .= '</br>'.sprintf( __( 'So far %s has created %s entries.' ), $name, count_user_posts( $author_id ) );
 msgid "This author has not yet filled in any details."
 msgstr "Denna författare har ej fyllt i några detaljer."

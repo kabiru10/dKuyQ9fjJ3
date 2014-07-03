@@ -1,10 +1,10 @@
 <?php
 
 /**
- * SMOF Option filters
+ * zindh Option filters
  *
  * @package     WordPress
- * @subpackage  SMOF
+ * @subpackage  zindh
  * @since       1.4.0
  * @author      Jonah Dahlquist
  */

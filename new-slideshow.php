@@ -1,12 +1,12 @@
-			<?php global $smof_data; ?>
+			<?php global $zdata; ?>
 			<?php
 			$layout = '';
 			if(is_archive()) {
-				$layout = $smof_data['blog_archive_layout'];
+				$layout = $zdata['blog_archive_layout'];
 			} elseif(is_search()) {
-				$layout = $smof_data['search_layout'];
+				$layout = $zdata['search_layout'];
 			} else {
-				$layout = $smof_data['blog_layout'];
+				$layout = $zdata['blog_layout'];
 			}
 			?>
 			<?php if($layout != 'Grid' && $layout != 'Timeline'): ?>
@@ -90,13 +90,13 @@
 
 			<?php
 			if(is_archive()) {
-				if($smof_data['blog_archive_sidebar'] == 'None') {
+				if($zdata['blog_archive_sidebar'] == 'None') {
 					$size = 'full';
 				} else {
 					$size = 'blog-large';
 				}
 			} else {
-				if($smof_data['blog_full_width']) {
+				if($zdata['blog_full_width']) {
 					$size = 'full';
 				} else {
 					$size = 'blog-large';
@@ -150,7 +150,7 @@
 					<?php $attachment_data = wp_get_attachment_metadata(get_post_thumbnail_id()); ?>
 					<li>
 						<div class="image" aria-haspopup="true">
-								<?php if($smof_data['image_rollover']): ?>
+								<?php if($zdata['image_rollover']): ?>
 								<?php the_post_thumbnail($size); ?>
 								<?php else: ?>
 								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail($size); ?></a>
@@ -172,10 +172,10 @@
 						</div>
 					</li>
 					<?php endif; ?>
-					<?php if($smof_data['posts_slideshow']): ?>
+					<?php if($zdata['posts_slideshow']): ?>
 					<?php
 					$i = 2;
-					while($i <= $smof_data['posts_slideshow_number']):
+					while($i <= $zdata['posts_slideshow_number']):
 					$attachment_id = kd_mfi_get_featured_image_id('featured-image-'.$i, 'post');
 					if($attachment_id):
 					?>

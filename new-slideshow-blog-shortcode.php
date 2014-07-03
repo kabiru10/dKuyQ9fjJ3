@@ -1,4 +1,4 @@
-			<?php global $smof_data; ?>
+			<?php global $zdata; ?>
 			<?php global $post; ?>
 
 			<?php if($atts['layout'] != 'grid' && $atts['layout'] != 'timeline'): ?>
@@ -133,7 +133,7 @@
 					<?php $attachment_data = wp_get_attachment_metadata(get_post_thumbnail_id()); ?>
 					<li>
 						<div class="image" aria-haspopup="true">
-								<?php if($smof_data['image_rollover']): ?>
+								<?php if($zdata['image_rollover']): ?>
 								<?php the_post_thumbnail($size); ?>
 								<?php else: ?>
 								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail($size); ?></a>
@@ -155,10 +155,10 @@
 						</div>
 					</li>
 					<?php endif; ?>
-					<?php if($smof_data['posts_slideshow']): ?>
+					<?php if($zdata['posts_slideshow']): ?>
 					<?php
 					$i = 2;
-					while($i <= $smof_data['posts_slideshow_number']):
+					while($i <= $zdata['posts_slideshow_number']):
 					$attachment_id = kd_mfi_get_featured_image_id('featured-image-'.$i, 'post');
 					if($attachment_id):
 					?>

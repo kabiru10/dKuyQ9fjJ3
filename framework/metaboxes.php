@@ -3,8 +3,8 @@ class PyreThemeFrameworkMetaboxes {
 
 	public function __construct()
 	{
-		global $smof_data;
-		$this->data = $smof_data;
+		global $zdata;
+		$this->data = $zdata;
 
 		add_action('add_meta_boxes', array($this, 'add_meta_boxes'));
 		add_action('save_post', array($this, 'save_meta_boxes'));
@@ -15,8 +15,8 @@ class PyreThemeFrameworkMetaboxes {
 	function admin_script_loader() {
 		global $pagenow;
 		if (is_admin() && ($pagenow=='post-new.php' || $pagenow=='post.php')) {
-	    	wp_register_script('avada_upload', get_bloginfo('template_directory').'/js/upload.js');
-	    	wp_enqueue_script('avada_upload');
+	    	wp_register_script('zhane_upload', get_bloginfo('template_directory').'/js/upload.js');
+	    	wp_enqueue_script('zhane_upload');
 	    	wp_enqueue_script('media-upload');
 	    	wp_enqueue_script('thickbox');
 	   		wp_enqueue_style('thickbox');
@@ -27,22 +27,22 @@ class PyreThemeFrameworkMetaboxes {
 	{
 		$post_types = get_post_types( array( 'public' => true ) );
 
-		$disallowed = array( 'page', 'post', 'attachment', 'avada_portfolio', 'themefusion_elastic', 'product', 'wpsc-product', 'slide' );
+		$disallowed = array( 'page', 'post', 'attachment', 'zhane_portfolio', 'idh_elastic', 'product', 'wpsc-product', 'slide' );
 
 		foreach ( $post_types as $post_type ) {
 			if ( in_array( $post_type, $disallowed ) )
 				continue;
 
-			$this->add_meta_box('post_options', 'Avada Options', $post_type);
+			$this->add_meta_box('post_options', 'Zhane Options', $post_type);
 		}
 
 		$this->add_meta_box('post_options', 'Post Options', 'post');
 
 		$this->add_meta_box('page_options', 'Page Options', 'page');
 
-		$this->add_meta_box('portfolio_options', 'Portfolio Options', 'avada_portfolio');
+		$this->add_meta_box('portfolio_options', 'Portfolio Options', 'zhane_portfolio');
 
-		$this->add_meta_box('es_options', 'Elastic Slide Options', 'themefusion_elastic');
+		$this->add_meta_box('es_options', 'Elastic Slide Options', 'idh_elastic');
 
 		$this->add_meta_box('woocommerce_options', 'Product Options', 'product');
 
@@ -74,7 +74,7 @@ class PyreThemeFrameworkMetaboxes {
 
 	public function post_options()
 	{
-		$smof_data = $this->data;
+		$zdata = $this->data;
 		include 'views/metaboxes/style.php';
 		include 'views/metaboxes/post_options.php';
 	}
@@ -230,7 +230,7 @@ class PyreThemeFrameworkMetaboxes {
 			$html .= '</label>';
 			$html .= '<div class="field">';
 			    $html .= '<input name="pyre_' . $id . '" class="upload_field" id="pyre_' . $id . '" type="text" value="' . get_post_meta($post->ID, 'pyre_' . $id, true) . '" />';
-			    $html .= '<input class="avada_upload_button" type="button" value="Browse" />';
+			    $html .= '<input class="zhane_upload_button" type="button" value="Browse" />';
 				if($desc) {
 					$html .= '<p>' . $desc . '</p>';
 				}

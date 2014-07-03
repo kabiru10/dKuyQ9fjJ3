@@ -22,7 +22,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 <table class="shop_table cart" cellspacing="0">
 	<thead>
 		<tr>
-			<?php // Avada edit ?>
+			<?php // Zhane edit ?>
 			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
 			<th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
 			<th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
@@ -43,7 +43,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 
 					<td class="product-name">
-						<?php // Avada edit ?>
+						<?php // Zhane edit ?>
 						<span class="product-thumbnail">
 							<?php
 								$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
@@ -59,7 +59,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							if ( ! $_product->is_visible() )
 								echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key );
 							else
-								// Avada edit
+								// Zhane edit
 								echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a class="product-title" href="%s">%s</a>', $_product->get_permalink(), $_product->get_title() ), $cart_item, $cart_item_key );
 
 							// Meta data
@@ -100,7 +100,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 					</td>
 					
-					<?php // Avada edit ?>
+					<?php // Zhane edit ?>
 					<td class="product-remove">
 						<?php
 							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf( '<a href="%s" class="remove" title="%s">&times;</a>', esc_url( WC()->cart->get_remove_url( $cart_item_key ) ), __( 'Remove this item', 'woocommerce' ) ), $cart_item_key );
@@ -114,7 +114,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 		do_action( 'woocommerce_cart_contents' );
 		?>
-		<?php // Avada edit ?>
+		<?php // Zhane edit ?>
 		<?php wp_nonce_field( 'woocommerce-cart' ); ?>
 		<?php do_action( 'woocommerce_after_cart_contents' ); ?>
 	</tbody>

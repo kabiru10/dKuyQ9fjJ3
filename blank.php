@@ -8,7 +8,7 @@ get_header(); ?>
 			<span class="vcard" style="display: none;"><span class="fn"><?php the_author_posts_link(); ?></span></span>
 			<span class="updated" style="display:none;"><?php the_modified_time( 'c' ); ?></span>	
 			<?php if( ! post_password_required($post->ID) ): ?>
-			<?php global $smof_data; if(!$smof_data['featured_images_pages'] && has_post_thumbnail()): ?>
+			<?php global $zdata; if(!$zdata['featured_images_pages'] && has_post_thumbnail()): ?>
 			<div class="image">
 				<?php the_post_thumbnail('full'); ?>
 			</div>

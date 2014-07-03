@@ -2,47 +2,47 @@
 get_header();
 
 $portfolio_sep = false;
-if($smof_data['portfolio_archive_layout'] == 'Portfolio Two Column') {
+if($zdata['portfolio_archive_layout'] == 'Portfolio Two Column') {
 	$portfolio_layout = 'portfolio-two';
 	$portfolio_image = 'portfolio-two';
 	$portfolio_content = false;
 	$content_class = 'portfolio-two-sidebar';
-} elseif($smof_data['portfolio_archive_layout'] == 'Portfolio Three Column') {
+} elseif($zdata['portfolio_archive_layout'] == 'Portfolio Three Column') {
 	$portfolio_layout = 'portfolio-three';
 	$portfolio_image = 'portfolio-three';
 	$portfolio_content = false;
 	$content_class = 'portfolio-three-sidebar';
-} elseif($smof_data['portfolio_archive_layout'] == 'Portfolio Four Column') {
+} elseif($zdata['portfolio_archive_layout'] == 'Portfolio Four Column') {
 	$portfolio_layout = 'portfolio-four';
 	$portfolio_image = 'portfolio-four';
 	$portfolio_content = false;
 	$content_class = 'portfolio-four-sidebar';
-} elseif($smof_data['portfolio_archive_layout'] == 'Portfolio One Column Text') {
+} elseif($zdata['portfolio_archive_layout'] == 'Portfolio One Column Text') {
 	$portfolio_layout = 'portfolio-one portfolio-one-text';
 	$portfolio_image = 'portfolio-full';
 	$portfolio_content = true;
 	$portfolio_sep = true;
 	$content_class = 'portfolio-one-sidebar';
-} elseif($smof_data['portfolio_archive_layout'] == 'Portfolio Two Column Text') {
+} elseif($zdata['portfolio_archive_layout'] == 'Portfolio Two Column Text') {
 	$portfolio_layout = 'portfolio-two portfolio-two-text';
 	$portfolio_image = 'portfolio-two';
 	$portfolio_content = true;
 	$content_class = 'portfolio-two-sidebar';
-} elseif($smof_data['portfolio_archive_layout'] == 'Portfolio Three Column Text') {
+} elseif($zdata['portfolio_archive_layout'] == 'Portfolio Three Column Text') {
 	$portfolio_layout = 'portfolio-three portfolio-three-text';
 	$portfolio_image = 'portfolio-three';
 	$portfolio_content = true;
 	$content_class = 'portfolio-three-sidebar';
-} elseif($smof_data['portfolio_archive_layout'] == 'Portfolio Four Column Text') {
+} elseif($zdata['portfolio_archive_layout'] == 'Portfolio Four Column Text') {
 	$portfolio_layout = 'portfolio-four portfolio-four-text';
 	$portfolio_image = 'portfolio-four';
 	$portfolio_content = true;
 	$content_class = 'portfolio-four-sidebar';
-} elseif($smof_data['portfolio_archive_layout'] == 'Portfolio Grid') {
+} elseif($zdata['portfolio_archive_layout'] == 'Portfolio Grid') {
 	$portfolio_layout = 'portfolio-masonry';
 	$portfolio_image = 'full';
 	$portfolio_content = false;
-	if($smof_data['grid_pagination_type'] == 'Infinite Scroll') {
+	if($zdata['grid_pagination_type'] == 'Infinite Scroll') {
 		$portfolio_layout .= ' portfolio-infinite';
 	}
 } else {
@@ -54,15 +54,15 @@ if($smof_data['portfolio_archive_layout'] == 'Portfolio Two Column') {
 }
 
 $sidebar_exists = true;
-if($smof_data['portfolio_archive_sidebar'] == 'None') {
+if($zdata['portfolio_archive_sidebar'] == 'None') {
 	$content_css = 'width:100%';
 	$sidebar_css = 'display:none';
 	$content_class = '';
 	$sidebar_exists = false;
-} elseif($smof_data['default_sidebar_pos'] == 'Left') {
+} elseif($zdata['default_sidebar_pos'] == 'Left') {
 	$content_css = 'float:right;';
 	$sidebar_css = 'float:left;';
-} elseif($smof_data['default_sidebar_pos'] == 'Right') {
+} elseif($zdata['default_sidebar_pos'] == 'Right') {
 	$content_css = 'float:left;';
 	$sidebar_css = 'float:right;';
 }
@@ -99,7 +99,7 @@ if($portfolio_content == false) {
 				<span class="vcard" style="display: none;"><span class="fn"><?php the_author_posts_link(); ?></span></span>
 				<span class="updated" style="display:none;"><?php the_modified_time( 'c' ); ?></span>	
 				<div class="image" aria-haspopup="true">
-					<?php if($smof_data['image_rollover']): ?>
+					<?php if($zdata['image_rollover']): ?>
 					<?php the_post_thumbnail($portfolio_image); ?>
 					<?php else: ?>
 					<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail($portfolio_image); ?></a>
@@ -146,8 +146,8 @@ if($portfolio_content == false) {
 
 					<div class="post-content">
 					<?php
-					if($smof_data['portfolio_content_length'] == 'Excerpt') {
-						$stripped_content = strip_shortcodes( tf_content( $smof_data['excerpt_length_portfolio'], $smof_data['strip_html_excerpt'] ) );
+					if($zdata['portfolio_content_length'] == 'Excerpt') {
+						$stripped_content = strip_shortcodes( tf_content( $zdata['excerpt_length_portfolio'], $zdata['strip_html_excerpt'] ) );
 						echo $stripped_content;
 					} else {
 						the_content();
@@ -155,11 +155,11 @@ if($portfolio_content == false) {
 					?>
 					</div>
 
-					<?php if($smof_data['portfolio_archive_layout'] == 'Portfolio One Column Text' || $smof_data['portfolio_archive_layout'] == 'Portfolio One Column'): ?>
+					<?php if($zdata['portfolio_archive_layout'] == 'Portfolio One Column Text' || $zdata['portfolio_archive_layout'] == 'Portfolio One Column'): ?>
 					<div class="buttons">
-						<a href="<?php the_permalink(); ?>" class="<?php echo sprintf( 'btn btn-default button small fusion-button button-small button-default button-%s button-%s', strtolower( $smof_data['button_shape'] ), strtolower( $smof_data['button_type'] ) ); ?>"><?php echo __('Learn More', 'Avada'); ?></a>
+						<a href="<?php the_permalink(); ?>" class="<?php echo sprintf( 'btn btn-default button small fusion-button button-small button-default button-%s button-%s', strtolower( $zdata['button_shape'] ), strtolower( $zdata['button_type'] ) ); ?>"><?php echo __('Learn More', 'Zhane'); ?></a>
 						<?php if(get_post_meta($post->ID, 'pyre_project_url', true)): ?>
-						<a href="<?php echo get_post_meta($post->ID, 'pyre_project_url', true); ?>" class="<?php echo sprintf( 'btn btn-default button small fusion-button button-small button-default button-%s button-%s', strtolower( $smof_data['button_shape'] ), strtolower( $smof_data['button_type'] ) ); ?>"><?php echo __('View Project', 'Avada'); ?></a>
+						<a href="<?php echo get_post_meta($post->ID, 'pyre_project_url', true); ?>" class="<?php echo sprintf( 'btn btn-default button small fusion-button button-small button-default button-%s button-%s', strtolower( $zdata['button_shape'] ), strtolower( $zdata['button_type'] ) ); ?>"><?php echo __('View Project', 'Zhane'); ?></a>
 						<?php endif; ?>
 					</div>
 					<?php endif; ?>
@@ -171,14 +171,14 @@ if($portfolio_content == false) {
 			</div>
 			<?php endif; endwhile; ?>
 		</div>
-		<?php themefusion_pagination($pages = '', $range = 2); ?>
+		<?php idh_pagination($pages = '', $range = 2); ?>
 	</div>
 	<?php if( $sidebar_exists == true ): ?>
 	<?php wp_reset_query(); ?>
 	<div id="sidebar" style="<?php echo $sidebar_css; ?>">
 	<?php
-	if ($smof_data['portfolio_archive_sidebar'] != 'None' && function_exists('dynamic_sidebar')) {
-		generated_dynamic_sidebar($smof_data['portfolio_archive_sidebar']);
+	if ($zdata['portfolio_archive_sidebar'] != 'None' && function_exists('dynamic_sidebar')) {
+		generated_dynamic_sidebar($zdata['portfolio_archive_sidebar']);
 	}
 	?>
 	</div>

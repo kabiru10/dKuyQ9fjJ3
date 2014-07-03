@@ -18,11 +18,11 @@ elseif(get_post_meta($post->ID, 'pyre_portfolio_sidebar_position', true) == 'lef
 	$sidebar_css = 'float:right;';
 	$sidebar_exists = true;
 } elseif(get_post_meta($post->ID, 'pyre_portfolio_sidebar_position', true) == 'default') {
-	if($smof_data['default_sidebar_pos'] == 'Left') {
+	if($zdata['default_sidebar_pos'] == 'Left') {
 		$content_css = 'float:right;';
 		$sidebar_css = 'float:left;';
 		$sidebar_exists = true;
-	} elseif($smof_data['default_sidebar_pos'] == 'Right') {
+	} elseif($zdata['default_sidebar_pos'] == 'Right') {
 		$content_css = 'float:left;';
 		$sidebar_css = 'float:right;';
 		$sidebar_exists = true;
@@ -31,7 +31,7 @@ elseif(get_post_meta($post->ID, 'pyre_portfolio_sidebar_position', true) == 'lef
 
 $class = '';
 
-if($smof_data['grid_pagination_type'] == 'Infinite Scroll') {
+if($zdata['grid_pagination_type'] == 'Infinite Scroll') {
 	$class = 'portfolio-infinite';
 }
 if(get_post_meta($post->ID, 'pyre_portfolio_full_width', true) == 'no') {
@@ -58,9 +58,9 @@ if(get_post_meta($post->ID, 'pyre_portfolio_full_width', true) == 'no') {
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 		}
 		$args = array(
-			'post_type' => 'avada_portfolio',
+			'post_type' => 'zhane_portfolio',
 			'paged' => $paged,
-			'posts_per_page' => $smof_data['portfolio_items'],
+			'posts_per_page' => $zdata['portfolio_items'],
 		);
 		$pcats = get_post_meta(get_the_ID(), 'pyre_portfolio_category', true);
 		if($pcats && $pcats[0] == 0) {
@@ -102,7 +102,7 @@ if(get_post_meta($post->ID, 'pyre_portfolio_full_width', true) == 'no') {
 
 		$portfolio_taxs = $sorted_taxs;
 
-		if($smof_data['grid_pagination_type'] == 'Infinite Scroll') {
+		if($zdata['grid_pagination_type'] == 'Infinite Scroll') {
 			$portfolio_category = get_terms('portfolio_category');
 			$portfolio_taxs = array();
 
@@ -128,7 +128,7 @@ if(get_post_meta($post->ID, 'pyre_portfolio_full_width', true) == 'no') {
 		if(is_array($portfolio_taxs) && !empty($portfolio_taxs) && get_post_meta($post->ID, 'pyre_portfolio_filters', true) != 'no'):
 		?>
 		<ul class="portfolio-tabs clearfix">
-			<li class="active"><a data-filter="*" href="#"><?php echo __('All', 'Avada'); ?></a></li>
+			<li class="active"><a data-filter="*" href="#"><?php echo __('All', 'Zhane'); ?></a></li>
 			<?php foreach($portfolio_taxs as $portfolio_tax_slug => $portfolio_tax_name): ?>
 			<li><a data-filter=".<?php echo $portfolio_tax_slug; ?>" href="#"><?php echo $portfolio_tax_name; ?></a></li>
 			<?php endforeach; ?>
@@ -159,7 +159,7 @@ if(get_post_meta($post->ID, 'pyre_portfolio_full_width', true) == 'no') {
 				<span class="updated" style="display: none;"><?php the_time('c'); ?></span>
 				<?php if(has_post_thumbnail()): ?>
 				<div class="image" aria-haspopup="true">
-					<?php if($smof_data['image_rollover']): ?>
+					<?php if($zdata['image_rollover']): ?>
 					<?php the_post_thumbnail('full'); ?>
 					<?php else: ?>
 					<a href="<?php echo $permalink; ?>"><?php the_post_thumbnail('full'); ?></a>
@@ -212,7 +212,7 @@ if(get_post_meta($post->ID, 'pyre_portfolio_full_width', true) == 'no') {
 			</div>
 			<?php endif; endwhile; ?>
 		</div>
-		<?php themefusion_pagination($gallery->max_num_pages, $range = 2); ?>
+		<?php idh_pagination($gallery->max_num_pages, $range = 2); ?>
 		<?php endif; ?>
 	</div>
 	<?php if( $sidebar_exists == true ): ?>

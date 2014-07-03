@@ -1,4 +1,4 @@
-<?php global $smof_data; ?>
-<?php if($smof_data['header_number'] || $smof_data['header_email']): ?>
-<div class="header-info"><?php echo $smof_data['header_number']; ?><?php if($smof_data['header_number'] && $smof_data['header_email']): ?><span class="sep">|</span><?php endif; ?><a href="mailto:<?php echo $smof_data['header_email']; ?>"><?php echo $smof_data['header_email']; ?></a></div>
+<?php global $zdata; ?>
+<?php if($zdata['header_number'] || $zdata['header_email']): ?>
+<div class="header-info"><?php echo $zdata['header_number']; ?><?php if($zdata['header_number'] && $zdata['header_email']): ?><span class="sep">|</span><?php endif; ?><a href="mailto:<?php echo $zdata['header_email']; ?>"><?php echo $zdata['header_email']; ?></a></div>
 <?php endif; ?>

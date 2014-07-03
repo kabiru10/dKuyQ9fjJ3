@@ -14,7 +14,7 @@ class Contact_Info_Widget extends WP_Widget {
 
 		$control_ops = array('id_base' => 'contact_info-widget');
 
-		$this->WP_Widget('contact_info-widget', 'Avada: Contact Info', $widget_ops, $control_ops);
+		$this->WP_Widget('contact_info-widget', 'Zhane: Contact Info', $widget_ops, $control_ops);
 	}
 
 	function widget($args, $instance)
@@ -34,23 +34,23 @@ class Contact_Info_Widget extends WP_Widget {
 		<?php endif; ?>
 
 		<?php if(isset($instance['phone']) && $instance['phone']): ?>
-		<p class="phone"><?php _e('Phone:', 'Avada'); ?> <?php echo $instance['phone']; ?></p>
+		<p class="phone"><?php _e('Phone:', 'Zhane'); ?> <?php echo $instance['phone']; ?></p>
 		<?php endif; ?>
 
 		<?php if(isset($instance['mobile']) && $instance['mobile']): ?>
-		<p class="mobile"><?php _e('Mobile:', 'Avada'); ?> <?php echo $instance['mobile']; ?></p>
+		<p class="mobile"><?php _e('Mobile:', 'Zhane'); ?> <?php echo $instance['mobile']; ?></p>
 		<?php endif; ?>
 
 		<?php if(isset($instance['fax']) && $instance['fax']): ?>
-		<p class="fax"><?php _e('Fax:', 'Avada'); ?> <?php echo $instance['fax']; ?></p>
+		<p class="fax"><?php _e('Fax:', 'Zhane'); ?> <?php echo $instance['fax']; ?></p>
 		<?php endif; ?>
 
 		<?php if(isset($instance['email']) && $instance['email']): ?>
-		<p class="email"><?php _e('Email:', 'Avada'); ?> <a href="mailto:<?php echo $instance['email']; ?>"><?php if($instance['emailtxt']) { echo $instance['emailtxt']; } else { echo $instance['email']; } ?></a></p>
+		<p class="email"><?php _e('Email:', 'Zhane'); ?> <a href="mailto:<?php echo $instance['email']; ?>"><?php if($instance['emailtxt']) { echo $instance['emailtxt']; } else { echo $instance['email']; } ?></a></p>
 		<?php endif; ?>
 
 		<?php if(isset($instance['web']) && $instance['web']): ?>
-		<p class="web"><?php _e('Web:', 'Avada'); ?> <a href="<?php echo $instance['web']; ?>"><?php if(isset($instance['webtxt']) && $instance['webtxt']) { echo $instance['webtxt']; } else { echo $instance['web']; } ?></a></p>
+		<p class="web"><?php _e('Web:', 'Zhane'); ?> <a href="<?php echo $instance['web']; ?>"><?php if(isset($instance['webtxt']) && $instance['webtxt']) { echo $instance['webtxt']; } else { echo $instance['web']; } ?></a></p>
 		<?php endif; ?>
 		</div>
 		<?php

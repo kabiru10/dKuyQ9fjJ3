@@ -23,11 +23,11 @@ get_header(); ?>
 		$sidebar_exists = true;
 	} elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'default') {
 		$content_class = 'portfolio-four-sidebar';
-		if($smof_data['default_sidebar_pos'] == 'Left') {
+		if($zdata['default_sidebar_pos'] == 'Left') {
 			$content_css = 'float:right;';
 			$sidebar_css = 'float:left;';
 			$sidebar_exists = true;
-		} elseif($smof_data['default_sidebar_pos'] == 'Right') {
+		} elseif($zdata['default_sidebar_pos'] == 'Right') {
 			$content_css = 'float:left;';
 			$sidebar_css = 'float:right;';
 			$sidebar_exists = true;
@@ -54,9 +54,9 @@ get_header(); ?>
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 		}
 		$args = array(
-			'post_type' => 'avada_portfolio',
+			'post_type' => 'zhane_portfolio',
 			'paged' => $paged,
-			'posts_per_page' => $smof_data['portfolio_items'],
+			'posts_per_page' => $zdata['portfolio_items'],
 		);
 		$pcats = get_post_meta(get_the_ID(), 'pyre_portfolio_category', true);
 		if($pcats && $pcats[0] == 0) {
@@ -103,7 +103,7 @@ get_header(); ?>
 		if(is_array($portfolio_taxs) && !empty($portfolio_taxs) && get_post_meta($post->ID, 'pyre_portfolio_filters', true) != 'no'):
 		?>
 		<ul class="portfolio-tabs clearfix">
-			<li class="active"><a data-filter="*" href="#"><?php echo __('All', 'Avada'); ?></a></li>
+			<li class="active"><a data-filter="*" href="#"><?php echo __('All', 'Zhane'); ?></a></li>
 			<?php foreach($portfolio_taxs as $portfolio_tax_slug => $portfolio_tax_name): ?>
 			<li><a data-filter=".<?php echo $portfolio_tax_slug; ?>" href="#"><?php echo $portfolio_tax_name; ?></a></li>
 			<?php endforeach; ?>
@@ -131,7 +131,7 @@ get_header(); ?>
 			<div class="portfolio-item <?php echo $item_classes; ?>">
 				<?php if(has_post_thumbnail()): ?>
 				<div class="image" aria-haspopup="true">
-					<?php if($smof_data['image_rollover']): ?>
+					<?php if($zdata['image_rollover']): ?>
 					<?php the_post_thumbnail('portfolio-four'); ?>
 					<?php else: ?>
 					<a href="<?php echo $permalink; ?>"><?php the_post_thumbnail('portfolio-four'); ?></a>
@@ -187,12 +187,12 @@ get_header(); ?>
 					if(get_post_meta($current_page_id, 'pyre_portfolio_excerpt', true)) {
 						$excerpt_length = get_post_meta($current_page_id, 'pyre_portfolio_excerpt', true);
 					} else {
-						$excerpt_length = $smof_data['excerpt_length_portfolio'];
+						$excerpt_length = $zdata['excerpt_length_portfolio'];
 					}
 					?>
 					<?php
-					if($smof_data['portfolio_content_length'] == 'Excerpt') {
-						$stripped_content = strip_shortcodes( tf_content( $excerpt_length, $smof_data['strip_html_excerpt'] ) );
+					if($zdata['portfolio_content_length'] == 'Excerpt') {
+						$stripped_content = strip_shortcodes( tf_content( $excerpt_length, $zdata['strip_html_excerpt'] ) );
 						echo $stripped_content;
 					} else {
 						the_content();
@@ -203,7 +203,7 @@ get_header(); ?>
 			</div>
 			<?php endif; endwhile; ?>
 		</div>
-		<?php themefusion_pagination($gallery->max_num_pages, $range = 2); ?>
+		<?php idh_pagination($gallery->max_num_pages, $range = 2); ?>
 		<?php endif; ?>
 	</div>
 	<?php if( $sidebar_exists == true ): ?>

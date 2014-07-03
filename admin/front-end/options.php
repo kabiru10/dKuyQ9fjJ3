@@ -27,11 +27,11 @@
 				<span><?php echo ('v'. THEMEVERSION); ?></span>
 			</div>
 			
-			<?php // Avada Edit ?>
+			<?php // Zhane Edit ?>
 			<div class="docs">
-				<a href="http://theme-fusion.com/support/documentation/avada-documentation/" target="_blank">Online Documentation</a><span class="link_sep">|</span><a href="http://theme-fusion.com/support/forum/" target="_blank">Support Forum</a>
+				<a href="http://theme-fusion.com/support/documentation/zhane-documentation/" target="_blank">Online Documentation</a><span class="link_sep">|</span><a href="http://theme-fusion.com/support/forum/" target="_blank">Support Forum</a>
 			</div>
-			<?php // End Avada Edit ?>
+			<?php // End Zhane Edit ?>
 		
 			<div id="js-warning">Warning- This options panel will not work properly without javascript!</div>
 			<div class="icon-option"></div>
@@ -81,6 +81,6 @@
 	</form>
 	
 	<div style="clear:both;"></div>
-	<?php // Avada Edit (killed SMOF notice) ?>
+	<?php // Zhane Edit (killed zindh notice) ?>
 
 </div><!--wrap-->

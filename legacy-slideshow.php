@@ -1,12 +1,12 @@
-			<?php global $smof_data; ?>
+			<?php global $zdata; ?>
 			<?php
 			$layout = '';
 			if(is_archive()) {
-				$layout = $smof_data['blog_archive_layout'];
+				$layout = $zdata['blog_archive_layout'];
 			} elseif(is_search()) {
-				$layout = $smof_data['search_layout'];
+				$layout = $zdata['search_layout'];
 			} else {
-				$layout = $smof_data['blog_layout'];
+				$layout = $zdata['blog_layout'];
 			}
 			?>
 			<?php if($layout != 'Grid' && $layout != 'Timeline'): ?>
@@ -90,13 +90,13 @@
 
 			<?php
 			if(is_archive()) {
-				if($smof_data['blog_archive_sidebar'] == 'None') {
+				if($zdata['blog_archive_sidebar'] == 'None') {
 					$size = 'full';
 				} else {
 					$size = 'blog-large';
 				}
 			} else {
-				if($smof_data['blog_full_width']) {
+				if($zdata['blog_full_width']) {
 					$size = 'full';
 				} else {
 					$size = 'blog-large';
@@ -129,7 +129,7 @@
 			<?php
 			$args = array(
 			    'post_type' => 'attachment',
-			    'numberposts' => $smof_data['posts_slideshow_number']-1,
+			    'numberposts' => $zdata['posts_slideshow_number']-1,
 			    'post_status' => null,
 			    'post_parent' => $post->ID,
 				'orderby' => 'menu_order',
@@ -154,7 +154,7 @@
 					<?php $attachment_data = wp_get_attachment_metadata(get_post_thumbnail_id()); ?>
 					<li>
 						<div class="image"  aria-haspopup="true">
-								<?php if($smof_data['image_rollover']): ?>
+								<?php if($zdata['image_rollover']): ?>
 								<?php the_post_thumbnail($size); ?>
 								<?php else: ?>
 								<a href="<?php echo $permalink; ?>"><?php the_post_thumbnail($size); ?></a>
@@ -176,7 +176,7 @@
 						</div>
 					</li>
 					<?php endif; ?>
-					<?php if($smof_data['posts_slideshow']): ?>
+					<?php if($zdata['posts_slideshow']): ?>
 					<?php foreach($attachments as $attachment): ?>
 					<?php $attachment_image = wp_get_attachment_image_src($attachment->ID, $size); ?>
 					<?php $full_image = wp_get_attachment_image_src($attachment->ID, 'full'); ?>
@@ -198,7 +198,7 @@
 			<?php
 			$args = array(
 			    'post_type' => 'attachment',
-			    'numberposts' => $smof_data['posts_slideshow_number']-1,
+			    'numberposts' => $zdata['posts_slideshow_number']-1,
 			    'post_status' => null,
 			    'post_parent' => $post->ID,
 				'orderby' => 'menu_order',
@@ -223,7 +223,7 @@
 					<?php $attachment_data = wp_get_attachment_metadata(get_post_thumbnail_id()); ?>
 					<li>
 						<div class="image">
-								<?php if($smof_data['image_rollover']): ?>
+								<?php if($zdata['image_rollover']): ?>
 								<?php the_post_thumbnail($size); ?>
 								<?php else: ?>
 								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail($size); ?></a>
@@ -238,7 +238,7 @@
 										}
 										?>
 										<a style="<?php echo $zoom_icon_css; ?>" class="icon gallery-icon" href="<?php echo $full_image[0]; ?>" rel="prettyPhoto[gallery<?php echo $post->ID; ?>]" title="<?php echo get_post_field('post_excerpt', get_post_thumbnail_id()); ?>"><img style="display:none;" alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>" />Gallery</a>
-										<?php if($smof_data['title_link_image_rollover']): ?>
+										<?php if($zdata['title_link_image_rollover']): ?>
 										<h3><a href="<?php echo $permalink; ?>"><?php the_title(); ?></a></h3>
 										<?php else: ?>
 										<h3><?php the_title(); ?></h3>
@@ -249,7 +249,7 @@
 						</div>
 					</li>
 					<?php endif; ?>
-					<?php if($smof_data['posts_slideshow']): ?>
+					<?php if($zdata['posts_slideshow']): ?>
 					<?php foreach($attachments as $attachment): ?>
 					<?php $attachment_image = wp_get_attachment_image_src($attachment->ID, 'blog-medium'); ?>
 					<?php $full_image = wp_get_attachment_image_src($attachment->ID, 'full'); ?>

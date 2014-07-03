@@ -101,12 +101,12 @@ $this->text(	'slide_link',
 				'Please enter your URL that will be used to link the full slide.'
 			);
 $this->textarea('button_1',
-				'Button #1<br/><a href="http://theme-fusion.com/knowledgebase/avada-shortcode-list/#buttons">Click here to view button option descriptions.</a>',
+				'Button #1<br/><a href="http://theme-fusion.com/knowledgebase/zhane-shortcode-list/#buttons">Click here to view button option descriptions.</a>',
 				'Adjust the button shortcode parameters for the first button.',
 				'[button link="" color="default" size="" type="" shape="" target="_self" title="" gradient_colors="|" gradient_hover_colors="|" accent_color="" accent_hover_color="" bevel_color="" border_width="1px" shadow="" icon="" icon_divider="yes" icon_position="left" modal="" animation_type="0" animation_direction="down" animation_speed="0.1" class="" id=""]Button Text[/button]'
 			);
 $this->textarea('button_2',
-				'Button #2<br/><a href="http://theme-fusion.com/knowledgebase/avada-shortcode-list/#buttons">Click here to view button option descriptions.</a>',
+				'Button #2<br/><a href="http://theme-fusion.com/knowledgebase/zhane-shortcode-list/#buttons">Click here to view button option descriptions.</a>',
 				'Adjust the button shortcode parameters for the second button.',
 				'[button link="" color="default" size="" type="" shape="" target="_self" title="" gradient_colors="|" gradient_hover_colors="|" accent_color="" accent_hover_color="" bevel_color="" border_width="1px" shadow="" icon="" icon_divider="yes" icon_position="left" modal="" animation_type="0" animation_direction="down" animation_speed="0.1" class="" id=""]Button Text[/button]'
 			);

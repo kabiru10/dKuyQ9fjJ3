@@ -14,7 +14,7 @@ class Recent_Works_Widget extends WP_Widget {
 
 		$control_ops = array('id_base' => 'recent_works-widget');
 
-		$this->WP_Widget('recent_works-widget', 'Avada: Recent Works', $widget_ops, $control_ops);
+		$this->WP_Widget('recent_works-widget', 'Zhane: Recent Works', $widget_ops, $control_ops);
 	}
 
 	function widget($args, $instance)
@@ -32,7 +32,7 @@ class Recent_Works_Widget extends WP_Widget {
 		<div class="recent-works-items clearfix">
 		<?php
 		$args = array(
-			'post_type' => 'avada_portfolio',
+			'post_type' => 'zhane_portfolio',
 			'posts_per_page' => $number,
 			'has_password' => false
 		);

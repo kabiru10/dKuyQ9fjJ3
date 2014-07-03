@@ -1,7 +1,7 @@
 {
-	"name": "avada",
+	"name": "zhane",
 	"version": "4.0.0",
-	"description": "Avada, WordPress Theme Framework.",
+	"description": "Zhane, WordPress Theme Framework.",
 	"main": "Gruntfile.js",
 	"directories": {
 		"test": "tests"
@@ -20,13 +20,13 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Theme-Fusion/Avada.git"
+		"url": "https://github.com/Theme-Fusion/Zhane.git"
 	},
 	"keywords": [
 		"wordpress"
 	],
-	"author": "ThemeFusion",
+	"author": "idh",
 	"bugs": {
-		"url": "https://github.com/Theme-Fusion/Avada/issues"
+		"url": "https://github.com/Theme-Fusion/Zhane/issues"
 	}
 }

@@ -7,7 +7,7 @@
  * Add any modifications necessary under a child theme.
  *
  * @package  Fusion/Template
- * @author   ThemeFusion
+ * @author   idh
  * @link     http://theme-fusion.com
  */
 

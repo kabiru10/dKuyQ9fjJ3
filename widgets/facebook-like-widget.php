@@ -14,7 +14,7 @@ class Facebook_Like_Widget extends WP_Widget {
 
 		$control_ops = array('id_base' => 'facebook-like-widget');
 
-		$this->WP_Widget('facebook-like-widget', 'Avada: Facebook Like Box', $widget_ops, $control_ops);
+		$this->WP_Widget('facebook-like-widget', 'Zhane: Facebook Like Box', $widget_ops, $control_ops);
 	}
 
 	function widget($args, $instance)

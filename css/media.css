@@ -64,13 +64,13 @@
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
-	.avada-container .columns {
+	.zhane-container .columns {
 		float:none;
 		width:100%;
 		margin-bottom:20px;
 	}
-	.avada-container .columns .col {float:left;}
-	.avada-container .col img{		
+	.zhane-container .columns .col {float:left;}
+	.zhane-container .col img{		
 		display:block;
 		margin:0 auto;
 	}
@@ -323,7 +323,7 @@
 
 	.post-content .rev_slider_wrapper{margin-left:-5px !important;}
 	body .rev_slider_wrapper .tparrows,body .rev_slider_wrapper:hover .tparrows{display:none !important;}
-	.ls-avada .ls-nav-prev,.ls-avada .ls-nav-next{display:none !important;}
+	.ls-zhane .ls-nav-prev,.ls-zhane .ls-nav-next{display:none !important;}
 
 	nav#nav,nav#sticky-nav{margin-right:0;}
 
@@ -417,9 +417,9 @@
 
 	.products li{width:225px;}
 	.products li,.catalog-ordering > ul,.catalog-ordering .order,#main .products li:nth-child(3n),#main .products li:nth-child(4n),#main .has-sidebar .products li,
-	.avada-myaccount-data .addresses .col-1, .avada-myaccount-data .addresses .col-2, .avada-customer-details .addresses .col-1, .avada-customer-details .addresses .col-2
+	.zhane-myaccount-data .addresses .col-1, .zhane-myaccount-data .addresses .col-2, .zhane-customer-details .addresses .col-1, .zhane-customer-details .addresses .col-2
 	{float:none!important;margin-left:auto !important;margin-right:auto !important;}
-	.avada-myaccount-data .addresses .col-1, .avada-myaccount-data .addresses .col-2, .avada-customer-details .addresses .col-1, .avada-customer-details .addresses .col-2{margin:0!important;width:100%;}
+	.zhane-myaccount-data .addresses .col-1, .zhane-myaccount-data .addresses .col-2, .zhane-customer-details .addresses .col-1, .zhane-customer-details .addresses .col-2{margin:0!important;width:100%;}
 	.catalog-ordering{margin-bottom:50px;}
 	.catalog-ordering .order{width:33px;}
 	.catalog-ordering > ul,.catalog-ordering .order{margin-bottom:10px;}
@@ -433,8 +433,8 @@
 	.woocommerce #customer_login .login .form-row, .woocommerce #customer_login .login .lost_password{float:none;}
 	.woocommerce #customer_login .login .inline, .woocommerce #customer_login .login .lost_password{display:block;margin-left:0;}
 
-	.avada-myaccount-data .my_account_orders .order-number{padding-right:8px;}
-	.avada-myaccount-data .my_account_orders .order-actions{padding-left:8px;}
+	.zhane-myaccount-data .my_account_orders .order-number{padding-right:8px;}
+	.zhane-myaccount-data .my_account_orders .order-actions{padding-left:8px;}
 	
 	.shop_table .product-name{width:35%;}
 
@@ -564,13 +564,13 @@
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
-	.avada-container .columns {
+	.zhane-container .columns {
 		float:none;
 		width:100%;
 		margin-bottom:20px;
 	}
-	.avada-container .columns .col {float:left;}
-	.avada-container .col img{		
+	.zhane-container .columns .col {float:left;}
+	.zhane-container .col img{		
 		display:block;
 		margin:0 auto;
 	}
@@ -780,7 +780,7 @@
 
 	.post-content .rev_slider_wrapper{margin-left:-5px !important;}
 	body .rev_slider_wrapper .tparrows, body .rev_slider_wrapper:hover .tparrows{display:none !important;}
-	.ls-avada .ls-nav-prev,.ls-avada .ls-nav-next{display:none !important;}
+	.ls-zhane .ls-nav-prev,.ls-zhane .ls-nav-next{display:none !important;}
 
 	nav#nav,nav#sticky-nav{margin-right:0;}
 
@@ -962,7 +962,7 @@
 	
 	body #header.sticky-header .logo{float: left !important;}	
 	
-	.avada-container .columns .col,
+	.zhane-container .columns .col,
 	.footer-area .columns .col,
 	#slidingbar-area .columns .col{
 		float:none;
@@ -1011,7 +1011,7 @@
 	.post-content .rev_slider_wrapper{margin-left:-5px !important;}
 
 	body .rev_slider_wrapper .tparrows,body .rev_slider_wrapper:hover .tparrows{display:none !important;}
-	.ls-avada .ls-nav-prev,.ls-avada .ls-nav-next{display:none !important;}
+	.ls-zhane .ls-nav-prev,.ls-zhane .ls-nav-next{display:none !important;}
 
 	.rev_slider .button,.ls-container .button{
 		min-height: 0 !important;

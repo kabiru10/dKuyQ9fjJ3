@@ -21,9 +21,9 @@
 
 			<?php endif; ?>
 
-			<p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Avada' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
-			<p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
-			<p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Avada' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
+			<p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Zhane' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
+			<p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+			<p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Zhane' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
 		</div>
 	</div><!-- #bbp-author-topics-started -->
 

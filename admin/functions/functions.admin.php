@@ -1,9 +1,9 @@
 <?php
 /**
- * SMOF Admin
+ * zindh Admin
  *
  * @package     WordPress
- * @subpackage  SMOF
+ * @subpackage  zindh
  * @since       1.4.0
  * @author      Syamil MJ
  */
@@ -99,7 +99,7 @@ function of_get_options($key = null, $data = null) {
  */
 
 function of_save_options($data, $key = null) {
-	global $smof_data, $theme_name;
+	global $zdata, $theme_name;
     if (empty($data)) {
         return;
     }
@@ -158,5 +158,5 @@ function of_save_options($data, $key = null) {
  */
 
 $data = of_get_options();
-$smof_data = of_get_options();
-$data = $smof_data;
+$zdata = of_get_options();
+$data = $zdata;

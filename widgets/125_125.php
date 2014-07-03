@@ -14,7 +14,7 @@ class Ad_125_125_Widget extends WP_Widget {
 
 		$control_ops = array('id_base' => 'ad_125_125-widget');
 
-		$this->WP_Widget('ad_125_125-widget', 'Avada: 125x125 Ads', $widget_ops, $control_ops);
+		$this->WP_Widget('ad_125_125-widget', 'Zhane: 125x125 Ads', $widget_ops, $control_ops);
 	}
 
 	function widget($args, $instance)

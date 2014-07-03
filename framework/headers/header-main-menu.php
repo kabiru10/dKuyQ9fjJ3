@@ -1,9 +1,9 @@
-<?php global $smof_data, $woocommerce, $main_menu; ?>
-<?php if(!$smof_data['ubermenu']): ?>
+<?php global $zdata, $woocommerce, $main_menu; ?>
+<?php if(!$zdata['ubermenu']): ?>
 <ul class="navigation menu fusion-navbar-nav">
 <?php endif; ?>
 	<?php
-	if(!$smof_data['ubermenu']) {
+	if(!$zdata['ubermenu']) {
 		echo $main_menu;
 	} else {
 		if( function_exists( 'uberMenu_direct' ) ) {
@@ -11,27 +11,27 @@
 		}
 	}
 	?>
-	<?php if(class_exists('Woocommerce') && !$smof_data['ubermenu']): ?>
-	<?php if($smof_data['woocommerce_acc_link_main_nav']): ?>
+	<?php if(class_exists('Woocommerce') && !$zdata['ubermenu']): ?>
+	<?php if($zdata['woocommerce_acc_link_main_nav']): ?>
 	<li class="my-account">
-		<a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>" class="my-account-link"><?php _e('My Account', 'Avada'); ?></a>
+		<a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>" class="my-account-link"><?php _e('My Account', 'Zhane'); ?></a>
 		<?php if(!is_user_logged_in()): ?>
 		<div class="login-box">
 			<?php if( isset($_GET['login']) && $_GET['login']=='failed'): ?>
-				<p class="woo-login-error"><?php echo _e( 'Login failed, please try again','Avada' ); ?></p>
+				<p class="woo-login-error"><?php echo _e( 'Login failed, please try again','Zhane' ); ?></p>
 			<?php endif; ?>
 			<form action="<?php echo wp_login_url(); ?>" name="loginform" method="post">
 				<p>
-					<input type="text" class="input-text" name="log" id="username" value="" placeholder="<?php echo __('Username', 'Avada'); ?>" />
+					<input type="text" class="input-text" name="log" id="username" value="" placeholder="<?php echo __('Username', 'Zhane'); ?>" />
 				</p>
 				<p>
-					<input type="password" class="input-text" name="pwd" id="password" value="" placeholder="<?php echo __('Password', 'Avada'); ?>" />
+					<input type="password" class="input-text" name="pwd" id="password" value="" placeholder="<?php echo __('Password', 'Zhane'); ?>" />
 				</p>
 				<p class="forgetmenot">
-					<label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"> <?php _e('Remember Me', 'Avada'); ?></label>
+					<label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"> <?php _e('Remember Me', 'Zhane'); ?></label>
 				</p>
 					<p class="submit">
-					<input type="submit" name="wp-submit" id="wp-submit" class="button small default comment-submit" value="<?php _e('Log In', 'Avada'); ?>">
+					<input type="submit" name="wp-submit" id="wp-submit" class="button small default comment-submit" value="<?php _e('Log In', 'Zhane'); ?>">
 					<input type="hidden" name="redirect_to" value="<?php if(isset($_SERVER['HTTP_REFERER'])): echo $_SERVER['HTTP_REFERER']; endif; ?>">
 					<input type="hidden" name="testcookie" value="1">
 				</p>
@@ -40,12 +40,12 @@
 		</div>
 		<?php else: ?>
 		<ul class="sub-menu">
-			<li><a href="<?php echo wp_logout_url( get_permalink( woocommerce_get_page_id( 'myaccount' ) ) ); ?>"><?php _e('Logout', 'Avada'); ?></a></li>
+			<li><a href="<?php echo wp_logout_url( get_permalink( woocommerce_get_page_id( 'myaccount' ) ) ); ?>"><?php _e('Logout', 'Zhane'); ?></a></li>
 		</ul>
 		<?php endif; ?>
 	</li>
 	<?php endif; ?>
-	<?php if($smof_data['woocommerce_cart_link_main_nav']): ?>
+	<?php if($zdata['woocommerce_cart_link_main_nav']): ?>
 	<li class="cart">
 		<?php if(!$woocommerce->cart->cart_contents_count): ?>
 		<a class="my-cart-link" href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"></a>
@@ -65,15 +65,15 @@
 			</div>
 			<?php endforeach; ?>
 			<div class="cart-checkout">
-				<div class="cart-link"><a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('View Cart', 'Avada'); ?></a></div>
-				<div class="checkout-link"><a href="<?php echo get_permalink(get_option('woocommerce_checkout_page_id')); ?>"><?php _e('Checkout', 'Avada'); ?></a></div>
+				<div class="cart-link"><a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('View Cart', 'Zhane'); ?></a></div>
+				<div class="checkout-link"><a href="<?php echo get_permalink(get_option('woocommerce_checkout_page_id')); ?>"><?php _e('Checkout', 'Zhane'); ?></a></div>
 			</div>
 		</div>
 		<?php endif; ?>
 	</li>
 	<?php endif; ?>
 	<?php endif; ?>
-	<?php if($smof_data['main_nav_search_icon'] && !$smof_data['ubermenu']): ?>
+	<?php if($zdata['main_nav_search_icon'] && !$zdata['ubermenu']): ?>
 	<li class="main-nav-search">
 		<a id="main-nav-search-link" class="search-link"></a>
 		<div id="main-nav-search-form" class="main-nav-search-form">
@@ -90,6 +90,6 @@
 		</div>
 	</li>
 	<?php endif; ?>
-<?php if(!$smof_data['ubermenu']): ?>
+<?php if(!$zdata['ubermenu']): ?>
 </ul>
 <?php endif; ?>

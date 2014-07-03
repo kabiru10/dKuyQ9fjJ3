@@ -1,9 +1,9 @@
 <?php 
 /**
- * SMOF Options Machine Class
+ * zindh Options Machine Class
  *
  * @package     WordPress
- * @subpackage  SMOF
+ * @subpackage  zindh
  * @since       1.0.0
  * @author      Syamil MJ
  */
@@ -64,9 +64,9 @@ class Options_Machine {
 	 * @return array
 	 */
 	public static function optionsframework_machine($options) {
-		global $smof_output;
-	    $smof_data = of_get_options();
-		$data = $smof_data;
+		global $zindh_output;
+	    $zdata = of_get_options();
+		$data = $zdata;
 		
 		$defaults = array();   
 	    $counter = 0;
@@ -75,10 +75,10 @@ class Options_Machine {
 		
 		do_action('optionsframework_machine_before', array(
 				'options'	=> $options,
-				'smof_data'	=> $smof_data,
+				'zdata'	=> $zdata,
 			));
 
-		$output .= $smof_output;
+		$output .= $zindh_output;
 		
 		foreach ($options as $value) {
 			
@@ -102,7 +102,7 @@ class Options_Machine {
 			}
 			
 			/* condition start */
-			if(!empty($smof_data) || !empty($data)){
+			if(!empty($zdata) || !empty($data)){
 			
 			 if( $value['type'] == 'accordion' && $value['position'] == 'start' ) {
 			 	$output .= '<div class="accordion">';
@@ -116,7 +116,7 @@ class Options_Machine {
 				//hide items in checkbox group
 				$fold='';
 				if (array_key_exists("fold",$value)) {
-					if (isset($smof_data[$value['fold']]) && $smof_data[$value['fold']]) {
+					if (isset($zdata[$value['fold']]) && $zdata[$value['fold']]) {
 						$fold="f_".$value['fold']." ";
 					} else {
 						$fold="f_".$value['fold']." temphide ";
@@ -134,7 +134,7 @@ class Options_Machine {
 			 //End Heading
 
 /*
-			if (!isset($smof_data[$value['id']]) && $value['type'] != "heading")
+			if (!isset($zdata[$value['id']]) && $value['type'] != "heading")
 				continue;
 */			
 			//switch statement to handle various options type                              
@@ -143,7 +143,7 @@ class Options_Machine {
 				//text input
 				case 'text':
 					$t_value = '';
-					$t_value = stripslashes($smof_data[$value['id']]);
+					$t_value = stripslashes($zdata[$value['id']]);
 					
 					$mini ='';
 					if(!isset($value['mod'])) $value['mod'] = '';
@@ -164,7 +164,7 @@ class Options_Machine {
 						$theValue = $option;
 						if (!is_numeric($select_ID))
 							$theValue = $select_ID;
-						$output .= '<option id="' . $select_ID . '" value="'.$theValue.'" ' . selected($smof_data[$value['id']], $option, false) . ' />'.$option.'</option>';	 
+						$output .= '<option id="' . $select_ID . '" value="'.$theValue.'" ' . selected($zdata[$value['id']], $option, false) . ' />'.$option.'</option>';	 
 					 } 
 					$output .= '</select></div>';
 				break;
@@ -182,34 +182,34 @@ class Options_Machine {
 							} 
 						}
 						
-						$ta_value = stripslashes($smof_data[$value['id']]);			
+						$ta_value = stripslashes($zdata[$value['id']]);			
 						$output .= '<textarea class="of-input" name="'.$value['id'].'" id="'. $value['id'] .'" cols="'. $cols .'" rows="8">'.$ta_value.'</textarea>';		
 				break;
 				
 				//radiobox option
 				case "radio":
-					$checked = (isset($smof_data[$value['id']])) ? checked($smof_data[$value['id']], $option, false) : '';
+					$checked = (isset($zdata[$value['id']])) ? checked($zdata[$value['id']], $option, false) : '';
 					 foreach($value['options'] as $option=>$name) {
-						$output .= '<input class="of-input of-radio" name="'.$value['id'].'" type="radio" value="'.$option.'" ' . checked($smof_data[$value['id']], $option, false) . ' /><label class="radio">'.$name.'</label><br/>';				
+						$output .= '<input class="of-input of-radio" name="'.$value['id'].'" type="radio" value="'.$option.'" ' . checked($zdata[$value['id']], $option, false) . ' /><label class="radio">'.$name.'</label><br/>';				
 					}
 				break;
 				
 				//checkbox option
 				case 'checkbox':
-					if (!isset($smof_data[$value['id']])) {
-						$smof_data[$value['id']] = 0;
+					if (!isset($zdata[$value['id']])) {
+						$zdata[$value['id']] = 0;
 					}
 					
 					$fold = '';
 					if (array_key_exists("folds",$value)) $fold="fld ";
 		
 					$output .= '<input type="hidden" class="'.$fold.'checkbox of-input" name="'.$value['id'].'" id="'. $value['id'] .'" value="0"/>';
-					$output .= '<input type="checkbox" class="'.$fold.'checkbox of-input" name="'.$value['id'].'" id="'. $value['id'] .'" value="1" '. checked($smof_data[$value['id']], 1, false) .' />';
+					$output .= '<input type="checkbox" class="'.$fold.'checkbox of-input" name="'.$value['id'].'" id="'. $value['id'] .'" value="1" '. checked($zdata[$value['id']], 1, false) .' />';
 				break;
 				
 				//multiple checkbox option
 				case 'multicheck': 			
-					(isset($smof_data[$value['id']]))? $multi_stored = $smof_data[$value['id']] : $multi_stored="";
+					(isset($zdata[$value['id']]))? $multi_stored = $zdata[$value['id']] : $multi_stored="";
 								
 					foreach ($value['options'] as $key => $option) {
 						if (!isset($multi_stored[$key])) {$multi_stored[$key] = '';}
@@ -222,17 +222,17 @@ class Options_Machine {
 				case "color":
 					$default_color = '';
 					if ( isset($value['std']) ) {
-						if ( $smof_data[$value['id']] !=  $value['std'] )
+						if ( $zdata[$value['id']] !=  $value['std'] )
 							$default_color = ' data-default-color="' .$value['std'] . '" ';
 					}
-					$output .= '<input name="' . $value['id'] . '" id="' . $value['id'] . '" class="of-color"  type="text" value="' . $smof_data[$value['id']] . '"' . $default_color .' />';
+					$output .= '<input name="' . $value['id'] . '" id="' . $value['id'] . '" class="of-color"  type="text" value="' . $zdata[$value['id']] . '"' . $default_color .' />';
 		 	
 				break;
 
 				//typography option	
 				case 'typography':
 				
-					$typography_stored = isset($smof_data[$value['id']]) ? $smof_data[$value['id']] : $value['std'];
+					$typography_stored = isset($zdata[$value['id']]) ? $zdata[$value['id']] : $value['std'];
 					
 					/* Font Size */
 					
@@ -316,7 +316,7 @@ class Options_Machine {
 				case 'border':
 						
 					/* Border Width */
-					$border_stored = $smof_data[$value['id']];
+					$border_stored = $zdata[$value['id']];
 					
 					$output .= '<div class="select_wrapper border-width">';
 					$output .= '<select class="of-border of-border-width select" name="'.$value['id'].'[width]" id="'. $value['id'].'_width">';
@@ -350,7 +350,7 @@ class Options_Machine {
 				
 					$i = 0;
 					
-					$select_value = (isset($smof_data[$value['id']])) ? $smof_data[$value['id']] : '';
+					$select_value = (isset($zdata[$value['id']])) ? $zdata[$value['id']] : '';
 					
 					foreach ($value['options'] as $key => $option) 
 					{ 
@@ -388,13 +388,13 @@ class Options_Machine {
 					$output .= '<img src="'.$src.'">';
 				break;
 				
-				// Avada edit
+				// Zhane edit
 				//display a button with url
 				case 'button':
 					$src = $value['std'];
 					$output .= '<button href="' . $src . '" class="button-primary" type="button">' . $value['btntext'] . '</button>';
 				break;
-				// End Avada edit
+				// End Zhane edit
 				
 				//tab heading
 				case 'heading':
@@ -419,7 +419,7 @@ class Options_Machine {
 				//drag & drop slide manager
 				case 'slider':
 					$output .= '<div class="slider"><ul id="'.$value['id'].'">';
-					$slides = $smof_data[$value['id']];
+					$slides = $zdata[$value['id']];
 					$count = count($slides);
 					if ($count < 2) {
 						$oldorder = 1;
@@ -519,7 +519,7 @@ class Options_Machine {
 				case 'tiles':
 					
 					$i = 0;
-					$select_value = isset($smof_data[$value['id']]) && !empty($smof_data[$value['id']]) ? $smof_data[$value['id']] : '';
+					$select_value = isset($zdata[$value['id']]) && !empty($zdata[$value['id']]) ? $zdata[$value['id']] : '';
 					if (is_array($value['options'])) {
 						foreach ($value['options'] as $key => $option) { 
 						$i++;
@@ -564,7 +564,7 @@ class Options_Machine {
 				case 'transfer':
 				
 					$instructions = $value['desc'];
-					$output .= '<textarea id="export_data" rows="8">'.base64_encode(serialize($smof_data)) /* 100% safe - ignore theme check nag */ .'</textarea>'."\n";
+					$output .= '<textarea id="export_data" rows="8">'.base64_encode(serialize($zdata)) /* 100% safe - ignore theme check nag */ .'</textarea>'."\n";
 					$output .= '<a href="#" id="of_import_button" class="button" title="Restore Options">Import Options</a>';
 				
 				break;
@@ -574,7 +574,7 @@ class Options_Machine {
 					$output .= '<div class="select_wrapper">';
 					$output .= '<select class="select of-input google_font_select" name="'.$value['id'].'" id="'. $value['id'] .'">';
 					foreach ($value['options'] as $select_key => $option) {
-						$output .= '<option value="'.$select_key.'" ' . selected((isset($smof_data[$value['id']]))? $smof_data[$value['id']] : "", $option, false) . ' />'.$option.'</option>';
+						$output .= '<option value="'.$select_key.'" ' . selected((isset($zdata[$value['id']]))? $zdata[$value['id']] : "", $option, false) . ' />'.$option.'</option>';
 					} 
 					$output .= '</select></div>';
 					
@@ -596,7 +596,7 @@ class Options_Machine {
 				case 'sliderui':
 					$s_val = $s_min = $s_max = $s_step = $s_edit = '';//no errors, please
 					
-					$s_val  = stripslashes($smof_data[$value['id']]);
+					$s_val  = stripslashes($zdata[$value['id']]);
 					
 					if(!isset($value['min'])){ $s_min  = '0'; }else{ $s_min = $value['min']; }
 					if(!isset($value['max'])){ $s_max  = $s_min + 1; }else{ $s_max = $value['max']; }
@@ -617,15 +617,15 @@ class Options_Machine {
 					
 					//html output
 					$output .= '<input type="text" name="'.$value['id'].'" id="'.$value['id'].'" value="'. $s_val .'" class="mini" '. $s_edit .' />';
-					$output .= '<div id="'.$value['id'].'-slider" class="smof_sliderui" style="margin-left: 7px;" '. $s_data .'></div>';
+					$output .= '<div id="'.$value['id'].'-slider" class="zindh_sliderui" style="margin-left: 7px;" '. $s_data .'></div>';
 					
 				break;
 				
 				
 				//Switch option
 				case 'switch':
-					if (!isset($smof_data[$value['id']])) {
-						$smof_data[$value['id']] = 0;
+					if (!isset($zdata[$value['id']])) {
+						$zdata[$value['id']] = 0;
 					}
 					
 					$fold = '';
@@ -634,7 +634,7 @@ class Options_Machine {
 					$cb_enabled = $cb_disabled = '';//no errors, please
 					
 					//Get selected
-					if ($smof_data[$value['id']] == 1){
+					if ($zdata[$value['id']] == 1){
 						$cb_enabled = ' selected';
 						$cb_disabled = '';
 					}else{
@@ -661,7 +661,7 @@ class Options_Machine {
 						$output .= '<label class="'.$fold.'cb-disable'. $cb_disabled .'" data-id="'.$value['id'].'"><span>'. $off .'</span></label>';
 						
 						$output .= '<input type="hidden" class="'.$fold.'checkbox of-input" name="'.$value['id'].'" id="'. $value['id'] .'" value="0"/>';
-						$output .= '<input type="checkbox" id="'.$value['id'].'" class="'.$fold.'checkbox of-input main_checkbox" name="'.$value['id'].'"  value="1" '. checked($smof_data[$value['id']], 1, false) .' />';
+						$output .= '<input type="checkbox" id="'.$value['id'].'" class="'.$fold.'checkbox of-input main_checkbox" name="'.$value['id'].'"  value="1" '. checked($zdata[$value['id']], 1, false) .' />';
 						
 					$output .= '</p>';
 					
@@ -674,8 +674,8 @@ class Options_Machine {
 					if(!isset($value['mod'])) $value['mod'] = '';
 					
 					$u_val = '';
-					if($smof_data[$value['id']]){
-						$u_val = stripslashes($smof_data[$value['id']]);
+					if($zdata[$value['id']]){
+						$u_val = stripslashes($zdata[$value['id']]);
 					}
 
 					$output .= Options_Machine::optionsframework_media_uploader_function($value['id'],$u_val, $value['mod']);
@@ -686,8 +686,8 @@ class Options_Machine {
 
 					$output .= '<ul class="fusion-sortable">';
 					
-					if( isset( $smof_data[$value['id']] ) ) {
-						$s_value = $smof_data[$value['id']];
+					if( isset( $zdata[$value['id']] ) ) {
+						$s_value = $zdata[$value['id']];
 						if( $s_value ) {
 							$s_order = explode(',', $s_value);
 						}
@@ -705,7 +705,7 @@ class Options_Machine {
 					if( isset( $s_order ) && $s_order && is_array( $s_order ) ) {
 						foreach( $s_order as $key => $field_order ) {
 							$field_order_number = str_replace( $value['id'] . '_', '', $field_order );
-							$find_the_field = $smof_data[$value['id'] . '_' . $field_order_number];
+							$find_the_field = $zdata[$value['id'] . '_' . $field_order_number];
 							$sorted_fields[] = $default_array[$find_the_field];
 							$named_sorted_fields[$sorted_fields[$key]['id']] = $default_array[$find_the_field];
 						}
@@ -728,7 +728,7 @@ class Options_Machine {
 						//hide items in checkbox group
 						$fold='';
 						if (array_key_exists("fold",$field)) {
-							if (isset($smof_data[$field['fold']]) && $smof_data[$field['fold']]) {
+							if (isset($zdata[$field['fold']]) && $zdata[$field['fold']]) {
 								$fold="f_".$field['fold']." ";
 							} else {
 								$fold="f_".$field['fold']." temphide ";
@@ -744,8 +744,8 @@ class Options_Machine {
 
 						if( $field['type'] == 'text') {
 							$t_value = '';
-							if( isset( $smof_data[$field['id']] ) && $smof_data[$field['id']] ) {
-								$t_value = stripslashes($smof_data[$field['id']]);
+							if( isset( $zdata[$field['id']] ) && $zdata[$field['id']] ) {
+								$t_value = stripslashes($zdata[$field['id']]);
 							} else {
 								$t_value = $field['std'];
 							}
@@ -778,14 +778,14 @@ class Options_Machine {
 
 			do_action('optionsframework_machine_loop', array(
 					'options'	=> $options,
-					'smof_data'	=> $smof_data,
+					'zdata'	=> $zdata,
 					'defaults'	=> $defaults,
 					'counter'	=> $counter,
 					'menu'		=> $menu,
 					'output'	=> $output,
 					'value'		=> $value
 				));
-			$output .= $smof_output;
+			$output .= $zindh_output;
 			
 			//description of each option
 			if ( $value['type'] != 'heading' ) { 
@@ -808,14 +808,14 @@ class Options_Machine {
 
 	    do_action('optionsframework_machine_after', array(
 					'options'		=> $options,
-					'smof_data'		=> $smof_data,
+					'zdata'		=> $zdata,
 					'defaults'		=> $defaults,
 					'counter'		=> $counter,
 					'menu'			=> $menu,
 					'output'		=> $output,
 					'value'			=> $value
 				));
-	    $output .= $smof_output;
+	    $output .= $zindh_output;
 	    
 	    return array($output,$menu,$defaults);
 	    
@@ -833,10 +833,10 @@ class Options_Machine {
 	 * @return string
 	 */
 	public static function optionsframework_media_uploader_function($id,$std,$mod){
-		global $smof_data;
+		global $zdata;
 		
 		$uploader = '';
-	    $upload = $smof_data[$id];
+	    $upload = $zdata[$id];
 		$hide = '';
 		
 		if ($mod == "min") {$hide ='hide';}
@@ -888,11 +888,11 @@ class Options_Machine {
 	public static function optionsframework_slider_function($id,$std,$oldorder,$order){
 		
 	    $data = of_get_options();
-	    $smof_data = of_get_options();
+	    $zdata = of_get_options();
 		
 		$slider = '';
 		$slide = array();
-	    $slide = $smof_data[$id];
+	    $slide = $zdata[$id];
 		
 	    if (isset($slide[$oldorder])) { $val = $slide[$oldorder]; } else {$val = $std;}
 		

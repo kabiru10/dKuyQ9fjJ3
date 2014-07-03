@@ -14,7 +14,7 @@ class Tweets_Widget extends WP_Widget {
 
 		$control_ops = array('id_base' => 'tweets-widget');
 
-		$this->WP_Widget('tweets-widget', 'Avada: Twitter', $widget_ops, $control_ops);
+		$this->WP_Widget('tweets-widget', 'Zhane: Twitter', $widget_ops, $control_ops);
 	}
 
 	function widget($args, $instance)
@@ -127,11 +127,11 @@ class Tweets_Widget extends WP_Widget {
 	}
 
 	function ago( $time ) {
-		$periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+		$periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 		$lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 		$now = time();
 		$difference = $now - $time;
-		$tense = __( 'ago', 'Avada' );
+		$tense = __( 'ago', 'Zhane' );
 
 		for( $j = 0; $difference >= $lengths[$j] && $j < count( $lengths )-1; $j++ ) {
 			$difference /= $lengths[$j];
@@ -140,7 +140,7 @@ class Tweets_Widget extends WP_Widget {
 		$difference = round( $difference );
 
 		if( $difference != 1 ) {
-			$periods[$j] .= __( 's', 'Avada' );
+			$periods[$j] .= __( 's', 'Zhane' );
 		}
 
 	   return sprintf('%s %s %s', $difference, $periods[$j], $tense );

@@ -3,7 +3,7 @@
  * Functions Load
  *
  * @package     WordPress
- * @subpackage  SMOF
+ * @subpackage  zindh
  * @since       1.4.0
  * @author      Syamil MJ
  */

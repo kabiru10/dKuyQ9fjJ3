@@ -19,10 +19,10 @@ elseif(get_post_meta($pageID, 'pyre_sidebar_position', true) == 'left') {
 	$content_css = 'float:left;';
 	$sidebar_css = 'float:right;';
 } elseif(get_post_meta($pageID, 'pyre_sidebar_position', true) == 'default') {
-	if($smof_data['default_sidebar_pos'] == 'Left') {
+	if($zdata['default_sidebar_pos'] == 'Left') {
 		$content_css = 'float:right;';
 		$sidebar_css = 'float:left;';
-	} elseif($smof_data['default_sidebar_pos'] == 'Right') {
+	} elseif($zdata['default_sidebar_pos'] == 'Right') {
 		$content_css = 'float:left;';
 		$sidebar_css = 'float:right;';
 	}
