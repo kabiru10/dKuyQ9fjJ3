@@ -196,7 +196,7 @@ if( ! class_exists( 'FusionTemplateWoo' ) ) {
 		}
 
 		function after_shop_item_buttons() {
-			echo '<a href="' . get_permalink() . '" class="show_details_button">' . __( 'Details', 'Avada' ) . '</a></div></div>';
+			echo '<a href="' . get_permalink() . '" class="show_details_button">' . __( 'Details', 'Zhane' ) . '</a></div></div>';
 		}
 
 		function add_product_border() {
@@ -210,13 +210,13 @@ new FusionTemplateWoo();
 
 global $smof_data;
 
-add_filter( 'get_product_search_form' , 'avada_product_search_form' );
+add_filter( 'get_product_search_form' , 'zhane_product_search_form' );
 
-function avada_product_search_form( $form )
+function zhane_product_search_form( $form )
 {
 	$form = '<form role="search" method="get" id="searchform" action="' . esc_url( home_url( '/' ) ) . '">
 	<div>
-	<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="' . __( 'Search...', 'Avada' ) . '" />
+	<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="' . __( 'Search...', 'Zhane' ) . '" />
 	<input type="hidden" name="post_type" value="product" />
 	</div>
 	</form>';
@@ -227,12 +227,12 @@ function avada_product_search_form( $form )
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 
-if( ! $smof_data['woocommerce_avada_ordering'] ) {
+if( ! $smof_data['woocommerce_zhane_ordering'] ) {
 	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 
-	add_action('woocommerce_before_shop_loop', 'avada_woocommerce_catalog_ordering', 30);
+	add_action('woocommerce_before_shop_loop', 'zhane_woocommerce_catalog_ordering', 30);
 }
-function avada_woocommerce_catalog_ordering() {
+function zhane_woocommerce_catalog_ordering() {
 	global $smof_data;
 
 	parse_str($_SERVER['QUERY_STRING'], $params);
@@ -282,14 +282,14 @@ function avada_woocommerce_catalog_ordering() {
 
 	$html .= '<ul class="orderby order-dropdown">';
 	$html .= '<li>';
-	$html .= '<span class="current-li"><span class="current-li-content"><a aria-haspopup="true">'.__('Sort by', 'Avada').' <strong>'.__('Default Order', 'Avada').'</strong></a></span></span>';
+	$html .= '<span class="current-li"><span class="current-li-content"><a aria-haspopup="true">'.__('Sort by', 'Zhane').' <strong>'.__('Default Order', 'Zhane').'</strong></a></span></span>';
 	$html .= '<ul>';
-	$html .= '<li class="'.(($pob == 'default') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'default').'">'.__('Sort by', 'Avada').' <strong>'.__('Default Order', 'Avada').'</strong></a></li>';
-	$html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Avada').' <strong>'.__('Name', 'Avada').'</strong></a></li>';
-	$html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Avada').' <strong>'.__('Price', 'Avada').'</strong></a></li>';
-	$html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Avada').' <strong>'.__('Date', 'Avada').'</strong></a></li>';
-	$html .= '<li class="'.(($pob == 'popularity') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'popularity').'">'.__('Sort by', 'Avada').' <strong>'.__('Popularity', 'Avada').'</strong></a></li>';
-	$html .= '<li class="'.(($pob == 'rating') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'rating').'">'.__('Sort by', 'Avada').' <strong>'.__('Rating', 'Avada').'</strong></a></li>';
+	$html .= '<li class="'.(($pob == 'default') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'default').'">'.__('Sort by', 'Zhane').' <strong>'.__('Default Order', 'Zhane').'</strong></a></li>';
+	$html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Zhane').' <strong>'.__('Name', 'Zhane').'</strong></a></li>';
+	$html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Zhane').' <strong>'.__('Price', 'Zhane').'</strong></a></li>';
+	$html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Zhane').' <strong>'.__('Date', 'Zhane').'</strong></a></li>';
+	$html .= '<li class="'.(($pob == 'popularity') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'popularity').'">'.__('Sort by', 'Zhane').' <strong>'.__('Popularity', 'Zhane').'</strong></a></li>';
+	$html .= '<li class="'.(($pob == 'rating') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'rating').'">'.__('Sort by', 'Zhane').' <strong>'.__('Rating', 'Zhane').'</strong></a></li>';
 	$html .= '</ul>';
 	$html .= '</li>';
 	$html .= '</ul>';
@@ -308,11 +308,11 @@ function avada_woocommerce_catalog_ordering() {
 
 	$html .= '<ul class="sort-count order-dropdown">';
 	$html .= '<li>';
-	$html .= '<span class="current-li"><a aria-haspopup="true">'.__('Show', 'Avada').' <strong>'.$per_page.' '.__(' Products', 'Avada').'</strong></a></span>';
+	$html .= '<span class="current-li"><a aria-haspopup="true">'.__('Show', 'Zhane').' <strong>'.$per_page.' '.__(' Products', 'Zhane').'</strong></a></span>';
 	$html .= '<ul>';
-	$html .= '<li class="'.(($pc == $per_page) ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_count', $per_page).'">'.__('Show', 'Avada').' <strong>'.$per_page.' '.__('Products', 'Avada').'</strong></a></li>';
-	$html .= '<li class="'.(($pc == $per_page*2) ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_count', $per_page*2).'">'.__('Show', 'Avada').' <strong>'.($per_page*2).' '.__('Products', 'Avada').'</strong></a></li>';
-	$html .= '<li class="'.(($pc == $per_page*3) ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_count', $per_page*3).'">'.__('Show', 'Avada').' <strong>'.($per_page*3).' '.__('Products', 'Avada').'</strong></a></li>';
+	$html .= '<li class="'.(($pc == $per_page) ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_count', $per_page).'">'.__('Show', 'Zhane').' <strong>'.$per_page.' '.__('Products', 'Zhane').'</strong></a></li>';
+	$html .= '<li class="'.(($pc == $per_page*2) ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_count', $per_page*2).'">'.__('Show', 'Zhane').' <strong>'.($per_page*2).' '.__('Products', 'Zhane').'</strong></a></li>';
+	$html .= '<li class="'.(($pc == $per_page*3) ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_count', $per_page*3).'">'.__('Show', 'Zhane').' <strong>'.($per_page*3).' '.__('Products', 'Zhane').'</strong></a></li>';
 	$html .= '</ul>';
 	$html .= '</li>';
 	$html .= '</ul>';
@@ -321,10 +321,10 @@ function avada_woocommerce_catalog_ordering() {
 	echo $html;
 }
 
-if( ! $smof_data['woocommerce_avada_ordering'] ) {
-	add_action('woocommerce_get_catalog_ordering_args', 'avada_woocommerce_get_catalog_ordering_args', 20);
+if( ! $smof_data['woocommerce_zhane_ordering'] ) {
+	add_action('woocommerce_get_catalog_ordering_args', 'zhane_woocommerce_get_catalog_ordering_args', 20);
 }
-function avada_woocommerce_get_catalog_ordering_args($args)
+function zhane_woocommerce_get_catalog_ordering_args($args)
 {
 	global $woocommerce;
 
@@ -425,8 +425,8 @@ function fusion_order_by_rating_post_clauses( $args ) {
 	return $args;
 }
 
-add_filter('loop_shop_per_page', 'avada_loop_shop_per_page');
-function avada_loop_shop_per_page()
+add_filter('loop_shop_per_page', 'zhane_loop_shop_per_page');
+function zhane_loop_shop_per_page()
 {
 	global $smof_data;
 
@@ -443,9 +443,9 @@ function avada_loop_shop_per_page()
 	return $pc;
 }
 
-add_action('woocommerce_before_shop_loop_item_title', 'avada_woocommerce_thumbnail', 10);
+add_action('woocommerce_before_shop_loop_item_title', 'zhane_woocommerce_thumbnail', 10);
 remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
-function avada_woocommerce_thumbnail() {
+function zhane_woocommerce_thumbnail() {
 	global $product, $woocommerce;
 
 	$items_in_cart = array();
@@ -485,17 +485,17 @@ function avada_woocommerce_thumbnail() {
 	}
 	echo '</span>';
 }
-add_filter('add_to_cart_fragments', 'avada_woocommerce_header_add_to_cart_fragment');
-function avada_woocommerce_header_add_to_cart_fragment( $fragments ) {
+add_filter('add_to_cart_fragments', 'zhane_woocommerce_header_add_to_cart_fragment');
+function zhane_woocommerce_header_add_to_cart_fragment( $fragments ) {
 	global $woocommerce;
 
 	ob_start();
 	?>
 	<li class="cart">
 		<?php if(!$woocommerce->cart->cart_contents_count): ?>
-		<a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('Cart', 'Avada'); ?></a>
+		<a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('Cart', 'Zhane'); ?></a>
 		<?php else: ?>
-		<a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php echo $woocommerce->cart->cart_contents_count; ?> <?php _e('Item(s)', 'Avada'); ?> - <?php echo woocommerce_price($woocommerce->cart->subtotal); ?></a>
+		<a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php echo $woocommerce->cart->cart_contents_count; ?> <?php _e('Item(s)', 'Zhane'); ?> - <?php echo woocommerce_price($woocommerce->cart->subtotal); ?></a>
 		<div class="cart-contents">
 			<?php foreach($woocommerce->cart->cart_contents as $cart_item): ?>
 			<div class="cart-content">
@@ -510,8 +510,8 @@ function avada_woocommerce_header_add_to_cart_fragment( $fragments ) {
 			</div>
 			<?php endforeach; ?>
 			<div class="cart-checkout">
-				<div class="cart-link"><a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('View Cart', 'Avada'); ?></a></div>
-				<div class="checkout-link"><a href="<?php echo get_permalink(get_option('woocommerce_checkout_page_id')); ?>"><?php _e('Checkout', 'Avada'); ?></a></div>
+				<div class="cart-link"><a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('View Cart', 'Zhane'); ?></a></div>
+				<div class="checkout-link"><a href="<?php echo get_permalink(get_option('woocommerce_checkout_page_id')); ?>"><?php _e('Checkout', 'Zhane'); ?></a></div>
 			</div>
 		</div>
 		<?php endif; ?>
@@ -540,8 +540,8 @@ function avada_woocommerce_header_add_to_cart_fragment( $fragments ) {
 			</div>
 			<?php endforeach; ?>
 			<div class="cart-checkout">
-				<div class="cart-link"><a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('View Cart', 'Avada'); ?></a></div>
-				<div class="checkout-link"><a href="<?php echo get_permalink(get_option('woocommerce_checkout_page_id')); ?>"><?php _e('Checkout', 'Avada'); ?></a></div>
+				<div class="cart-link"><a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('View Cart', 'Zhane'); ?></a></div>
+				<div class="checkout-link"><a href="<?php echo get_permalink(get_option('woocommerce_checkout_page_id')); ?>"><?php _e('Checkout', 'Zhane'); ?></a></div>
 			</div>
 		</div>
 		<?php endif; ?>
@@ -556,8 +556,8 @@ function avada_woocommerce_header_add_to_cart_fragment( $fragments ) {
 
 }
 
-add_action('woocommerce_after_single_product_summary', 'avada_woocommerce_after_single_product_summary', 15);
-function avada_woocommerce_after_single_product_summary()
+add_action('woocommerce_after_single_product_summary', 'zhane_woocommerce_after_single_product_summary', 15);
+function zhane_woocommerce_after_single_product_summary()
 {
 
 	global $smof_data;
@@ -572,26 +572,26 @@ function avada_woocommerce_after_single_product_summary()
 			<li class="facebook">
 				<a href="http://www.facebook.com/sharer.php?s=100&p&#91;url&#93;=' . get_permalink() . '&p&#91;title&#93;=' . get_the_title() .'" target="_blank"' . $nofollow .'>
 					<i class="fontawesome-icon medium circle-yes icon-facebook"></i>
-					<span>' . __('Share On', 'Avada') .'</span>Facebook
+					<span>' . __('Share On', 'Zhane') .'</span>Facebook
 				</a>
 			</li>
 			<li class="twitter">
 				<a href="http://twitter.com/home?status=' . get_the_title() .' ' . get_permalink() . '" target="_blank"' . $nofollow .'>
 					<i class="fontawesome-icon medium circle-yes icon-twitter"></i>
-					<span>' . __('Tweet This', 'Avada') . '</span>' . __('Product', 'Avada') . '
+					<span>' . __('Tweet This', 'Zhane') . '</span>' . __('Product', 'Zhane') . '
 				</a>
 			</li>
 			<li class="pinterest">';
 				$full_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
 				$social .= '<a href="http://pinterest.com/pin/create/button/?url=' . urlencode(get_permalink()) . '&amp;description=' . urlencode(get_the_title()) . '&amp;media=' . urlencode($full_image[0]) .'" target="_blank"' . $nofollow .'>
 					<i class="fontawesome-icon medium circle-yes icon-pinterest"></i>
-					<span>' . __('Pin This', 'Avada') . '</span>' . __('Product', 'Avada') . '
+					<span>' . __('Pin This', 'Zhane') . '</span>' . __('Product', 'Zhane') . '
 				</a>
 			</li>
 			<li class="email">
 				<a href="mailto:?subject=' . get_the_title() . '&amp;body=' . get_permalink() . '" target="_blank"' . $nofollow .'>
 					<i class="fontawesome-icon medium circle-yes icon-mail"></i>
-					<span>' . __('Mail This', 'Avada') . '</span>' . __('Product', 'Avada') .'
+					<span>' . __('Mail This', 'Zhane') . '</span>' . __('Product', 'Zhane') .'
 				</a>
 			</li>
 		</ul>';
@@ -601,8 +601,8 @@ function avada_woocommerce_after_single_product_summary()
 }
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
-add_action('woocommerce_after_single_product_summary', 'avada_woocommerce_output_related_products', 15);
-function avada_woocommerce_output_related_products()
+add_action('woocommerce_after_single_product_summary', 'zhane_woocommerce_output_related_products', 15);
+function zhane_woocommerce_output_related_products()
 {
 		$args = array(
 			'posts_per_page' => 4,
@@ -620,20 +620,20 @@ function avada_woocommerce_output_related_products()
 /* end variations hooks */
 
 /* cart hooks */
-add_action('woocommerce_before_cart_table', 'avada_woocommerce_before_cart_table', 20);
-function avada_woocommerce_before_cart_table( $args )
+add_action('woocommerce_before_cart_table', 'zhane_woocommerce_before_cart_table', 20);
+function zhane_woocommerce_before_cart_table( $args )
 {
 	global $woocommerce;
 
 	$html = '<div class="woocommerce-content-box full-width clearfix">';
 
-	$html .= '<h2>' . sprintf( __( 'You Have %d Items In Your Cart', 'Avada' ), $woocommerce->cart->cart_contents_count ) . '</h2>';
+	$html .= '<h2>' . sprintf( __( 'You Have %d Items In Your Cart', 'Zhane' ), $woocommerce->cart->cart_contents_count ) . '</h2>';
 
 	echo $html;
 }
 
-add_action('woocommerce_after_cart_table', 'avada_woocommerce_after_cart_table', 20);
-function avada_woocommerce_after_cart_table($args)
+add_action('woocommerce_after_cart_table', 'zhane_woocommerce_after_cart_table', 20);
+function zhane_woocommerce_after_cart_table($args)
 {
 	$html = '</div>';
 
@@ -662,7 +662,7 @@ function cart_shipping_calc() {
 
 		<h2><a href="#" class="shipping-calculator-button"><?php _e( 'Calculate Shipping', 'woocommerce' ); ?></a></h2>
 
-		<section class="avada-shipping-calculator-form">
+		<section class="zhane-shipping-calculator-form">
 
 			<p class="form-row form-row-wide">
 				<select name="calc_shipping_country" id="calc_shipping_country" class="country_to_state" rel="calc_shipping_state">
@@ -734,8 +734,8 @@ function cart_shipping_calc() {
 	<?php
 }
 
-add_action('woocommerce_cart_collaterals', 'avada_woocommerce_cart_collaterals');
-function avada_woocommerce_cart_collaterals($args)
+add_action('woocommerce_cart_collaterals', 'zhane_woocommerce_cart_collaterals');
+function zhane_woocommerce_cart_collaterals($args)
 {
 	global $woocommerce;
 	?>
@@ -747,10 +747,10 @@ function avada_woocommerce_cart_collaterals($args)
 	if ( WC()->cart->coupons_enabled() ) { ?>
 		<div class="coupon">
 
-			<h2><?php _e( 'Have A Promotional Code?', 'Avada'); ?></h2>
+			<h2><?php _e( 'Have A Promotional Code?', 'Zhane'); ?></h2>
 
 			<input name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php _e( 'Coupon code', 'woocommerce' ); ?>" />
-			<input type="submit" class="fusion-button button-default button-small button default small" name="apply_coupon" value="<?php _e( 'Apply', 'Avada' ); ?>" />
+			<input type="submit" class="fusion-button button-default button-small button default small" name="apply_coupon" value="<?php _e( 'Apply', 'Zhane' ); ?>" />
 
 			<?php do_action('woocommerce_cart_coupon'); ?>
 
@@ -762,8 +762,8 @@ function avada_woocommerce_cart_collaterals($args)
 	<?php
 }
 
-add_action('woocommerce_before_cart_totals', 'avada_woocommerce_before_cart_totals', 20);
-function avada_woocommerce_before_cart_totals($args)
+add_action('woocommerce_before_cart_totals', 'zhane_woocommerce_before_cart_totals', 20);
+function zhane_woocommerce_before_cart_totals($args)
 {
 	global $woocommerce; ?>
 
@@ -772,8 +772,8 @@ function avada_woocommerce_before_cart_totals($args)
 	<?php
 }
 
-add_action('woocommerce_after_cart_totals', 'avada_woocommerce_after_cart_totals');
-function avada_woocommerce_after_cart_totals($args)
+add_action('woocommerce_after_cart_totals', 'zhane_woocommerce_after_cart_totals');
+function zhane_woocommerce_after_cart_totals($args)
 {
 	global $woocommerce; ?>
 
@@ -785,8 +785,8 @@ function avada_woocommerce_after_cart_totals($args)
 	<?php
 }
 
-add_action('woocommerce_after_cart', 'avada_woocommerce_after_cart');
-function avada_woocommerce_after_cart($args)
+add_action('woocommerce_after_cart', 'zhane_woocommerce_after_cart');
+function zhane_woocommerce_after_cart($args)
 {
 	?>
 
@@ -799,8 +799,8 @@ function avada_woocommerce_after_cart($args)
 
 /* begin checkout hooks */
 remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
-add_action( 'woocommerce_before_checkout_form', 'avada_woocommerce_checkout_coupon_form', 10 );
-function avada_woocommerce_checkout_coupon_form($args)
+add_action( 'woocommerce_before_checkout_form', 'zhane_woocommerce_checkout_coupon_form', 10 );
+function zhane_woocommerce_checkout_coupon_form($args)
 {
 	global $woocommerce;
 
@@ -810,7 +810,7 @@ function avada_woocommerce_checkout_coupon_form($args)
 
 	<form class="woocommerce-content-box full-width checkout_coupon" method="post">
 
-		<h2 class="promo-code-heading alignleft"><?php _e( 'Have A Promotional Code?', 'Avada'); ?></h2>
+		<h2 class="promo-code-heading alignleft"><?php _e( 'Have A Promotional Code?', 'Zhane'); ?></h2>
 
 		<div class="coupon-contents alignright">
 			<div class="form-row form-row-first alignleft coupon-input">
@@ -828,9 +828,9 @@ function avada_woocommerce_checkout_coupon_form($args)
 }
 
 if( ! $smof_data['woocommerce_one_page_checkout'] ) {
-	add_action('woocommerce_before_checkout_form', 'avada_woocommerce_before_checkout_form');
+	add_action('woocommerce_before_checkout_form', 'zhane_woocommerce_before_checkout_form');
 }
-function avada_woocommerce_before_checkout_form($args)
+function zhane_woocommerce_before_checkout_form($args)
 {
 	global $woocommerce;
 	?>
@@ -838,13 +838,13 @@ function avada_woocommerce_before_checkout_form($args)
 	<ul class="woocommerce-side-nav woocommerce-checkout-nav">
 		<li class="active">
 			<a data-name="col-1" href="#">
-				<?php _e('Billing Address' , 'Avada'); ?>
+				<?php _e('Billing Address' , 'Zhane'); ?>
 			</a>
 		</li>
 		<?php if ( WC()->cart->needs_shipping() && ! WC()->cart->ship_to_billing_address_only() ) : ?>
 		<li>
 			<a data-name="col-2" href="#">
-				<?php _e('Shipping Address' , 'Avada'); ?>
+				<?php _e('Shipping Address' , 'Zhane'); ?>
 			</a>
 		</li>
 		<?php elseif( apply_filters( 'woocommerce_enable_order_notes_field', get_option( 'woocommerce_enable_order_comments', 'yes' ) === 'yes' ) ) :
@@ -853,7 +853,7 @@ function avada_woocommerce_before_checkout_form($args)
 
 		<li>
 			<a data-name="col-2" href="#">
-				<?php _e('Additional Information' , 'Avada'); ?>
+				<?php _e('Additional Information' , 'Zhane'); ?>
 			</a>
 		</li>
 		<?php endif; ?>
@@ -861,21 +861,21 @@ function avada_woocommerce_before_checkout_form($args)
 
 		<li>
 			<a data-name="#order_review" href="#">
-				<?php _e('Review &amp; Payment' , 'Avada'); ?>
+				<?php _e('Review &amp; Payment' , 'Zhane'); ?>
 			</a>
 		</li>
 	</ul>
 
-	<div class="woocommerce-content-box avada-checkout">
+	<div class="woocommerce-content-box zhane-checkout">
 
 	<?php
 
 }
 
 if( ! $smof_data['woocommerce_one_page_checkout'] ) {
-	add_action('woocommerce_after_checkout_form', 'avada_woocommerce_after_checkout_form');
+	add_action('woocommerce_after_checkout_form', 'zhane_woocommerce_after_checkout_form');
 }
-function avada_woocommerce_after_checkout_form($args)
+function zhane_woocommerce_after_checkout_form($args)
 {
 	?>
 
@@ -886,9 +886,9 @@ function avada_woocommerce_after_checkout_form($args)
 }
 
 if( $smof_data['woocommerce_one_page_checkout'] ) {
-	add_action('woocommerce_checkout_before_customer_details', 'avada_woocommerce_checkout_before_customer_details');
+	add_action('woocommerce_checkout_before_customer_details', 'zhane_woocommerce_checkout_before_customer_details');
 }
-function avada_woocommerce_checkout_before_customer_details($args)
+function zhane_woocommerce_checkout_before_customer_details($args)
 {
 	global $smof_data, $woocommerce;
 
@@ -899,7 +899,7 @@ function avada_woocommerce_checkout_before_customer_details($args)
 	} else {
 	?>
 
-	<div class="avada-checkout-no-shipping">
+	<div class="zhane-checkout-no-shipping">
 
 	<?php
 	}
@@ -907,9 +907,9 @@ function avada_woocommerce_checkout_before_customer_details($args)
 }
 
 if( $smof_data['woocommerce_one_page_checkout'] ) {
-	add_action('woocommerce_checkout_after_customer_details', 'avada_woocommerce_checkout_after_customer_details');
+	add_action('woocommerce_checkout_after_customer_details', 'zhane_woocommerce_checkout_after_customer_details');
 }
-function avada_woocommerce_checkout_after_customer_details($args)
+function zhane_woocommerce_checkout_after_customer_details($args)
 {
 	global $smof_data, $woocommerce;
 
@@ -933,8 +933,8 @@ function avada_woocommerce_checkout_after_customer_details($args)
 }
 
 
-add_action('woocommerce_checkout_billing', 'avada_woocommerce_checkout_billing', 20);
-function avada_woocommerce_checkout_billing($args)
+add_action('woocommerce_checkout_billing', 'zhane_woocommerce_checkout_billing', 20);
+function zhane_woocommerce_checkout_billing($args)
 {
 	global $smof_data, $woocommerce;
 
@@ -949,7 +949,7 @@ function avada_woocommerce_checkout_billing($args)
 	if( ! $smof_data['woocommerce_one_page_checkout'] ) {
 	?>
 
-	<a data-name="<?php echo $data_name; ?>" href="#" class="fusion-button button-default button-medium  button default medium continue-checkout"><?php _e('Continue', 'Avada'); ?></a>
+	<a data-name="<?php echo $data_name; ?>" href="#" class="fusion-button button-default button-medium  button default medium continue-checkout"><?php _e('Continue', 'Zhane'); ?></a>
 	<div class="clearboth"></div>
 
 	<?php
@@ -957,15 +957,15 @@ function avada_woocommerce_checkout_billing($args)
 
 }
 
-add_action('woocommerce_checkout_shipping', 'avada_woocommerce_checkout_shipping', 20);
-function avada_woocommerce_checkout_shipping($args)
+add_action('woocommerce_checkout_shipping', 'zhane_woocommerce_checkout_shipping', 20);
+function zhane_woocommerce_checkout_shipping($args)
 {
 	global $smof_data;
 
 	if( ! $smof_data['woocommerce_one_page_checkout'] ) {
 	?>
 
-	<a data-name="#order_review" href="#" class="fusion-button button-default button-medium continue-checkout button default medium"><?php _e('Continue', 'Avada'); ?></a>
+	<a data-name="#order_review" href="#" class="fusion-button button-default button-medium continue-checkout button default medium"><?php _e('Continue', 'Zhane'); ?></a>
 	<div class="clearboth"></div>
 
 	<?php
@@ -974,8 +974,8 @@ function avada_woocommerce_checkout_shipping($args)
 }
 
 
-add_filter('woocommerce_enable_order_notes_field', 'avada_enable_order_notes_field');
-function avada_enable_order_notes_field() {
+add_filter('woocommerce_enable_order_notes_field', 'zhane_enable_order_notes_field');
+function zhane_enable_order_notes_field() {
 	global $smof_data;
 
 	if( ! $smof_data['woocommerce_enable_order_notes'] ) {
@@ -987,9 +987,9 @@ function avada_enable_order_notes_field() {
 }
 
 if( $smof_data['woocommerce_one_page_checkout'] ) {
-	add_action('woocommerce_review_order_after_payment', 'avada_woocommerce_review_order_after_payment');
+	add_action('woocommerce_review_order_after_payment', 'zhane_woocommerce_review_order_after_payment');
 }
-function avada_woocommerce_review_order_after_payment() {
+function zhane_woocommerce_review_order_after_payment() {
 
 	?>
 
@@ -1002,12 +1002,12 @@ function avada_woocommerce_review_order_after_payment() {
 
 //function under myaccount hooks
 remove_action('woocommerce_thankyou', 'woocommerce_order_details_table', 10);
-add_action('woocommerce_thankyou', 'avada_woocommerce_view_order', 10);
+add_action('woocommerce_thankyou', 'zhane_woocommerce_view_order', 10);
 /* end checkout hooks */
 
 /* begin my-account hooks */
-add_action('woocommerce_before_customer_login_form', 'avada_woocommerce_before_customer_login_form');
-function avada_woocommerce_before_customer_login_form()
+add_action('woocommerce_before_customer_login_form', 'zhane_woocommerce_before_customer_login_form');
+function zhane_woocommerce_before_customer_login_form()
 {
 
 	global $woocommerce;
@@ -1021,8 +1021,8 @@ function avada_woocommerce_before_customer_login_form()
 	endif;
 }
 
-add_action('woocommerce_after_customer_login_form', 'avada_woocommerce_after_customer_login_form');
-function avada_woocommerce_after_customer_login_form()
+add_action('woocommerce_after_customer_login_form', 'zhane_woocommerce_after_customer_login_form');
+function zhane_woocommerce_after_customer_login_form()
 {
 
 	global $woocommerce;
@@ -1036,18 +1036,18 @@ function avada_woocommerce_after_customer_login_form()
 	endif;
 }
 
-add_action('woocommerce_before_my_account', 'avada_woocommerce_before_my_account');
-function avada_woocommerce_before_my_account( $order_count, $edit_address = false)
+add_action('woocommerce_before_my_account', 'zhane_woocommerce_before_my_account');
+function zhane_woocommerce_before_my_account( $order_count, $edit_address = false)
 {
 	global $smof_data, $woocommerce, $current_user;
 	$edit_address = is_wc_endpoint_url('edit-address');
 	?>
-	<p class="avada_myaccount_user">
+	<p class="zhane_myaccount_user">
 		<span class="myaccount_user_container">
 			<span class="username">
 			<?php
 			printf(
-				__( 'Hello, %s:', 'Avada' ),
+				__( 'Hello, %s:', 'Zhane' ),
 				$current_user->display_name
 			);
 			?>
@@ -1063,16 +1063,16 @@ function avada_woocommerce_before_my_account( $order_count, $edit_address = fals
 			</span>
 			<?php endif; ?>
 			<span class="view-cart">
-				<a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('View Cart', 'Avada' ); ?></a>
+				<a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('View Cart', 'Zhane' ); ?></a>
 			</span>
 		</span>
 	</p>
 
-	<ul class="woocommerce-side-nav avada-myaccount-nav">
+	<ul class="woocommerce-side-nav zhane-myaccount-nav">
 		<?php if( $downloads = WC()->customer->get_downloadable_products() ) : ?>
 		<li <?php if( ! $edit_address ) { echo 'class="active"'; } ?>>
 			<a class="downloads" href="#">
-				<?php _e('View Downloads' , 'Avada' ); ?>
+				<?php _e('View Downloads' , 'Zhane' ); ?>
 			</a>
 		</li>
 		<?php endif;
@@ -1088,29 +1088,29 @@ function avada_woocommerce_before_my_account( $order_count, $edit_address = fals
 		if ( $customer_orders ) : ?>
 		<li <?php if( ! $edit_address && ! WC()->customer->get_downloadable_products() ) { echo 'class="active"'; } ?>>
 			<a class="orders" href="#">
-				<?php _e('View Orders' , 'Avada' ); ?>
+				<?php _e('View Orders' , 'Zhane' ); ?>
 			</a>
 		</li>
 		<?php endif; ?>
 		<li <?php if( $edit_address || ! WC()->customer->get_downloadable_products() && ! $customer_orders ) { echo 'class="active"'; } ?>>
 			<a class="address" href="#">
-				<?php _e('Change Address' , 'Avada' ); ?>
+				<?php _e('Change Address' , 'Zhane' ); ?>
 			</a>
 		</li>
 		<li>
 			<a class="account" href="#">
-				<?php _e('Edit Account' , 'Avada' ); ?>
+				<?php _e('Edit Account' , 'Zhane' ); ?>
 			</a>
 		</li>
 	</ul>
 
-	<div class="woocommerce-content-box avada-myaccount-data">
+	<div class="woocommerce-content-box zhane-myaccount-data">
 
 	<?php
 }
 
-add_action('woocommerce_after_my_account', 'avada_woocommerce_after_my_account');
-function avada_woocommerce_after_my_account($args)
+add_action('woocommerce_after_my_account', 'zhane_woocommerce_after_my_account');
+function zhane_woocommerce_after_my_account($args)
 {
 	global $woocommerce, $wp;
 
@@ -1118,7 +1118,7 @@ function avada_woocommerce_after_my_account($args)
 
 	?>
 
-	<h2 class="edit-account-heading"><?php _e( 'Edit Account', 'Avada' ); ?></h2>
+	<h2 class="edit-account-heading"><?php _e( 'Edit Account', 'Zhane' ); ?></h2>
 
 	<form class="edit-account-form" action="" method="post">
 		<p class="form-row form-row-first">
@@ -1159,15 +1159,15 @@ function avada_woocommerce_after_my_account($args)
 
 /* begin order hooks */
 remove_action('woocommerce_view_order', 'woocommerce_order_details_table', 10);
-add_action('woocommerce_view_order', 'avada_woocommerce_view_order', 10);
-function avada_woocommerce_view_order( $order_id  )
+add_action('woocommerce_view_order', 'zhane_woocommerce_view_order', 10);
+function zhane_woocommerce_view_order( $order_id  )
 {
 	global $woocommerce;
 
 	$order = new WC_Order( $order_id );
 
 	?>
-	<div class="avada-order-details woocommerce-content-box full-width">
+	<div class="zhane-order-details woocommerce-content-box full-width">
 	<h2><?php _e( 'Order Details', 'woocommerce' ); ?></h2>
 	<table class="shop_table order_details">
 		<thead>
@@ -1263,7 +1263,7 @@ function avada_woocommerce_view_order( $order_id  )
 	<?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
 	</div>
 
-	<div class="avada-customer-details woocommerce-content-box full-width">
+	<div class="zhane-customer-details woocommerce-content-box full-width">
 	<header>
 		<h2><?php _e( 'Customer details', 'woocommerce' ); ?></h2>
 	</header>

@@ -61,10 +61,10 @@ if(isset($_POST['submit'])) {
 		$comments = wp_filter_kses( $comments );
 		
 		$emailTo = $smof_data['email_address']; //Put your own email address here
-		$body = __('Name:', 'Avada')." $name \n\n";
-		$body .= __('Email:', 'Avada')." $email \n\n";
-		$body .= __('Subject:', 'Avada')." $subject \n\n";
-		$body .= __('Comments:', 'Avada')."\n $comments";
+		$body = __('Name:', 'Zhane')." $name \n\n";
+		$body .= __('Email:', 'Zhane')." $email \n\n";
+		$body .= __('Subject:', 'Zhane')." $subject \n\n";
+		$body .= __('Comments:', 'Zhane')."\n $comments";
 		$headers = 'Reply-To: ' . $name . ' <' . $email . '>' . "\r\n";
 
 		$mail = wp_mail($emailTo, $subject, $body, $headers);
@@ -112,12 +112,12 @@ elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'left') {
 				<?php the_content(); ?>
 
 				<?php if(isset($hasError)) { //If errors are found ?>
-					<div class="alert error"><div class="msg"><?php echo __("Please check if you've filled all the fields with valid information. Thank you.", 'Avada'); ?></div></div>
+					<div class="alert error"><div class="msg"><?php echo __("Please check if you've filled all the fields with valid information. Thank you.", 'Zhane'); ?></div></div>
 					<br />
 				<?php } ?>
 
 				<?php if(isset($emailSent) && $emailSent == true) { //If email is sent ?>
-					<div class="alert success"><div class="msg"><?php echo __('Thank you', 'Avada'); ?> <strong><?php echo $name;?></strong> <?php echo __('for using my contact form! Your email was successfully sent!', 'Avada'); ?></div></div>
+					<div class="alert success"><div class="msg"><?php echo __('Thank you', 'Zhane'); ?> <strong><?php echo $name;?></strong> <?php echo __('for using my contact form! Your email was successfully sent!', 'Zhane'); ?></div></div>
 					<br />
 				<?php } ?>
 			</div>
@@ -125,17 +125,17 @@ elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'left') {
 
 					<div id="comment-input">
 
-						<input type="text" name="contact_name" id="author" value="<?php if(isset($_POST['contact_name']) && !empty($_POST['contact_name'])) { echo wp_filter_kses( $_POST['contact_name'] ); } ?>" placeholder="<?php echo __('Name (required)', 'Avada'); ?>" size="22" tabindex="1" aria-required="true" class="input-name">
+						<input type="text" name="contact_name" id="author" value="<?php if(isset($_POST['contact_name']) && !empty($_POST['contact_name'])) { echo wp_filter_kses( $_POST['contact_name'] ); } ?>" placeholder="<?php echo __('Name (required)', 'Zhane'); ?>" size="22" tabindex="1" aria-required="true" class="input-name">
 
-						<input type="text" name="email" id="email" value="<?php if(isset($_POST['email']) && !empty($_POST['email'])) { echo wp_filter_kses( $_POST['email'] ); } ?>" placeholder="<?php echo __('Email (required)', 'Avada'); ?>" size="22" tabindex="2" aria-required="true" class="input-email">
+						<input type="text" name="email" id="email" value="<?php if(isset($_POST['email']) && !empty($_POST['email'])) { echo wp_filter_kses( $_POST['email'] ); } ?>" placeholder="<?php echo __('Email (required)', 'Zhane'); ?>" size="22" tabindex="2" aria-required="true" class="input-email">
 
-						<input type="text" name="url" id="url" value="<?php if(isset($_POST['url']) && !empty($_POST['url'])) { echo wp_filter_kses( $_POST['url'] ); } ?>" placeholder="<?php echo __('Subject', 'Avada'); ?>" size="22" tabindex="3" class="input-website">
+						<input type="text" name="url" id="url" value="<?php if(isset($_POST['url']) && !empty($_POST['url'])) { echo wp_filter_kses( $_POST['url'] ); } ?>" placeholder="<?php echo __('Subject', 'Zhane'); ?>" size="22" tabindex="3" class="input-website">
 
 					</div>
 
 					<div id="comment-textarea">
 
-						<textarea name="msg" id="comment" cols="39" rows="4" tabindex="4" class="textarea-comment" placeholder="<?php echo __('Message', 'Avada'); ?>"><?php if(isset($_POST['msg']) && !empty($_POST['msg'])) { echo wp_filter_kses( $_POST['msg'] ); } ?></textarea>
+						<textarea name="msg" id="comment" cols="39" rows="4" tabindex="4" class="textarea-comment" placeholder="<?php echo __('Message', 'Zhane'); ?>"><?php if(isset($_POST['msg']) && !empty($_POST['msg'])) { echo wp_filter_kses( $_POST['msg'] ); } ?></textarea>
 
 					</div>
 
@@ -151,7 +151,7 @@ elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'left') {
 
 					<div id="comment-submit-container">
 
-						<p><div><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Submit Form', 'Avada'); ?>" class="<?php echo sprintf( 'comment-submit btn btn-default button default small fusion-button button-small button-default button-%s button-%s', strtolower( $smof_data['button_shape'] ), strtolower( $smof_data['button_type'] ) ); ?>"></div></p>
+						<p><div><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Submit Form', 'Zhane'); ?>" class="<?php echo sprintf( 'comment-submit btn btn-default button default small fusion-button button-small button-default button-%s button-%s', strtolower( $smof_data['button_shape'] ), strtolower( $smof_data['button_type'] ) ); ?>"></div></p>
 					</div>
 
 			</form>

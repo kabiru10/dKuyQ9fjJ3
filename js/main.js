@@ -512,7 +512,7 @@ function onPlayerReady(slide) {
 				last_item_left_pos = last_item.position().left,
 				last_item_width = last_item.outerWidth(),
 				last_item_child,
-				parent_container = jQuery( '.header-social .avada-row' ),
+				parent_container = jQuery( '.header-social .zhane-row' ),
 				parent_container_left_pos = parent_container.position().left,
 				parent_container_width = parent_container.outerWidth();
 
@@ -779,7 +779,7 @@ jQuery(window).load(function() {
 		});
 	}
 });
-var avada_ipad = function() {
+var zhane_ipad = function() {
 	if(jQuery('meta[name=viewport]').length == 0) {
 		jQuery('head').append('<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />');
 	}
@@ -796,9 +796,9 @@ jQuery(document).ready(function($) {
 	}
 	if(jQuery('html').hasClass('ua-mobile-ipad') && js_local_vars.ipad_potrait == '1') {
 		jQuery('body').css('overflow', 'hidden');
-		avada_ipad();
+		zhane_ipad();
 		jQuery(window).resize(function() {
-			avada_ipad();
+			zhane_ipad();
 		});
 	}
 
@@ -1174,7 +1174,7 @@ jQuery(document).ready(function($) {
 	sharebox_h4_width = jQuery('#wrapper .share-box h4').outerWidth();
 	sharebox_ul = jQuery('.share-box ul').outerWidth();
 	// social share box alignment on resize
-	if( sharebox_h4_width + sharebox_ul > jQuery('.post-content').width() && ! jQuery('.single-avada_portfolio').length ) {
+	if( sharebox_h4_width + sharebox_ul > jQuery('.post-content').width() && ! jQuery('.single-zhane_portfolio').length ) {
 		jQuery('#wrapper .share-box').css('height', 'auto');
 		jQuery('#wrapper .share-box h4').css('float', 'none').css('line-height', '20px').css('padding-bottom', '25px').css('padding-top', '25px');
 		jQuery('.share-box ul').css('float', 'none').css('margin-top', '0').css('overflow', 'hidden').css('padding', '0 25px 25px');
@@ -1422,29 +1422,29 @@ jQuery(document).ready(function($) {
 	jQuery('.woocommerce #calc_shipping_state').parent().addClass('one_half');
 	jQuery('.woocommerce #calc_shipping_postcode').parent().addClass('one_half last');
 	jQuery('.woocommerce .shop_table .variation dd').after('<br />');
-	jQuery('.woocommerce .avada-myaccount-data th.order-actions').text(js_local_vars.order_actions);
+	jQuery('.woocommerce .zhane-myaccount-data th.order-actions').text(js_local_vars.order_actions);
 
 	jQuery( '.rtl .woocommerce .wc-forward' ).each( function() {
 		jQuery( this ).val( jQuery( '.rtl .woocommerce .wc-forward' ).val().replace( '\u2192', '\u2190' ) );
 	});
 
-	var avada_myaccount_active = jQuery('.avada-myaccount-nav').find('.active a');
+	var zhane_myaccount_active = jQuery('.zhane-myaccount-nav').find('.active a');
 
-	if(avada_myaccount_active.hasClass('address') ) {
-		jQuery('.avada-myaccount-data .edit_address_heading').fadeIn();
+	if(zhane_myaccount_active.hasClass('address') ) {
+		jQuery('.zhane-myaccount-data .edit_address_heading').fadeIn();
 	} else {
-		jQuery('.avada-myaccount-data h2:nth-of-type(1)').fadeIn();
+		jQuery('.zhane-myaccount-data h2:nth-of-type(1)').fadeIn();
 	}
 
-	if(avada_myaccount_active.hasClass('downloads') ) {
-		jQuery('.avada-myaccount-data .digital-downloads').fadeIn();
-	} else if(avada_myaccount_active.hasClass('orders') ) {
-		jQuery('.avada-myaccount-data .my_account_orders').fadeIn();
-	} else if(avada_myaccount_active ) {
-		jQuery('.avada-myaccount-data .myaccount_address, .avada-myaccount-data .addresses').fadeIn();
+	if(zhane_myaccount_active.hasClass('downloads') ) {
+		jQuery('.zhane-myaccount-data .digital-downloads').fadeIn();
+	} else if(zhane_myaccount_active.hasClass('orders') ) {
+		jQuery('.zhane-myaccount-data .my_account_orders').fadeIn();
+	} else if(zhane_myaccount_active ) {
+		jQuery('.zhane-myaccount-data .myaccount_address, .zhane-myaccount-data .addresses').fadeIn();
 	}
 
-	jQuery('.rtl .avada-myaccount-data .my_account_orders .order-status').each( function() {
+	jQuery('.rtl .zhane-myaccount-data .my_account_orders .order-status').each( function() {
 		jQuery( this ).css( 'text-align', 'right' );
 	});
 
@@ -1516,7 +1516,7 @@ jQuery(document).ready(function($) {
 	jQuery('.woocommerce-checkout-nav a,.continue-checkout').click(function(e) {
 		e.preventDefault();
 
-		if( ! jQuery( '.woocommerce .avada-checkout' ).find( '.woocommerce-invalid' ).is( ':visible' ) ) {
+		if( ! jQuery( '.woocommerce .zhane-checkout' ).find( '.woocommerce-invalid' ).is( ':visible' ) ) {
 			var data_name = $(this).attr('data-name');
 			var name = data_name;
 			if(data_name != '#order_review') {
@@ -1534,46 +1534,46 @@ jQuery(document).ready(function($) {
 			jQuery('.woocommerce-checkout-nav').find('[data-name='+data_name+']').parent().addClass('active');
 
 			if( jQuery( this ).hasClass( 'continue-checkout' ) && jQuery( window ).scrollTop() > 0 ) {
-				jQuery('html, body').animate({scrollTop: jQuery( '.woocommerce-content-box.avada-checkout' ).offset().top - adminbar_height - sticky_height }, 500);
+				jQuery('html, body').animate({scrollTop: jQuery( '.woocommerce-content-box.zhane-checkout' ).offset().top - adminbar_height - sticky_height }, 500);
 			}
 		}
 	});
 
 
-	jQuery('.avada-myaccount-nav a').click(function(e) {
+	jQuery('.zhane-myaccount-nav a').click(function(e) {
 		e.preventDefault();
 
-		jQuery('.avada-myaccount-data h2, .avada-myaccount-data .digital-downloads, .avada-myaccount-data .my_account_orders, .avada-myaccount-data .myaccount_address, .avada-myaccount-data .addresses, .avada-myaccount-data .edit-account-heading, .avada-myaccount-data .edit-account-form').hide();
+		jQuery('.zhane-myaccount-data h2, .zhane-myaccount-data .digital-downloads, .zhane-myaccount-data .my_account_orders, .zhane-myaccount-data .myaccount_address, .zhane-myaccount-data .addresses, .zhane-myaccount-data .edit-account-heading, .zhane-myaccount-data .edit-account-form').hide();
 
 		if(jQuery(this).hasClass('downloads') ) {
-			jQuery('.avada-myaccount-data h2:nth-of-type(1), .avada-myaccount-data .digital-downloads').fadeIn();
+			jQuery('.zhane-myaccount-data h2:nth-of-type(1), .zhane-myaccount-data .digital-downloads').fadeIn();
 		} else if(jQuery(this).hasClass('orders') ) {
 
-			if( jQuery(this).parents('.avada-myaccount-nav').find('.downloads').length ) {
-				heading = jQuery('.avada-myaccount-data h2:nth-of-type(2)');
+			if( jQuery(this).parents('.zhane-myaccount-nav').find('.downloads').length ) {
+				heading = jQuery('.zhane-myaccount-data h2:nth-of-type(2)');
 			} else {
-				heading = jQuery('.avada-myaccount-data h2:nth-of-type(1)');
+				heading = jQuery('.zhane-myaccount-data h2:nth-of-type(1)');
 			}
 
 			heading.fadeIn();
-			jQuery('.avada-myaccount-data .my_account_orders').fadeIn();
+			jQuery('.zhane-myaccount-data .my_account_orders').fadeIn();
 		} else if(jQuery(this).hasClass('address') ) {
 
-			if( jQuery(this).parents('.avada-myaccount-nav').find('.downloads').length && jQuery(this).parents('.avada-myaccount-nav').find('.orders').length ) {
-				heading = jQuery('.avada-myaccount-data h2:nth-of-type(3)');
-			} else if( jQuery(this).parents('.avada-myaccount-nav').find('.downloads').length || jQuery(this).parents('.avada-myaccount-nav').find('.orders').length ) {
-				heading = jQuery('.avada-myaccount-data h2:nth-of-type(2)');
+			if( jQuery(this).parents('.zhane-myaccount-nav').find('.downloads').length && jQuery(this).parents('.zhane-myaccount-nav').find('.orders').length ) {
+				heading = jQuery('.zhane-myaccount-data h2:nth-of-type(3)');
+			} else if( jQuery(this).parents('.zhane-myaccount-nav').find('.downloads').length || jQuery(this).parents('.zhane-myaccount-nav').find('.orders').length ) {
+				heading = jQuery('.zhane-myaccount-data h2:nth-of-type(2)');
 			} else {
-				heading = jQuery('.avada-myaccount-data h2:nth-of-type(1)');
+				heading = jQuery('.zhane-myaccount-data h2:nth-of-type(1)');
 			}
 
 			heading.fadeIn();
-			jQuery('.avada-myaccount-data .myaccount_address, .avada-myaccount-data .addresses').fadeIn();
+			jQuery('.zhane-myaccount-data .myaccount_address, .zhane-myaccount-data .addresses').fadeIn();
 		} else if(jQuery(this).hasClass('account') ) {
-			jQuery('.avada-myaccount-data .edit-account-heading, .avada-myaccount-data .edit-account-form').fadeIn();
+			jQuery('.zhane-myaccount-data .edit-account-heading, .zhane-myaccount-data .edit-account-form').fadeIn();
 		}
 
-		jQuery('.avada-myaccount-nav li').removeClass('active');
+		jQuery('.zhane-myaccount-nav li').removeClass('active');
 		jQuery(this).parent().addClass('active');
 	});
 
@@ -1607,19 +1607,19 @@ jQuery(document).ready(function($) {
 	});
 
 
-	jQuery( '.cart-collaterals #calc_shipping_country, .cart-collaterals #calc_shipping_state, .widget_layered_nav select').wrap('<p class="avada-select-parent"></p>').after('<div class="select-arrow">&#xe61f;</div>');
+	jQuery( '.cart-collaterals #calc_shipping_country, .cart-collaterals #calc_shipping_state, .widget_layered_nav select').wrap('<p class="zhane-select-parent"></p>').after('<div class="select-arrow">&#xe61f;</div>');
 
 	if( ! jQuery( '#billing_country_field .chosen-container').length ) {
-		jQuery( '#billing_country_field	select.country_select').wrap('<p class="avada-select-parent"></p>').after('<span class="select-arrow">&#xe61f;</span>');
-		jQuery( '#billing_state_field select.state_select').wrap('<div class="avada-select-parent"></div>').after('<div class="select-arrow">&#xe61f;</div>');
+		jQuery( '#billing_country_field	select.country_select').wrap('<p class="zhane-select-parent"></p>').after('<span class="select-arrow">&#xe61f;</span>');
+		jQuery( '#billing_state_field select.state_select').wrap('<div class="zhane-select-parent"></div>').after('<div class="select-arrow">&#xe61f;</div>');
 	}
 
 	if( ! jQuery( '#shipping_country_field .chosen-container').length ) {
-		jQuery( '#shipping_country_field select.country_select').wrap('<p class="avada-select-parent"></p>').after('<span class="select-arrow">&#xe61f;</span>');
-		jQuery( '#shipping_state_field select.state_select').wrap('<div class="avada-select-parent"></div>').after('<div class="select-arrow">&#xe61f;</div>');
+		jQuery( '#shipping_country_field select.country_select').wrap('<p class="zhane-select-parent"></p>').after('<span class="select-arrow">&#xe61f;</span>');
+		jQuery( '#shipping_state_field select.state_select').wrap('<div class="zhane-select-parent"></div>').after('<div class="select-arrow">&#xe61f;</div>');
 	}
 
-	jQuery( '.avada-select-parent .select-arrow, .gravity-select-parent .select-arrow, .wpcf7-select-parent .select-arrow' ).each( function() {
+	jQuery( '.zhane-select-parent .select-arrow, .gravity-select-parent .select-arrow, .wpcf7-select-parent .select-arrow' ).each( function() {
 		jQuery( this ).height( jQuery( this ).prev().innerHeight() );
 	});
 
@@ -1635,9 +1635,9 @@ jQuery(document).ready(function($) {
 	jQuery( "#billing_country" ).change(function() {
 
 		if( jQuery( '#billing_state_field .chosen-container').length ) {
-			jQuery( '#billing_state_field .avada-select-parent' ).hide();
+			jQuery( '#billing_state_field .zhane-select-parent' ).hide();
 		} else {
-			jQuery( '#billing_state_field .avada-select-parent' ).show();
+			jQuery( '#billing_state_field .zhane-select-parent' ).show();
 		}
 
 		if( jQuery('#billing_state_field input').length) {
@@ -1650,9 +1650,9 @@ jQuery(document).ready(function($) {
 	jQuery( "#shipping_country" ).change(function() {
 
 		if( jQuery( '#shipping_country_field .chosen-container').length ) {
-			jQuery( '#shipping_country_field .avada-select-parent' ).hide();
+			jQuery( '#shipping_country_field .zhane-select-parent' ).hide();
 		} else {
-			jQuery( '#shipping_country_field .avada-select-parent' ).show();
+			jQuery( '#shipping_country_field .zhane-select-parent' ).show();
 		}
 
 		if( jQuery('#shipping_state_field input').length) {
@@ -1668,8 +1668,8 @@ jQuery(document).ready(function($) {
 	jQuery('<div class="select-arrow">&#xe61f;</div>').appendTo('.wpcf7-select-parent');
 
 	// wrap variation forms select and add arrow
-	jQuery('table.variations select').wrap('<div class="avada-select-parent"></div>');
-	jQuery('<div class="avada-select-arrow">&#xe61f;</div>').appendTo('table.variations .avada-select-parent');
+	jQuery('table.variations select').wrap('<div class="zhane-select-parent"></div>');
+	jQuery('<div class="zhane-select-arrow">&#xe61f;</div>').appendTo('table.variations .zhane-select-parent');
 
 	// wrap gravity forms select and add arrow
 	jQuery('.gform_wrapper select:not([multiple])').wrap('<div class="gravity-select-parent"></div>');
@@ -1684,7 +1684,7 @@ jQuery(document).ready(function($) {
 
 
 	// wrap woo and bbpress select and add arrow
-	jQuery('#bbp_stick_topic_select, #bbp_topic_status_select, #bbp_forum_id, #bbp_destination_topic').wrap('<div class="avada-select-parent"></div>').after('<div class="select-arrow">&#xe61f;</div>');
+	jQuery('#bbp_stick_topic_select, #bbp_topic_status_select, #bbp_forum_id, #bbp_destination_topic').wrap('<div class="zhane-select-parent"></div>').after('<div class="select-arrow">&#xe61f;</div>');
 
 	jQuery('.variations_form select').change(function() {
 		jQuery('.product #slider').flexslider(0);
@@ -7186,7 +7186,7 @@ $.fn.easyPieChart = function(options) {
         .detach()
         .css({ top: 0, left: 0, display: 'block' })
         .addClass(placement)
-        .addClass(this.$element.data('class')); // Avada Edit
+        .addClass(this.$element.data('class')); // Zhane Edit
 
       this.options.container ? $tip.appendTo(this.options.container) : $tip.insertAfter(this.$element);
 
@@ -7916,7 +7916,7 @@ if( jQuery( '.header-v1' ).length && jQuery( '.header-wrapper' ).css( 'position'
 						'box-shadow': '0 1px 3px rgba(0, 0, 0, 0.12)'
 					});
 
-					jQuery( '.header-wrapper' ).find( '.avada-row' ).css({
+					jQuery( '.header-wrapper' ).find( '.zhane-row' ).css({
 						'padding-top': '0',
 						'padding-bottom': '0'
 					});
@@ -7986,7 +7986,7 @@ function animate_scrolled_header_v1() {
 					height: scrolled_header_height
 				}, { queue:false, duration:350, easing: 'easeOutCubic' });
 
-				jQuery( '.header-wrapper' ).find( '.avada-row' ).stop(true, true).animate({
+				jQuery( '.header-wrapper' ).find( '.zhane-row' ).stop(true, true).animate({
 					'padding-top': '0',
 					'padding-bottom': '0'
 				}, { queue:false, duration:350, easing: 'easeOutCubic' });
@@ -8034,7 +8034,7 @@ function animate_scrolled_header_v1() {
 					'height': orig_header_height
 				}, { queue:false, duration:350, easing: 'easeOutCubic' });
 
-				jQuery( '.header-wrapper' ).find( '.avada-row' ).stop(true, true).animate({
+				jQuery( '.header-wrapper' ).find( '.zhane-row' ).stop(true, true).animate({
 					'padding-top': '0',
 					'padding-bottom': '0'
 				}, { queue:false, duration:350, easing: 'easeOutCubic' });
@@ -8183,7 +8183,7 @@ jQuery(window).load(function() {
 	}
 
 	if(jQuery().flexslider) {
-		var avada_ytplayer;
+		var zhane_ytplayer;
 
 		if(!Number(js_local_vars.status_vimeo)) {
 			function ready(player_id) {
@@ -9140,13 +9140,13 @@ jQuery(window).load(function() {
 		});
 	}
 
-	if(!Boolean(Number(js_local_vars.avada_rev_styles))) {
+	if(!Boolean(Number(js_local_vars.zhane_rev_styles))) {
 		jQuery('.rev_slider_wrapper').each(function() {
 			if(jQuery(this).length >=1 && jQuery(this).find('.tp-bannershadow').length == 0) {
 				jQuery('<div class="shadow-left">').appendTo(this);
 				jQuery('<div class="shadow-right">').appendTo(this);
 
-				jQuery(this).addClass('avada-skin-rev');
+				jQuery(this).addClass('zhane-skin-rev');
 			}
 		});
 	}

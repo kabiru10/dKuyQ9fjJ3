@@ -433,11 +433,11 @@ jQuery(document).ready(function($){
 		$('.ajax-loading-img').fadeIn();
 
 		//get serialized data from all our option fields
-		// Avada edit
+		// Zhane edit
 		$('#of_form :input[name][name!="security"][name!="of_reset"][name!="google_analytics"][name!="space_head"][name!="space_body"][name!="custom_css"]').val().replace(/\%22/g, "'");
 
 		var serializedReturn = $('#of_form :input[name][name!="security"][name!="of_reset"]').serialize();
-		// End Avada edit
+		// End Zhane edit
 
 		var data = {
 			type: 'save',
@@ -737,7 +737,7 @@ jQuery(document).ready(function($){
 }); //end doc ready
 
 
-// Avada edit
+// Zhane edit
 jQuery(document).ready(function($) {
     var green = new Array();
     green['primary_color']='#a0ce4e';
@@ -1367,4 +1367,4 @@ jQuery(document).ready(function($) {
 		$(this).parents('.accordion').find('.section').not('.section-accordion').slideUp();
 	});
 });
-// End Avada edit
+// End Zhane edit

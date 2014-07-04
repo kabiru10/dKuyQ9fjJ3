@@ -35,8 +35,8 @@
 	<div id="content" class="<?php echo $content_class; ?>" style="<?php echo $content_css; ?>">
 		<?php if(!$smof_data['blog_pn_nav']): ?>
 		<div class="single-navigation clearfix">
-			<?php previous_post_link('%link', __('Previous', 'Avada')); ?>
-			<?php next_post_link('%link', __('Next', 'Avada')); ?>
+			<?php previous_post_link('%link', __('Previous', 'Zhane')); ?>
+			<?php next_post_link('%link', __('Next', 'Zhane')); ?>
 		</div>
 		<?php endif; ?>
 		<?php if(have_posts()): the_post(); ?>
@@ -207,7 +207,7 @@
 			<?php if($smof_data['post_meta'] && ( (!$smof_data['post_meta_author']) || (!$smof_data['post_meta_date']) || (!$smof_data['post_meta_cats']) || (!$smof_data['post_meta_comments']) || (!$smof_data['post_meta_tags']) ) ): ?>
 			<div class="meta-info">
 				<div class="vcard">
-					<?php if(!$smof_data['post_meta_author']): ?><?php echo __('By', 'Avada'); ?> <span class="fn"><?php the_author_posts_link(); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_date']): ?><span class="updated" style="display:none;"><?php the_modified_time( 'c' ); ?></span><span class="published"><?php the_time($smof_data['date_format']); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_cats']): ?><?php if(!$smof_data['post_meta_tags']){ echo __('Categories:', 'Avada') . ' '; } ?><?php the_category(', '); ?><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_tags']): ?><span class="meta-tags"><?php echo __('Tags:', 'Avada') . ' '; the_tags( '' ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_comments']): ?><?php comments_popup_link(__('0 Comments', 'Avada'), __('1 Comment', 'Avada'), '% '.__('Comments', 'Avada')); ?><?php endif; ?>
+					<?php if(!$smof_data['post_meta_author']): ?><?php echo __('By', 'Zhane'); ?> <span class="fn"><?php the_author_posts_link(); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_date']): ?><span class="updated" style="display:none;"><?php the_modified_time( 'c' ); ?></span><span class="published"><?php the_time($smof_data['date_format']); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_cats']): ?><?php if(!$smof_data['post_meta_tags']){ echo __('Categories:', 'Zhane') . ' '; } ?><?php the_category(', '); ?><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_tags']): ?><span class="meta-tags"><?php echo __('Tags:', 'Zhane') . ' '; the_tags( '' ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_comments']): ?><?php comments_popup_link(__('0 Comments', 'Zhane'), __('1 Comment', 'Zhane'), '% '.__('Comments', 'Zhane')); ?><?php endif; ?>
 				</div>
 			</div>
 			<?php endif; ?>
@@ -228,13 +228,13 @@
 				);
 				?>
 				<div class="fusion-sharing-box share-box">
-					<h4><?php echo __('Share This Story, Choose Your Platform!', 'Avada'); ?></h4>
+					<h4><?php echo __('Share This Story, Choose Your Platform!', 'Zhane'); ?></h4>
 					<?php echo $social_icons->render_social_icons( $sharingbox_soical_icon_options ); ?>
 				</div>
 			<?php endif; ?>
 			<?php if($smof_data['author_info']): ?>
 			<div class="about-author">
-				<div class="title"><h2><?php echo __('About the Author:', 'Avada'); ?> <?php the_author_posts_link(); ?></h2><div class="title-sep-container"><div class="title-sep"></div></div></div>
+				<div class="title"><h2><?php echo __('About the Author:', 'Zhane'); ?> <?php the_author_posts_link(); ?></h2><div class="title-sep-container"><div class="title-sep"></div></div></div>
 				<div class="about-author-container">
 					<div class="avatar">
 						<?php echo get_avatar(get_the_author_meta('email'), '72'); ?>
@@ -251,7 +251,7 @@
 			<?php $related = get_related_posts($post->ID, $smof_data['number_related_posts']); ?>
 			<?php if($related->have_posts()): ?>
 			<div class="related-posts single-related-posts">
-				<div class="fusion-title title"><h2 class="title-heading-left"><?php echo __('Related Posts', 'Avada'); ?></h2><div class="title-sep-container"><div class="title-sep sep-double"></div></div></div>
+				<div class="fusion-title title"><h2 class="title-heading-left"><?php echo __('Related Posts', 'Zhane'); ?></h2><div class="title-sep-container"><div class="title-sep sep-double"></div></div></div>
 				<div id="carousel" class="es-carousel-wrapper fusion-carousel-large">
 					<div class="es-carousel">
 						<ul>

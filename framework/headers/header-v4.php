@@ -2,7 +2,7 @@
 <div class="header-v4">
 	<?php if($smof_data['header_left_content'] != 'Leave Empty' || $smof_data['header_right_content'] != 'Leave Empty'): ?>
 	<div class="header-social">
-		<div class="avada-row">
+		<div class="zhane-row">
 			<div class="alignleft">
 				<?php
 				if($smof_data['header_left_content'] == 'Contact Info') {
@@ -29,7 +29,7 @@
 	</div>
 	<?php endif; ?>
 	<header id="header">
-		<div class="avada-row" style="padding-top:<?php echo $smof_data['margin_header_top']; ?>;padding-bottom:<?php echo $smof_data['margin_header_bottom']; ?>;">
+		<div class="zhane-row" style="padding-top:<?php echo $smof_data['margin_header_top']; ?>;padding-bottom:<?php echo $smof_data['margin_header_bottom']; ?>;">
 			<div class="logo" data-margin-right="<?php echo $smof_data['margin_logo_right']; ?>" data-margin-left="<?php echo $smof_data['margin_logo_left']; ?>" data-margin-top="<?php echo $smof_data['margin_logo_top']; ?>" data-margin-bottom="<?php echo $smof_data['margin_logo_bottom']; ?>" style="margin-right:<?php echo $smof_data['margin_logo_right']; ?>;margin-top:<?php echo $smof_data['margin_logo_top']; ?>;margin-left:<?php echo $smof_data['margin_logo_left']; ?>;margin-bottom:<?php echo $smof_data['margin_logo_bottom']; ?>;">
 				<a href="<?php bloginfo('url'); ?>">
 					<img src="<?php echo $smof_data['logo']; ?>" alt="<?php bloginfo('name'); ?>" class="normal_logo" />
@@ -49,7 +49,7 @@
 				<form role="search" id="searchform" class="search" method="get" action="<?php echo home_url( '/' ); ?>">
 					<div class="search-table">
 						<div class="search-field">
-							<input type="text" placeholder="<?php echo _e( 'Search...', 'Avada' ); ?>" value="" name="s" id="s" />
+							<input type="text" placeholder="<?php echo _e( 'Search...', 'Zhane' ); ?>" value="" name="s" id="s" />
 						</div>
 						<div class="search-button">
 							<input type="submit" id="searchsubmit" value="&#xf002;" />
@@ -66,7 +66,7 @@
 				<form role="search" id="searchform" class="search" method="get" action="<?php echo home_url( '/' ); ?>">
 					<div class="search-table">
 						<div class="search-field">
-							<input type="text" placeholder="<?php echo _e( 'Search...', 'Avada' ); ?>" value="" name="s" id="s" />
+							<input type="text" placeholder="<?php echo _e( 'Search...', 'Zhane' ); ?>" value="" name="s" id="s" />
 						</div>
 						<div class="search-button">
 							<input type="submit" id="searchsubmit" value="&#xf002;" />
@@ -82,7 +82,7 @@
 			<form role="search" id="searchform" class="search" method="get" action="<?php echo home_url( '/' ); ?>">
 				<div class="search-table">
 					<div class="search-field">
-						<input type="text" placeholder="<?php echo _e( 'Search...', 'Avada' ); ?>" value="" name="s" id="s" />
+						<input type="text" placeholder="<?php echo _e( 'Search...', 'Zhane' ); ?>" value="" name="s" id="s" />
 					</div>
 					<div class="search-button">
 						<input type="submit" id="searchsubmit" value="&#xf002;" />
@@ -97,7 +97,7 @@
 		</div>
 	</header>
 	<div id="small-nav">
-		<div class="avada-row">
+		<div class="zhane-row">
 			<?php if($smof_data['ubermenu']): ?>
 			<nav id="nav-uber">
 			<?php else: ?>

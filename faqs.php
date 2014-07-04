@@ -39,7 +39,7 @@ get_header(); ?>
 		if($portfolio_category):
 		?>
 		<ul class="faq-tabs clearfix">
-			<li class="active"><a data-filter="*" href="#"><?php echo __('All', 'Avada'); ?></a></li>
+			<li class="active"><a data-filter="*" href="#"><?php echo __('All', 'Zhane'); ?></a></li>
 			<?php foreach($portfolio_category as $portfolio_cat): ?>
 			<li><a data-filter=".<?php echo urldecode($portfolio_cat->slug); ?>" href="#"><?php echo $portfolio_cat->name; ?></a></li>
 			<?php endforeach; ?>
@@ -50,7 +50,7 @@ get_header(); ?>
 				<div class="panel-group" id="accordian-one">
 					<?php
 					$args = array(
-						'post_type' => 'avada_faq',
+						'post_type' => 'zhane_faq',
 						'nopaging' => true
 					);
 					$gallery = new WP_Query($args);

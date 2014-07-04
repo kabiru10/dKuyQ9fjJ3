@@ -1,6 +1,6 @@
 <wpml-config>
     <admin-texts>
-        <key name="avada_options">
+        <key name="zhane_options">
             <key name="google_analytics" />
             <key name="space_head" />
             <key name="space_body" />
@@ -26,8 +26,8 @@
         <custom-type translate="1">slide</custom-type>
         <custom-type translate="1">layerslider</custom-type>
         <custom-type translate="1">revslider</custom-type>
-        <custom-type translate="1">avada_faq</custom-type>
-        <custom-type translate="1">avada_portfolio</custom-type>
+        <custom-type translate="1">zhane_faq</custom-type>
+        <custom-type translate="1">zhane_portfolio</custom-type>
     </custom-types>
     <taxonomies>
         <taxonomy translate="1">portfolio_category</taxonomy>
@@ -38,7 +38,7 @@
         <taxonomy translate="1">slide-page</taxonomy>
     </taxonomies>
     <custom-fields>
-        <custom-field action="copy">avada_post_views_count</custom-field>
+        <custom-field action="copy">zhane_post_views_count</custom-field>
         <custom-field action="copy">pyre_address</custom-field>
         <custom-field action="copy">pyre_caption_1</custom-field>
         <custom-field action="copy">pyre_caption_2</custom-field>

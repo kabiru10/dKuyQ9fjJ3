@@ -1,6 +1,6 @@
 <?php
-if( ! class_exists( 'AvadaThemeUpdater' ) ) {
-    class AvadaThemeUpdater {
+if( ! class_exists( 'ZhaneThemeUpdater' ) ) {
+    class ZhaneThemeUpdater {
         var $api_url;
     	var $theme_id;
     	var $theme_slug;
@@ -35,7 +35,7 @@ if( ! class_exists( 'AvadaThemeUpdater' ) ) {
     			'version' => $transient->checked[$this->theme_slug]
     		);
 
-            if( $this->api_url == 'http://updates.theme-fusion.com/avada-theme.php' ) {
+            if( $this->api_url == 'http://updates.theme-fusion.com/zhane-theme.php' ) {
                 $request_args['item_code'] = '2833226';
                 $request_args['envato_username'] = $smof_data['tf_username'];
                 $request_args['api_key'] = $smof_data['tf_api'];
@@ -84,7 +84,7 @@ if( ! class_exists( 'AvadaThemeUpdater' ) ) {
                     $theme_name = '<strong>'. wp_get_theme() .'</strong>';
                 }
                 echo '<div class="updated">
-                <p>' . __( 'There is an update available for the ' . $theme_name . ' theme.', 'Avada' ) . '</p>
+                <p>' . __( 'There is an update available for the ' . $theme_name . ' theme.', 'Zhane' ) . '</p>
                 </div>';
             }
         }

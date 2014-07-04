@@ -26,7 +26,7 @@ h5.toggle:hover a,
 #sidebar .widget .recentcomments:hover:before,#sidebar .widget_recent_entries li a:hover:before,
 #sidebar .widget_archive li a:hover:before,#sidebar .widget_pages li a:hover:before,
 #sidebar .widget_links li a:hover:before,.side-nav .arrow:hover:after,.woocommerce-tabs .tabs a:hover .arrow:after,
-.star-rating:before,.star-rating span:before,.price ins .amount, .avada-order-details .shop_table.order_details tfoot tr:last-child .amount,
+.star-rating:before,.star-rating span:before,.price ins .amount, .zhane-order-details .shop_table.order_details tfoot tr:last-child .amount,
 .price > .amount,.woocommerce-pagination .prev:hover,.woocommerce-pagination .next:hover,.woocommerce-pagination .prev:hover:before,.woocommerce-pagination .next:hover:after,
 .woocommerce-tabs .tabs li.active a,.woocommerce-tabs .tabs li.active a .arrow:after,
 #wrapper .cart-checkout a:hover,#wrapper .cart-checkout a:hover:before,#wrapper .header-social .top-menu .cart-checkout a:hover,
@@ -102,7 +102,7 @@ ul.circle-yes li:before,
 #wrapper .search-table .search-button input[type="submit"]:hover,
 ul.arrow li:before,
 p.demo_store,
-.avada-myaccount-data .digital-downloads li:before, .avada-thank-you .order_details li:before{
+.zhane-myaccount-data .digital-downloads li:before, .zhane-thank-you .order_details li:before{
 	background-color:<?php echo $smof_data['primary_color']; ?>;
 }
 .woocommerce .social-share li a:hover i {
@@ -128,7 +128,7 @@ if($smof_data['slidingbar_bg_color_transparency']) {
 } else {
 	$slidingbar_opacity = '1';
 }
-$rgb = avada_hex2rgb($smof_data['slidingbar_bg_color']);
+$rgb = zhane_hex2rgb($smof_data['slidingbar_bg_color']);
 $rgba= "rgba(".$rgb[0].','.$rgb[1].','.$rgb[2].','.$slidingbar_opacity.')';
 ?>
 #slidingbar {
@@ -186,7 +186,7 @@ $rgba= "rgba(".$rgb[0].','.$rgb[1].','.$rgb[2].','.$slidingbar_opacity.')';
 
 
 <?php if($smof_data['header_sticky_bg_color']): ?>
-<?php $header_sticky_bg_color_hex = avada_hex2rgb($smof_data['header_sticky_bg_color']); ?>
+<?php $header_sticky_bg_color_hex = zhane_hex2rgb($smof_data['header_sticky_bg_color']); ?>
 <?php if($smof_data['header_sticky_opacity']): ?>
 body #header-sticky.sticky-header .sticky-shadow{background:rgba(<?php echo $header_sticky_bg_color_hex[0]; ?>, <?php echo $header_sticky_bg_color_hex[1]; ?>, <?php echo $header_sticky_bg_color_hex[2]; ?>, <?php echo $smof_data['header_sticky_opacity']; ?>);}
 .no-rgba #header-sticky.sticky-header .sticky-shadow{background:<?php echo $smof_data['header_sticky_bg_color']; ?>; filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=<?php echo $smof_data['header_sticky_opacity']*100; ?>); opacity: <?php echo $smof_data['header_sticky_opacity']; ?>;}
@@ -197,7 +197,7 @@ body #header-sticky.sticky-header .sticky-shadow{background:rgba(<?php echo $hea
 <?php endif; ?>
 
 <?php if($smof_data['header_bg_color']): ?>
-<?php $header_bg_color_hex = avada_hex2rgb($smof_data['header_bg_color']); ?>
+<?php $header_bg_color_hex = zhane_hex2rgb($smof_data['header_bg_color']); ?>
 #header,#small-nav{
 	background-color:<?php echo $smof_data['header_bg_color']; ?>;
 }
@@ -246,8 +246,8 @@ body #header-sticky.sticky-header .sticky-shadow{background:rgba(<?php echo $hea
 <?php endif; ?>
 <?php if($smof_data['image_gradient_top_color']): ?>
 <?php
-$imgr_gtop = avada_hex2rgb($smof_data['image_gradient_top_color']);
-$imgr_gbot = avada_hex2rgb($smof_data['image_gradient_bottom_color']);
+$imgr_gtop = zhane_hex2rgb($smof_data['image_gradient_top_color']);
+$imgr_gbot = zhane_hex2rgb($smof_data['image_gradient_bottom_color']);
 if($smof_data['image_rollover_opacity']) {
 	$opacity = $smof_data['image_rollover_opacity'];
 } else {
@@ -302,8 +302,8 @@ $imgr_gbot_string = 'rgba('.$imgr_gbot[0].','.$imgr_gbot[1].','.$imgr_gbot[2].',
 .woocommerce .checkout_coupon .button,
 .woocommerce .login .button,
 .woocommerce .register .button,
-.woocommerce .avada-order-details .order-again .button,
-.woocommerce .avada-order-details .order-again .button{
+.woocommerce .zhane-order-details .order-again .button,
+.woocommerce .zhane-order-details .order-again .button{
 	background: <?php echo $smof_data['button_gradient_top_color']; ?>;
 	color: <?php echo $smof_data['button_accent_color']; ?>;
 	
@@ -340,7 +340,7 @@ $imgr_gbot_string = 'rgba('.$imgr_gbot[0].','.$imgr_gbot[1].','.$imgr_gbot[2].',
 .no-cssgradients .woocommerce .checkout_coupon .button,
 .no-cssgradients .woocommerce .login .button,
 .no-cssgradients .woocommerce .register .button,
-.no-cssgradients .woocommerce .avada-order-details .order-again .button{
+.no-cssgradients .woocommerce .zhane-order-details .order-again .button{
 	background:<?php echo $smof_data['button_gradient_top_color']; ?>;
 }
 <?php endif; ?>
@@ -361,7 +361,7 @@ $imgr_gbot_string = 'rgba('.$imgr_gbot[0].','.$imgr_gbot[1].','.$imgr_gbot[2].',
 .woocommerce .checkout_coupon .button:hover,
 .woocommerce .login .button:hover,
 .woocommerce .register .button:hover,
-.woocommerce .avada-order-details .order-again .button:hover{
+.woocommerce .zhane-order-details .order-again .button:hover{
 	background: <?php echo $smof_data['button_gradient_top_color_hover']; ?>;
 	color: <?php echo $smof_data['button_accent_hover_color']; ?>;
 	
@@ -392,7 +392,7 @@ $imgr_gbot_string = 'rgba('.$imgr_gbot[0].','.$imgr_gbot[1].','.$imgr_gbot[2].',
 .no-cssgradients .woocommerce .checkout_coupon .button:hover,
 .no-cssgradients .woocommerce .login .button:hover,
 .no-cssgradients .woocommerce .register .button:hover,
-.no-cssgradients .woocommerce .avada-order-details .order-again .button:hover{
+.no-cssgradients .woocommerce .zhane-order-details .order-again .button:hover{
 	background:<?php echo $smof_data['button_gradient_top_color_hover']; ?>;
 }
 <?php endif; ?>
@@ -461,10 +461,10 @@ $imgr_gbot_string = 'rgba('.$imgr_gbot[0].','.$imgr_gbot[1].','.$imgr_gbot[2].',
 
 <?php if($smof_data['icon_color']): ?>
 .fontawesome-icon,
-.avada-myaccount-data .digital-downloads li:before,
-.avada-myaccount-data .digital-downloads li:after,
-.avada-thank-you .order_details li:before,
-.avada-thank-you .order_details li:after,
+.zhane-myaccount-data .digital-downloads li:before,
+.zhane-myaccount-data .digital-downloads li:after,
+.zhane-thank-you .order_details li:before,
+.zhane-thank-you .order_details li:after,
 .post-content .error-menu li:before,
 .post-content .error-menu li:after{
 	color:<?php echo $smof_data['icon_color']; ?>;
@@ -524,7 +524,7 @@ if($smof_data['google_body'] != 'Select Font') {
 body,#nav ul li ul li a,#sticky-nav ul li ul li a,
 #wrapper .fusion-megamenu-wrapper .fusion-megamenu-widgets-container,
 .more,
-.avada-container h3,
+.zhane-container h3,
 .meta .date,
 .review blockquote q,
 .review blockquote div strong,
@@ -555,7 +555,7 @@ body,#nav ul li ul li a,#sticky-nav ul li ul li a,
 .image .image-extras .image-extras-content .price {
 	font-family:<?php echo $font; ?>;
 }
-.avada-container h3,
+.zhane-container h3,
 .review blockquote div strong,
 .footer-area  h3,
 #slidingbar-area  h3,
@@ -566,7 +566,7 @@ body,#nav ul li ul li a,#sticky-nav ul li ul li a,
 .woocommerce .checkout_coupon .button,
 .woocommerce .login .button,
 .woocommerce .register .button,
-.woocommerce .avada-order-details .order-again .button,
+.woocommerce .zhane-order-details .order-again .button,
 .comment-form input[type="submit"],
 .wpcf7-form input[type="submit"],
 .gform_wrapper .gform_button{
@@ -712,7 +712,7 @@ body,#sidebar .slide-excerpt h2, .footer-area .slide-excerpt h2,#slidingbar-area
 <?php endif; ?>
 
 <?php if($smof_data['responsive']): ?>
-#header-sticky .avada-row,#header .avada-row, #main .avada-row, .footer-area .avada-row,#slidingbar-area .avada-row, #footer .avada-row{ max-width:940px; }
+#header-sticky .zhane-row,#header .zhane-row, #main .zhane-row, .footer-area .zhane-row,#slidingbar-area .zhane-row, #footer .zhane-row{ max-width:940px; }
 <?php endif; ?>
 
 <?php if($smof_data['h1_font_size']): ?>
@@ -1027,7 +1027,7 @@ body #toTop:before {color:#fff;}
 <?php if($smof_data['sep_color']): ?>
 
 .sep-single,.sep-double,.sep-dashed,.sep-dotted,.search-page-search-form{border-color:<?php echo $smof_data['sep_color']; ?>;}
-.ls-avada, .avada-skin-rev,.es-carousel-wrapper.fusion-carousel-small .es-carousel ul li img,.fusion-accordian .panel,.progress-bar,
+.ls-zhane, .zhane-skin-rev,.es-carousel-wrapper.fusion-carousel-small .es-carousel ul li img,.fusion-accordian .panel,.progress-bar,
 #small-nav,.portfolio-tabs,.faq-tabs,.single-navigation,.project-content .project-info .project-info-box,
 .fusion-blog-medium-alternate .post, .fusion-blog-large-alternate .post,
 .post .meta-info,.grid-layout .post,.grid-layout .post .content-sep,
@@ -1045,7 +1045,7 @@ body #toTop:before {color:#fff;}
 {border-color:<?php echo $smof_data['sep_color']; ?>;}
 .side-nav li a,#sidebar .product_list_widget li,#sidebar .widget_layered_nav li,.price_slider_wrapper,.tagcloud a,#header-sticky .cart-content a,#header-sticky .cart-content a:hover,#header-sticky .login-box,#header-sticky .cart-contents,
 #header .cart-content a,#header .cart-content a:hover,#header .login-box,#header .cart-contents,#small-nav .login-box,#small-nav .cart-contents,#small-nav .cart-content a,#small-nav .cart-content a:hover,
-#customer_login_box,.avada_myaccount_user,#wrapper .myaccount_user_container span,
+#customer_login_box,.zhane_myaccount_user,#wrapper .myaccount_user_container span,
 .woocommerce-side-nav li a,.woocommerce-content-box,.woocommerce-content-box h2,.my_account_orders tr,.woocommerce .address h4,.shop_table tr,.cart_totals .total,.chzn-container-single .chzn-single,.chzn-container-single .chzn-single div,.chzn-drop,form.checkout .shop_table tfoot,.input-radio,#final-order-details .mini-order-details tr:last-child,p.order-info,.cart-content a img,.panel.entry-content,
 .woocommerce-tabs .tabs li a,.woocommerce .social-share,.woocommerce .social-share li,.quantity,.quantity .minus, .quantity .qty,.shop_attributes tr,.woocommerce-success-message,#reviews li .comment-text,
 .cart_totals, .shipping_calculator, .coupon, .woocommerce .cross-sells, #customer_login .col-1, #customer_login .col-2, .woocommerce-message, .woocommerce form.checkout #customer_details .col-1, .woocommerce form.checkout #customer_details .col-2,
@@ -1079,7 +1079,7 @@ input#s,#comment-input input,#comment-textarea textarea,.comment-form-comment te
 .gform_wrapper .gfield input[type=text],.gform_wrapper .gfield input[type=email],.gform_wrapper .gfield textarea,.gform_wrapper .gfield select,
 #bbpress-forums .bbp-search-form #bbp_search,.bbp-reply-form input#bbp_topic_tags,.bbp-topic-form input#bbp_topic_title, .bbp-topic-form input#bbp_topic_tags, .bbp-topic-form select#bbp_stick_topic_select, .bbp-topic-form select#bbp_topic_status_select,#bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content,
 .main-nav-search-form input,.search-page-search-form input,.chzn-container-single .chzn-single,.chzn-container .chzn-drop,
-.avada-select-parent select,.avada-select-parent .avada-select-arrow, #wrapper .select-arrow,
+.zhane-select-parent select,.zhane-select-parent .zhane-select-arrow, #wrapper .select-arrow,
 #lang_sel_click a.lang_sel_sel,
 #lang_sel_click ul ul a, #lang_sel_click ul ul a:visited,
 #lang_sel_click a, #lang_sel_click a:visited,#wrapper .search-table .search-field input{
@@ -1091,7 +1091,7 @@ input#s,input#s .placeholder,#comment-input input,#comment-textarea textarea,#co
 .wpcf7-form .wpcf7-text,.wpcf7-form .wpcf7-quiz,.wpcf7-form .wpcf7-number,.wpcf7-form textarea,.wpcf7-form .wpcf7-select,.wpcf7-select-parent .select-arrow,.wpcf7-captchar,.wpcf7-form .wpcf7-date,
 .gform_wrapper .gfield input[type=text],.gform_wrapper .gfield input[type=email],.gform_wrapper .gfield textarea,.gform_wrapper .gfield select,
 #bbpress-forums .bbp-search-form #bbp_search,.bbp-reply-form input#bbp_topic_tags,.bbp-topic-form input#bbp_topic_title, .bbp-topic-form input#bbp_topic_tags, .bbp-topic-form select#bbp_stick_topic_select, .bbp-topic-form select#bbp_topic_status_select,#bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content,
-.main-nav-search-form input,.search-page-search-form input,.chzn-container-single .chzn-single,.chzn-container .chzn-drop,.avada-select-parent select, #wrapper .search-table .search-field input
+.main-nav-search-form input,.search-page-search-form input,.chzn-container-single .chzn-single,.chzn-container .chzn-drop,.zhane-select-parent select, #wrapper .search-table .search-field input
 {color:<?php echo $smof_data['form_text_color']; ?>;}
 input#s::-webkit-input-placeholder,#comment-input input::-webkit-input-placeholder,.post-password-form .password::-webkit-input-placeholder,#comment-textarea textarea::-webkit-input-placeholder,.comment-form-comment textarea::-webkit-input-placeholder,.input-text::-webkit-input-placeholder{color:<?php echo $smof_data['form_text_color']; ?>;}
 input#s:-moz-placeholder,#comment-input input:-moz-placeholder,.post-password-form .password::-moz-input-placeholder,#comment-textarea textarea:-moz-placeholder,.comment-form-comment textarea:-moz-placeholder,.input-text:-moz-placeholder,
@@ -1105,7 +1105,7 @@ input#s,#comment-input input,#comment-textarea textarea,.comment-form-comment te
 .gform_wrapper .gfield input[type=text],.gform_wrapper .gfield input[type=email],.gform_wrapper .gfield textarea,.gform_wrapper .gfield_select[multiple=multiple],.gform_wrapper .gfield select,.gravity-select-parent .select-arrow,.select-arrow,
 #bbpress-forums .quicktags-toolbar,#bbpress-forums .bbp-search-form #bbp_search,.bbp-reply-form input#bbp_topic_tags,.bbp-topic-form input#bbp_topic_title, .bbp-topic-form input#bbp_topic_tags, .bbp-topic-form select#bbp_stick_topic_select, .bbp-topic-form select#bbp_topic_status_select,#bbpress-forums div.bbp-the-content-wrapper textarea.bbp-the-content,#wp-bbp_topic_content-editor-container,#wp-bbp_reply_content-editor-container,
 .main-nav-search-form input,.search-page-search-form input,.chzn-container-single .chzn-single,.chzn-container .chzn-drop,
-.avada-select-parent select,.avada-select-parent .avada-select-arrow,
+.zhane-select-parent select,.zhane-select-parent .zhane-select-arrow,
 #lang_sel_click a.lang_sel_sel,
 #lang_sel_click ul ul a, #lang_sel_click ul ul a:visited,
 #lang_sel_click a, #lang_sel_click a:visited,
@@ -1333,8 +1333,8 @@ body #sidebar .tab-hold .tabs li.active a{border-top-color:<?php echo $smof_data
 <?php endif; ?>
 
 <?php
-$avada_color_scheme = 'light';
-if($smof_data['scheme_type'] == 'Dark'): $avada_color_scheme = 'dark'; ?>
+$zhane_color_scheme = 'light';
+if($smof_data['scheme_type'] == 'Dark'): $zhane_color_scheme = 'dark'; ?>
 <?php if($smof_data['header_border_color']): ?>
 .header-v4 #small-nav,.header-v5 #small-nav{
 	border-bottom-color:<?php echo $smof_data['header_border_color']; ?>;
@@ -1481,7 +1481,7 @@ body #header-sticky.sticky-header .sticky-shadow { -webkit-box-shadow: 0 1px 3px
 <?php endif; ?>
 
 <?php if($smof_data['button_text_shadow']): ?>
-.button.default,.button-default,.gform_wrapper .gform_button,#comment-submit,.woocommerce .avada-shipping-calculator-form .button,.woocommerce form.checkout #place_order,.woocommerce .single_add_to_cart_button,#reviews input#submit,.woocommerce .login .button,.woocommerce .register .button,
+.button.default,.button-default,.gform_wrapper .gform_button,#comment-submit,.woocommerce .zhane-shipping-calculator-form .button,.woocommerce form.checkout #place_order,.woocommerce .single_add_to_cart_button,#reviews input#submit,.woocommerce .login .button,.woocommerce .register .button,
 .bbp-submit-wrapper button,.wpcf7-form input[type="submit"], .wpcf7-submit
 {
 	text-shadow:none;
@@ -1552,19 +1552,19 @@ body #header-sticky.sticky-header .sticky-shadow { -webkit-box-shadow: 0 1px 3px
 <?php endif; ?>
 
 <?php if($smof_data['button_shape'] == 'Pill'): ?>
-.button.default,.button-default,#comment-submit,.woocommerce form.checkout #place_order,.woocommerce .single_add_to_cart_button,#reviews input#submit,.woocommerce .avada-shipping-calculator-form .button,.woocommerce .login .button,.woocommerce .register .button,
+.button.default,.button-default,#comment-submit,.woocommerce form.checkout #place_order,.woocommerce .single_add_to_cart_button,#reviews input#submit,.woocommerce .zhane-shipping-calculator-form .button,.woocommerce .login .button,.woocommerce .register .button,
 .bbp-submit-wrapper button,.wpcf7-form input[type="submit"], .wpcf7-submit
 {border-radius: 25px;}
 <?php endif; ?>
 
 <?php if($smof_data['button_shape'] == 'Round'): ?>
-.button.default,#comment-submit,.woocommerce form.checkout #place_order,.woocommerce .single_add_to_cart_button,#reviews input#submit,.woocommerce .avada-shipping-calculator-form .button,.woocommerce .login .button,.woocommerce .register .button,
+.button.default,#comment-submit,.woocommerce form.checkout #place_order,.woocommerce .single_add_to_cart_button,#reviews input#submit,.woocommerce .zhane-shipping-calculator-form .button,.woocommerce .login .button,.woocommerce .register .button,
 .bbp-submit-wrapper button,.wpcf7-form input[type="submit"], .wpcf7-submit
 {border-radius: 2px;}
 <?php endif; ?>
 
 <?php if($smof_data['button_shape'] == 'Square'): ?>
-.button.default,#comment-submit,.woocommerce form.checkout #place_order,.woocommerce .single_add_to_cart_button,#reviews input#submit,.woocommerce .avada-shipping-calculator-form .button,.woocommerce .login .button,.woocommerce .register .button,
+.button.default,#comment-submit,.woocommerce form.checkout #place_order,.woocommerce .single_add_to_cart_button,#reviews input#submit,.woocommerce .zhane-shipping-calculator-form .button,.woocommerce .login .button,.woocommerce .register .button,
 .bbp-submit-wrapper button,.wpcf7-form input[type="submit"], .wpcf7-submit
 {border-radius: 0px;}
 <?php endif; ?>
@@ -1644,7 +1644,7 @@ body #header-sticky.sticky-header .sticky-shadow { -webkit-box-shadow: 0 1px 3px
 }
 <?php endif; ?>
 
-<?php if(!$smof_data['avada_rev_styles']): ?>
+<?php if(!$smof_data['zhane_rev_styles']): ?>
 .rev_slider_wrapper{
 	position:relative
 }
@@ -1675,7 +1675,7 @@ body #header-sticky.sticky-header .sticky-shadow { -webkit-box-shadow: 0 1px 3px
 	z-index:99;
 }
 
-.avada-skin-rev{
+.zhane-skin-rev{
 	border-top: 1px solid #d2d3d4;
 	border-bottom: 1px solid #d2d3d4;
 	-moz-box-sizing: content-box;
@@ -1790,8 +1790,8 @@ body #header-sticky.sticky-header .sticky-shadow { -webkit-box-shadow: 0 1px 3px
 
 .woocommerce form.checkout #customer_details div:last-child { margin-right: 0; }
 
-.woocommerce form.checkout .avada-checkout-no-shipping #customer_details .col-1 {width:100%;margin-right:0}
-.woocommerce form.checkout .avada-checkout-no-shipping #customer_details .col-2 {display:none;}
+.woocommerce form.checkout .zhane-checkout-no-shipping #customer_details .col-1 {width:100%;margin-right:0}
+.woocommerce form.checkout .zhane-checkout-no-shipping #customer_details .col-2 {display:none;}
 
 <?php else: ?>
 
@@ -1803,7 +1803,7 @@ body #header-sticky.sticky-header .sticky-shadow { -webkit-box-shadow: 0 1px 3px
 
 <?php
 if($smof_data['imgframe_style_color']) {
-	$rgb = avada_hex2rgb( $smof_data['imgframe_style_color'] );
+	$rgb = zhane_hex2rgb( $smof_data['imgframe_style_color'] );
 	echo ".imageframe-glow img{
 		-moz-box-shadow: 0 0 3px rgba({$rgb[0]},{$rgb[1]},{$rgb[2]},.3);
 		-webkit-box-shadow: 0 0 3px rgba({$rgb[0]},{$rgb[1]},{$rgb[2]},.3);

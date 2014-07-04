@@ -4,7 +4,7 @@
 		die ('Please do not load this page directly. Thanks!');
 
 	if ( post_password_required() ) { ?>
-		<p class="no-comments"><?php echo __('This post is password protected. Enter the password to view comments.', 'Avada'); ?></p>
+		<p class="no-comments"><?php echo __('This post is password protected. Enter the password to view comments.', 'Zhane'); ?></p>
 	<?php
 		return;
 	}
@@ -15,10 +15,10 @@
 <?php if ( have_comments() ) : ?>
 
 	<div id="comments" class="comments-container">
-		<div class="title fusion-title"><h2 class="title-heading-left"><?php comments_number(__('No Comments', 'Avada'), __('One Comment', 'Avada'), '% '.__('Comments', 'Avada'));?></h2><div class="title-sep-container"><div class="title-sep sep-double"></div></div></div>
+		<div class="title fusion-title"><h2 class="title-heading-left"><?php comments_number(__('No Comments', 'Zhane'), __('One Comment', 'Zhane'), '% '.__('Comments', 'Zhane'));?></h2><div class="title-sep-container"><div class="title-sep sep-double"></div></div></div>
 
 		<ol class="commentlist">
-			<?php wp_list_comments('callback=avada_comment'); ?>
+			<?php wp_list_comments('callback=zhane_comment'); ?>
 		</ol>
 
 		<div class="comments-navigation">
@@ -34,7 +34,7 @@
 
 	 <?php else : // comments are closed ?>
 		<!-- If comments are closed. -->
-		<p class="no-comments"><?php echo __('Comments are closed.', 'Avada'); ?></p>
+		<p class="no-comments"><?php echo __('Comments are closed.', 'Zhane'); ?></p>
 
 	<?php endif; ?>
 
@@ -47,26 +47,26 @@
 		$commenter = wp_get_current_commenter();
 		$req       = get_option( 'require_name_email' );
 
-		$fields['author'] = '<div id="comment-input"><input type="text" name="author" id="author" value="'. esc_attr( $commenter['comment_author'] ) .'" placeholder="'. __("Name (required)", "Avada").'" size="22" tabindex="1"'. ( $req ? 'aria-required="true"' : '' ).' class="input-name" />';
+		$fields['author'] = '<div id="comment-input"><input type="text" name="author" id="author" value="'. esc_attr( $commenter['comment_author'] ) .'" placeholder="'. __("Name (required)", "Zhane").'" size="22" tabindex="1"'. ( $req ? 'aria-required="true"' : '' ).' class="input-name" />';
 
-		$fields['email'] = '<input type="text" name="email" id="email" value="'. esc_attr( $commenter['comment_author_email'] ) .'" placeholder="'. __("Email (required)", "Avada").'" size="22" tabindex="2"'. ( $req ? 'aria-required="true"' : '' ).' class="input-email"  />';
+		$fields['email'] = '<input type="text" name="email" id="email" value="'. esc_attr( $commenter['comment_author_email'] ) .'" placeholder="'. __("Email (required)", "Zhane").'" size="22" tabindex="2"'. ( $req ? 'aria-required="true"' : '' ).' class="input-email"  />';
 
-		$fields['url'] = '<input type="text" name="url" id="url" value="'. esc_attr( $commenter['comment_author_url'] ) .'" placeholder="'. __("Website", "Avada").'" size="22" tabindex="3" class="input-website" /></div>';
+		$fields['url'] = '<input type="text" name="url" id="url" value="'. esc_attr( $commenter['comment_author_url'] ) .'" placeholder="'. __("Website", "Zhane").'" size="22" tabindex="3" class="input-website" /></div>';
 
 		return $fields;
 	}
 	add_filter('comment_form_default_fields','modify_comment_form_fields');
 
 	$comments_args = array(
-		'title_reply' => '<div class="title fusion-title"><h2 class="title-heading-left">'. __("Leave A Comment", "Avada").'</h2><div class="title-sep-container"><div class="title-sep sep-double"></div></div></div>',
-		'title_reply_to' => '<div class="title fusion-title"><h2 class="title-heading-left">'. __("Leave A Comment", "Avada").'</h2><div class="title-sep-container"><div class="title-sep sep-double"></div></div></div>',
-		'must_log_in' => '<p class="must-log-in">' .  sprintf( __( "You must be %slogged in%s to post a comment.", "Avada" ), '<a href="'.wp_login_url( apply_filters( 'the_permalink', get_permalink( ) ) ).'">', '</a>' ) . '</p>',
-		'logged_in_as' => '<p class="logged-in-as">' . __( "Logged in as","Avada" ).' <a href="' .admin_url( "profile.php" ).'">'.$user_identity.'</a>. <a href="' .wp_logout_url(get_permalink()).'" title="' . __("Log out of this account", "Avada").'">'. __("Log out &raquo;", "Avada").'</a></p>',
+		'title_reply' => '<div class="title fusion-title"><h2 class="title-heading-left">'. __("Leave A Comment", "Zhane").'</h2><div class="title-sep-container"><div class="title-sep sep-double"></div></div></div>',
+		'title_reply_to' => '<div class="title fusion-title"><h2 class="title-heading-left">'. __("Leave A Comment", "Zhane").'</h2><div class="title-sep-container"><div class="title-sep sep-double"></div></div></div>',
+		'must_log_in' => '<p class="must-log-in">' .  sprintf( __( "You must be %slogged in%s to post a comment.", "Zhane" ), '<a href="'.wp_login_url( apply_filters( 'the_permalink', get_permalink( ) ) ).'">', '</a>' ) . '</p>',
+		'logged_in_as' => '<p class="logged-in-as">' . __( "Logged in as","Zhane" ).' <a href="' .admin_url( "profile.php" ).'">'.$user_identity.'</a>. <a href="' .wp_logout_url(get_permalink()).'" title="' . __("Log out of this account", "Zhane").'">'. __("Log out &raquo;", "Zhane").'</a></p>',
 		'comment_notes_before' => '',
 		'comment_notes_after' => '',
-		'comment_field' => '<div id="comment-textarea"><textarea name="comment" id="comment" cols="39" rows="4" tabindex="4" class="textarea-comment" placeholder="'. __("Comment...", "Avada").'"></textarea></div>',
+		'comment_field' => '<div id="comment-textarea"><textarea name="comment" id="comment" cols="39" rows="4" tabindex="4" class="textarea-comment" placeholder="'. __("Comment...", "Zhane").'"></textarea></div>',
 		'id_submit' => 'comment-submit',
-		'label_submit'=> __("Post Comment", "Avada"),
+		'label_submit'=> __("Post Comment", "Zhane"),
 	);
 
 	comment_form($comments_args);

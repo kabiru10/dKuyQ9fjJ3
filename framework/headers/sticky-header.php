@@ -1,8 +1,8 @@
 <?php global $smof_data,$woocommerce,$main_menu; ?>
 <?php
 $c_pageID = get_queried_object_id();
-$header_sticky_bg_color_hex = avada_hex2rgb($smof_data['header_sticky_bg_color']); 
-$header_normal_bg_color_hex = avada_hex2rgb($smof_data['header_sticky_bg_color']);
+$header_sticky_bg_color_hex = zhane_hex2rgb($smof_data['header_sticky_bg_color']); 
+$header_normal_bg_color_hex = zhane_hex2rgb($smof_data['header_sticky_bg_color']);
 $header_normal_bg_color = $header_sticky_bg_color_hex[0] . ',' . $header_sticky_bg_color_hex[1] . ',' . $header_sticky_bg_color_hex[2] . ',' . $smof_data['header_sticky_opacity'];
 if( ( ($smof_data['header_transparent'] && get_post_meta($c_pageID, 'pyre_transparent_header', true) != 'no') ||
 		  ( ! $smof_data['header_transparent'] && get_post_meta($c_pageID, 'pyre_transparent_header', true) == 'yes') ) && ! is_search() ) {
@@ -13,7 +13,7 @@ if( ( ($smof_data['header_transparent'] && get_post_meta($c_pageID, 'pyre_transp
 <?php if( $smof_data['header_sticky'] ): ?>
 <header id="header-sticky" class="sticky-header">
 <div class="sticky-shadow">
-	<div class="avada-row">
+	<div class="zhane-row">
 		<div class="logo">
 			<a href="<?php bloginfo('url'); ?>">
 				<img src="<?php echo $smof_data['logo']; ?>" alt="<?php bloginfo('name'); ?>" data-max-width="<?php echo $smof_data["header_sticky_logo_max_width"]; ?>" class="normal_logo" />
@@ -51,21 +51,21 @@ if( ( ($smof_data['header_transparent'] && get_post_meta($c_pageID, 'pyre_transp
 			<?php if(class_exists('Woocommerce')): ?>
 			<?php if($smof_data['woocommerce_acc_link_main_nav']): ?>
 			<li class="my-account">
-				<a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>" class="my-account-link"><?php _e('My Account', 'Avada'); ?></a>
+				<a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>" class="my-account-link"><?php _e('My Account', 'Zhane'); ?></a>
 				<?php if(!is_user_logged_in()): ?>
 				<div class="login-box">
 					<form action="<?php echo wp_login_url(); ?>" name="loginform" method="post">
 						<p>
-							<input type="text" class="input-text" name="log" id="username" value="" placeholder="<?php echo __('Username', 'Avada'); ?>" />
+							<input type="text" class="input-text" name="log" id="username" value="" placeholder="<?php echo __('Username', 'Zhane'); ?>" />
 						</p>
 						<p>
-							<input type="password" class="input-text" name="pwd" id="pasword" value="" placeholder="<?php echo __('Password', 'Avada'); ?>" />
+							<input type="password" class="input-text" name="pwd" id="pasword" value="" placeholder="<?php echo __('Password', 'Zhane'); ?>" />
 						</p>
 						<p class="forgetmenot">
-							<label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"> <?php _e('Remember Me', 'Avada'); ?></label>
+							<label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"> <?php _e('Remember Me', 'Zhane'); ?></label>
 						</p>
 							<p class="submit">
-							<input type="submit" name="wp-submit" id="wp-submit" class="button small default comment-submit" value="<?php _e('Log In', 'Avada'); ?>">
+							<input type="submit" name="wp-submit" id="wp-submit" class="button small default comment-submit" value="<?php _e('Log In', 'Zhane'); ?>">
 							<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['HTTP_REFERER']; ?>">
 							<input type="hidden" name="testcookie" value="1">
 						</p>
@@ -74,7 +74,7 @@ if( ( ($smof_data['header_transparent'] && get_post_meta($c_pageID, 'pyre_transp
 				</div>
 				<?php else: ?>
 				<ul class="sub-menu">
-					<li><a href="<?php echo get_permalink(get_option('woocommerce_logout_page_id')); ?>"><?php _e('Logout', 'Avada'); ?></a></li>
+					<li><a href="<?php echo get_permalink(get_option('woocommerce_logout_page_id')); ?>"><?php _e('Logout', 'Zhane'); ?></a></li>
 				</ul>
 				<?php endif; ?>
 			</li>
@@ -98,8 +98,8 @@ if( ( ($smof_data['header_transparent'] && get_post_meta($c_pageID, 'pyre_transp
 					</div>
 					<?php endforeach; ?>
 					<div class="cart-checkout">
-						<div class="cart-link"><a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('View Cart', 'Avada'); ?></a></div>
-						<div class="checkout-link"><a href="<?php echo get_permalink(get_option('woocommerce_checkout_page_id')); ?>"><?php _e('Checkout', 'Avada'); ?></a></div>
+						<div class="cart-link"><a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('View Cart', 'Zhane'); ?></a></div>
+						<div class="checkout-link"><a href="<?php echo get_permalink(get_option('woocommerce_checkout_page_id')); ?>"><?php _e('Checkout', 'Zhane'); ?></a></div>
 					</div>
 				</div>
 				<?php endif; ?>

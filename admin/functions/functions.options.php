@@ -6,7 +6,7 @@ if (!function_exists('of_options'))
 {
 	function of_options()
 	{
-		// Avada edit
+		// Zhane edit
         //Register sidebar options for blog/portfolio/woocommerce category/archive pages
         global $wp_registered_sidebars;
         $sidebar_options[] = 'None';
@@ -25,7 +25,7 @@ if (!function_exists('of_options'))
                 }
             }
         }
-        // End Avada edit
+        // End Zhane edit
 
 		//Access the WordPress Categories via an Array
 		$of_categories 		= array();
@@ -45,7 +45,7 @@ if (!function_exists('of_options'))
 		$of_options_select 	= array("one","two","three","four","five");
 		$of_options_radio 	= array("one" => "One","two" => "Two","three" => "Three","four" => "Four","five" => "Five");
 
-		// Begin Avada edit
+		// Begin Zhane edit
 		// Social Icon default order
 		$of_options_social_links_ordering = array
 		(
@@ -78,7 +78,7 @@ if (!function_exists('of_options'))
 			"custom" => array (
 			),
 		);
-		// End Avada edit
+		// End Zhane edit
 
 
 		//Stylesheets Reader
@@ -144,7 +144,7 @@ if (!function_exists('of_options'))
 global $of_options;
 $of_options = array();
 
-// Avada Edit
+// Zhane Edit
 
         $font_sizes = array(
             '10' => '10',
@@ -1507,7 +1507,7 @@ $of_options = array();
         $of_options[] = array( "name" => "Copyright Text",
             "desc" => "Enter the text that displays in the copyright bar. HTML markup can be used.",
             "id" => "footer_text",
-            "std" => 'Copyright 2012 Avada | All Rights Reserved | Powered by <a href="http://wordpress.org">WordPress</a>  |  <a href="http://theme-fusion.com">Theme Fusion</a>',
+            "std" => 'Copyright 2012 Zhane | All Rights Reserved | Powered by <a href="http://wordpress.org">WordPress</a>  |  <a href="http://theme-fusion.com">Theme Fusion</a>',
             "type" => "textarea");
 
         $of_options[] = array( "name" => "Copyright Top Padding",
@@ -4408,13 +4408,13 @@ $of_options = array();
             "type" => "info");
 
         $of_options[] = array( "name" => "ReCaptcha Public Key",
-            "desc" => "Follow the steps in <a href='http://theme-fusion.com/avada-doc/pages/setting-up-contact-page/'> our docs</a> to get key.",
+            "desc" => "Follow the steps in <a href='http://theme-fusion.com/zhane-doc/pages/setting-up-contact-page/'> our docs</a> to get key.",
             "id" => "recaptcha_public",
             "std" => "",
             "type" => "text");
 
         $of_options[] = array( "name" => "ReCaptcha Private Key",
-            "desc" => "Follow the steps in <a href='http://theme-fusion.com/avada-doc/pages/setting-up-contact-page/'> our docs</a> to get key.",
+            "desc" => "Follow the steps in <a href='http://theme-fusion.com/zhane-doc/pages/setting-up-contact-page/'> our docs</a> to get key.",
             "id" => "recaptcha_private",
             "std" => "",
             "type" => "text");
@@ -4696,9 +4696,9 @@ $of_options = array();
             "std" => 0,
             "type" => "checkbox");
 
-        $of_options[] = array( "name" => "Disable Avada Styles For Revolution Slider",
-            "desc" => "Check the box to disable the Avada styles and use the default Revolution Slider styles.",
-            "id" => "avada_rev_styles",
+        $of_options[] = array( "name" => "Disable Zhane Styles For Revolution Slider",
+            "desc" => "Check the box to disable the Zhane styles and use the default Revolution Slider styles.",
+            "id" => "zhane_rev_styles",
             "std" => 0,
             "type" => "checkbox");
 
@@ -4799,12 +4799,12 @@ $of_options = array();
 
         $of_options[] = array( "name" => "Disable Woocommerce Shop Page Ordering Boxes",
             "desc" => "Check the box to disable the ordering boxes displayed on the shop page.",
-            "id" => "woocommerce_avada_ordering",
+            "id" => "woocommerce_zhane_ordering",
             "std" => 0,
             "type" => "checkbox");
 
         $of_options[] = array( "name" => "Use Woocommerce One Page Checkout",
-            "desc" => "Check the box to use Avada's one page checkout template.",
+            "desc" => "Check the box to use Zhane's one page checkout template.",
             "id" => "woocommerce_one_page_checkout",
             "std" => 0,
             "type" => "checkbox");
@@ -4912,7 +4912,7 @@ $of_options = array();
             "id" => "tf_purchase_code",
             "std" => "",
             "type" => "text");
-            // End Avada Edit
+            // End Zhane Edit
 	}//End function: of_options()
 }//End chack if function exists: of_options()
 ?>

@@ -298,7 +298,7 @@ function fusion_adjacent_post_link_plus($args = '', $format = '%link &raquo;', $
 	foreach ( $posts as $post ) {
 		$title = $post->post_title;
 		if ( empty($post->post_title) )
-			$title = $previous ? __('Previous Post', 'Avada') : __('Next Post', 'Avada');
+			$title = $previous ? __('Previous Post', 'Zhane') : __('Next Post', 'Zhane');
 
 		$title = apply_filters('the_title', $title, $post->ID);
 		$date = mysql2date($r['date_format'], $post->post_date);

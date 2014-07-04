@@ -132,7 +132,7 @@
 	<script type="text/javascript">
 	/*@cc_on
 		@if (@_jscript_version == 10)
-	    	document.write('<style type="text/css">.search input,#searchform input {padding-left:10px;} .avada-select-parent .avada-select-arrow,.select-arrow{height:33px;<?php if($smof_data['form_bg_color']): ?>background-color:<?php echo $smof_data['form_bg_color']; ?>;<?php endif; ?>}.search input{padding-left:5px;}header .tagline{margin-top:3px;}.star-rating span:before {letter-spacing: 0;}.avada-select-parent .avada-select-arrow,.gravity-select-parent .select-arrow,.wpcf7-select-parent .select-arrow,.select-arrow{background: #fff;}.star-rating{width: 5.2em;}.star-rating span:before {letter-spacing: 0.1em;}</style>');
+	    	document.write('<style type="text/css">.search input,#searchform input {padding-left:10px;} .zhane-select-parent .zhane-select-arrow,.select-arrow{height:33px;<?php if($smof_data['form_bg_color']): ?>background-color:<?php echo $smof_data['form_bg_color']; ?>;<?php endif; ?>}.search input{padding-left:5px;}header .tagline{margin-top:3px;}.star-rating span:before {letter-spacing: 0;}.zhane-select-parent .zhane-select-arrow,.gravity-select-parent .select-arrow,.wpcf7-select-parent .select-arrow,.select-arrow{background: #fff;}.star-rating{width: 5.2em;}.star-rating span:before {letter-spacing: 0.1em;}</style>');
 		@end
 	@*/
 
@@ -162,7 +162,7 @@
 	//IE11
 	if (strpos($_SERVER['HTTP_USER_AGENT'], 'Trident/7.0; rv:11.0') !== false):
 	?>
-	.avada-select-parent .avada-select-arrow,.select-arrow, 
+	.zhane-select-parent .zhane-select-arrow,.select-arrow, 
 	.wpcf7-select-parent .select-arrow{height:33px;line-height:33px;}
 	.gravity-select-parent .select-arrow{height:24px;line-height:24px;}
 	
@@ -172,7 +172,7 @@
 
 	/*IE11 hack */
 	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-		.avada-select-parent .avada-select-arrow,.select-arrow, 
+		.zhane-select-parent .zhane-select-arrow,.select-arrow, 
 		.wpcf7-select-parent .select-arrow{height:33px;line-height:33px;}
 		.gravity-select-parent .select-arrow{height:24px;line-height:24px;}
 		
@@ -587,7 +587,7 @@
 		}
 	<?php endif; ?>
 
-	.woocommerce-invalid:after { content: '<?php echo __('Please enter correct details for this required field.', 'Avada'); ?>'; display: inline-block; margin-top: 7px; color: red; }
+	.woocommerce-invalid:after { content: '<?php echo __('Please enter correct details for this required field.', 'Zhane'); ?>'; display: inline-block; margin-top: 7px; color: red; }
 
 	<?php if(get_post_meta($c_pageID, 'pyre_fallback', true)): ?>
 	@media only screen and (max-width: 940px){
@@ -601,7 +601,7 @@
 	<?php endif; ?>
 
 	<?php if(is_page_template('contact.php') && $smof_data['gmap_address'] && !$smof_data['status_gmap']): ?>
-	.avada-google-map{
+	.zhane-google-map{
 		width:<?php echo $smof_data['gmap_width']; ?>;
 		margin:0 auto;
 		<?php if($smof_data['gmap_width'] != '100%'): ?>
@@ -621,7 +621,7 @@
 	<?php endif; ?>
 
 	<?php if(is_page_template('contact-2.php') && $smof_data['gmap_address'] && !$smof_data['status_gmap']): ?>
-	.avada-google-map{
+	.zhane-google-map{
 		margin:0 auto;
 		margin-top:55px;
 		height:415px !important;
@@ -708,7 +708,7 @@ if( $smof_data['layout'] == 'Boxed' || get_post_meta($c_pageID, 'pyre_page_bg_la
 	<?php endif; ?>
 	<?php
 	get_template_part( 'framework/templates/header' );
-	avada_header_template( 'Below' );
+	zhane_header_template( 'Below' );
 	?>
 	<div id="sliders-container">
 	<?php
@@ -732,7 +732,7 @@ if( $smof_data['layout'] == 'Boxed' || get_post_meta($c_pageID, 'pyre_page_bg_la
 				$slider_page_id = get_option( 'woocommerce_shop_page_id' );
 			}
 		}
-		avada_slider( $slider_page_id );
+		zhane_slider( $slider_page_id );
 	}
 	?>
 	</div>
@@ -742,8 +742,8 @@ if( $smof_data['layout'] == 'Boxed' || get_post_meta($c_pageID, 'pyre_page_bg_la
 		</div>
 	<?php endif; ?>
 	<?php
-	avada_header_template( 'Above' );
-	avada_current_page_title_bar( $c_pageID );
+	zhane_header_template( 'Above' );
+	zhane_current_page_title_bar( $c_pageID );
 	?>
 	<?php if(is_page_template('contact.php') && $smof_data['recaptcha_public'] && $smof_data['recaptcha_private']): ?>
 	<script type="text/javascript">
@@ -779,7 +779,7 @@ if( $smof_data['layout'] == 'Boxed' || get_post_meta($c_pageID, 'pyre_page_bg_la
 	} else {
 		$address_pin = 'no';
 	}
-	echo do_shortcode('[avada_map address="' . $smof_data['gmap_address'] . '" type="' . $smof_data['gmap_type'] . '" address_pin="' . $address_pin . '" map_style="' . $smof_data['map_styling'] . '" overlay_color="' . $smof_data['map_overlay_color'] . '" infobox="' . $smof_data['map_infobox_styling'] . '" infobox_background_color="' . $smof_data['map_infobox_bg_color'] . '" infobox_text_color="' . $smof_data['map_infobox_text_color'] . '" infobox_content="' . $smof_data['map_infobox_content'] . '" icon="' . $smof_data['map_custom_marker_icon'] . '" width="' . $smof_data['gmap_width'] . '" height="' . $smof_data['gmap_height'] . '" zoom="' . $smof_data['map_zoom_level'] . '" scrollwheel="' . $map_scrollwheel . '" scale="' . $map_scale . '" zoom_pancontrol="' . $map_zoomcontrol . '" popup="' . $map_popup . '"][/avada_map]');
+	echo do_shortcode('[zhane_map address="' . $smof_data['gmap_address'] . '" type="' . $smof_data['gmap_type'] . '" address_pin="' . $address_pin . '" map_style="' . $smof_data['map_styling'] . '" overlay_color="' . $smof_data['map_overlay_color'] . '" infobox="' . $smof_data['map_infobox_styling'] . '" infobox_background_color="' . $smof_data['map_infobox_bg_color'] . '" infobox_text_color="' . $smof_data['map_infobox_text_color'] . '" infobox_content="' . $smof_data['map_infobox_content'] . '" icon="' . $smof_data['map_custom_marker_icon'] . '" width="' . $smof_data['gmap_width'] . '" height="' . $smof_data['gmap_height'] . '" zoom="' . $smof_data['map_zoom_level'] . '" scrollwheel="' . $map_scrollwheel . '" scale="' . $map_scale . '" zoom_pancontrol="' . $map_zoomcontrol . '" popup="' . $map_popup . '"][/zhane_map]');
 	?>
 	<?php endif; ?>
 	<?php if(is_page_template('contact-2.php') && $smof_data['gmap_address'] && !$smof_data['status_gmap']): ?>
@@ -804,7 +804,7 @@ if( $smof_data['layout'] == 'Boxed' || get_post_meta($c_pageID, 'pyre_page_bg_la
 	} else {
 		$map_zoomcontrol = 'no';
 	}
-	echo do_shortcode('[avada_map address="' . $smof_data['gmap_address'] . '" type="' . $smof_data['gmap_type'] . '" map_style="' . $smof_data['map_styling'] . '" overlay_color="' . $smof_data['map_overlay_color'] . '" infobox="' . $smof_data['map_infobox_styling'] . '" infobox_background_color="' . $smof_data['map_infobox_bg_color'] . '" infobox_text_color="' . $smof_data['map_infobox_text_color'] . '" infobox_content="' . $smof_data['map_infobox_content'] . '" icon="' . $smof_data['map_custom_marker_icon'] . '" width="' . $smof_data['gmap_width'] . '" height="' . $smof_data['gmap_height'] . '" zoom="' . $smof_data['map_zoom_level'] . '" scrollwheel="' . $map_scrollwheel . '" scale="' . $map_scale . '" zoom_pancontrol="' . $map_zoomcontrol . '" popup="' . $map_popup . '"][/avada_map]');
+	echo do_shortcode('[zhane_map address="' . $smof_data['gmap_address'] . '" type="' . $smof_data['gmap_type'] . '" map_style="' . $smof_data['map_styling'] . '" overlay_color="' . $smof_data['map_overlay_color'] . '" infobox="' . $smof_data['map_infobox_styling'] . '" infobox_background_color="' . $smof_data['map_infobox_bg_color'] . '" infobox_text_color="' . $smof_data['map_infobox_text_color'] . '" infobox_content="' . $smof_data['map_infobox_content'] . '" icon="' . $smof_data['map_custom_marker_icon'] . '" width="' . $smof_data['gmap_width'] . '" height="' . $smof_data['gmap_height'] . '" zoom="' . $smof_data['map_zoom_level'] . '" scrollwheel="' . $map_scrollwheel . '" scale="' . $map_scale . '" zoom_pancontrol="' . $map_zoomcontrol . '" popup="' . $map_popup . '"][/zhane_map]');
 	?>
 	<?php endif; ?>
 	<?php
@@ -835,4 +835,4 @@ if( $smof_data['layout'] == 'Boxed' || get_post_meta($c_pageID, 'pyre_page_bg_la
 	}
 	?>
 	<div id="main" class="clearfix <?php echo $main_class; ?>" style="<?php echo $main_css; ?>">
-		<div class="avada-row" style="<?php echo $row_css; ?>">
+		<div class="zhane-row" style="<?php echo $row_css; ?>">

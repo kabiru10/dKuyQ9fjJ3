@@ -5,7 +5,7 @@
 <div id="slidingbar-area">
 <?php endif; ?>
 	<div id="slidingbar">
-		<div class="avada-row">
+		<div class="zhane-row">
 			<section class="fusion-columns row fusion-columns-<?php echo $smof_data['slidingbar_widgets_columns']; ?> columns columns-<?php echo $smof_data['slidingbar_widgets_columns']; ?>">
 				<?php $column_width = 12 / $smof_data['slidingbar_widgets_columns']; ?>
 			

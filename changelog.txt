@@ -2,10 +2,10 @@
 Version 3.5
 -----------------------------------------------------------------------------------------
 
-We are very excited to bring you Avada v3.5, our most significant update ever. This is our first major version on our pathway to Avada v4. There have been significant improvements, enhancements, additions and fixes added to this update.  Below you will find our general change log list items, but please see the Avada 3.5 Important Update Notes post below for important information when updating.
+We are very excited to bring you Zhane v3.5, our most significant update ever. This is our first major version on our pathway to Zhane v4. There have been significant improvements, enhancements, additions and fixes added to this update.  Below you will find our general change log list items, but please see the Zhane 3.5 Important Update Notes post below for important information when updating.
 
 
-PLEASE READ: http://theme-fusion.com/avada-doc/install-update/important-update-information/
+PLEASE READ: http://theme-fusion.com/zhane-doc/install-update/important-update-information/
 
 
 - NEW: Fusion Slider - new parallax image and video slider
@@ -80,7 +80,7 @@ PLEASE READ: http://theme-fusion.com/avada-doc/install-update/important-update-i
 - IMPROVEMENT: sidebar selection drop down field is now inside of the page options box
 - fixed issue with woo 2.1.8 bundled template file message
 - two new google fonts added, Rubik one and Rubik one mono
-- added avada layer slider skin
+- added zhane layer slider skin
 - flexslider short code is now called post slider, still works and functions the same
 - fixed portfolio archive/category/tag pages linking to wrong items on image rollovers
 - woocommerce archive pages now show 4 columns without a sidebar
@@ -143,7 +143,7 @@ Version 3.4.3 - April 24th, 2014
 -----------------------------------------------------------------------------------------
 
 - upgraded rev slider plugin
-- missing Avada skin from layer slider 
+- missing Zhane skin from layer slider 
 - counter box issue with unit in back, can now go front or back
 - dark skin color fixes (titles, arrows, woo) 
 - xss bug in contact form 
@@ -343,7 +343,7 @@ Version 3.3
 - NEW: bbPress options to use a global sidebar on all forums/topics
 - NEW: background images in full width are fully responsive
 - NEW: options to control drop down menu text
-- NEW: option to enable default rev slider styles instead of Avada
+- NEW: option to enable default rev slider styles instead of Zhane
 - NEW: option to control amount of related projects and posts
 - NEW: padding controls for main and footer content (global and meta)
 - NEW: padding controls for 100% width template (global and meta)
@@ -392,7 +392,7 @@ Version 3.3
 - twitter timestamp links are now fixed
 - fixed formatting issue when one country is selected from woocommerce
 - changed portfolio grid layouts to show all categories when page loads
-- fully removed ddSlick from Avada
+- fully removed ddSlick from Zhane
 - gravity forms 1.8 tested and approved
 - short code generator is no longer hardcoding wp-content folder
 - added new google fonts
@@ -537,9 +537,9 @@ Version 3.1.2
 
 This is just a small update to fix an important Gravity Forms and Excerpt issue. Our major update v3.2 is still scheduled to be released in a week from 21st October 2013.
 
-- Avada/style.css: version number change
-- Avada/functions.php: added new excerpt and content function
-- Avada/js/main.js: fixed gravity forms drop down issue
+- Zhane/style.css: version number change
+- Zhane/functions.php: added new excerpt and content function
+- Zhane/js/main.js: fixed gravity forms drop down issue
 
 
 -----------------------------------------------------------------------------------------
@@ -597,9 +597,9 @@ Version 3.1
 - NEW FEATURE: added ability for users to enter custom excerpt for blog posts
 - NEW FEATURE: ability to exclude categories from recent news short code
 - NEW FEATURE: theme options are now translatable with WPML plugin
-- NEW FEATURE: added Avada styling for Gravity Forms
-- NEW FEATURE: added Avada styling for Contact Form 7
-- NEW FEATURE: added Avada styling for qTranslate widgets
+- NEW FEATURE: added Zhane styling for Gravity Forms
+- NEW FEATURE: added Zhane styling for Contact Form 7
+- NEW FEATURE: added Zhane styling for qTranslate widgets
 - NEW FEATURE: tabs are now able to be bookmarked, ex: tab 2 can open on page load
 - NEW FEATURE: improved Ubermenu integration, works well with v2.0
 - NEW FEATURE: new 100% option for page title image
@@ -713,7 +713,7 @@ Version 3.0
 - NEW FEATURE: added compatibility for Code styling Localization Plugin
 - NEW FEATURE: now using Caroufredsel plugin for carousels
 - NEW FEATURE: added ability to enable/disbale filters per portfolio page
-- worked directly with WPML devs to make Avada perfectly compatible with WPML
+- worked directly with WPML devs to make Zhane perfectly compatible with WPML
 - added default map height of 270px for mobile to counteract scrolling issue
 - fixed video issues of playing and stopping due to other vidoes/sliders
 - fixed tab issue of small gap on right side
@@ -848,7 +848,7 @@ Version 2.1.1
 - category sidebar widget now displays the count properly
 - fixed google map translating issue
 - fixed sidebar issue when setting front page as post page
-- checked for full compatibility for WPML plugin and added Avada to list of compatible sites
+- checked for full compatibility for WPML plugin and added Zhane to list of compatible sites
 - included a function that fixes sidebar position if post content has invalid content
 - fixed issue of embed code disappearing when clicked on
 - other minor styling changes
@@ -863,7 +863,7 @@ Version 2.1.1
 Version 2.1
 -----------------------------------------------------------------------------------------
 
-- NEW FEATURE: Avada is now Retina Ready!
+- NEW FEATURE: Zhane is now Retina Ready!
 - NEW FEATURE: includes the super cool Elastic Slider!
 - NEW FEATURE: 4 new header design options (social icons and text) all easily accessed via theme options
 - NEW FEATURE: new theme options for ThemeFusion Slider; speed, animation, autoplay
@@ -935,7 +935,7 @@ Version 2.0.7
 - FAQ toggles are now accordion style so one closes when another is open
 - Fixed position of title and breadcrumbs in page title bar when text goes on two lines. 
 - Fixed pricing numbers so they follow the color selections in theme options
-- Added back avada skin to the layer slider plugin
+- Added back zhane skin to the layer slider plugin
 - Fixed rev slider when setting "nav arrows" to none, the page content no longer jumps
 - Fixed alignment issue with rev slider when used via shortcodes in post content area
 
@@ -952,7 +952,7 @@ Version 2.0.6
 - NEW FEATURE: added ability for page title bar to have a color in addition to an image
 - NEW FEATURE: add option to disable featured image only on single post pages
 - NEW FEATURE: add side nav option for child pages to open on hover or on click
-- include "language" folder in avada theme folder so user does not have to create a new one
+- include "language" folder in zhane theme folder so user does not have to create a new one
 - fixed child theme issue
 - fixed the new_slideshow.php warning that some users received. 
 - corrected description for "Allow Comments On Pages
@@ -986,7 +986,7 @@ Version 2.0.5
 - Includes updated Post Type Order Plugin that is now integrated into the Theme
 - Includes updated Layer Slider plugin that is now integrated into the Theme
 - FlexSlider plugin that is now integrated into the Theme
-- Added Avada skin back into the skin dropdown menu for Layer Slider
+- Added Zhane skin back into the skin dropdown menu for Layer Slider
 - Added 2 buttons to single portfolio search page when using filters
 - fixed blockquote from not showing in portfolio post pages
 - Added custom CSS filters for IE9 Gradients
@@ -1043,7 +1043,7 @@ Version 2.0.2
 -----------------------------------------------------------------------------------------
 
 - fixed favicon bug
-- styled the Avada social links widget for footer
+- styled the Zhane social links widget for footer
 - fixed featured image bug
 - fixed image rollover disable option & posts slideshows option
 - fixed child theme issue
@@ -1091,7 +1091,7 @@ NEW FEATURE: allow for 4th level dropdown
 NEW FEATURE: allow portfolio text (project description, project url, etc) to be change via theme options, add fields to the portfolio tab
 NEW FEATURE: ability to easily sort blog posts, portfolio posts and FAQ's by draggin and dropping them into place. Using the Posts Types Order plugin
 NEW FEATURE: ability to have more than one widget per footer column, example http://wednesdaysinmhd.com/
-NEW FEATURE: Avada should work with W3C Total Cache - http://theme-fusion.com/wp-admin/admin.php?page=ahq_forum_options&action=view_topic&id=700
+NEW FEATURE: Zhane should work with W3C Total Cache - http://theme-fusion.com/wp-admin/admin.php?page=ahq_forum_options&action=view_topic&id=700
 NEW FEATURE: add option in VC to have custom amount of characters for recent works widget
 NEW FEATURE: added new post slideshow method for portfolio and bog posts. Legacy method still works, but you have to enable it in theme options.
 NEW FEATURE: added ability to hide featured image for blog posts as well as other meta information (author, categoreis, etc)
@@ -1154,7 +1154,7 @@ Version 1.1.1
 - Typo for post shortcode option fixed
 - Fixed side navigation no-sidebar option and added margin if a sidebar is added to the side navigation pages
 - Updated wooslider plugin, if you are updating, uninstall it and reinstall the plugin.
-- Made plugin notices softer and added ability to enable / disable plugins while on Avada.
+- Made plugin notices softer and added ability to enable / disable plugins while on Zhane.
 
 
 -----------------------------------------------------------------------------------------

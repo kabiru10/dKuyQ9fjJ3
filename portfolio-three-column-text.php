@@ -54,7 +54,7 @@ get_header(); ?>
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 		}
 		$args = array(
-			'post_type' => 'avada_portfolio',
+			'post_type' => 'zhane_portfolio',
 			'paged' => $paged,
 			'posts_per_page' => $smof_data['portfolio_items'],
 		);
@@ -106,7 +106,7 @@ get_header(); ?>
 		if(is_array($portfolio_taxs) && !empty($portfolio_taxs) && get_post_meta($post->ID, 'pyre_portfolio_filters', true) != 'no'):
 		?>
 		<ul class="portfolio-tabs clearfix">
-			<li class="active"><a data-filter="*" href="#"><?php echo __('All', 'Avada'); ?></a></li>
+			<li class="active"><a data-filter="*" href="#"><?php echo __('All', 'Zhane'); ?></a></li>
 			<?php foreach($portfolio_taxs as $portfolio_tax_slug => $portfolio_tax_name): ?>
 			<li><a data-filter=".<?php echo $portfolio_tax_slug; ?>" href="#"><?php echo $portfolio_tax_name; ?></a></li>
 			<?php endforeach; ?>

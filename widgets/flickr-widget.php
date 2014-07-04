@@ -14,7 +14,7 @@ class Flickr_Widget extends WP_Widget {
 
 		$control_ops = array('id_base' => 'flickr-widget');
 
-		$this->WP_Widget('flickr-widget', 'Avada: Flickr', $widget_ops, $control_ops);
+		$this->WP_Widget('flickr-widget', 'Zhane: Flickr', $widget_ops, $control_ops);
 	}
 
 	function widget($args, $instance)

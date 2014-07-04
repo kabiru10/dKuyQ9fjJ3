@@ -12,8 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $woocommerce;
 
 if ( $order ) : ?>
-	<?php //Avada edit ?>
-	<div class="avada-thank-you woocommerce-content-box full-width">
+	<?php //Zhane edit ?>
+	<div class="zhane-thank-you woocommerce-content-box full-width">
 
 	<?php if ( in_array( $order->status, array( 'failed' ) ) ) : ?>
 
@@ -35,7 +35,7 @@ if ( $order ) : ?>
 
 	<?php else : ?>
 		
-		<?php //Avada edit ?>
+		<?php //Zhane edit ?>
 		<h2><?php _e( 'Thank you. Your order has been received.', 'woocommerce' ); ?></h2>
 
 		<ul class="order_details">
@@ -61,7 +61,7 @@ if ( $order ) : ?>
 		<div class="clear"></div>
 
 	<?php endif; ?>
-	<?php //Avada edit ?>
+	<?php //Zhane edit ?>
 
 	<?php do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
 
@@ -71,7 +71,7 @@ if ( $order ) : ?>
 
 <?php else : ?>
 
-	<?php //Avada edit ?>
+	<?php //Zhane edit ?>
 	<h2><?php _e( 'Thank you. Your order has been received.', 'woocommerce' ); ?></h2>
 	</div>
 

@@ -14,7 +14,7 @@ class Pyre_Tabs_Widget extends WP_Widget {
 
 		$control_ops = array('id_base' => 'pyre_tabs-widget');
 
-		$this->WP_Widget('pyre_tabs-widget', 'Avada: Tabs', $widget_ops, $control_ops);
+		$this->WP_Widget('pyre_tabs-widget', 'Zhane: Tabs', $widget_ops, $control_ops);
 	}
 
 	function widget($args, $instance)
@@ -43,10 +43,10 @@ class Pyre_Tabs_Widget extends WP_Widget {
 			<div class="tab-hold tabs-wrapper">
 				<ul id="tabs" class="tabset tabs">
 					<?php if($show_popular_posts == 'true'): ?>
-					<li><a href="#tab-popular"><?php echo __('Popular', 'Avada'); ?></a></li>
+					<li><a href="#tab-popular"><?php echo __('Popular', 'Zhane'); ?></a></li>
 					<?php endif; ?>
 					<?php if($show_recent_posts == 'true'): ?>
-					<li><a href="#tab-recent"><?php echo __('Recent', 'Avada'); ?></a></li>
+					<li><a href="#tab-recent"><?php echo __('Recent', 'Zhane'); ?></a></li>
 					<?php endif; ?>
 					<?php if($show_comments == 'true'): ?>
 					<li><a href="#tab-comments"><span class="icon-bubbles"></span></a></li>
@@ -59,7 +59,7 @@ class Pyre_Tabs_Widget extends WP_Widget {
 						if($orderby == 'Highest Comments') {
 							$order_string = '&orderby=comment_count';
 						} else {
-							$order_string = '&meta_key=avada_post_views_count&orderby=meta_value_num';
+							$order_string = '&meta_key=zhane_post_views_count&orderby=meta_value_num';
 						}
 						$popular_posts = new WP_Query('showposts='.$posts.$order_string.'&order=DESC&ignore_sticky_posts=1');
 						if($popular_posts->have_posts()): ?>
@@ -129,7 +129,7 @@ class Pyre_Tabs_Widget extends WP_Widget {
 									</a>
 								</div>
 								<div class="post-holder">
-									<p><?php echo strip_tags($comment->comment_author); ?> <?php _e('says', 'Avada'); ?>:</p>
+									<p><?php echo strip_tags($comment->comment_author); ?> <?php _e('says', 'Zhane'); ?>:</p>
 									<div class="meta">
 										<a class="comment-text-side" href="<?php echo get_permalink($comment->ID); ?>#comment-<?php echo $comment->comment_ID; ?>" title="<?php echo strip_tags($comment->comment_author); ?> on <?php echo $comment->post_title; ?>"><?php echo string_limit_words(strip_tags($comment->com_excerpt), 12); ?>...</a>
 									</div>

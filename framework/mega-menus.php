@@ -226,7 +226,7 @@ if( ! class_exists( 'FusionCoreFrontendWalker' ) ) {
 					if ( ! empty( $this->menu_megamenu_thumbnail ) ) {
 						$title_enhance = '<span class="fusion-megamenu-icon"><img src="' . $this->menu_megamenu_thumbnail . '"></span>';
 					} elseif( ! empty( $this->menu_megamenu_icon ) ) {
-						$title_enhance = '<span class="fusion-megamenu-icon"><i class="fa glyphicon ' . avada_font_awesome_name_handler( $this->menu_megamenu_icon) . '"></i></span>';
+						$title_enhance = '<span class="fusion-megamenu-icon"><i class="fa glyphicon ' . zhane_font_awesome_name_handler( $this->menu_megamenu_icon) . '"></i></span>';
 					} elseif($this->menu_megamenu_title == 'disabled') {
 						$title_enhance = '<span class="fusion-megamenu-bullet"></span>';
 					}
@@ -276,7 +276,7 @@ if( ! class_exists( 'FusionCoreFrontendWalker' ) ) {
 				if ( ! empty( $this->menu_megamenu_thumbnail ) && $this->menu_megamenu_status == "enabled" ) {
 					$item_output .= '<a ' . $attributes . '><span class="fusion-megamenu-icon"><img src="' . $this->menu_megamenu_thumbnail . '"></span>';
 				} elseif( ! empty( $this->menu_megamenu_icon ) && $this->menu_megamenu_status == "enabled" ) {
-					$item_output .= '<a ' . $attributes . '><span class="fusion-megamenu-icon text-menu-icon"><i class="fa glyphicon ' . avada_font_awesome_name_handler( $this->menu_megamenu_icon ) . '"></i></span>';
+					$item_output .= '<a ' . $attributes . '><span class="fusion-megamenu-icon text-menu-icon"><i class="fa glyphicon ' . zhane_font_awesome_name_handler( $this->menu_megamenu_icon ) . '"></i></span>';
 				} elseif ( $depth !== 0 && $this->menu_megamenu_status == "enabled") {
 					$item_output .= '<a ' . $attributes . '><span class="fusion-megamenu-bullet"></span>';
 				} else {
@@ -621,20 +621,20 @@ if( ! class_exists( 'FusionCoreMegaMenus' ) ) {
 						<p class="field-megamenu-status description description-wide">
 							<label for="edit-menu-item-megamenu-status-<?php echo $item_id; ?>">
 								<input type="checkbox" id="edit-menu-item-megamenu-status-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-status" name="menu-item-fusion-megamenu-status[<?php echo $item_id; ?>]" value="enabled" <?php checked( $item->fusion_megamenu_status, 'enabled' ); ?> />
-								<strong><?php _e( 'Enable Fusion Mega Menu', 'Avada' ); ?></strong>
+								<strong><?php _e( 'Enable Fusion Mega Menu', 'Zhane' ); ?></strong>
 							</label>
 						</p>
 						<p class="field-megamenu-width description description-wide">
 							<label for="edit-menu-item-megamenu-width-<?php echo $item_id; ?>">
 								<input type="checkbox" id="edit-menu-item-megamenu-width-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-width" name="menu-item-fusion-megamenu-width[<?php echo $item_id; ?>]" value="fullwidth" <?php checked( $item->fusion_megamenu_width, 'fullwidth' ); ?> />
-								<?php _e( 'Full Width Mega Menu', 'Avada' ); ?>
+								<?php _e( 'Full Width Mega Menu', 'Zhane' ); ?>
 							</label>
 						</p>
 						<p class="field-megamenu-columns description description-wide">
 							<label for="edit-menu-item-megamenu-columns-<?php echo $item_id; ?>">
-								<?php _e( 'Mega Menu Number of Columns', 'Avada' ); ?>
+								<?php _e( 'Mega Menu Number of Columns', 'Zhane' ); ?>
 								<select id="edit-menu-item-megamenu-columns-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-columns" name="menu-item-fusion-megamenu-columns[<?php echo $item_id; ?>]">
-									<option value="auto" <?php selected( $item->fusion_megamenu_columns, 'auto' ); ?>><?php _e( 'Auto', 'Avada' ); ?></option>
+									<option value="auto" <?php selected( $item->fusion_megamenu_columns, 'auto' ); ?>><?php _e( 'Auto', 'Zhane' ); ?></option>
 									<option value="1" <?php selected( $item->fusion_megamenu_columns, '1' ); ?>>1</option>
 									<option value="2" <?php selected( $item->fusion_megamenu_columns, '2' ); ?>>2</option>
 									<option value="3" <?php selected( $item->fusion_megamenu_columns, '3' ); ?>>3</option>
@@ -645,14 +645,14 @@ if( ! class_exists( 'FusionCoreMegaMenus' ) ) {
 						<p class="field-megamenu-title description description-wide">
 							<label for="edit-menu-item-megamenu-title-<?php echo $item_id; ?>">
 								<input type="checkbox" id="edit-menu-item-megamenu-title-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-title" name="menu-item-fusion-megamenu-title[<?php echo $item_id; ?>]" value="disabled" <?php checked( $item->fusion_megamenu_title, 'disabled' ); ?> />
-								<?php _e( 'Disable Mega Menu Column Title', 'Avada' ); ?>
+								<?php _e( 'Disable Mega Menu Column Title', 'Zhane' ); ?>
 							</label>
 						</p>
 						<p class="field-megamenu-widgetarea description description-wide">
 							<label for="edit-menu-item-megamenu-widgetarea-<?php echo $item_id; ?>">
-								<?php _e( 'Mega Menu Widget Area', 'Avada' ); ?>
+								<?php _e( 'Mega Menu Widget Area', 'Zhane' ); ?>
 								<select id="edit-menu-item-megamenu-widgetarea-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-widgetarea" name="menu-item-fusion-megamenu-widgetarea[<?php echo $item_id; ?>]">
-									<option value="0"><?php _e( 'Select Widget Area', 'Avada' ); ?></option>
+									<option value="0"><?php _e( 'Select Widget Area', 'Zhane' ); ?></option>
 									<?php
 									if( ! empty( $wp_registered_sidebars ) && is_array( $wp_registered_sidebars ) ):
 									foreach( $wp_registered_sidebars as $sidebar ):
@@ -664,11 +664,11 @@ if( ! class_exists( 'FusionCoreMegaMenus' ) ) {
 						</p>
 						<p class="field-megamenu-icon description description-wide">
 							<label for="edit-menu-item-megamenu-icon-<?php echo $item_id; ?>">
-								<?php _e( 'Mega Menu Icon (use full font awesome name)', 'Avada' ); ?>
+								<?php _e( 'Mega Menu Icon (use full font awesome name)', 'Zhane' ); ?>
 								<input type="text" id="edit-menu-item-megamenu-icon-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-icon" name="menu-item-fusion-megamenu-icon[<?php echo $item_id; ?>]" value="<?php echo $item->fusion_megamenu_icon; ?>" />
 							</label>
 						</p>
-						<a href="#" id="fusion-media-upload-<?php echo $item_id; ?>" class="fusion-open-media button button-primary fusion-megamenu-upload-thumbnail"><?php _e( 'Set Thumbnail', 'Avada' ); ?></a>
+						<a href="#" id="fusion-media-upload-<?php echo $item_id; ?>" class="fusion-open-media button button-primary fusion-megamenu-upload-thumbnail"><?php _e( 'Set Thumbnail', 'Zhane' ); ?></a>
 						<p class="field-megamenu-thumbnail description description-wide">
 							<label for="edit-menu-item-megamenu-thumbnail-<?php echo $item_id; ?>">
 								<input type="hidden" id="edit-menu-item-megamenu-thumbnail-<?php echo $item_id; ?>" class="fusion-new-media-image widefat code edit-menu-item-megamenu-thumbnail" name="menu-item-fusion-megamenu-thumbnail[<?php echo $item_id; ?>]" value="<?php echo $item->fusion_megamenu_thumbnail; ?>" />

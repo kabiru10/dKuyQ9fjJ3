@@ -32,7 +32,7 @@ global $post, $woocommerce, $product;
 						$gallery = '';
 					}
 
-					// Avada Edit
+					// Zhane Edit
 					echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<li><a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" data-rel="prettyPhoto' . $gallery . '">%s</a></li>', $image_link, $image_title, $image ), $post->ID );
 
 					/**
@@ -41,12 +41,12 @@ global $post, $woocommerce, $product;
 					$attachment_ids = $product->get_gallery_attachment_ids();
 
 					$loop = 0;
-					// Avada Edit
+					// Zhane Edit
 					//$columns = apply_filters( 'woocommerce_product_thumbnails_columns', 3 );
 
 					foreach ( $attachment_ids as $attachment_id ) {
 
-						// Avada Edit
+						// Zhane Edit
 						/*
 						$classes = array( 'zoom' );
 
@@ -63,13 +63,13 @@ global $post, $woocommerce, $product;
 						if ( ! $image_link )
 							continue;
 
-						// Avada Edit
+						// Zhane Edit
 						// modified image size to shop_single from thumbnail
 						$image       = wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_small_thumbnail_size', 'shop_single' ) );
 						$image_class = esc_attr( implode( ' ', $classes ) );
 						$image_title = esc_attr( get_the_title( $attachment_id ) );
 
-						// Avada Edit
+						// Zhane Edit
 						echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<li><a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" data-rel="prettyPhoto' . $gallery . '">%s</a></li>', $image_link, $image_title, $image ), $attachment_id, $post->ID, $image_class );
 						//echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<a href="%s" class="%s" title="%s" data-rel="prettyPhoto[product-gallery]">%s</a>', $image_link, $image_class, $image_title, $image ), $attachment_id, $post->ID, $image_class );
 

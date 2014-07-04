@@ -62,7 +62,7 @@ get_header(); ?>
 			$post_parent = end($post_ancestors);
 			?>
 			<?php if(is_page($post_parent)): ?><?php endif; ?>
-			<li <?php if(is_page($post_parent)): ?>class="current_page_item"<?php endif; ?>><a href="<?php echo get_permalink($post_parent); ?>" title="<?php echo __('Back to Parent Page', 'Avada'); ?>"><?php echo get_the_title($post_parent); ?></a></li>
+			<li <?php if(is_page($post_parent)): ?>class="current_page_item"<?php endif; ?>><a href="<?php echo get_permalink($post_parent); ?>" title="<?php echo __('Back to Parent Page', 'Zhane'); ?>"><?php echo get_the_title($post_parent); ?></a></li>
 			<?php
 			if($post_parent) {
 				$children = wp_list_pages("title_li=&child_of=".$post_parent."&echo=0");

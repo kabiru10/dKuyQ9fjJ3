@@ -19,7 +19,7 @@
 
 		<div class="bbp-reply-post-date"><?php bbp_topic_post_date( bbp_get_topic_id() ); ?></div>
 
-		<div class="bbps-post-count"><?php printf( __( 'Post count: %s', 'Avada' ), bbp_get_user_reply_count_raw(bbp_get_reply_author_id()) ); ?></div>
+		<div class="bbps-post-count"><?php printf( __( 'Post count: %s', 'Zhane' ), bbp_get_user_reply_count_raw(bbp_get_reply_author_id()) ); ?></div>
 
 		<?php if ( bbp_is_user_keymaster() ) : ?>
 

@@ -19,7 +19,7 @@
 
 <?php if ( bbp_is_topic_edit() ) : ?>
 
-	<?php bbp_topic_tag_list( bbp_get_topic_id(), array( 'before' => '<div class="bbp-topic-tags"><p>' . esc_html__( 'Tags:', 'Avada' ) . '&nbsp;', sep => ' ' ) ); ?>
+	<?php bbp_topic_tag_list( bbp_get_topic_id(), array( 'before' => '<div class="bbp-topic-tags"><p>' . esc_html__( 'Tags:', 'Zhane' ) . '&nbsp;', sep => ' ' ) ); ?>
 
 <?php endif; ?>
 

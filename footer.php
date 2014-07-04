@@ -22,7 +22,7 @@
 	<?php if( ($smof_data['footer_widgets'] && get_post_meta($c_pageID, 'pyre_display_footer', true) != 'no') ||
 			  ( ! $smof_data['footer_widgets'] && get_post_meta($c_pageID, 'pyre_display_footer', true) == 'yes') ): ?>
 	<footer class="footer-area">
-		<div class="avada-row">
+		<div class="zhane-row">
 			<section class="fusion-columns row fusion-columns-<?php echo $smof_data['footer_widgets_columns']; ?> columns columns-<?php echo $smof_data['footer_widgets_columns']; ?>">
 				<?php $column_width = 12 / $smof_data['footer_widgets_columns']; ?>
 			
@@ -69,7 +69,7 @@
 	<?php if( ($smof_data['footer_copyright'] && get_post_meta($c_pageID, 'pyre_display_copyright', true) != 'no') ||
 			  ( ! $smof_data['footer_copyright'] && get_post_meta($c_pageID, 'pyre_display_copyright', true) == 'yes') ): ?>
 	<footer id="footer">
-		<div class="avada-row">
+		<div class="zhane-row">
 			<div class="copyright-area-content">
 				<div class="copyright">
 					<div><?php echo $smof_data['footer_text'] ?></div>
@@ -86,7 +86,7 @@
 						'linktarget'		=> $smof_data['social_icons_new']
 					);
 
-					//$footer_social_icons = new Avada_SocialIcons( $footer_soical_icon_options );
+					//$footer_social_icons = new Zhane_SocialIcons( $footer_soical_icon_options );
 					echo $social_icons->render_social_icons($footer_soical_icon_options);
 
 				} ?>

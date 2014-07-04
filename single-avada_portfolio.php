@@ -67,9 +67,9 @@
 		<div class="single-navigation clearfix">
 			<?php
 			if($portfolioID || $categoryID) {
-				$previous_post_link = fusion_previous_post_link_plus(array('format' => '%link', 'link' => __('Previous', 'Avada'), 'in_same_tax' => 'portfolio_category', 'in_cats' => $nav_categories, 'return' => 'href'));
+				$previous_post_link = fusion_previous_post_link_plus(array('format' => '%link', 'link' => __('Previous', 'Zhane'), 'in_same_tax' => 'portfolio_category', 'in_cats' => $nav_categories, 'return' => 'href'));
 			} else {
-				$previous_post_link = fusion_previous_post_link_plus(array('format' => '%link', 'link' => __('Previous', 'Avada'), 'return' => 'href'));
+				$previous_post_link = fusion_previous_post_link_plus(array('format' => '%link', 'link' => __('Previous', 'Zhane'), 'return' => 'href'));
 			}
 			?>
 			<?php if($previous_post_link):
@@ -81,13 +81,13 @@
 				}
 			}
 			?>
-			<a href="<?php echo $previous_post_link; ?>" rel="prev"><?php _e('Previous', 'Avada'); ?></a>
+			<a href="<?php echo $previous_post_link; ?>" rel="prev"><?php _e('Previous', 'Zhane'); ?></a>
 			<?php endif; ?>
 			<?php
 			if($portfolioID || $categoryID) {
-				$next_post_link = fusion_next_post_link_plus(array('format' => '%link', 'link' => __('Next', 'Avada'), 'in_same_tax' => 'portfolio_category', 'in_cats' => $nav_categories, 'return' => 'href'));
+				$next_post_link = fusion_next_post_link_plus(array('format' => '%link', 'link' => __('Next', 'Zhane'), 'in_same_tax' => 'portfolio_category', 'in_cats' => $nav_categories, 'return' => 'href'));
 			} else {
-				$next_post_link = fusion_next_post_link_plus(array('format' => '%link', 'link' => __('Next', 'Avada'), 'return' => 'href'));
+				$next_post_link = fusion_next_post_link_plus(array('format' => '%link', 'link' => __('Next', 'Zhane'), 'return' => 'href'));
 			}
 			?>
 			<?php if($next_post_link):
@@ -99,7 +99,7 @@
 				}
 			}
 			?>
-			<a href="<?php echo $next_post_link; ?>" rel="next"><?php _e('Next', 'Avada'); ?></a>
+			<a href="<?php echo $next_post_link; ?>" rel="next"><?php _e('Next', 'Zhane'); ?></a>
 			<?php endif; ?>
 		</div>
 		<?php endif; ?>
@@ -227,7 +227,7 @@
 					<?php
 					$i = 2;
 					while($i <= $smof_data['posts_slideshow_number']):
-					$attachment_new_id = kd_mfi_get_featured_image_id('featured-image-'.$i, 'avada_portfolio');
+					$attachment_new_id = kd_mfi_get_featured_image_id('featured-image-'.$i, 'zhane_portfolio');
 					if($attachment_new_id):
 					?>
 					<?php $attachment_image = wp_get_attachment_image_src($attachment_new_id, 'full'); ?>
@@ -268,16 +268,16 @@
 				<span class="updated" style="display: none;"><?php the_modified_time( 'c' ); ?></span>
 				<div class="project-description post-content" style="<?php echo $project_desc_style; ?>">
 					<?php if( ! post_password_required($post->ID) ): ?>
-					<h3 style="<?php echo $project_desc_title_style; ?>"><?php echo __('Project Description', 'Avada') ?></h3>
+					<h3 style="<?php echo $project_desc_title_style; ?>"><?php echo __('Project Description', 'Zhane') ?></h3>
 					<?php endif; ?>
 					<?php the_content(); ?>
 				</div>
 				<?php if( ! post_password_required($post->ID) ): ?>
 				<div class="project-info" style="<?php echo $project_info_style; ?>">
-					<h3><?php echo __('Project Details', 'Avada'); ?></h3>
+					<h3><?php echo __('Project Details', 'Zhane'); ?></h3>
 					<?php if(get_the_term_list($post->ID, 'portfolio_skills', '', '<br />', '')): ?>
 					<div class="project-info-box">
-						<h4><?php echo __('Skills Needed', 'Avada') ?>:</h4>
+						<h4><?php echo __('Skills Needed', 'Zhane') ?>:</h4>
 						<div class="project-terms">
 							<?php echo get_the_term_list($post->ID, 'portfolio_skills', '', '<br />', ''); ?>
 						</div>
@@ -285,7 +285,7 @@
 					<?php endif; ?>
 					<?php if(get_the_term_list($post->ID, 'portfolio_category', '', '<br />', '')): ?>
 					<div class="project-info-box">
-						<h4><?php echo __('Categories', 'Avada') ?>:</h4>
+						<h4><?php echo __('Categories', 'Zhane') ?>:</h4>
 						<div class="project-terms">
 							<?php echo get_the_term_list($post->ID, 'portfolio_category', '', '<br />', ''); ?>
 						</div>
@@ -293,7 +293,7 @@
 					<?php endif; ?>
 					<?php if(get_the_term_list($post->ID, 'portfolio_tags', '', '<br />', '')): ?>
 					<div class="project-info-box">
-						<h4><?php echo __('Tags', 'Avada') ?>:</h4>
+						<h4><?php echo __('Tags', 'Zhane') ?>:</h4>
 						<div class="project-terms">
 							<?php echo get_the_term_list($post->ID, 'portfolio_tags', '', '<br />', ''); ?>
 						</div>
@@ -301,19 +301,19 @@
 					<?php endif; ?>
 					<?php if(get_post_meta($post->ID, 'pyre_project_url', true) && get_post_meta($post->ID, 'pyre_project_url_text', true)): ?>
 					<div class="project-info-box">
-						<h4><?php echo __('Project URL', 'Avada') ?>:</h4>
+						<h4><?php echo __('Project URL', 'Zhane') ?>:</h4>
 						<span><a href="<?php echo get_post_meta($post->ID, 'pyre_project_url', true); ?>"><?php echo get_post_meta($post->ID, 'pyre_project_url_text', true); ?></a></span>
 					</div>
 					<?php endif; ?>
 					<?php if(get_post_meta($post->ID, 'pyre_copy_url', true) && get_post_meta($post->ID, 'pyre_copy_url_text', true)): ?>
 					<div class="project-info-box">
-						<h4><?php echo __('Copyright', 'Avada'); ?>:</h4>
+						<h4><?php echo __('Copyright', 'Zhane'); ?>:</h4>
 						<span><a href="<?php echo get_post_meta($post->ID, 'pyre_copy_url', true); ?>"><?php echo get_post_meta($post->ID, 'pyre_copy_url_text', true); ?></a></span>
 					</div>
 					<?php endif; ?>
 					<?php if($smof_data['portfolio_author']): ?>
 					<div class="project-info-box vcard">
-						<h4><?php echo __('By', 'Avada'); ?>:</h4><span class="fn"><?php the_author_posts_link(); ?></span>
+						<h4><?php echo __('By', 'Zhane'); ?>:</h4><span class="fn"><?php the_author_posts_link(); ?></span>
 					</div>
 					<?php endif; ?>
 				</div>
@@ -338,7 +338,7 @@
 				);
 				?>
 				<div class="fusion-sharing-box share-box">
-					<h4><?php echo __('Share This Story, Choose Your Platform!', 'Avada'); ?></h4>
+					<h4><?php echo __('Share This Story, Choose Your Platform!', 'Zhane'); ?></h4>
 					<?php echo $social_icons->render_social_icons( $sharingbox_soical_icon_options ); ?>
 				</div>
 			<?php endif; ?>
@@ -348,7 +348,7 @@
 			<?php $projects = get_related_projects($post->ID, $smof_data['number_related_posts']); ?>
 			<?php if($projects->have_posts() ): ?>
 			<div class="related-posts related-projects">		
-				<div class="fusion-title title"><h2 class="title-heading-left"><?php echo __('Related Projects', 'Avada'); ?></h2><div class="title-sep-container"><div class="title-sep sep-double"></div></div></div>
+				<div class="fusion-title title"><h2 class="title-heading-left"><?php echo __('Related Projects', 'Zhane'); ?></h2><div class="title-sep-container"><div class="title-sep sep-double"></div></div></div>
 				<div id="carousel" class="es-carousel-wrapper fusion-carousel-large">
 					<div class="es-carousel">
 						<ul>

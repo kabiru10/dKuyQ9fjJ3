@@ -1,7 +1,7 @@
 <?php global $smof_data; ?>
 <div class="header-v1">
 	<header id="header">
-		<div class="avada-row" style="padding-top:<?php echo $smof_data['margin_header_top']; ?>;padding-bottom:<?php echo $smof_data['margin_header_bottom']; ?>;" data-padding-top="<?php echo $smof_data['margin_header_top']; ?>" data-padding-bottom="<?php echo $smof_data['margin_header_bottom']; ?>">
+		<div class="zhane-row" style="padding-top:<?php echo $smof_data['margin_header_top']; ?>;padding-bottom:<?php echo $smof_data['margin_header_bottom']; ?>;" data-padding-top="<?php echo $smof_data['margin_header_top']; ?>" data-padding-bottom="<?php echo $smof_data['margin_header_bottom']; ?>">
 			<div class="logo" data-margin-right="<?php echo $smof_data['margin_logo_right']; ?>" data-margin-left="<?php echo $smof_data['margin_logo_left']; ?>" data-margin-top="<?php echo $smof_data['margin_logo_top']; ?>" data-margin-bottom="<?php echo $smof_data['margin_logo_bottom']; ?>" style="margin-right:<?php echo $smof_data['margin_logo_right']; ?>;margin-top:<?php echo $smof_data['margin_logo_top']; ?>;margin-left:<?php echo $smof_data['margin_logo_left']; ?>;margin-bottom:<?php echo $smof_data['margin_logo_bottom']; ?>;">
 				<a href="<?php bloginfo('url'); ?>">
 					<?php $image_size = getimagesize( $smof_data['logo'] ); ?>

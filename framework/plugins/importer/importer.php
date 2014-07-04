@@ -24,7 +24,7 @@ function fusion_importer() {
             /* Import Woocommerce if WooCommerce Exists */
             if( class_exists('Woocommerce') ) {
                 $importer = new WP_Import();
-                $theme_xml = get_template_directory() . '/framework/plugins/importer/data/avadawithwoo.xml.gz';
+                $theme_xml = get_template_directory() . '/framework/plugins/importer/data/zhanewithwoo.xml.gz';
                 $importer->fetch_attachments = true;
                 ob_start();
                 $importer->import($theme_xml);
@@ -60,7 +60,7 @@ function fusion_importer() {
             } else {
                 $importer = new WP_Import();
                 /* Import Posts, Pages, Portfolio Content, FAQ, Images, Menus */
-                $theme_xml = get_template_directory() . '/framework/plugins/importer/data/avadawithoutwoo.xml.gz';
+                $theme_xml = get_template_directory() . '/framework/plugins/importer/data/zhanewithoutwoo.xml.gz';
                 $importer->fetch_attachments = true;
                 ob_start();
                 $importer->import($theme_xml);
@@ -110,10 +110,10 @@ function fusion_importer() {
             update_option( 'sbg_sidebars', $sidebars );
 
             foreach( $sidebars as $sidebar ) {
-                $sidebar_class = avada_name_to_class( $sidebar );
+                $sidebar_class = zhane_name_to_class( $sidebar );
                 register_sidebar(array(
                     'name'=>$sidebar,
-                    'id' => 'avada-custom-sidebar-' . strtolower( $sidebar_class ),
+                    'id' => 'zhane-custom-sidebar-' . strtolower( $sidebar_class ),
                     'before_widget' => '<div id="%1$s" class="widget %2$s">',
                     'after_widget' => '</div>',
                     'before_title' => '<div class="heading"><h3>',
@@ -165,8 +165,8 @@ function fusion_importer() {
 
                 // Assign LayerSlider
                 $lspage = get_page_by_title( 'Layer Slider' );
-                if(isset( $lspage ) && $lspage->ID && $slides_array['Avada Full Width']) {
-                    update_post_meta($lspage->ID, 'pyre_slider', $slides_array['Avada Full Width']);
+                if(isset( $lspage ) && $lspage->ID && $slides_array['Zhane Full Width']) {
+                    update_post_meta($lspage->ID, 'pyre_slider', $slides_array['Zhane Full Width']);
                 }
             }
 
@@ -472,7 +472,7 @@ function fusion_importer() {
 
             // Fusion Sliders Import
             $fs_url = get_template_directory() . '/framework/plugins/importer/data/fusion_slider.zip';
-            @avada_import_fsliders( $fs_url );
+            @zhane_import_fsliders( $fs_url );
 
             // finally redirect to success page
             wp_redirect( admin_url( 'themes.php?page=optionsframework&imported=success#of-option-generaloptions' ) );
@@ -596,7 +596,7 @@ function fusion_get_new_widget_name( $widget_name, $widget_index ) {
 }
 
 if( function_exists( 'layerslider_import_sample_slider' ) ) {
-    function avada_import_sample_slider( $layerslider_data ) {
+    function zhane_import_sample_slider( $layerslider_data ) {
         // Base64 encoded, serialized slider export code
         $sample_slider = $layerslider_data;
 
@@ -654,7 +654,7 @@ if( function_exists( 'layerslider_import_sample_slider' ) ) {
 }
 
 // Rename sidebar
-function avada_name_to_class($name){
+function zhane_name_to_class($name){
     $class = str_replace(array(' ',',','.','"',"'",'/',"\\",'+','=',')','(','*','&','^','%','$','#','@','!','~','`','<','>','?','[',']','{','}','|',':',),'',$name);
     return $class;
 }
@@ -662,7 +662,7 @@ function avada_name_to_class($name){
 /**
  * Import Fusion Sliders
  */
-function avada_import_fsliders( $zip_file ) {
+function zhane_import_fsliders( $zip_file ) {
     $upload_dir = wp_upload_dir();
     $base_dir = trailingslashit( $upload_dir['basedir'] );
     $fs_dir = $base_dir . 'fusion_slider_exports/';

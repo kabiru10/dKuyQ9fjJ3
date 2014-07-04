@@ -176,7 +176,7 @@
 <script type="text/javascript">
 boxed_style_selector_change = function(current) {
 	if(current == 'Boxed') {
-		var html = 'body{background-color:#d7d6d6;background-image:url("http://isharis.dnsalias.com/wp-content/themes/Avada/images/patterns/pattern1.png");background-repeat:repeat;}#wrapper{background:#fff;width:1000px;margin:0 auto;}';
+		var html = 'body{background-color:#d7d6d6;background-image:url("http://isharis.dnsalias.com/wp-content/themes/Zhane/images/patterns/pattern1.png");background-repeat:repeat;}#wrapper{background:#fff;width:1000px;margin:0 auto;}';
 		jQuery('head').append('<style type="text/css" id="ss"></style>');
 		jQuery('style#ss').append(html);
 	} else {
@@ -321,7 +321,7 @@ style_selector_change = function(name) {
 	var colorObject = jQuery.extend({}, color);
 
 	var data = {
-		action: 'avada_style_selector',
+		action: 'zhane_style_selector',
 		color: colorObject
 	};
 
@@ -423,9 +423,9 @@ jQuery(document).ready(function() {
 		var current = jQuery(this).find('option:selected').val();
 
 		if(current == 'Light') {
-			window.location = 'http://theme-fusion.com/avada/';
+			window.location = 'http://theme-fusion.com/zhane/';
 		} else {
-			window.location = 'http://theme-fusion.com/avadadark/';
+			window.location = 'http://theme-fusion.com/zhanedark/';
 		}
 
 	});

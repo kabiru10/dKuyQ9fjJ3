@@ -69,7 +69,7 @@
 
 	<?php if($smof_data['header_bg_color']): ?>
 	<?php
-	$header_bg_color_hex = avada_hex2rgb($smof_data['header_bg_color']);
+	$header_bg_color_hex = zhane_hex2rgb($smof_data['header_bg_color']);
 	?>
 	#header,#small-nav,#header .login-box,#header .cart-contents,#small-nav .login-box,#small-nav .cart-contents{
 		background-color:<?php echo $smof_data['header_bg_color']; ?> !important;
@@ -121,8 +121,8 @@
 	<?php endif; ?>
 	<?php if($smof_data['image_gradient_top_color'] && $smof_data['image_gradient_bottom_color']): ?>
 	<?php
-	$imgr_gtop = avada_hex2rgb($smof_data['image_gradient_top_color']);
-	$imgr_gbot = avada_hex2rgb($smof_data['image_gradient_bottom_color']);
+	$imgr_gtop = zhane_hex2rgb($smof_data['image_gradient_top_color']);
+	$imgr_gbot = zhane_hex2rgb($smof_data['image_gradient_bottom_color']);
 	if($smof_data['image_rollover_opacity']) {
 		$opacity = $smof_data['image_rollover_opacity'];
 	} else{
@@ -275,7 +275,7 @@
 	<?php if($smof_data['sep_color']): ?>
 	.sep-single{background-color:<?php echo $smof_data['sep_color']; ?> !important;}
 	.sep-double,.sep-dashed,.sep-dotted{border-color:<?php echo $smof_data['sep_color']; ?> !important;}
-	.ls-avada, .avada-skin-rev,.clients-carousel .es-carousel li img,h5.toggle a,.progress-bar,
+	.ls-zhane, .zhane-skin-rev,.clients-carousel .es-carousel li img,h5.toggle a,.progress-bar,
 	#small-nav,.portfolio-tabs,.faq-tabs,.single-navigation,.project-content .project-info .project-info-box,
 	.post .meta-info,.grid-layout .post,.grid-layout .post .content-sep,
 	.grid-layout .post .flexslider,.timeline-layout .post,.timeline-layout .post .content-sep,

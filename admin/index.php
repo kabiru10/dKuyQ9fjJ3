@@ -64,7 +64,7 @@ define( 'THEMEVERSION', $theme_version );
 define( 'THEMEURI', $theme_uri );
 define( 'THEMEAUTHORURI', $author_uri );
 
-// Avada Edit
+// Zhane Edit
 $lang = '';
 if(defined('ICL_LANGUAGE_CODE')) {
 	global $sitepress;
@@ -82,7 +82,7 @@ if(defined('ICL_LANGUAGE_CODE')) {
 		$lang = '';
 	}
 }
-// End Avada Edit
+// End Zhane Edit
 
 define( 'OPTIONS', $theme_name . '_options' . $lang );
 define( 'BACKUPS', $theme_name . '_backups' . $lang );

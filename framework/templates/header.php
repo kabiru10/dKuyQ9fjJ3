@@ -1,5 +1,5 @@
 <?php
-function avada_header_template( $slider_position = 'Below' ) {
+function zhane_header_template( $slider_position = 'Below' ) {
 	global $smof_data;
 
 	if( $smof_data['header_transparent'] ) {

@@ -34,18 +34,18 @@ if ( $attachment_ids ) {
 						$gallery = '';
 					}
 
-					// Avada Edit
+					// Zhane Edit
 					echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<li>%s</li>', $image ), $post->ID );
 
 				}
 
 				$loop = 0;
-				// Avada Edit
+				// Zhane Edit
 				$columns = apply_filters( 'woocommerce_product_thumbnails_columns', 3 );
 
 				foreach ( $attachment_ids as $attachment_id ) {
 
-					// Avada Edit
+					// Zhane Edit
 					/*$classes = array( 'zoom' );
 
 					if ( $loop == 0 || $loop % $columns == 0 )
@@ -65,7 +65,7 @@ if ( $attachment_ids ) {
 					$image_class = esc_attr( implode( ' ', $classes ) );
 					$image_title = esc_attr( get_the_title( $attachment_id ) );
 
-					// Avada Edit
+					// Zhane Edit
 					echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<li>%s</li>', $image ), $attachment_id, $post->ID, $image_class );
 
 					$loop++;

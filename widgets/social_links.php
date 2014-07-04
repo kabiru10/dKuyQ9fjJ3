@@ -14,7 +14,7 @@ class Social_Links_Widget extends WP_Widget {
 
 		$control_ops = array('id_base' => 'social_links-widget');
 
-		$this->WP_Widget('social_links-widget', 'Avada: Social Links', $widget_ops, $control_ops);
+		$this->WP_Widget('social_links-widget', 'Zhane: Social Links', $widget_ops, $control_ops);
 	}
 
 	function widget($args, $instance)

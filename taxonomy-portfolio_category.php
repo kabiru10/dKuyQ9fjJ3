@@ -156,9 +156,9 @@ if($portfolio_content == false) {
 					</div>
 					<?php if($smof_data['portfolio_archive_layout'] == 'Portfolio One Column Text' || $smof_data['portfolio_archive_layout'] == 'Portfolio One Column'): ?>
 					<div class="buttons">
-						<a href="<?php the_permalink(); ?>" class="<?php echo sprintf( 'btn btn-default button small fusion-button button-small button-default button-%s button-%s', strtolower( $smof_data['button_shape'] ), strtolower( $smof_data['button_type'] ) ); ?>"><?php echo __('Learn More', 'Avada'); ?></a>
+						<a href="<?php the_permalink(); ?>" class="<?php echo sprintf( 'btn btn-default button small fusion-button button-small button-default button-%s button-%s', strtolower( $smof_data['button_shape'] ), strtolower( $smof_data['button_type'] ) ); ?>"><?php echo __('Learn More', 'Zhane'); ?></a>
 						<?php if(get_post_meta($post->ID, 'pyre_project_url', true)): ?>
-						<a href="<?php echo get_post_meta($post->ID, 'pyre_project_url', true); ?>" class="<?php echo sprintf( 'btn btn-default button small fusion-button button-small button-default button-%s button-%s', strtolower( $smof_data['button_shape'] ), strtolower( $smof_data['button_type'] ) ); ?>"><?php echo __('View Project', 'Avada'); ?></a>
+						<a href="<?php echo get_post_meta($post->ID, 'pyre_project_url', true); ?>" class="<?php echo sprintf( 'btn btn-default button small fusion-button button-small button-default button-%s button-%s', strtolower( $smof_data['button_shape'] ), strtolower( $smof_data['button_type'] ) ); ?>"><?php echo __('View Project', 'Zhane'); ?></a>
 						<?php endif; ?>
 					</div>
 					<?php endif; ?>

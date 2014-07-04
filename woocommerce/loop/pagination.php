@@ -21,8 +21,8 @@ if ( $wp_query->max_num_pages <= 1 )
 			'format' 		=> '',
 			'current' 		=> max( 1, get_query_var('paged') ),
 			'total' 		=> $wp_query->max_num_pages,
-			'prev_text' 	=> '<span class="page-prev"></span>' . __('Previous', 'Avada'),
-			'next_text' 	=> __('Next', 'Avada'). '<span class="page-next"></span>',
+			'prev_text' 	=> '<span class="page-prev"></span>' . __('Previous', 'Zhane'),
+			'next_text' 	=> __('Next', 'Zhane'). '<span class="page-next"></span>',
 			'type'			=> 'plain',
 			'end_size'		=> 3,
 			'mid_size'		=> 3

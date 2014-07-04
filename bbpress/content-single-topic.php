@@ -29,7 +29,7 @@
 
 	<?php else : ?>
 
-		<?php bbp_topic_tag_list( bbp_get_topic_id(), array( 'before' => '<div class="bbp-topic-tags"><p>' . esc_html__( 'Tags:', 'Avada' ) . '&nbsp;', 'sep'    => ' ', 'after'  => '</p></div>' ) ); ?>
+		<?php bbp_topic_tag_list( bbp_get_topic_id(), array( 'before' => '<div class="bbp-topic-tags"><p>' . esc_html__( 'Tags:', 'Zhane' ) . '&nbsp;', 'sep'    => ' ', 'after'  => '</p></div>' ) ); ?>
 
 		<?php if ( bbp_show_lead_topic() ) : ?>
 

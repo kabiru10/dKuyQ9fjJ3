@@ -69,10 +69,10 @@ global $woocommerce, $product, $post;
 								}
 							?>
 						</select>
-					  <?php //Avada edit ?>
+					  <?php //Zhane edit ?>
 					  </td>
 		        <?php endforeach;?>
-		          <?php //Avada edit ?>
+		          <?php //Zhane edit ?>
 				  <tr>
 					<td class="label"></td>
 					<td class="value">
@@ -91,7 +91,7 @@ global $woocommerce, $product, $post;
 		</table>
 
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-		<?php //Avada edit ?>
+		<?php //Zhane edit ?>
 		
 
 		<div class="single_variation_wrap" style="display:none;">

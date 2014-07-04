@@ -54,7 +54,7 @@ get_header(); ?>
 			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 		}
 		$args = array(
-			'post_type' => 'avada_portfolio',
+			'post_type' => 'zhane_portfolio',
 			'paged' => $paged,
 			'posts_per_page' => $smof_data['portfolio_items'],
 		);
@@ -103,7 +103,7 @@ get_header(); ?>
 		if(is_array($portfolio_taxs) && !empty($portfolio_taxs) && get_post_meta($post->ID, 'pyre_portfolio_filters', true) != 'no'):
 		?>
 		<ul class="portfolio-tabs clearfix">
-			<li class="active"><a data-filter="*" href="#"><?php echo __('All', 'Avada'); ?></a></li>
+			<li class="active"><a data-filter="*" href="#"><?php echo __('All', 'Zhane'); ?></a></li>
 			<?php foreach($portfolio_taxs as $portfolio_tax_slug => $portfolio_tax_name): ?>
 			<li><a data-filter=".<?php echo $portfolio_tax_slug; ?>" href="#"><?php echo $portfolio_tax_name; ?></a></li>
 			<?php endforeach; ?>
@@ -207,9 +207,9 @@ get_header(); ?>
 
 					<div class="buttons">
 					
-						<a href="<?php echo $permalink; ?>" class="<?php echo sprintf( 'btn btn-default button small fusion-button button-small button-default button-%s button-%s', strtolower( $smof_data['button_shape'] ), strtolower( $smof_data['button_type'] ) ); ?>"><?php echo __('Learn More', 'Avada'); ?></a>
+						<a href="<?php echo $permalink; ?>" class="<?php echo sprintf( 'btn btn-default button small fusion-button button-small button-default button-%s button-%s', strtolower( $smof_data['button_shape'] ), strtolower( $smof_data['button_type'] ) ); ?>"><?php echo __('Learn More', 'Zhane'); ?></a>
 						<?php if(get_post_meta($post->ID, 'pyre_project_url', true)): ?>
-						<a href="<?php echo get_post_meta($post->ID, 'pyre_project_url', true); ?>" class="<?php echo sprintf( 'btn btn-default button small fusion-button button-small button-default button-%s button-%s', strtolower( $smof_data['button_shape'] ), strtolower( $smof_data['button_type'] ) ); ?>"><?php echo __('View Project', 'Avada'); ?></a>
+						<a href="<?php echo get_post_meta($post->ID, 'pyre_project_url', true); ?>" class="<?php echo sprintf( 'btn btn-default button small fusion-button button-small button-default button-%s button-%s', strtolower( $smof_data['button_shape'] ), strtolower( $smof_data['button_type'] ) ); ?>"><?php echo __('View Project', 'Zhane'); ?></a>
 						<?php endif; ?>
 					</div>
 				</div>

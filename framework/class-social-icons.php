@@ -17,9 +17,9 @@ if( ! defined( 'ABSPATH' ) ) {
 }
 
 // Don't duplicate me!
-if( ! class_exists( 'Avada_SocialIcons' ) ) {
+if( ! class_exists( 'Zhane_SocialIcons' ) ) {
 
-	class Avada_SocialIcons {
+	class Zhane_SocialIcons {
 
 		public $args = array(
 			'icon_order' => '',

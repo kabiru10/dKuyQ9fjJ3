@@ -388,13 +388,13 @@ class Options_Machine {
 					$output .= '<img src="'.$src.'">';
 				break;
 				
-				// Avada edit
+				// Zhane edit
 				//display a button with url
 				case 'button':
 					$src = $value['std'];
 					$output .= '<button href="' . $src . '" class="button-primary" type="button">' . $value['btntext'] . '</button>';
 				break;
-				// End Avada edit
+				// End Zhane edit
 				
 				//tab heading
 				case 'heading':
