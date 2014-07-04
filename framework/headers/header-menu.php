@@ -1,4 +1,4 @@
-<?php global $woocommerce, $smof_data; ?>
+<?php global $woocommerce, $zdata; ?>
 <div class='top-menu'>
 	<ul id="snav" class="menu">
 		<?php
@@ -7,7 +7,7 @@
 		}
 		?>
 		<?php if(class_exists('Woocommerce')): ?>
-		<?php if($smof_data['woocommerce_acc_link_top_nav']): ?>
+		<?php if($zdata['woocommerce_acc_link_top_nav']): ?>
 		<li class="my-account">
 			<a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>"><?php _e('My Account', 'Zhane'); ?></a>
 			<?php if(!is_user_logged_in()): ?>
@@ -40,7 +40,7 @@
 			<?php endif; ?>
 		</li>
 		<?php endif; ?>
-		<?php if($smof_data['woocommerce_cart_link_top_nav']): ?>
+		<?php if($zdata['woocommerce_cart_link_top_nav']): ?>
 		<li class="cart">
 			<?php //var_dump($woocommerce->cart); ?>
 			<?php if(!$woocommerce->cart->cart_contents_count): ?>

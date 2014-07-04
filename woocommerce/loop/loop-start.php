@@ -8,7 +8,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-global $woocommerce_loop, $smof_data;
+global $woocommerce_loop, $zdata;
 
 // Store column count for displaying the grid
 if( empty( $woocommerce_loop['columns'] ) ) {
@@ -31,7 +31,7 @@ if( is_shop() || is_product_category() || is_product_tag() ) {
 
 	if( get_post_meta($pageID, 'pyre_full_width', true ) == 'yes' ||
 		$page_template == 'full-width.php' ||
-		( ( is_product_category() || is_product_tag() ) && $smof_data['woocommerce_archive_sidebar'] == 'None' )
+		( ( is_product_category() || is_product_tag() ) && $zdata['woocommerce_archive_sidebar'] == 'None' )
 	) {
 		$woocommerce_loop['columns'] = 4;
 	} else {

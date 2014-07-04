@@ -7,7 +7,7 @@
  *
  * @version: 1.0.0
  * @package  Fusion/Admin Interface
- * @author   ThemeFusion
+ * @author   idh
  * @link     http://theme-fusion.com
  */
 

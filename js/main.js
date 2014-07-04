@@ -1706,7 +1706,7 @@ jQuery(document).bind('gform_post_conditional_logic', function(){
  * Copyright 2011-2014 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * scrollspy.js
- * modified by ThemeFusion 2014
+ * modified by idh 2014
  */
 
 +function ($) {

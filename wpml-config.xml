@@ -22,7 +22,7 @@
         </key>
     </admin-texts>   
     <custom-types>
-        <custom-type translate="1">themefusion_elastic</custom-type>
+        <custom-type translate="1">idh_elastic</custom-type>
         <custom-type translate="1">slide</custom-type>
         <custom-type translate="1">layerslider</custom-type>
         <custom-type translate="1">revslider</custom-type>
@@ -34,7 +34,7 @@
         <taxonomy translate="1">faq_category</taxonomy>
         <taxonomy translate="1">portfolio_skills</taxonomy>
         <taxonomy translate="1">portfolio_tags</taxonomy>
-        <taxonomy translate="1">themefusion_es_groups</taxonomy>
+        <taxonomy translate="1">idh_es_groups</taxonomy>
         <taxonomy translate="1">slide-page</taxonomy>
     </taxonomies>
     <custom-fields>

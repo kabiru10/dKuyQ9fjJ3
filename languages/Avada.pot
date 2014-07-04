@@ -13,791 +13,791 @@ msgstr ""
 "MIME-Version: 1.0\n"
 
 # if ( empty($post->post_title) )
-# $title = $previous ? __('Previous Post', 'Avada') : __('Next Post', 'Avada');
+# $title = $previous ? __('Previous Post', 'Zhane') : __('Next Post', 'Zhane');
 # 
 # wpml-name: d17e21dca8afcdfcafd8762928cf8bf8
 msgid "Next Post"
 msgstr ""
 
 # if ( empty($post->post_title) )
-# $title = $previous ? __('Previous Post', 'Avada') : __('Next Post', 'Avada');
+# $title = $previous ? __('Previous Post', 'Zhane') : __('Next Post', 'Zhane');
 # 
 # wpml-name: d0215db3a3b973e1d423e01881bfc813
 msgid "Previous Post"
 msgstr ""
 
 # 'sbg_box',
-# __( 'Sidebar', 'Avada' ),
+# __( 'Sidebar', 'Zhane' ),
 # array('sidebar_generator', 'edit_form'),
 # wpml-name: 219ff7705d67d0c798779951dcf82e95
 msgid "Sidebar"
 msgstr ""
 
 # </p>
-# <a href="#" id="fusion-media-upload-<?php echo $item_id; ?>" class="fusion-open-media button button-primary fusion-megamenu-upload-thumbnail"><?php _e( 'Set Thumbnail', 'Avada' ); ?></a>
+# <a href="#" id="fusion-media-upload-<?php echo $item_id; ?>" class="fusion-open-media button button-primary fusion-megamenu-upload-thumbnail"><?php _e( 'Set Thumbnail', 'Zhane' ); ?></a>
 # <p class="field-megamenu-thumbnail description description-wide">
 # wpml-name: 35e9cfa14322e1b3a7d13391e53477ac
 msgid "Set Thumbnail"
 msgstr ""
 
 # <label for="edit-menu-item-megamenu-icon-<?php echo $item_id; ?>">
-# <?php _e( 'Mega Menu Icon (use full font awesome name)', 'Avada' ); ?>
+# <?php _e( 'Mega Menu Icon (use full font awesome name)', 'Zhane' ); ?>
 # <input type="text" id="edit-menu-item-megamenu-icon-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-icon" name="menu-item-fusion-megamenu-icon[<?php echo $item_id; ?>]" value="<?php echo $item->fusion_megamenu_icon; ?>" />
 # wpml-name: ed337b2d405b51264196ba53c363a9f3
 msgid "Mega Menu Icon (use full font awesome name)"
 msgstr ""
 
 # <select id="edit-menu-item-megamenu-widgetarea-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-widgetarea" name="menu-item-fusion-megamenu-widgetarea[<?php echo $item_id; ?>]">
-# <option value="0"><?php _e( 'Select Widget Area', 'Avada' ); ?></option>
+# <option value="0"><?php _e( 'Select Widget Area', 'Zhane' ); ?></option>
 # <?php
 # wpml-name: dd45b8e59a8c54710a6cdba027c9e350
 msgid "Select Widget Area"
 msgstr ""
 
 # <label for="edit-menu-item-megamenu-widgetarea-<?php echo $item_id; ?>">
-# <?php _e( 'Mega Menu Widget Area', 'Avada' ); ?>
+# <?php _e( 'Mega Menu Widget Area', 'Zhane' ); ?>
 # <select id="edit-menu-item-megamenu-widgetarea-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-widgetarea" name="menu-item-fusion-megamenu-widgetarea[<?php echo $item_id; ?>]">
 # wpml-name: 035f4cf9c1c508c76ba0f981287f3ce2
 msgid "Mega Menu Widget Area"
 msgstr ""
 
 # <input type="checkbox" id="edit-menu-item-megamenu-title-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-title" name="menu-item-fusion-megamenu-title[<?php echo $item_id; ?>]" value="disabled" <?php checked( $item->fusion_megamenu_title, 'disabled' ); ?> />
-# <?php _e( 'Disable Mega Menu Column Title', 'Avada' ); ?>
+# <?php _e( 'Disable Mega Menu Column Title', 'Zhane' ); ?>
 # </label>
 # wpml-name: 327be4f1954415dad7cc90cbdffe2ff4
 msgid "Disable Mega Menu Column Title"
 msgstr ""
 
 # <select id="edit-menu-item-megamenu-columns-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-columns" name="menu-item-fusion-megamenu-columns[<?php echo $item_id; ?>]">
-# <option value="auto" <?php selected( $item->fusion_megamenu_columns, 'auto' ); ?>><?php _e( 'Auto', 'Avada' ); ?></option>
+# <option value="auto" <?php selected( $item->fusion_megamenu_columns, 'auto' ); ?>><?php _e( 'Auto', 'Zhane' ); ?></option>
 # <option value="1" <?php selected( $item->fusion_megamenu_columns, '1' ); ?>>1</option>
 # wpml-name: 06b9281e396db002010bde1de57262eb
 msgid "Auto"
 msgstr ""
 
 # <label for="edit-menu-item-megamenu-columns-<?php echo $item_id; ?>">
-# <?php _e( 'Mega Menu Number of Columns', 'Avada' ); ?>
+# <?php _e( 'Mega Menu Number of Columns', 'Zhane' ); ?>
 # <select id="edit-menu-item-megamenu-columns-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-columns" name="menu-item-fusion-megamenu-columns[<?php echo $item_id; ?>]">
 # wpml-name: 03d959e709ff7835f42c19e71afd281e
 msgid "Mega Menu Number of Columns"
 msgstr ""
 
 # <input type="checkbox" id="edit-menu-item-megamenu-width-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-width" name="menu-item-fusion-megamenu-width[<?php echo $item_id; ?>]" value="fullwidth" <?php checked( $item->fusion_megamenu_width, 'fullwidth' ); ?> />
-# <?php _e( 'Full Width Mega Menu', 'Avada' ); ?>
+# <?php _e( 'Full Width Mega Menu', 'Zhane' ); ?>
 # </label>
 # wpml-name: 9e2661888f17b075b9ebd47f834268df
 msgid "Full Width Mega Menu"
 msgstr ""
 
 # <input type="checkbox" id="edit-menu-item-megamenu-status-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-status" name="menu-item-fusion-megamenu-status[<?php echo $item_id; ?>]" value="enabled" <?php checked( $item->fusion_megamenu_status, 'enabled' ); ?> />
-# <strong><?php _e( 'Enable Fusion Mega Menu', 'Avada' ); ?></strong>
+# <strong><?php _e( 'Enable Fusion Mega Menu', 'Zhane' ); ?></strong>
 # </label>
 # wpml-name: 1d548d28b4394500d23817f71e43510a
 msgid "Enable Fusion Mega Menu"
 msgstr ""
 
 # <input type="checkbox" class="input-checkbox" name="terms" <?php checked( $terms_is_checked, true ); ?> id="terms" />
-# <label for="terms" class="checkbox"><?php _e( 'I have read and accept the', 'Avada' ); ?> <a href="<?php echo esc_url( get_permalink(wc_get_page_id('terms')) ); ?>" target="_blank"><?php _e( 'terms &amp; conditions', 'Avada' ); ?></a></label>
-# <?php // End Avada edit ?>
+# <label for="terms" class="checkbox"><?php _e( 'I have read and accept the', 'Zhane' ); ?> <a href="<?php echo esc_url( get_permalink(wc_get_page_id('terms')) ); ?>" target="_blank"><?php _e( 'terms &amp; conditions', 'Zhane' ); ?></a></label>
+# <?php // End Zhane edit ?>
 # wpml-name: 4ab1891a1bb56bcdc29d3c4238df3027
 msgid "terms &amp; conditions"
 msgstr ""
 
 # <input type="checkbox" class="input-checkbox" name="terms" <?php checked( $terms_is_checked, true ); ?> id="terms" />
-# <label for="terms" class="checkbox"><?php _e( 'I have read and accept the', 'Avada' ); ?> <a href="<?php echo esc_url( get_permalink(wc_get_page_id('terms')) ); ?>" target="_blank"><?php _e( 'terms &amp; conditions', 'Avada' ); ?></a></label>
-# <?php // End Avada edit ?>
+# <label for="terms" class="checkbox"><?php _e( 'I have read and accept the', 'Zhane' ); ?> <a href="<?php echo esc_url( get_permalink(wc_get_page_id('terms')) ); ?>" target="_blank"><?php _e( 'terms &amp; conditions', 'Zhane' ); ?></a></label>
+# <?php // End Zhane edit ?>
 # wpml-name: 9258cdb88f76574c5b600b603315b9e5
 msgid "I have read and accept the"
 msgstr ""
 
 # if( $difference != 1 ) {
-# $periods[$j] .= __( 's', 'Avada' );
+# $periods[$j] .= __( 's', 'Zhane' );
 # }
 # wpml-name: 03c7c0ace395d80182db07ae2c30f034
 msgid "s"
 msgstr ""
 
 # $difference = $now - $time;
-# $tense = __( 'ago', 'Avada' );
+# $tense = __( 'ago', 'Zhane' );
 # 
 # wpml-name: 6d0a578ca2f2c0e792fc923002fccbe3
 msgid "ago"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 2787910b1b16428d65412fca2718a92e
 msgid "decade"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 84cdc76cabf41bd7c961f6ab12f117d8
 msgid "year"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 7436f942d5ea836cb84f1bb2527d8286
 msgid "month"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 172a8327fcd3685ab3c0f740d031da09
 msgid "week"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 628b7db04235f228d40adc671413a8c8
 msgid "day"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 896c55cc5e46fab38ce9f51ebf7bfcd3
 msgid "hour"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 0a7d55be9d12a369a6a8da0fb517fba4
 msgid "minute"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: a9f0e61a137d86aa9db53465e0801612
 msgid "second"
 msgstr ""
 
 # <div class="post-holder">
-# <p><?php echo strip_tags($comment->comment_author); ?> <?php _e('says', 'Avada'); ?>:</p>
+# <p><?php echo strip_tags($comment->comment_author); ?> <?php _e('says', 'Zhane'); ?>:</p>
 # <div class="meta">
 # wpml-name: 84eeb81e61c76ad3f4103b0b051c7021
 msgid "says"
 msgstr ""
 
 # <?php if($show_recent_posts == 'true'): ?>
-# <li><a href="#tab-recent"><?php echo __('Recent', 'Avada'); ?></a></li>
+# <li><a href="#tab-recent"><?php echo __('Recent', 'Zhane'); ?></a></li>
 # <?php endif; ?>
 # wpml-name: dae52b80711ee1029c7006f95018d300
 msgid "Recent"
 msgstr ""
 
 # <?php if($show_popular_posts == 'true'): ?>
-# <li><a href="#tab-popular"><?php echo __('Popular', 'Avada'); ?></a></li>
+# <li><a href="#tab-popular"><?php echo __('Popular', 'Zhane'); ?></a></li>
 # <?php endif; ?>
 # wpml-name: 2cc1943d4c0b46bfcf503a75c44f988b
 msgid "Popular"
 msgstr ""
 
 # <?php if(isset($instance['web']) && $instance['web']): ?>
-# <p class="web"><?php _e('Web:', 'Avada'); ?> <a href="<?php echo $instance['web']; ?>"><?php if(isset($instance['webtxt']) && $instance['webtxt']) { echo $instance['webtxt']; } else { echo $instance['web']; } ?></a></p>
+# <p class="web"><?php _e('Web:', 'Zhane'); ?> <a href="<?php echo $instance['web']; ?>"><?php if(isset($instance['webtxt']) && $instance['webtxt']) { echo $instance['webtxt']; } else { echo $instance['web']; } ?></a></p>
 # <?php endif; ?>
 # wpml-name: 76612ef17d4d7ead66155f357461bced
 msgid "Web:"
 msgstr ""
 
 # <?php if(isset($instance['fax']) && $instance['fax']): ?>
-# <p class="fax"><?php _e('Fax:', 'Avada'); ?> <?php echo $instance['fax']; ?></p>
+# <p class="fax"><?php _e('Fax:', 'Zhane'); ?> <?php echo $instance['fax']; ?></p>
 # <?php endif; ?>
 # wpml-name: 0e2fb5b02182fd28b9b96e86ed27838f
 msgid "Fax:"
 msgstr ""
 
 # <?php if(isset($instance['mobile']) && $instance['mobile']): ?>
-# <p class="mobile"><?php _e('Mobile:', 'Avada'); ?> <?php echo $instance['mobile']; ?></p>
+# <p class="mobile"><?php _e('Mobile:', 'Zhane'); ?> <?php echo $instance['mobile']; ?></p>
 # <?php endif; ?>
 # wpml-name: ffcb08c10f0f79e2f023967154ddbeed
 msgid "Mobile:"
 msgstr ""
 
 # <?php if(isset($instance['phone']) && $instance['phone']): ?>
-# <p class="phone"><?php _e('Phone:', 'Avada'); ?> <?php echo $instance['phone']; ?></p>
+# <p class="phone"><?php _e('Phone:', 'Zhane'); ?> <?php echo $instance['phone']; ?></p>
 # <?php endif; ?>
 # wpml-name: 673ae02fffb72f0fe68a66f096a01347
 msgid "Phone:"
 msgstr ""
 
 # <div class="related-posts single-related-posts">
-# <div class="title"><h2><?php echo __('Related Posts', 'Avada'); ?></h2><div class="title-sep-container"><div class="title-sep"></div></div></div>
+# <div class="title"><h2><?php echo __('Related Posts', 'Zhane'); ?></h2><div class="title-sep-container"><div class="title-sep"></div></div></div>
 # <div id="carousel" class="es-carousel-wrapper">
 # wpml-name: 177f0eb97c41c1d839bff85af7cb1120
 msgid "Related Posts"
 msgstr ""
 
 # <div class="about-author">
-# <div class="title"><h2><?php echo __('About the Author:', 'Avada'); ?> <?php the_author_posts_link(); ?></h2><div class="title-sep-container"><div class="title-sep"></div></div></div>
+# <div class="title"><h2><?php echo __('About the Author:', 'Zhane'); ?> <?php the_author_posts_link(); ?></h2><div class="title-sep-container"><div class="title-sep"></div></div></div>
 # <div class="about-author-container">
 # wpml-name: a85d110a7b47233be31e99ae463c6910
 msgid "About the Author:"
 msgstr ""
 
 # <div class="related-posts related-projects">
-# <div class="title"><h2><?php echo __('Related Projects', 'Avada'); ?></h2><div class="title-sep-container"><div class="title-sep"></div></div></div>
+# <div class="title"><h2><?php echo __('Related Projects', 'Zhane'); ?></h2><div class="title-sep-container"><div class="title-sep"></div></div></div>
 # <div id="carousel" class="es-carousel-wrapper">
 # wpml-name: 89ec20af684bf65c3be23fa5743cfe7a
 msgid "Related Projects"
 msgstr ""
 
 # <div class="share-box">
-# <h4><?php echo __('Share This Story, Choose Your Platform!', 'Avada'); ?></h4>
-# <ul class="social-networks social-networks-<?php echo strtolower($smof_data['socialbox_icons_color']); ?>">
+# <h4><?php echo __('Share This Story, Choose Your Platform!', 'Zhane'); ?></h4>
+# <ul class="social-networks social-networks-<?php echo strtolower($zdata['socialbox_icons_color']); ?>">
 # wpml-name: dd9e123ac85d2c75f6a5ff9c7354e35c
 msgid "Share This Story, Choose Your Platform!"
 msgstr ""
 
 # <div class="project-info-box">
-# <h4><?php echo __('Copyright', 'Avada'); ?>:</h4>
+# <h4><?php echo __('Copyright', 'Zhane'); ?>:</h4>
 # <span><a href="<?php echo get_post_meta($post->ID, 'pyre_copy_url', true); ?>"><?php echo get_post_meta($post->ID, 'pyre_copy_url_text', true); ?></a></span>
 # wpml-name: 6016a2b341113bf496b719905398ecd2
 msgid "Copyright"
 msgstr ""
 
 # <div class="project-info-box">
-# <h4><?php echo __('Project URL', 'Avada') ?>:</h4>
+# <h4><?php echo __('Project URL', 'Zhane') ?>:</h4>
 # <span><a href="<?php echo get_post_meta($post->ID, 'pyre_project_url', true); ?>"><?php echo get_post_meta($post->ID, 'pyre_project_url_text', true); ?></a></span>
 # wpml-name: 9bc13a6d723ab331f1dc83876593dda8
 msgid "Project URL"
 msgstr ""
 
 # <div class="project-info-box">
-# <h4><?php echo __('Tags', 'Avada') ?>:</h4>
+# <h4><?php echo __('Tags', 'Zhane') ?>:</h4>
 # <div class="project-terms">
 # wpml-name: 189f63f277cd73395561651753563065
 msgid "Tags"
 msgstr ""
 
 # <div class="project-info-box">
-# <h4><?php echo __('Categories', 'Avada') ?>:</h4>
+# <h4><?php echo __('Categories', 'Zhane') ?>:</h4>
 # <div class="project-terms">
 # wpml-name: af1b98adf7f686b84cd0b443e022b7a0
 msgid "Categories"
 msgstr ""
 
 # <div class="project-info-box">
-# <h4><?php echo __('Skills Needed', 'Avada') ?>:</h4>
+# <h4><?php echo __('Skills Needed', 'Zhane') ?>:</h4>
 # <div class="project-terms">
 # wpml-name: c5e2e6a5cf227abeb35ed19bad3f18d4
 msgid "Skills Needed"
 msgstr ""
 
 # <div class="project-info" style="<?php echo $project_info_style; ?>">
-# <h3><?php echo __('Project Details', 'Avada'); ?></h3>
+# <h3><?php echo __('Project Details', 'Zhane'); ?></h3>
 # <?php if(get_the_term_list($post->ID, 'portfolio_skills', '', '<br />', '')): ?>
 # wpml-name: ba516011f8955ad772f70ea105fcec9f
 msgid "Project Details"
 msgstr ""
 
 # <?php if( ! post_password_required($post->ID) ): ?>
-# <h3 style="<?php echo $project_desc_title_style; ?>"><?php echo __('Project Description', 'Avada') ?></h3>
+# <h3 style="<?php echo $project_desc_title_style; ?>"><?php echo __('Project Description', 'Zhane') ?></h3>
 # <?php endif; ?>
 # wpml-name: 498431355a10a934543eb9a3ad24518e
 msgid "Project Description"
 msgstr ""
 
 # <?php if(is_page($post_parent)): ?><?php endif; ?>
-# <li <?php if(is_page($post_parent)): ?>class="current_page_item"<?php endif; ?>><a href="<?php echo get_permalink($post_parent); ?>" title="<?php echo __('Back to Parent Page', 'Avada'); ?>"><?php echo get_the_title($post_parent); ?></a></li>
+# <li <?php if(is_page($post_parent)): ?>class="current_page_item"<?php endif; ?>><a href="<?php echo get_permalink($post_parent); ?>" title="<?php echo __('Back to Parent Page', 'Zhane'); ?>"><?php echo get_the_title($post_parent); ?></a></li>
 # <?php
 # wpml-name: 13a1c246a6d1a5ae1a40f5260a99ac1e
 msgid "Back to Parent Page"
 msgstr ""
 
-# <h3><?php echo __('Try again!', 'Avada'); ?></a></h3>
-# <p><?php echo __('If you want to rephrase your query, here is your chance:', 'Avada'); ?></p>
+# <h3><?php echo __('Try again!', 'Zhane'); ?></a></h3>
+# <p><?php echo __('If you want to rephrase your query, here is your chance:', 'Zhane'); ?></p>
 # <?php get_search_form(); ?>
 # wpml-name: b52ddfb7fddb89c4226ace319475c323
 msgid "If you want to rephrase your query, here is your chance:"
 msgstr ""
 
 # <div class="one_third last">
-# <h3><?php echo __('Try again!', 'Avada'); ?></a></h3>
-# <p><?php echo __('If you want to rephrase your query, here is your chance:', 'Avada'); ?></p>
+# <h3><?php echo __('Try again!', 'Zhane'); ?></a></h3>
+# <p><?php echo __('If you want to rephrase your query, here is your chance:', 'Zhane'); ?></p>
 # wpml-name: 0912f8f8b87c237b8415f1b4c0a50438
 msgid "Try again!"
 msgstr ""
 
 # <div class="one_third">
-# <h1 class="oops <?php echo ($sidebar_css != 'display:none') ? 'sidebar-oops' : ''; ?>"><?php echo __('Oops!', 'Avada'); ?></h1>
+# <h1 class="oops <?php echo ($sidebar_css != 'display:none') ? 'sidebar-oops' : ''; ?>"><?php echo __('Oops!', 'Zhane'); ?></h1>
 # </div>
 # wpml-name: 50717588689bf6a591f54c262359f0cc
 msgid "Oops!"
 msgstr ""
 
 # <div class="title">
-# <h2><?php echo __('Couldn\'t find what you\'re looking for!', 'Avada'); ?></h2><div class="title-sep-container"><div class="title-sep"></div></div>
+# <h2><?php echo __('Couldn\'t find what you\'re looking for!', 'Zhane'); ?></h2><div class="title-sep-container"><div class="title-sep"></div></div>
 # </div>
 # wpml-name: 0ca81ab2e2fcd5ef38aecf8c7624d533
 msgid "Couldn't find what you're looking for!"
 msgstr ""
 
 # <?php if(get_post_meta($post->ID, 'pyre_project_url', true)): ?>
-# <a href="<?php echo get_post_meta($post->ID, 'pyre_project_url', true); ?>" class="button small"><?php echo __('View Project', 'Avada'); ?></a>
+# <a href="<?php echo get_post_meta($post->ID, 'pyre_project_url', true); ?>" class="button small"><?php echo __('View Project', 'Zhane'); ?></a>
 # <?php endif; ?>
 # wpml-name: 716f3cb27c271759e1fb0d39972706e3
 msgid "View Project"
 msgstr ""
 
 # <div class="buttons">
-# <a href="<?php echo $permalink; ?>" class="button small"><?php echo __('Learn More', 'Avada'); ?></a>
+# <a href="<?php echo $permalink; ?>" class="button small"><?php echo __('Learn More', 'Zhane'); ?></a>
 # <?php if(get_post_meta($post->ID, 'pyre_project_url', true)): ?>
 # wpml-name: f5395c9793af8a11b406ca7c1ac70da9
 msgid "Learn More"
 msgstr ""
 
 # 
-# .woocommerce-invalid:after { content: '<?php echo __('Please enter correct details for this required field.', 'Avada'); ?>'; display: inline-block; margin-top: 7px; color: red; }
+# .woocommerce-invalid:after { content: '<?php echo __('Please enter correct details for this required field.', 'Zhane'); ?>'; display: inline-block; margin-top: 7px; color: red; }
 # </style>
 # wpml-name: 158f1bc10f611d14543e1426abfed743
 msgid "Please enter correct details for this required field."
 msgstr ""
 
-# 'portfolio_loading_text' => '<em>'. __('Loading Portfolio Items...', 'Avada').'</em>',
-# 'faqs_loading_text' => '<em>'. __('Loading FAQ Items...', 'Avada').'</em>',
-# 'order_actions' =>  __('Details', 'Avada')
+# 'portfolio_loading_text' => '<em>'. __('Loading Portfolio Items...', 'Zhane').'</em>',
+# 'faqs_loading_text' => '<em>'. __('Loading FAQ Items...', 'Zhane').'</em>',
+# 'order_actions' =>  __('Details', 'Zhane')
 # wpml-name: 3b340ac59e178c70f764a4c1313b6a0a
 msgid "Loading FAQ Items..."
 msgstr ""
 
-# 'infinite_blog_text' => '<em>'. __('Loading the next set of posts...', 'Avada').'</em>',
-# 'portfolio_loading_text' => '<em>'. __('Loading Portfolio Items...', 'Avada').'</em>',
-# 'faqs_loading_text' => '<em>'. __('Loading FAQ Items...', 'Avada').'</em>',
+# 'infinite_blog_text' => '<em>'. __('Loading the next set of posts...', 'Zhane').'</em>',
+# 'portfolio_loading_text' => '<em>'. __('Loading Portfolio Items...', 'Zhane').'</em>',
+# 'faqs_loading_text' => '<em>'. __('Loading FAQ Items...', 'Zhane').'</em>',
 # wpml-name: e06645be9f00d5cb266104d208c82320
 msgid "Loading Portfolio Items..."
 msgstr ""
 
-# 'infinite_blog_finished_msg' => '<em>'.__('All posts displayed', 'Avada').'</em>',
-# 'infinite_blog_text' => '<em>'. __('Loading the next set of posts...', 'Avada').'</em>',
-# 'portfolio_loading_text' => '<em>'. __('Loading Portfolio Items...', 'Avada').'</em>',
+# 'infinite_blog_finished_msg' => '<em>'.__('All posts displayed', 'Zhane').'</em>',
+# 'infinite_blog_text' => '<em>'. __('Loading the next set of posts...', 'Zhane').'</em>',
+# 'portfolio_loading_text' => '<em>'. __('Loading Portfolio Items...', 'Zhane').'</em>',
 # wpml-name: 9a1dc1e92f772868a9fd98b5bf52ad2c
 msgid "Loading the next set of posts..."
 msgstr ""
 
 # 'language_flag' => $language_code,
-# 'infinite_blog_finished_msg' => '<em>'.__('All posts displayed', 'Avada').'</em>',
-# 'infinite_blog_text' => '<em>'. __('Loading the next set of posts...', 'Avada').'</em>',
+# 'infinite_blog_finished_msg' => '<em>'.__('All posts displayed', 'Zhane').'</em>',
+# 'infinite_blog_text' => '<em>'. __('Loading the next set of posts...', 'Zhane').'</em>',
 # wpml-name: 89d2d6748d3d718e6a99fb666368fb84
 msgid "All posts displayed"
 msgstr ""
 
-# 'dropdown_goto' => __('Go to...', 'Avada'),
-# 'mobile_nav_cart' => __('Shopping Cart', 'Avada'),
+# 'dropdown_goto' => __('Go to...', 'Zhane'),
+# 'mobile_nav_cart' => __('Shopping Cart', 'Zhane'),
 # 'page_smoothHeight' => $smoothHeight,
 # wpml-name: b75443a19207ed3a3552edda86536857
 msgid "Shopping Cart"
 msgstr ""
 
 # 'theme_url' => get_template_directory_uri(),
-# 'dropdown_goto' => __('Go to...', 'Avada'),
-# 'mobile_nav_cart' => __('Shopping Cart', 'Avada'),
+# 'dropdown_goto' => __('Go to...', 'Zhane'),
+# 'mobile_nav_cart' => __('Shopping Cart', 'Zhane'),
 # wpml-name: ec434af0a2786fa23b468584c5622fe1
 msgid "Go to..."
 msgstr ""
 
-# 'id' => 'smof_options', // link ID, defaults to a sanitized title value
-# 'title' => __('Theme Options', 'Avada'), // link title
+# 'id' => 'zindh_options', // link ID, defaults to a sanitized title value
+# 'title' => __('Theme Options', 'Zhane'), // link title
 # 'href' => admin_url( 'themes.php?page=optionsframework'), // name of file
 # wpml-name: 857ecb2ae9191bf8449f80abc89b8083
 msgid "Theme Options"
 msgstr ""
 
 # <?php if ($comment->comment_approved == '0') : ?>
-# <em><?php echo __('Your comment is awaiting moderation.', 'Avada') ?></em>
+# <em><?php echo __('Your comment is awaiting moderation.', 'Zhane') ?></em>
 # <br />
 # wpml-name: 6954378552054e698cfff1a52b0eca9d
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
 # <strong><?php echo get_comment_author_link() ?></strong>
-# <?php printf(__('%1$s at %2$s', 'Avada'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__(' - Edit', 'Avada'),'  ','') ?><?php comment_reply_link(array_merge( $args, array('reply_text' => __(' - Reply', 'Avada'), 'add_below' => 'comment', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+# <?php printf(__('%1$s at %2$s', 'Zhane'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__(' - Edit', 'Zhane'),'  ','') ?><?php comment_reply_link(array_merge( $args, array('reply_text' => __(' - Reply', 'Zhane'), 'add_below' => 'comment', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 # </div>
 # wpml-name: 4f255458d9b7fd3d589990ca43060865
 msgid " - Reply"
 msgstr ""
 
 # <strong><?php echo get_comment_author_link() ?></strong>
-# <?php printf(__('%1$s at %2$s', 'Avada'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__(' - Edit', 'Avada'),'  ','') ?><?php comment_reply_link(array_merge( $args, array('reply_text' => __(' - Reply', 'Avada'), 'add_below' => 'comment', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+# <?php printf(__('%1$s at %2$s', 'Zhane'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__(' - Edit', 'Zhane'),'  ','') ?><?php comment_reply_link(array_merge( $args, array('reply_text' => __(' - Reply', 'Zhane'), 'add_below' => 'comment', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 # </div>
 # wpml-name: 787ee0b3d8dcf131da613bade1ef7873
 msgid " - Edit"
 msgstr ""
 
 # <strong><?php echo get_comment_author_link() ?></strong>
-# <?php printf(__('%1$s at %2$s', 'Avada'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__(' - Edit', 'Avada'),'  ','') ?><?php comment_reply_link(array_merge( $args, array('reply_text' => __(' - Reply', 'Avada'), 'add_below' => 'comment', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+# <?php printf(__('%1$s at %2$s', 'Zhane'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__(' - Edit', 'Zhane'),'  ','') ?><?php comment_reply_link(array_merge( $args, array('reply_text' => __(' - Reply', 'Zhane'), 'add_below' => 'comment', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 # </div>
 # wpml-name: 5862ba6b9399ea36ab7d486f299754c8
 msgid "%1$s at %2$s"
 msgstr ""
 
 # <a class="account" href="#">
-# <?php _e('Edit Account' , 'Avada'); ?>
+# <?php _e('Edit Account' , 'Zhane'); ?>
 # </a>
 # wpml-name: cc17c909a9497f9582fdd4d15746cd97
 msgid "Edit Account"
 msgstr ""
 
 # <a class="address" href="#">
-# <?php _e('Change Address' , 'Avada'); ?>
+# <?php _e('Change Address' , 'Zhane'); ?>
 # </a>
 # wpml-name: 343eb235cf6b5426fc4f92f739876c27
 msgid "Change Address"
 msgstr ""
 
 # <a class="orders" href="#">
-# <?php _e('View Orders' , 'Avada'); ?>
+# <?php _e('View Orders' , 'Zhane'); ?>
 # </a>
 # wpml-name: dd40a3644e7e77aa24f79d691ce34c19
 msgid "View Orders"
 msgstr ""
 
 # <a class="downloads" href="#">
-# <?php _e('View Downloads' , 'Avada'); ?>
+# <?php _e('View Downloads' , 'Zhane'); ?>
 # </a>
 # wpml-name: e85ffc8d4fe76f12e9cca0811fa45461
 msgid "View Downloads"
 msgstr ""
 
 # 
-# <a data-name="<?php echo $data_name; ?>" href="#" class="fusion-button button-default button-medium continue-checkout"><?php _e('Continue', 'Avada'); ?></a>
+# <a data-name="<?php echo $data_name; ?>" href="#" class="fusion-button button-default button-medium continue-checkout"><?php _e('Continue', 'Zhane'); ?></a>
 # <div class="clearboth"></div>
 # wpml-name: a0bfb8e59e6c13fc8d990781f77694fe
 msgid "Continue"
 msgstr ""
 
 # <a data-name="#order_review" href="#">
-# <?php _e('Review &amp; Payment' , 'Avada'); ?>
+# <?php _e('Review &amp; Payment' , 'Zhane'); ?>
 # </a>
 # wpml-name: a1224651f7ebc5a8a7278892a886204a
 msgid "Review &amp; Payment"
 msgstr ""
 
 # <a data-name="col-2" href="#">
-# <?php _e('Additional Information' , 'Avada'); ?>
+# <?php _e('Additional Information' , 'Zhane'); ?>
 # </a>
 # wpml-name: 092bf78f9c97ba171b8232ddff585392
 msgid "Additional Information"
 msgstr ""
 
 # <a data-name="col-2" href="#">
-# <?php _e('Shipping Address' , 'Avada'); ?>
+# <?php _e('Shipping Address' , 'Zhane'); ?>
 # </a>
 # wpml-name: 48974cc3df177e6b565c39aa155458cd
 msgid "Shipping Address"
 msgstr ""
 
 # <a data-name="col-1" href="#">
-# <?php _e('Billing Address' , 'Avada'); ?>
+# <?php _e('Billing Address' , 'Zhane'); ?>
 # </a>
 # wpml-name: 28a59051cd90053f87bacd5f1ffbc0b8
 msgid "Billing Address"
 msgstr ""
 
 # <input name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php _e( 'Coupon code', 'woocommerce' ); ?>" />
-# <input type="submit" class="fusion-button button-default button-medium" name="apply_coupon" value="<?php _e( 'Apply', 'Avada' ); ?>" />
+# <input type="submit" class="fusion-button button-default button-medium" name="apply_coupon" value="<?php _e( 'Apply', 'Zhane' ); ?>" />
 # 
 # wpml-name: 9639e32cab248434a17ab32237cb3b71
 msgid "Apply"
 msgstr ""
 
 # 
-# <h2><?php _e( 'Have A Promotional Code?', 'Avada'); ?></h2>
+# <h2><?php _e( 'Have A Promotional Code?', 'Zhane'); ?></h2>
 # 
 # wpml-name: 0733b91b6077c4844e47d54f0f112a1c
 msgid "Have A Promotional Code?"
 msgstr ""
 
 # printf(
-# __( 'Hello, %s:', 'Avada' ),
+# __( 'Hello, %s:', 'Zhane' ),
 # $current_user->display_name
 # wpml-name: 1a398886f0a87366494032615ec7f42e
 msgid "Hello, %s:"
 msgstr ""
 
 # 
-# $html .= '<h2>' . sprintf( __( 'You Have %d Items In Your Cart', 'Avada' ), $woocommerce->cart->cart_contents_count ) . '</h2>';
+# $html .= '<h2>' . sprintf( __( 'You Have %d Items In Your Cart', 'Zhane' ), $woocommerce->cart->cart_contents_count ) . '</h2>';
 # 
 # wpml-name: 5cb6c6810287b52cc2cd70f735bc3103
 msgid "You Have %d Items In Your Cart"
 msgstr ""
 
 # <i class="fontawesome-icon medium circle-yes icon-mail"></i>
-# <span>' . __('Mail This', 'Avada') . '</span>' . __('Product', 'Avada') .'
+# <span>' . __('Mail This', 'Zhane') . '</span>' . __('Product', 'Zhane') .'
 # </a>
 # wpml-name: 8498b5e4d8ad0accc065bea8c8d93a11
 msgid "Mail This"
 msgstr ""
 
 # <i class="fontawesome-icon medium circle-yes icon-pinterest"></i>
-# <span>' . __('Pin This', 'Avada') . '</span>' . __('Product', 'Avada') . '
+# <span>' . __('Pin This', 'Zhane') . '</span>' . __('Product', 'Zhane') . '
 # </a>
 # wpml-name: 1d8067ce4f707a88d4ee97bc7cebf855
 msgid "Pin This"
 msgstr ""
 
 # <i class="fontawesome-icon medium circle-yes icon-twitter"></i>
-# <span>' . __('Tweet This', 'Avada') . '</span>' . __('Product', 'Avada') . '
+# <span>' . __('Tweet This', 'Zhane') . '</span>' . __('Product', 'Zhane') . '
 # </a>
 # wpml-name: deb10517653c255364175796ace3553f
 msgid "Product"
 msgstr ""
 
 # <i class="fontawesome-icon medium circle-yes icon-twitter"></i>
-# <span>' . __('Tweet This', 'Avada') . '</span>' . __('Product', 'Avada') . '
+# <span>' . __('Tweet This', 'Zhane') . '</span>' . __('Product', 'Zhane') . '
 # </a>
 # wpml-name: 396874b26083996931681c44fba73cab
 msgid "Tweet This"
 msgstr ""
 
 # <i class="fontawesome-icon medium circle-yes icon-facebook"></i>
-# <span>' . __('Share On', 'Avada') .'</span>Facebook
+# <span>' . __('Share On', 'Zhane') .'</span>Facebook
 # </a>
 # wpml-name: cf48c3336343e0cdd9048c3d255f6468
 msgid "Share On"
 msgstr ""
 
 # $html .= '<ul>';
-# $html .= '<li class="'.(($pc == $per_page) ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_count', $per_page).'">'.__('Show', 'Avada').' <strong>'.$per_page.' '.__('Products', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pc == $per_page*2) ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_count', $per_page*2).'">'.__('Show', 'Avada').' <strong>'.($per_page*2).' '.__('Products', 'Avada').'</strong></a></li>';
+# $html .= '<li class="'.(($pc == $per_page) ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_count', $per_page).'">'.__('Show', 'Zhane').' <strong>'.$per_page.' '.__('Products', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pc == $per_page*2) ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_count', $per_page*2).'">'.__('Show', 'Zhane').' <strong>'.($per_page*2).' '.__('Products', 'Zhane').'</strong></a></li>';
 # wpml-name: 068f80c7519d0528fb08e82137a72131
 msgid "Products"
 msgstr ""
 
 # $html .= '<li>';
-# $html .= '<span class="current-li"><a>'.__('Show', 'Avada').' <strong>'.$per_page.' '.__(' Products', 'Avada').'</strong></a></span>';
+# $html .= '<span class="current-li"><a>'.__('Show', 'Zhane').' <strong>'.$per_page.' '.__(' Products', 'Zhane').'</strong></a></span>';
 # $html .= '<ul>';
 # wpml-name: 666b55c4082e2318433e0164b132ba32
 msgid " Products"
 msgstr ""
 
 # $html .= '<li>';
-# $html .= '<span class="current-li"><a>'.__('Show', 'Avada').' <strong>'.$per_page.' '.__(' Products', 'Avada').'</strong></a></span>';
+# $html .= '<span class="current-li"><a>'.__('Show', 'Zhane').' <strong>'.$per_page.' '.__(' Products', 'Zhane').'</strong></a></span>';
 # $html .= '<ul>';
 # wpml-name: 498f79c4c5bbde77f1bceb6c86fd0f6d
 msgid "Show"
 msgstr ""
 
-# $html .= '<li class="'.(($pob == 'popularity') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'popularity').'">'.__('Sort by', 'Avada').' <strong>'.__('Popularity', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'rating') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'rating').'">'.__('Sort by', 'Avada').' <strong>'.__('Rating', 'Avada').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'popularity') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'popularity').'">'.__('Sort by', 'Zhane').' <strong>'.__('Popularity', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'rating') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'rating').'">'.__('Sort by', 'Zhane').' <strong>'.__('Rating', 'Zhane').'</strong></a></li>';
 # $html .= '</ul>';
 # wpml-name: dda9c06f33071c9b6fc237ee164109d8
 msgid "Rating"
 msgstr ""
 
-# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Avada').' <strong>'.__('Date', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'popularity') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'popularity').'">'.__('Sort by', 'Avada').' <strong>'.__('Popularity', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'rating') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'rating').'">'.__('Sort by', 'Avada').' <strong>'.__('Rating', 'Avada').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Zhane').' <strong>'.__('Date', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'popularity') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'popularity').'">'.__('Sort by', 'Zhane').' <strong>'.__('Popularity', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'rating') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'rating').'">'.__('Sort by', 'Zhane').' <strong>'.__('Rating', 'Zhane').'</strong></a></li>';
 # wpml-name: e22269bb51f9f2394e148716babbafbb
 msgid "Popularity"
 msgstr ""
 
-# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Avada').' <strong>'.__('Price', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Avada').' <strong>'.__('Date', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'popularity') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'popularity').'">'.__('Sort by', 'Avada').' <strong>'.__('Popularity', 'Avada').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Zhane').' <strong>'.__('Price', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Zhane').' <strong>'.__('Date', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'popularity') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'popularity').'">'.__('Sort by', 'Zhane').' <strong>'.__('Popularity', 'Zhane').'</strong></a></li>';
 # wpml-name: 44749712dbec183e983dcd78a7736c41
 msgid "Date"
 msgstr ""
 
-# $html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Avada').' <strong>'.__('Name', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Avada').' <strong>'.__('Price', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Avada').' <strong>'.__('Date', 'Avada').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Zhane').' <strong>'.__('Name', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Zhane').' <strong>'.__('Price', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'date') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'date').'">'.__('Sort by', 'Zhane').' <strong>'.__('Date', 'Zhane').'</strong></a></li>';
 # wpml-name: 3601146c4e948c32b6424d2c0a7f0118
 msgid "Price"
 msgstr ""
 
-# $html .= '<li class="'.(($pob == 'default') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'default').'">'.__('Sort by', 'Avada').' <strong>'.__('Default Order', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Avada').' <strong>'.__('Name', 'Avada').'</strong></a></li>';
-# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Avada').' <strong>'.__('Price', 'Avada').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'default') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'default').'">'.__('Sort by', 'Zhane').' <strong>'.__('Default Order', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'name') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'name').'">'.__('Sort by', 'Zhane').' <strong>'.__('Name', 'Zhane').'</strong></a></li>';
+# $html .= '<li class="'.(($pob == 'price') ? 'current': '').'"><a href="'.tf_addURLParameter($query_string, 'product_orderby', 'price').'">'.__('Sort by', 'Zhane').' <strong>'.__('Price', 'Zhane').'</strong></a></li>';
 # wpml-name: 49ee3087348e8d44e1feda1917443987
 msgid "Name"
 msgstr ""
 
 # $html .= '<li>';
-# $html .= '<span class="current-li"><span class="current-li-content"><a>'.__('Sort by', 'Avada').' <strong>'.__('Default Order', 'Avada').'</strong></a></span></span>';
+# $html .= '<span class="current-li"><span class="current-li-content"><a>'.__('Sort by', 'Zhane').' <strong>'.__('Default Order', 'Zhane').'</strong></a></span></span>';
 # $html .= '<ul>';
 # wpml-name: 253cd15656be62df689c67c9ecc768bf
 msgid "Default Order"
 msgstr ""
 
 # $html .= '<li>';
-# $html .= '<span class="current-li"><span class="current-li-content"><a>'.__('Sort by', 'Avada').' <strong>'.__('Default Order', 'Avada').'</strong></a></span></span>';
+# $html .= '<span class="current-li"><span class="current-li-content"><a>'.__('Sort by', 'Zhane').' <strong>'.__('Default Order', 'Zhane').'</strong></a></span></span>';
 # $html .= '<ul>';
 # wpml-name: 33d8042bd735c559cc3206f4bc99aedc
 msgid "Sort by"
 msgstr ""
 
 # <div>
-# <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="' . __( 'Search...', 'Avada' ) . '" />
+# <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="' . __( 'Search...', 'Zhane' ) . '" />
 # <input type="hidden" name="post_type" value="product" />
 # wpml-name: 2a37324bb4c331c859044121df3f576b
 msgid "Search..."
 msgstr ""
 
 # function after_shop_item_buttons() {
-# echo '<a href="' . get_permalink() . '" class="show_details_button">' . __( 'Details', 'Avada' ) . '</a></div></div>';
+# echo '<a href="' . get_permalink() . '" class="show_details_button">' . __( 'Details', 'Zhane' ) . '</a></div></div>';
 # }
 # wpml-name: 3ec365dd533ddb7ef3d1c111186ce872
 msgid "Details"
 msgstr ""
 
 # <?php else: ?>
-# <a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php echo $woocommerce->cart->cart_contents_count; ?> <?php _e('Item(s)', 'Avada'); ?> - <?php echo woocommerce_price($woocommerce->cart->subtotal); ?></a>
+# <a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php echo $woocommerce->cart->cart_contents_count; ?> <?php _e('Item(s)', 'Zhane'); ?> - <?php echo woocommerce_price($woocommerce->cart->subtotal); ?></a>
 # <div class="cart-contents">
 # wpml-name: 9408f5e33576ebe4937339939e667545
 msgid "Item(s)"
 msgstr ""
 
 # <?php if(!$woocommerce->cart->cart_contents_count): ?>
-# <a class="empty-cart" href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('Cart', 'Avada'); ?></a>
+# <a class="empty-cart" href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('Cart', 'Zhane'); ?></a>
 # <?php else: ?>
 # wpml-name: a85eba4c6c699122b2bb1387ea4813ad
 msgid "Cart"
 msgstr ""
 
-# <div class="cart-link"><a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('View Cart', 'Avada'); ?></a></div>
-# <div class="checkout-link"><a href="<?php echo get_permalink(get_option('woocommerce_checkout_page_id')); ?>"><?php _e('Checkout', 'Avada'); ?></a></div>
+# <div class="cart-link"><a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('View Cart', 'Zhane'); ?></a></div>
+# <div class="checkout-link"><a href="<?php echo get_permalink(get_option('woocommerce_checkout_page_id')); ?>"><?php _e('Checkout', 'Zhane'); ?></a></div>
 # </div>
 # wpml-name: 6ff063fbc860a79759a7369ac32cee22
 msgid "Checkout"
 msgstr ""
 
 # <div class="cart-checkout">
-# <div class="cart-link"><a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('View Cart', 'Avada'); ?></a></div>
-# <div class="checkout-link"><a href="<?php echo get_permalink(get_option('woocommerce_checkout_page_id')); ?>"><?php _e('Checkout', 'Avada'); ?></a></div>
+# <div class="cart-link"><a href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"><?php _e('View Cart', 'Zhane'); ?></a></div>
+# <div class="checkout-link"><a href="<?php echo get_permalink(get_option('woocommerce_checkout_page_id')); ?>"><?php _e('Checkout', 'Zhane'); ?></a></div>
 # wpml-name: 59fc69e031ecb0f82efe467fd6692383
 msgid "View Cart"
 msgstr ""
 
 # <ul class="sub-menu">
-# <li><a href="<?php echo wp_logout_url( get_permalink( woocommerce_get_page_id( 'myaccount' ) ) ); ?>"><?php _e('Logout', 'Avada'); ?></a></li>
+# <li><a href="<?php echo wp_logout_url( get_permalink( woocommerce_get_page_id( 'myaccount' ) ) ); ?>"><?php _e('Logout', 'Zhane'); ?></a></li>
 # </ul>
 # wpml-name: 0323de4f66a1700e2173e9bcdce02715
 msgid "Logout"
 msgstr ""
 
 # <p class="submit">
-# <input type="submit" name="wp-submit" id="wp-submit" class="button small default comment-submit" value="<?php _e('Log In', 'Avada'); ?>">
+# <input type="submit" name="wp-submit" id="wp-submit" class="button small default comment-submit" value="<?php _e('Log In', 'Zhane'); ?>">
 # <input type="hidden" name="redirect_to" value="<?php echo $_SERVER['HTTP_REFERER']; ?>">
 # wpml-name: 3bbbad631029e3575da7a151bba4f37c
 msgid "Log In"
 msgstr ""
 
 # <p class="forgetmenot">
-# <label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"> <?php _e('Remember Me', 'Avada'); ?></label>
+# <label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"> <?php _e('Remember Me', 'Zhane'); ?></label>
 # </p>
 # wpml-name: e857817b07c27f3c57caa6c40f7499d4
 msgid "Remember Me"
 msgstr ""
 
 # <li class="my-account">
-# <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>" class="my-account-link"><?php _e('My Account', 'Avada'); ?></a>
+# <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>" class="my-account-link"><?php _e('My Account', 'Zhane'); ?></a>
 # <?php if(!is_user_logged_in()): ?>
 # wpml-name: bea8d9e6a0d57c4a264756b4f9822ed9
 msgid "My Account"
 msgstr ""
 
 # <p>
-# <input type="password" class="input-text" name="pwd" id="pasword" value="" placeholder="<?php echo __('Password', 'Avada'); ?>" />
+# <input type="password" class="input-text" name="pwd" id="pasword" value="" placeholder="<?php echo __('Password', 'Zhane'); ?>" />
 # </p>
 # wpml-name: dc647eb65e6711e155375218212b3964
 msgid "Password"
 msgstr ""
 
 # <p>
-# <input type="text" class="input-text" name="log" id="username" value="" placeholder="<?php echo __('Username', 'Avada'); ?>" />
+# <input type="text" class="input-text" name="log" id="username" value="" placeholder="<?php echo __('Username', 'Zhane'); ?>" />
 # </p>
 # wpml-name: f6039d44b29456b20f8f373155ae4973
 msgid "Username"
 msgstr ""
 
 # } elseif ( is_year() ) {
-# $title = __( 'Yearly Archives: %s', 'Avada' ) . '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'Avada' ) ) . '</span>';
+# $title = __( 'Yearly Archives: %s', 'Zhane' ) . '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'Zhane' ) ) . '</span>';
 # } elseif ( is_author() ) {
 # wpml-name: yearly archives date format: Y
 msgid "Y"
 msgstr ""
 
 # } else if ( is_month() ) {
-# $title = __( 'Monthly Archives: %s', 'Avada' ) . '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'Avada' ) ) . '</span>';
+# $title = __( 'Monthly Archives: %s', 'Zhane' ) . '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'Zhane' ) ) . '</span>';
 # } elseif ( is_year() ) {
 # wpml-name: monthly archives date format: F Y
 msgid "F Y"
 msgstr ""
 
 # } elseif ( is_year() ) {
-# $title = __( 'Yearly Archives: %s', 'Avada' ) . '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'Avada' ) ) . '</span>';
+# $title = __( 'Yearly Archives: %s', 'Zhane' ) . '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'Zhane' ) ) . '</span>';
 # } elseif ( is_author() ) {
 # wpml-name: ca3a598d3659dcda98453974e0a42b48
 msgid "Yearly Archives: %s"
 msgstr ""
 
 # } else if ( is_month() ) {
-# $title = __( 'Monthly Archives: %s', 'Avada' ) . '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'Avada' ) ) . '</span>';
+# $title = __( 'Monthly Archives: %s', 'Zhane' ) . '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'Zhane' ) ) . '</span>';
 # } elseif ( is_year() ) {
 # wpml-name: e18556cfbb55240493ce4c5aa52d6ffc
 msgid "Monthly Archives: %s"
 msgstr ""
 
 # if ( is_day() ) {
-# $title = __( 'Daily Archives: %s', 'Avada' ) . '<span>' . get_the_date() . '</span>';
+# $title = __( 'Daily Archives: %s', 'Zhane' ) . '<span>' . get_the_date() . '</span>';
 # } else if ( is_month() ) {
 # wpml-name: 509ddf70d4ec2ea525ddf92ef58c1dd5
 msgid "Daily Archives: %s"
 msgstr ""
 
 # if( is_404() ) {
-# $title = __('Error 404 Page', 'Avada');
+# $title = __('Error 404 Page', 'Zhane');
 # }
 # wpml-name: 21ba5005b9eb7e6569cf871b4f6db9c4
 msgid "Error 404 Page"
 msgstr ""
 
 # if( is_search() ) {
-# $title = __('Search results for:', 'Avada') . get_search_query();
+# $title = __('Search results for:', 'Zhane') . get_search_query();
 # }
 # wpml-name: e5dba1c9996ec7f313c1abeecf6ff291
 msgid "Search results for:"
 msgstr ""
 
-# if(is_404()){ echo '<li>'.__("404 - Page not Found", 'Avada').'</li>'; }
-# if(is_search()){ echo '<li>'.__("Search", 'Avada').'</li>'; }
+# if(is_404()){ echo '<li>'.__("404 - Page not Found", 'Zhane').'</li>'; }
+# if(is_search()){ echo '<li>'.__("Search", 'Zhane').'</li>'; }
 # if(is_year()){ echo '<li>'.get_the_time('Y').'</li>'; }
 # wpml-name: 13348442cc6a27032d2b4aa28b75a5d3
 msgid "Search"
 msgstr ""
 
 # if(is_tag()){ echo '<li>'."Tag: ".single_tag_title('',FALSE).'</li>'; }
-# if(is_404()){ echo '<li>'.__("404 - Page not Found", 'Avada').'</li>'; }
-# if(is_search()){ echo '<li>'.__("Search", 'Avada').'</li>'; }
+# if(is_404()){ echo '<li>'.__("404 - Page not Found", 'Zhane').'</li>'; }
+# if(is_search()){ echo '<li>'.__("Search", 'Zhane').'</li>'; }
 # wpml-name: c5fb882b54e1a70d9c5ca9a6f4a8cfa3
 msgid "404 - Page not Found"
 msgstr ""
 
 # echo home_url();
-# echo '">'.__('Home', 'Avada');
+# echo '">'.__('Home', 'Zhane');
 # echo "</a></li>";
 # wpml-name: 8cf04a9734132302f96da8e113e80ce5
 msgid "Home"
 msgstr ""
 
 # 
-# if ($paged < $pages) echo "<a class='pagination-next' href='".get_pagenum_link($paged + 1)."'>".__('Next', 'Avada')."<span class='page-next'></span></a>";
+# if ($paged < $pages) echo "<a class='pagination-next' href='".get_pagenum_link($paged + 1)."'>".__('Next', 'Zhane')."<span class='page-next'></span></a>";
 # //if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>Last <span class='arrows'>&raquo;</span></a>";
 # wpml-name: 10ac3d04253ef7e1ddc73e6091c0cd55
 msgid "Next"
 msgstr ""
 
 # //if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a href='".get_pagenum_link(1)."'><span class='arrows'>&laquo;</span> First</a>";
-# if($paged > 1) echo "<a class='pagination-prev' href='".get_pagenum_link($paged - 1)."'><span class='page-prev'></span>".__('Previous', 'Avada')."</a>";
+# if($paged > 1) echo "<a class='pagination-prev' href='".get_pagenum_link($paged - 1)."'><span class='page-prev'></span>".__('Previous', 'Zhane')."</a>";
 # 
 # wpml-name: dd1f775e443ff3b9a89270713580a51b
 msgid "Previous"
@@ -1126,329 +1126,329 @@ msgid "Install Required Plugins"
 msgstr ""
 
 # <ul class="faq-tabs clearfix">
-# <li class="active"><a data-filter="*" href="#"><?php echo __('All', 'Avada'); ?></a></li>
+# <li class="active"><a data-filter="*" href="#"><?php echo __('All', 'Zhane'); ?></a></li>
 # <?php foreach($portfolio_category as $portfolio_cat): ?>
 # wpml-name: b1c94ca2fbc3e78fc30069c8d0f01680
 msgid "All"
 msgstr ""
 
 # 
-# <p><div><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Submit Form', 'Avada'); ?>" class="comment-submit button small green"></div></p>
+# <p><div><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Submit Form', 'Zhane'); ?>" class="comment-submit button small green"></div></p>
 # </div>
 # wpml-name: 85984b8c7e20cbde3370f6c37bc42835
 msgid "Submit Form"
 msgstr ""
 
 # 
-# <textarea name="msg" id="comment" cols="39" rows="4" tabindex="4" class="textarea-comment" placeholder="<?php echo __('Message', 'Avada'); ?>"><?php if(isset($_POST['msg']) && !empty($_POST['msg'])) { echo wp_filter_kses( $_POST['msg'] ); } ?></textarea>
+# <textarea name="msg" id="comment" cols="39" rows="4" tabindex="4" class="textarea-comment" placeholder="<?php echo __('Message', 'Zhane'); ?>"><?php if(isset($_POST['msg']) && !empty($_POST['msg'])) { echo wp_filter_kses( $_POST['msg'] ); } ?></textarea>
 # 
 # wpml-name: 4c2a8fe7eaf24721cc7a9f0175115bd4
 msgid "Message"
 msgstr ""
 
 # 
-# <input type="text" name="url" id="url" value="<?php if(isset($_POST['url']) && !empty($_POST['url'])) { echo wp_filter_kses( $_POST['url'] ); } ?>" placeholder="<?php echo __('Subject', 'Avada'); ?>" size="22" tabindex="3" class="input-website">
+# <input type="text" name="url" id="url" value="<?php if(isset($_POST['url']) && !empty($_POST['url'])) { echo wp_filter_kses( $_POST['url'] ); } ?>" placeholder="<?php echo __('Subject', 'Zhane'); ?>" size="22" tabindex="3" class="input-website">
 # 
 # wpml-name: c7892ebbb139886662c6f2fc8c450710
 msgid "Subject"
 msgstr ""
 
 # <?php if(isset($emailSent) && $emailSent == true) { //If email is sent ?>
-# <div class="alert success"><div class="msg"><?php echo __('Thank you', 'Avada'); ?> <strong><?php echo $name;?></strong> <?php echo __('for using my contact form! Your email was successfully sent!', 'Avada'); ?></div></div>
+# <div class="alert success"><div class="msg"><?php echo __('Thank you', 'Zhane'); ?> <strong><?php echo $name;?></strong> <?php echo __('for using my contact form! Your email was successfully sent!', 'Zhane'); ?></div></div>
 # <br />
 # wpml-name: 4012a3acbbb81a95f55560c0e6f49fb6
 msgid "for using my contact form! Your email was successfully sent!"
 msgstr ""
 
 # <?php if(isset($emailSent) && $emailSent == true) { //If email is sent ?>
-# <div class="alert success"><div class="msg"><?php echo __('Thank you', 'Avada'); ?> <strong><?php echo $name;?></strong> <?php echo __('for using my contact form! Your email was successfully sent!', 'Avada'); ?></div></div>
+# <div class="alert success"><div class="msg"><?php echo __('Thank you', 'Zhane'); ?> <strong><?php echo $name;?></strong> <?php echo __('for using my contact form! Your email was successfully sent!', 'Zhane'); ?></div></div>
 # <br />
 # wpml-name: 7a7c46aab7e07559c6f7a8b25f2b9ef4
 msgid "Thank you"
 msgstr ""
 
 # <?php if(isset($hasError)) { //If errors are found ?>
-# <div class="alert error"><div class="msg"><?php echo __("Please check if you've filled all the fields with valid information. Thank you.", 'Avada'); ?></div></div>
+# <div class="alert error"><div class="msg"><?php echo __("Please check if you've filled all the fields with valid information. Thank you.", 'Zhane'); ?></div></div>
 # <br />
 # wpml-name: 70470481a161b8b5c93a87555ed3fcb4
 msgid "Please check if you've filled all the fields with valid information. Thank you."
 msgstr ""
 
-# $body .= __('Subject:', 'Avada')." $subject \n\n";
-# $body .= __('Comments:', 'Avada')."\n $comments";
+# $body .= __('Subject:', 'Zhane')." $subject \n\n";
+# $body .= __('Comments:', 'Zhane')."\n $comments";
 # $headers .= 'Reply-To: ' . $name . ' <' . $email . '>' . "\r\n";
 # wpml-name: c14a0ca9550a8b311dbf7acbb3e6cac4
 msgid "Comments:"
 msgstr ""
 
-# $body .= __('Email:', 'Avada')." $email \n\n";
-# $body .= __('Subject:', 'Avada')." $subject \n\n";
-# $body .= __('Comments:', 'Avada')."\n $comments";
+# $body .= __('Email:', 'Zhane')." $email \n\n";
+# $body .= __('Subject:', 'Zhane')." $subject \n\n";
+# $body .= __('Comments:', 'Zhane')."\n $comments";
 # wpml-name: 47a0be8d1015d526a1fbaa56c3102135
 msgid "Subject:"
 msgstr ""
 
-# $body = __('Name:', 'Avada')." $name \n\n";
-# $body .= __('Email:', 'Avada')." $email \n\n";
-# $body .= __('Subject:', 'Avada')." $subject \n\n";
+# $body = __('Name:', 'Zhane')." $name \n\n";
+# $body .= __('Email:', 'Zhane')." $email \n\n";
+# $body .= __('Subject:', 'Zhane')." $subject \n\n";
 # wpml-name: 6a1e265f92087bb6dd18194833fe946b
 msgid "Email:"
 msgstr ""
 
-# $emailTo = $smof_data['email_address']; //Put your own email address here
-# $body = __('Name:', 'Avada')." $name \n\n";
-# $body .= __('Email:', 'Avada')." $email \n\n";
+# $emailTo = $zdata['email_address']; //Put your own email address here
+# $body = __('Name:', 'Zhane')." $name \n\n";
+# $body .= __('Email:', 'Zhane')." $email \n\n";
 # wpml-name: 4e140ba723a03baa6948340bf90e2ef6
 msgid "Name:"
 msgstr ""
 
 # 'id_submit' => 'comment-submit',
-# 'label_submit'=> __("Post Comment", "Avada"),
+# 'label_submit'=> __("Post Comment", "Zhane"),
 # );
 # wpml-name: 55db28530640e9fb41ebf71ea8afce72
 msgid "Post Comment"
 msgstr ""
 
 # 'comment_notes_after' => '',
-# 'comment_field' => '<div id="comment-textarea"><textarea name="comment" id="comment" cols="39" rows="4" tabindex="4" class="textarea-comment" placeholder="'. __("Comment...", "Avada").'"></textarea></div>',
+# 'comment_field' => '<div id="comment-textarea"><textarea name="comment" id="comment" cols="39" rows="4" tabindex="4" class="textarea-comment" placeholder="'. __("Comment...", "Zhane").'"></textarea></div>',
 # 'id_submit' => 'comment-submit',
 # wpml-name: a1722b7a43963953caab67c139b0582e
 msgid "Comment..."
 msgstr ""
 
-# 'must_log_in' => '<p class="must-log-in">' .  sprintf( __( "You must be %slogged in%s to post a comment.", "Avada" ), '<a href="'.wp_login_url( apply_filters( 'the_permalink', get_permalink( ) ) ).'">', '</a>' ) . '</p>',
-# 'logged_in_as' => '<p class="logged-in-as">' . __( "Logged in as"," Avada" ).' <a href="' .admin_url( "profile.php" ).'">'.$user_identity.'</a>. <a href="' .wp_logout_url(get_permalink()).'" title="' . __("Log out of this account", "Avada").'">'. __("Log out &raquo;", "Avada").'</a></p>',
+# 'must_log_in' => '<p class="must-log-in">' .  sprintf( __( "You must be %slogged in%s to post a comment.", "Zhane" ), '<a href="'.wp_login_url( apply_filters( 'the_permalink', get_permalink( ) ) ).'">', '</a>' ) . '</p>',
+# 'logged_in_as' => '<p class="logged-in-as">' . __( "Logged in as"," Zhane" ).' <a href="' .admin_url( "profile.php" ).'">'.$user_identity.'</a>. <a href="' .wp_logout_url(get_permalink()).'" title="' . __("Log out of this account", "Zhane").'">'. __("Log out &raquo;", "Zhane").'</a></p>',
 # 'comment_notes_before' => '',
 # wpml-name: 0daf9402a86ecf0462af9fffd2b4b233
 msgid "Log out &raquo;"
 msgstr ""
 
-# 'must_log_in' => '<p class="must-log-in">' .  sprintf( __( "You must be %slogged in%s to post a comment.", "Avada" ), '<a href="'.wp_login_url( apply_filters( 'the_permalink', get_permalink( ) ) ).'">', '</a>' ) . '</p>',
-# 'logged_in_as' => '<p class="logged-in-as">' . __( "Logged in as"," Avada" ).' <a href="' .admin_url( "profile.php" ).'">'.$user_identity.'</a>. <a href="' .wp_logout_url(get_permalink()).'" title="' . __("Log out of this account", "Avada").'">'. __("Log out &raquo;", "Avada").'</a></p>',
+# 'must_log_in' => '<p class="must-log-in">' .  sprintf( __( "You must be %slogged in%s to post a comment.", "Zhane" ), '<a href="'.wp_login_url( apply_filters( 'the_permalink', get_permalink( ) ) ).'">', '</a>' ) . '</p>',
+# 'logged_in_as' => '<p class="logged-in-as">' . __( "Logged in as"," Zhane" ).' <a href="' .admin_url( "profile.php" ).'">'.$user_identity.'</a>. <a href="' .wp_logout_url(get_permalink()).'" title="' . __("Log out of this account", "Zhane").'">'. __("Log out &raquo;", "Zhane").'</a></p>',
 # 'comment_notes_before' => '',
 # wpml-name: e3e844aaaeac4176d6c4661dd4beabbc
 msgid "Log out of this account"
 msgstr ""
 
-# 'must_log_in' => '<p class="must-log-in">' .  sprintf( __( "You must be %slogged in%s to post a comment.", "Avada" ), '<a href="'.wp_login_url( apply_filters( 'the_permalink', get_permalink( ) ) ).'">', '</a>' ) . '</p>',
-# 'logged_in_as' => '<p class="logged-in-as">' . __( "Logged in as"," Avada" ).' <a href="' .admin_url( "profile.php" ).'">'.$user_identity.'</a>. <a href="' .wp_logout_url(get_permalink()).'" title="' . __("Log out of this account", "Avada").'">'. __("Log out &raquo;", "Avada").'</a></p>',
+# 'must_log_in' => '<p class="must-log-in">' .  sprintf( __( "You must be %slogged in%s to post a comment.", "Zhane" ), '<a href="'.wp_login_url( apply_filters( 'the_permalink', get_permalink( ) ) ).'">', '</a>' ) . '</p>',
+# 'logged_in_as' => '<p class="logged-in-as">' . __( "Logged in as"," Zhane" ).' <a href="' .admin_url( "profile.php" ).'">'.$user_identity.'</a>. <a href="' .wp_logout_url(get_permalink()).'" title="' . __("Log out of this account", "Zhane").'">'. __("Log out &raquo;", "Zhane").'</a></p>',
 # 'comment_notes_before' => '',
 # wpml-name: b046ed95f719df2e79c9cb3e3bc23bf1
 msgid "Logged in as"
 msgstr ""
 
-# 'title_reply_to' => '<div class="title"><h2>'. __("Leave A Comment", "Avada").'</h2><div class="title-sep-container"><div class="title-sep"></div></div></div>',
-# 'must_log_in' => '<p class="must-log-in">' .  sprintf( __( "You must be %slogged in%s to post a comment.", "Avada" ), '<a href="'.wp_login_url( apply_filters( 'the_permalink', get_permalink( ) ) ).'">', '</a>' ) . '</p>',
-# 'logged_in_as' => '<p class="logged-in-as">' . __( "Logged in as"," Avada" ).' <a href="' .admin_url( "profile.php" ).'">'.$user_identity.'</a>. <a href="' .wp_logout_url(get_permalink()).'" title="' . __("Log out of this account", "Avada").'">'. __("Log out &raquo;", "Avada").'</a></p>',
+# 'title_reply_to' => '<div class="title"><h2>'. __("Leave A Comment", "Zhane").'</h2><div class="title-sep-container"><div class="title-sep"></div></div></div>',
+# 'must_log_in' => '<p class="must-log-in">' .  sprintf( __( "You must be %slogged in%s to post a comment.", "Zhane" ), '<a href="'.wp_login_url( apply_filters( 'the_permalink', get_permalink( ) ) ).'">', '</a>' ) . '</p>',
+# 'logged_in_as' => '<p class="logged-in-as">' . __( "Logged in as"," Zhane" ).' <a href="' .admin_url( "profile.php" ).'">'.$user_identity.'</a>. <a href="' .wp_logout_url(get_permalink()).'" title="' . __("Log out of this account", "Zhane").'">'. __("Log out &raquo;", "Zhane").'</a></p>',
 # wpml-name: d1791527b2a76a3506f9377ec874706b
 msgid "You must be %slogged in%s to post a comment."
 msgstr ""
 
 # $comments_args = array(
-# 'title_reply' => '<div class="title"><h2>'. __("Leave A Comment", "Avada").'</h2><div class="title-sep-container"><div class="title-sep"></div></div></div>',
-# 'title_reply_to' => '<div class="title"><h2>'. __("Leave A Comment", "Avada").'</h2><div class="title-sep-container"><div class="title-sep"></div></div></div>',
+# 'title_reply' => '<div class="title"><h2>'. __("Leave A Comment", "Zhane").'</h2><div class="title-sep-container"><div class="title-sep"></div></div></div>',
+# 'title_reply_to' => '<div class="title"><h2>'. __("Leave A Comment", "Zhane").'</h2><div class="title-sep-container"><div class="title-sep"></div></div></div>',
 # wpml-name: ee5e9dc647ba8ed1490efd6374ac85e8
 msgid "Leave A Comment"
 msgstr ""
 
 # 
-# $fields['url'] = '<input type="text" name="url" id="url" value="'. esc_attr( $commenter['comment_author_url'] ) .'" placeholder="'. __("Website", "Avada").'" size="22" tabindex="3" class="input-website" /></div>';
+# $fields['url'] = '<input type="text" name="url" id="url" value="'. esc_attr( $commenter['comment_author_url'] ) .'" placeholder="'. __("Website", "Zhane").'" size="22" tabindex="3" class="input-website" /></div>';
 # 
 # wpml-name: 15bbb9d0bbf25e8d2978de1168c749dc
 msgid "Website"
 msgstr ""
 
 # 
-# $fields['email'] = '<input type="text" name="email" id="email" value="'. esc_attr( $commenter['comment_author_email'] ) .'" placeholder="'. __("Email (required)", "Avada").'" size="22" tabindex="2"'. ( $req ? 'aria-required="true"' : '' ).' class="input-email"  />';
+# $fields['email'] = '<input type="text" name="email" id="email" value="'. esc_attr( $commenter['comment_author_email'] ) .'" placeholder="'. __("Email (required)", "Zhane").'" size="22" tabindex="2"'. ( $req ? 'aria-required="true"' : '' ).' class="input-email"  />';
 # 
 # wpml-name: 0974e3c4548edf4a3dd64ebea9ce8143
 msgid "Email (required)"
 msgstr ""
 
 # 
-# $fields['author'] = '<div id="comment-input"><input type="text" name="author" id="author" value="'. esc_attr( $commenter['comment_author'] ) .'" placeholder="'. __("Name (required)", "Avada").'" size="22" tabindex="1"'. ( $req ? 'aria-required="true"' : '' ).' class="input-name" />';
+# $fields['author'] = '<div id="comment-input"><input type="text" name="author" id="author" value="'. esc_attr( $commenter['comment_author'] ) .'" placeholder="'. __("Name (required)", "Zhane").'" size="22" tabindex="1"'. ( $req ? 'aria-required="true"' : '' ).' class="input-name" />';
 # 
 # wpml-name: c8cf97015c98815234011807fce40a8e
 msgid "Name (required)"
 msgstr ""
 
 # <!-- If comments are closed. -->
-# <p class="no-comments"><?php echo __('Comments are closed.', 'Avada'); ?></p>
+# <p class="no-comments"><?php echo __('Comments are closed.', 'Zhane'); ?></p>
 # 
 # wpml-name: 496c558a09bbbcfc869aa80b2f037261
 msgid "Comments are closed."
 msgstr ""
 
 # <div id="comments" class="comments-container">
-# <div class="title"><h2><?php comments_number(__('No Comments', 'Avada'), __('One Comment', 'Avada'), '% '.__('Comments', 'Avada'));?></h2><div class="title-sep-container"><div class="title-sep"></div></div></div>
+# <div class="title"><h2><?php comments_number(__('No Comments', 'Zhane'), __('One Comment', 'Zhane'), '% '.__('Comments', 'Zhane'));?></h2><div class="title-sep-container"><div class="title-sep"></div></div></div>
 # 
 # wpml-name: 4b36ac646a902ab56ab7146229c5f021
 msgid "One Comment"
 msgstr ""
 
 # <div id="comments" class="comments-container">
-# <div class="title"><h2><?php comments_number(__('No Comments', 'Avada'), __('One Comment', 'Avada'), '% '.__('Comments', 'Avada'));?></h2><div class="title-sep-container"><div class="title-sep"></div></div></div>
+# <div class="title"><h2><?php comments_number(__('No Comments', 'Zhane'), __('One Comment', 'Zhane'), '% '.__('Comments', 'Zhane'));?></h2><div class="title-sep-container"><div class="title-sep"></div></div></div>
 # 
 # wpml-name: 36fb383edd9f7c1594d4168fb999c379
 msgid "No Comments"
 msgstr ""
 
 # if ( post_password_required() ) { ?>
-# <p class="no-comments"><?php echo __('This post is password protected. Enter the password to view comments.', 'Avada'); ?></p>
+# <p class="no-comments"><?php echo __('This post is password protected. Enter the password to view comments.', 'Zhane'); ?></p>
 # <?php
 # wpml-name: af87efe29da4e67cbaf3cea543f44f7d
 msgid "This post is password protected. Enter the password to view comments."
 msgstr ""
 
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
-# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Avada' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Zhane' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
 # </div>
 # wpml-name: 5f868cc7c8691aa5c2ac1f4825b766f0
 msgid "Replies Created:"
 msgstr ""
 
-# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Avada' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
-# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Avada' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
+# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Zhane' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Zhane' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
 # wpml-name: bb38e07ef4980e1be771e83c35ce0a44
 msgid "Topics Started:"
 msgstr ""
 
 # 
-# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Avada' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Zhane' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
 # wpml-name: 381060983af096312477a998d631fd67
 msgid "Forum Role:"
 msgstr ""
 
 # 
-# <div class="bbps-post-count"><?php printf( __( 'Post count: %s', 'Avada' ), bbp_get_user_reply_count_raw(bbp_get_reply_author_id()) ); ?></div>
+# <div class="bbps-post-count"><?php printf( __( 'Post count: %s', 'Zhane' ), bbp_get_user_reply_count_raw(bbp_get_reply_author_id()) ); ?></div>
 # 
 # wpml-name: a9aa5b09cad7cc691f7add17dc072988
 msgid "Post count: %s"
 msgstr ""
 
 # 
-# <?php bbp_topic_tag_list( bbp_get_topic_id(), array( 'before' => '<div class="bbp-topic-tags"><p>' . esc_html__( 'Tags:', 'Avada' ) . '&nbsp;', 'sep'    => ' ', 'after'  => '</p></div>' ) ); ?>
+# <?php bbp_topic_tag_list( bbp_get_topic_id(), array( 'before' => '<div class="bbp-topic-tags"><p>' . esc_html__( 'Tags:', 'Zhane' ) . '&nbsp;', 'sep'    => ' ', 'after'  => '</p></div>' ) ); ?>
 # 
 # wpml-name: 32b502f33a535f75dcbf63f6753c631e
 msgid "Tags:"
 msgstr ""
 
 # <input type="hidden" name="action" value="bbp-search-request" />
-# <input tabindex="<?php bbp_tab_index(); ?>" type="text" value="<?php echo esc_attr( bbp_get_search_terms() ); ?>" placeholder="<?php _e( 'Search the Forum...', 'Avada' ); ?>" name="bbp_search" id="bbp_search" />
+# <input tabindex="<?php bbp_tab_index(); ?>" type="text" value="<?php echo esc_attr( bbp_get_search_terms() ); ?>" placeholder="<?php _e( 'Search the Forum...', 'Zhane' ); ?>" name="bbp_search" id="bbp_search" />
 # <input tabindex="<?php bbp_tab_index(); ?>" class="button" type="submit" id="bbp_search_submit" value="&#xe610;" />
 # wpml-name: 07b987a0e2b28e3695ffe63e012ea4c0
 msgid "Search the Forum..."
 msgstr ""
 
-# <h2><?php echo __('Need a new search?', 'Avada'); ?></h2>
-# <p><?php echo __('If you didn\'t find what you were looking for, try a new search!', 'Avada'); ?></p>
+# <h2><?php echo __('Need a new search?', 'Zhane'); ?></h2>
+# <p><?php echo __('If you didn\'t find what you were looking for, try a new search!', 'Zhane'); ?></p>
 # 
 # wpml-name: 0b67b877652b4d63ae07e24d654b8ae9
 msgid "If you didn't find what you were looking for, try a new search!"
 msgstr ""
 
 # <div class="search-page-search-form">
-# <h2><?php echo __('Need a new search?', 'Avada'); ?></h2>
-# <p><?php echo __('If you didn\'t find what you were looking for, try a new search!', 'Avada'); ?></p>
+# <h2><?php echo __('Need a new search?', 'Zhane'); ?></h2>
+# <p><?php echo __('If you didn\'t find what you were looking for, try a new search!', 'Zhane'); ?></p>
 # wpml-name: c1c10b029d1dddb5a28e1f9348decb39
 msgid "Need a new search?"
 msgstr ""
 
 # <div class="author_description">
-# <h3 class='author_title vcard'><?php echo __("About",'Avada'); ?> <span class="fn"><?php echo $name; ?></span>
+# <h3 class='author_title vcard'><?php echo __("About",'Zhane'); ?> <span class="fn"><?php echo $name; ?></span>
 # <?php if(current_user_can('edit_users') || get_current_user_id() == $author_id): ?>
 # wpml-name: 8f7f4c1ce7a4f933663d10543562b096
 msgid "About"
 msgstr ""
 
 # if(empty($description)) {
-# $description  = __("This author has not yet filled in any details.",'Avada');
+# $description  = __("This author has not yet filled in any details.",'Zhane');
 # $description .= '</br>'.sprintf( __( 'So far %s has created %s entries.' ), $name, count_user_posts( $author_id ) );
 # wpml-name: 8455b6e647ffdb41f1a221fe4dd66c89
 msgid "This author has not yet filled in any details."
 msgstr ""
 
 # <div class="alignright">
-# <?php if(!$smof_data['post_meta_comments']): ?><?php comments_popup_link('<i class="icon-comments"></i>&nbsp;'.__('0', 'Avada'), '<i class="icon-comments"></i>&nbsp;'.__('1', 'Avada'), '<i class="icon-comments"></i>&nbsp;'.'%'); ?><?php endif; ?>
+# <?php if(!$zdata['post_meta_comments']): ?><?php comments_popup_link('<i class="icon-comments"></i>&nbsp;'.__('0', 'Zhane'), '<i class="icon-comments"></i>&nbsp;'.__('1', 'Zhane'), '<i class="icon-comments"></i>&nbsp;'.'%'); ?><?php endif; ?>
 # </div>
 # wpml-name: c4ca4238a0b923820dcc509a6f75849b
 msgid "1"
 msgstr ""
 
 # <div class="alignright">
-# <a href="<?php the_permalink(); ?>" class="read-more"><?php echo __('Read More', 'Avada'); ?></a>
+# <a href="<?php the_permalink(); ?>" class="read-more"><?php echo __('Read More', 'Zhane'); ?></a>
 # </div>
 # wpml-name: decbe415d8accca7c2c16d48a79ee934
 msgid "Read More"
 msgstr ""
 
 # <div class="alignleft vcard">
-# <?php if(!$smof_data['post_meta_author']): ?><?php echo __('By', 'Avada'); ?> <span class="fn"><?php echo the_terms( $post->ID, 'wpfc_preacher', '', ', ', ' ' ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_date']): ?><span class="updated"><?php the_time($smof_data['date_format']); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_cats']): ?><?php if(!$smof_data['post_meta_tags']){ echo __('Categories:', 'Avada') . ' '; } ?><?php the_category(', '); ?><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_tags']): ?><span class="meta-tags bottom"><?php the_tags( ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_comments']): ?><?php comments_popup_link(__('0 Comments', 'Avada'), __('1 Comment', 'Avada'), '% '.__('Comments', 'Avada')); ?><?php endif; ?></p>
+# <?php if(!$zdata['post_meta_author']): ?><?php echo __('By', 'Zhane'); ?> <span class="fn"><?php echo the_terms( $post->ID, 'wpfc_preacher', '', ', ', ' ' ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_date']): ?><span class="updated"><?php the_time($zdata['date_format']); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_cats']): ?><?php if(!$zdata['post_meta_tags']){ echo __('Categories:', 'Zhane') . ' '; } ?><?php the_category(', '); ?><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_tags']): ?><span class="meta-tags bottom"><?php the_tags( ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_comments']): ?><?php comments_popup_link(__('0 Comments', 'Zhane'), __('1 Comment', 'Zhane'), '% '.__('Comments', 'Zhane')); ?><?php endif; ?></p>
 # </div>
 # wpml-name: 8413c683b4b27cc3f4dbd4c90329d8ba
 msgid "Comments"
 msgstr ""
 
 # <div class="alignleft vcard">
-# <?php if(!$smof_data['post_meta_author']): ?><?php echo __('By', 'Avada'); ?> <span class="fn"><?php echo the_terms( $post->ID, 'wpfc_preacher', '', ', ', ' ' ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_date']): ?><span class="updated"><?php the_time($smof_data['date_format']); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_cats']): ?><?php if(!$smof_data['post_meta_tags']){ echo __('Categories:', 'Avada') . ' '; } ?><?php the_category(', '); ?><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_tags']): ?><span class="meta-tags bottom"><?php the_tags( ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_comments']): ?><?php comments_popup_link(__('0 Comments', 'Avada'), __('1 Comment', 'Avada'), '% '.__('Comments', 'Avada')); ?><?php endif; ?></p>
+# <?php if(!$zdata['post_meta_author']): ?><?php echo __('By', 'Zhane'); ?> <span class="fn"><?php echo the_terms( $post->ID, 'wpfc_preacher', '', ', ', ' ' ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_date']): ?><span class="updated"><?php the_time($zdata['date_format']); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_cats']): ?><?php if(!$zdata['post_meta_tags']){ echo __('Categories:', 'Zhane') . ' '; } ?><?php the_category(', '); ?><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_tags']): ?><span class="meta-tags bottom"><?php the_tags( ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_comments']): ?><?php comments_popup_link(__('0 Comments', 'Zhane'), __('1 Comment', 'Zhane'), '% '.__('Comments', 'Zhane')); ?><?php endif; ?></p>
 # </div>
 # wpml-name: 0f0c0c1c95507b2503aa8c432c3c3188
 msgid "1 Comment"
 msgstr ""
 
 # <div class="alignleft vcard">
-# <?php if(!$smof_data['post_meta_author']): ?><?php echo __('By', 'Avada'); ?> <span class="fn"><?php echo the_terms( $post->ID, 'wpfc_preacher', '', ', ', ' ' ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_date']): ?><span class="updated"><?php the_time($smof_data['date_format']); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_cats']): ?><?php if(!$smof_data['post_meta_tags']){ echo __('Categories:', 'Avada') . ' '; } ?><?php the_category(', '); ?><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_tags']): ?><span class="meta-tags bottom"><?php the_tags( ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_comments']): ?><?php comments_popup_link(__('0 Comments', 'Avada'), __('1 Comment', 'Avada'), '% '.__('Comments', 'Avada')); ?><?php endif; ?></p>
+# <?php if(!$zdata['post_meta_author']): ?><?php echo __('By', 'Zhane'); ?> <span class="fn"><?php echo the_terms( $post->ID, 'wpfc_preacher', '', ', ', ' ' ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_date']): ?><span class="updated"><?php the_time($zdata['date_format']); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_cats']): ?><?php if(!$zdata['post_meta_tags']){ echo __('Categories:', 'Zhane') . ' '; } ?><?php the_category(', '); ?><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_tags']): ?><span class="meta-tags bottom"><?php the_tags( ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_comments']): ?><?php comments_popup_link(__('0 Comments', 'Zhane'), __('1 Comment', 'Zhane'), '% '.__('Comments', 'Zhane')); ?><?php endif; ?></p>
 # </div>
 # wpml-name: b2483883b115e89808da5b56ff5c10df
 msgid "0 Comments"
 msgstr ""
 
 # <div class="alignleft vcard">
-# <?php if(!$smof_data['post_meta_author']): ?><?php echo __('By', 'Avada'); ?> <span class="fn"><?php echo the_terms( $post->ID, 'wpfc_preacher', '', ', ', ' ' ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_date']): ?><span class="updated"><?php the_time($smof_data['date_format']); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_cats']): ?><?php if(!$smof_data['post_meta_tags']){ echo __('Categories:', 'Avada') . ' '; } ?><?php the_category(', '); ?><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_tags']): ?><span class="meta-tags bottom"><?php the_tags( ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_comments']): ?><?php comments_popup_link(__('0 Comments', 'Avada'), __('1 Comment', 'Avada'), '% '.__('Comments', 'Avada')); ?><?php endif; ?></p>
+# <?php if(!$zdata['post_meta_author']): ?><?php echo __('By', 'Zhane'); ?> <span class="fn"><?php echo the_terms( $post->ID, 'wpfc_preacher', '', ', ', ' ' ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_date']): ?><span class="updated"><?php the_time($zdata['date_format']); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_cats']): ?><?php if(!$zdata['post_meta_tags']){ echo __('Categories:', 'Zhane') . ' '; } ?><?php the_category(', '); ?><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_tags']): ?><span class="meta-tags bottom"><?php the_tags( ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_comments']): ?><?php comments_popup_link(__('0 Comments', 'Zhane'), __('1 Comment', 'Zhane'), '% '.__('Comments', 'Zhane')); ?><?php endif; ?></p>
 # </div>
 # wpml-name: 8c38776925f7cf41c090646a43157024
 msgid "Categories:"
 msgstr ""
 
 # <div class="alignleft vcard">
-# <?php if(!$smof_data['post_meta_author']): ?><?php echo __('By', 'Avada'); ?> <span class="fn"><?php echo the_terms( $post->ID, 'wpfc_preacher', '', ', ', ' ' ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_date']): ?><span class="updated"><?php the_time($smof_data['date_format']); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_cats']): ?><?php if(!$smof_data['post_meta_tags']){ echo __('Categories:', 'Avada') . ' '; } ?><?php the_category(', '); ?><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_tags']): ?><span class="meta-tags bottom"><?php the_tags( ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$smof_data['post_meta_comments']): ?><?php comments_popup_link(__('0 Comments', 'Avada'), __('1 Comment', 'Avada'), '% '.__('Comments', 'Avada')); ?><?php endif; ?></p>
+# <?php if(!$zdata['post_meta_author']): ?><?php echo __('By', 'Zhane'); ?> <span class="fn"><?php echo the_terms( $post->ID, 'wpfc_preacher', '', ', ', ' ' ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_date']): ?><span class="updated"><?php the_time($zdata['date_format']); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_cats']): ?><?php if(!$zdata['post_meta_tags']){ echo __('Categories:', 'Zhane') . ' '; } ?><?php the_category(', '); ?><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_tags']): ?><span class="meta-tags bottom"><?php the_tags( ); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$zdata['post_meta_comments']): ?><?php comments_popup_link(__('0 Comments', 'Zhane'), __('1 Comment', 'Zhane'), '% '.__('Comments', 'Zhane')); ?><?php endif; ?></p>
 # </div>
 # wpml-name: 53e5aa2c97fef1555d2511de8218c544
 msgid "By"
 msgstr ""
 
 # <div class="search-field">
-# <input type="text" value="" name="s" id="s" placeholder="<?php _e( 'Search ...', 'Avada' ); ?>"/>
+# <input type="text" value="" name="s" id="s" placeholder="<?php _e( 'Search ...', 'Zhane' ); ?>"/>
 # </div>
 # wpml-name: 014bd6f385cb5aec29ec9714b8106ccb
 msgid "Search ..."
 msgstr ""
 
-# <h3><?php echo __('Search Our Website', 'Avada'); ?></a></h3>
-# <p><?php echo __('Can\'t find what you need? Take a moment and do a search below!', 'Avada'); ?></p>
+# <h3><?php echo __('Search Our Website', 'Zhane'); ?></a></h3>
+# <p><?php echo __('Can\'t find what you need? Take a moment and do a search below!', 'Zhane'); ?></p>
 # <div class="search-page-search-form">
 # wpml-name: b0c88e09f0dba50a590801b8df4a4d2f
 msgid "Can't find what you need? Take a moment and do a search below!"
 msgstr ""
 
 # <div class="one_third last">
-# <h3><?php echo __('Search Our Website', 'Avada'); ?></a></h3>
-# <p><?php echo __('Can\'t find what you need? Take a moment and do a search below!', 'Avada'); ?></p>
+# <h3><?php echo __('Search Our Website', 'Zhane'); ?></a></h3>
+# <p><?php echo __('Can\'t find what you need? Take a moment and do a search below!', 'Zhane'); ?></p>
 # wpml-name: 69498ee5a2347632fa38643ac4bdf759
 msgid "Search Our Website"
 msgstr ""
 
 # <div class="one_third useful_links">
-# <h3><?php echo __('Here are some useful links:', 'Avada'); ?></h3>
+# <h3><?php echo __('Here are some useful links:', 'Zhane'); ?></h3>
 # 
 # wpml-name: bcb7ac354cce70e87f2d20d1106ff1f5
 msgid "Here are some useful links:"
 msgstr ""
 
 # <div class="title">
-# <h2 class="entry-title"><?php echo __('Oops, This Page Could Not Be Found!', 'Avada'); ?></h2><div class="title-sep-container"><div class="title-sep"></div></div>
+# <h2 class="entry-title"><?php echo __('Oops, This Page Could Not Be Found!', 'Zhane'); ?></h2><div class="title-sep-container"><div class="title-sep"></div></div>
 # </div>
 # wpml-name: a52f3ece15d037604bd81c0b18013f2e
 msgid "Oops, This Page Could Not Be Found!"

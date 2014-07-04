@@ -1,6 +1,6 @@
 <?php
 /*
-Title		: SMOF
+Title		: zindh
 Description	: Slightly Modified Options Framework
 Version		: 1.5.1
 Author		: Syamil MJ
@@ -25,7 +25,7 @@ Contributors: Syamil MJ - http://aquagraphite.com
  * @since 1.4.0
  */
 $theme_version = '';
-$smof_output = '';
+$zindh_output = '';
 	    
 if( function_exists( 'wp_get_theme' ) ) {
 	if( is_child_theme() ) {
@@ -48,7 +48,7 @@ if( function_exists( 'wp_get_theme' ) ) {
 }
 
 
-define( 'SMOF_VERSION', '1.5.1' );
+define( 'zindh_VERSION', '1.5.1' );
 
 if( !defined('ADMIN_PATH') )
 	define( 'ADMIN_PATH', get_template_directory() . '/admin/' );

@@ -8,11 +8,11 @@ get_header(); ?>
 			<span class="vcard" style="display: none;"><span class="fn"><?php the_author_posts_link(); ?></span></span>
 			<span class="updated" style="display:none;"><?php the_modified_time( 'c' ); ?></span>	
 			<?php if( ! post_password_required($post->ID) ): ?>
-			<?php global $smof_data; if(!$smof_data['featured_images_pages'] ): ?>
-			<?php if($smof_data['legacy_posts_slideshow']):
+			<?php global $zdata; if(!$zdata['featured_images_pages'] ): ?>
+			<?php if($zdata['legacy_posts_slideshow']):
 			$args = array(
 			    'post_type' => 'attachment',
-			    'numberposts' => $smof_data['posts_slideshow_number']-1,
+			    'numberposts' => $zdata['posts_slideshow_number']-1,
 			    'post_status' => null,
 			    'post_parent' => $post->ID,
 				'orderby' => 'menu_order',
@@ -25,7 +25,7 @@ get_header(); ?>
 			?>
 			<div class="flexslider post-slideshow">
 				<ul class="slides">
-					<?php if(!$smof_data['posts_slideshow']): ?>
+					<?php if(!$zdata['posts_slideshow']): ?>
 					<?php if(get_post_meta($post->ID, 'pyre_video', true)): ?>
 					<li>
 						<div class="full-video">
@@ -74,7 +74,7 @@ get_header(); ?>
 			?>
 			<div class="flexslider post-slideshow">
 				<ul class="slides">
-					<?php if(!$smof_data['posts_slideshow']): ?>
+					<?php if(!$zdata['posts_slideshow']): ?>
 					<?php if(get_post_meta($post->ID, 'pyre_video', true)): ?>
 					<li>
 						<div class="full-video">
@@ -107,7 +107,7 @@ get_header(); ?>
 					<?php endif; ?>
 					<?php
 					$i = 2;
-					while($i <= $smof_data['posts_slideshow_number']):
+					while($i <= $zdata['posts_slideshow_number']):
 					$attachment_new_id = kd_mfi_get_featured_image_id('featured-image-'.$i, 'page');
 					if($attachment_new_id):
 					?>
@@ -130,7 +130,7 @@ get_header(); ?>
 				<?php wp_link_pages(); ?>
 			</div>
 			<?php if( ! post_password_required($post->ID) ): ?>
-			<?php if($smof_data['comments_pages']): ?>
+			<?php if($zdata['comments_pages']): ?>
 				<?php
 				wp_reset_query();
 				comments_template();

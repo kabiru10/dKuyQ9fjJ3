@@ -83,10 +83,10 @@ function fusion_attr( $slug, $attributes = array() ) {
 
 } // end attr()
 
-if(!function_exists('themefusion_pagination')):
-function themefusion_pagination($pages = '', $range = 2, $current_query = '')
+if(!function_exists('idh_pagination')):
+function idh_pagination($pages = '', $range = 2, $current_query = '')
 {
-	global $smof_data;
+	global $zdata;
 
 	$showitems = ($range * 2)+1;
 
@@ -111,7 +111,7 @@ function themefusion_pagination($pages = '', $range = 2, $current_query = '')
 
      if(1 != $pages)
      {
-     	if ( ( $smof_data['blog_pagination_type'] == 'Infinite Scroll' && is_home() ) || ( $smof_data['grid_pagination_type'] == 'Infinite Scroll' && is_page_template('portfolio-grid.php') ) ) {
+     	if ( ( $zdata['blog_pagination_type'] == 'Infinite Scroll' && is_home() ) || ( $zdata['grid_pagination_type'] == 'Infinite Scroll' && is_page_template('portfolio-grid.php') ) ) {
         	echo "<div class='pagination infinite-scroll clearfix'>";
         } else {
         	echo "<div class='pagination clearfix'>";
@@ -145,13 +145,13 @@ function string_limit_words($string, $word_limit)
 	return implode(' ', $words);
 }
 
-if(!function_exists('themefusion_breadcrumb')):
-function themefusion_breadcrumb() {
-        global $smof_data,$post;
+if(!function_exists('idh_breadcrumb')):
+function idh_breadcrumb() {
+        global $zdata,$post;
         echo '<ul class="breadcrumbs">';
 
          if ( !is_front_page() ) {
-        echo '<li>'.$smof_data['breacrumb_prefix'].' <a href="';
+        echo '<li>'.$zdata['breacrumb_prefix'].' <a href="';
         echo home_url();
         echo '">'.__('Home', 'Zhane');
         echo "</a></li>";
@@ -184,7 +184,7 @@ function themefusion_breadcrumb() {
             echo '<li>'.$term->name.'</li>';
         }
 
-        if(is_home()) { echo '<li>'.$smof_data['blog_title'].'</li>'; }
+        if(is_home()) { echo '<li>'.$zdata['blog_title'].'</li>'; }
         if(is_page() && !is_front_page()) {
             $parents = array();
             $parent_id = $post->post_parent;
@@ -242,8 +242,8 @@ function tf_checkIfMenuIsSetByLocation($menu_location = '') {
 // Custom RSS Link
 add_filter('feed_link','pyre_feed_link', 1, 2);
 function pyre_feed_link($output, $feed) {
-    if( isset( $smof_data['rss_link'] ) && $smof_data['rss_link'] ) {
-        $feed_url = $smof_data['rss_link'];
+    if( isset( $zdata['rss_link'] ) && $zdata['rss_link'] ) {
+        $feed_url = $zdata['rss_link'];
 
         $feed_array = array('rss' => $feed_url, 'rss2' => $feed_url, 'atom' => $feed_url, 'rdf' => $feed_url, 'comments_rss2' => '');
         $feed_array[$feed] = $feed_url;
@@ -504,16 +504,20 @@ function zhane_layerslider( $id ) {
 }
 
 function zhane_elasticslider( $term ) {
+<<<<<<< HEAD
 	global $smof_data;
+=======
+	global $zdata;
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 
-	if( ! $smof_data['status_eslider'] ) {
+	if( ! $zdata['status_eslider'] ) {
 		$args                = array(
-			'post_type'        => 'themefusion_elastic',
+			'post_type'        => 'idh_elastic',
 			'posts_per_page'   => - 1,
 			'suppress_filters' => 0
 		);
 		$args['tax_query'][] = array(
-			'taxonomy' => 'themefusion_es_groups',
+			'taxonomy' => 'idh_es_groups',
 			'field'    => 'slug',
 			'terms'    => $term
 		);
@@ -555,9 +559,13 @@ function zhane_elasticslider( $term ) {
 }
 
 function zhane_wooslider( $term ) {
+<<<<<<< HEAD
 	global $smof_data;
+=======
+	global $zdata;
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 
-    if( ! $smof_data['status_fusion_slider'] ) {
+    if( ! $zdata['status_fusion_slider'] ) {
         $term_details = get_term_by( 'slug', $term, 'slide-page' );
 
         $slider_settings = get_option( 'taxonomy_' . $term_details->term_id );
@@ -774,7 +782,11 @@ function zhane_wooslider( $term ) {
 }
 
 /*function zhane_flexslider( $term ) {
+<<<<<<< HEAD
 	global $smof_data;
+=======
+	global $zdata;
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 
 	$slider_page_id = '';
 
@@ -782,11 +794,11 @@ function zhane_wooslider( $term ) {
 		$slider_page_id = $term;
 	}
 
-	if($smof_data[$term]):
+	if($zdata[$term]):
 	?>
-		<div class="tfs-slider flexslider main-flex" style="max-width:<?php echo $smof_data['flexslider_width']; ?>;">
-			<ul class="slides" style="width:<?php echo $smof_data['flexslider_width']; ?>;">
-				<?php foreach($smof_data[$term] as $slide): ?>
+		<div class="tfs-slider flexslider main-flex" style="max-width:<?php echo $zdata['flexslider_width']; ?>;">
+			<ul class="slides" style="width:<?php echo $zdata['flexslider_width']; ?>;">
+				<?php foreach($zdata[$term] as $slide): ?>
 					<?php if($slide['title'] || ($slide['url'] || $slide['description'])): ?>
 						<li style="position:relative;">
 							<?php if($slide['link']): ?>
@@ -835,11 +847,15 @@ function zhane_page_title_bar( $title, $subtitle, $secondary_content ) {
 <?php }
 
 function zhane_current_page_title_bar( $post_id ) {
+<<<<<<< HEAD
 	global $smof_data;
+=======
+	global $zdata;
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 
 	ob_start();
-	if( $smof_data['breadcrumb'] ) {
-		if ( $smof_data['page_title_bar_bs'] == 'Breadcrumbs' ) {
+	if( $zdata['breadcrumb'] ) {
+		if ( $zdata['page_title_bar_bs'] == 'Breadcrumbs' ) {
 			if( ( class_exists( 'Woocommerce' ) && is_woocommerce() ) || ( is_tax( 'product_cat' ) || is_tax( 'product_tag' ) ) ) {
 				woocommerce_breadcrumb(array(
 					'wrap_before' => '<ul class="breadcrumbs">',
@@ -851,7 +867,7 @@ function zhane_current_page_title_bar( $post_id ) {
 			} else if( class_exists( 'bbPress' ) && is_bbpress() ) {
 				bbp_breadcrumb( array ( 'before' => '<ul class="breadcrumbs">', 'after' => '</ul>', 'sep' => ' ', 'crumb_before' => '<li>', 'crumb_after' => '</li>', 'home_text' => __('Home', 'Zhane')) );
 			} else {
-				themefusion_breadcrumb();
+				idh_breadcrumb();
 			}
 		} else {
 			get_search_form();
@@ -875,7 +891,7 @@ function zhane_current_page_title_bar( $post_id ) {
 		$title = get_the_title();
 
 		if( is_home() ) {
-			$title = $smof_data['blog_title'];
+			$title = $zdata['blog_title'];
 		}
 
 		if( is_search() ) {
@@ -910,13 +926,13 @@ function zhane_current_page_title_bar( $post_id ) {
 
 	if ( ! $subtitle ) {
 		if( is_home() && ! is_front_page() ) {
-			$subtitle = $smof_data['blog_subtitle'];
+			$subtitle = $zdata['blog_subtitle'];
 		}
 	}
 	
 	if( ! is_archive() && ! is_search() && ! ( is_home() && ! is_front_page() ) ) {
 		if( get_post_meta( $post_id, 'pyre_page_title', true ) == 'yes' ||
-			( $smof_data['page_title_bar'] && get_post_meta( $post_id, 'pyre_page_title', true ) == 'default' )
+			( $zdata['page_title_bar'] && get_post_meta( $post_id, 'pyre_page_title', true ) == 'default' )
 		) {
 
 			if( get_post_meta( $post_id, 'pyre_page_title_text', true ) == 'no' ) {
@@ -928,7 +944,11 @@ function zhane_current_page_title_bar( $post_id ) {
 			
 		}
 	} else {
+<<<<<<< HEAD
 		if( $smof_data['page_title_bar'] ) {
+=======
+		if( $zdata['page_title_bar'] ) {
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 			zhane_page_title_bar( $title, $subtitle, $secondary_content );
 		}
 	}
@@ -1032,7 +1052,7 @@ class Zhane_GoogleMap {
      * @return string          HTML output
      */
     function render( $args, $content = '' ) {
-        global $smof_data;
+        global $zdata;
 
         $defaults = $this->set_shortcode_defaults(
             array(
@@ -1112,10 +1132,14 @@ class Zhane_GoogleMap {
                 $icon = 'theme';
                 $animation = 'yes';
                 $infobox = 'custom';
+<<<<<<< HEAD
                 $infobox_background_color = zhane_hex2rgb( $smof_data['primary_color'] );
+=======
+                $infobox_background_color = zhane_hex2rgb( $zdata['primary_color'] );
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
                 $infobox_background_color = 'rgba(' . $infobox_background_color[0] . ', ' . $infobox_background_color[1] . ', ' . $infobox_background_color[2] . ', 0.8)';
-                $overlay_color = $smof_data['primary_color'];
-                $brightness_level = $this->calc_color_brightness( $smof_data['primary_color'] );
+                $overlay_color = $zdata['primary_color'];
+                $brightness_level = $this->calc_color_brightness( $zdata['primary_color'] );
 
                 if( $brightness_level > 140 ) {
                     $infobox_text_color = '#fff';

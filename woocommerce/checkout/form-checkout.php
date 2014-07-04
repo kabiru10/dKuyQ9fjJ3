@@ -9,7 +9,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-global $smof_data, $woocommerce, $current_user;
+global $zdata, $woocommerce, $current_user;
 ?>
 <div class="zhane_myaccount_user">
 	<span class="myaccount_user_container">
@@ -21,14 +21,14 @@ global $smof_data, $woocommerce, $current_user;
 		);
 		?>
 		</span>
-		<?php if($smof_data['woo_acc_msg_1']): ?>
+		<?php if($zdata['woo_acc_msg_1']): ?>
 		<span class="msg">
-			<?php echo $smof_data['woo_acc_msg_1']; ?>
+			<?php echo $zdata['woo_acc_msg_1']; ?>
 		</span>
 		<?php endif; ?>
-		<?php if($smof_data['woo_acc_msg_2']): ?>
+		<?php if($zdata['woo_acc_msg_2']): ?>
 		<span class="msg">
-			<?php echo $smof_data['woo_acc_msg_2']; ?>
+			<?php echo $zdata['woo_acc_msg_2']; ?>
 		</span>
 		<?php endif; ?>
 		<span class="view-cart">

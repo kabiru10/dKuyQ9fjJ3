@@ -1,8 +1,8 @@
 <?php
 // Template Name: Contact
-get_header(); global $smof_data; ?>
+get_header(); global $zdata; ?>
 <?php
-if( $smof_data['recaptcha_public'] && $smof_data['recaptcha_private'] && !function_exists( 'recaptcha_get_html' ) ) {
+if( $zdata['recaptcha_public'] && $zdata['recaptcha_private'] && !function_exists( 'recaptcha_get_html' ) ) {
 	require_once('framework/recaptchalib.php');
 }
 //If the form is submitted
@@ -43,8 +43,8 @@ if(isset($_POST['submit'])) {
 		}
 	}
 
-	if($smof_data['recaptcha_public'] && $smof_data['recaptcha_private']) {
-		$resp = recaptcha_check_answer ($smof_data['recaptcha_private'],
+	if($zdata['recaptcha_public'] && $zdata['recaptcha_private']) {
+		$resp = recaptcha_check_answer ($zdata['recaptcha_private'],
                                 $_SERVER["REMOTE_ADDR"],
                                 $_POST["recaptcha_challenge_field"],
                                 $_POST["recaptcha_response_field"]);
@@ -60,7 +60,11 @@ if(isset($_POST['submit'])) {
 		$subject = wp_filter_kses( $subject );
 		$comments = wp_filter_kses( $comments );
 		
+<<<<<<< HEAD
 		$emailTo = $smof_data['email_address']; //Put your own email address here
+=======
+		$emailTo = $zdata['email_address']; //Put your own email address here
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 		$body = __('Name:', 'Zhane')." $name \n\n";
 		$body .= __('Email:', 'Zhane')." $email \n\n";
 		$body .= __('Subject:', 'Zhane')." $subject \n\n";
@@ -93,10 +97,10 @@ elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'left') {
 	$content_css = 'float:left;';
 	$sidebar_css = 'float:right;';
 } elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'default') {
-	if($smof_data['default_sidebar_pos'] == 'Left') {
+	if($zdata['default_sidebar_pos'] == 'Left') {
 		$content_css = 'float:right;';
 		$sidebar_css = 'float:left;';
-	} elseif($smof_data['default_sidebar_pos'] == 'Right') {
+	} elseif($zdata['default_sidebar_pos'] == 'Right') {
 		$content_css = 'float:left;';
 		$sidebar_css = 'float:right;';
 	}
@@ -139,11 +143,11 @@ elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'left') {
 
 					</div>
 
-					<?php if($smof_data['recaptcha_public'] && $smof_data['recaptcha_private']): ?>
+					<?php if($zdata['recaptcha_public'] && $zdata['recaptcha_private']): ?>
 
 					<div id="comment-recaptcha">
 
-					<?php echo recaptcha_get_html($smof_data['recaptcha_public']); ?>
+					<?php echo recaptcha_get_html($zdata['recaptcha_public']); ?>
 
 					</div>
 
@@ -151,7 +155,11 @@ elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'left') {
 
 					<div id="comment-submit-container">
 
+<<<<<<< HEAD
 						<p><div><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Submit Form', 'Zhane'); ?>" class="<?php echo sprintf( 'comment-submit btn btn-default button default small fusion-button button-small button-default button-%s button-%s', strtolower( $smof_data['button_shape'] ), strtolower( $smof_data['button_type'] ) ); ?>"></div></p>
+=======
+						<p><div><input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo __('Submit Form', 'Zhane'); ?>" class="<?php echo sprintf( 'comment-submit btn btn-default button default small fusion-button button-small button-default button-%s button-%s', strtolower( $zdata['button_shape'] ), strtolower( $zdata['button_type'] ) ); ?>"></div></p>
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 					</div>
 
 			</form>

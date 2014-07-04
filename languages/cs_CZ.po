@@ -25,7 +25,7 @@ msgid "Previous Post"
 msgstr "Předchozí příspěvek"
 
 # 'sbg_box',
-# __( 'Sidebar', 'Avada' ),
+# __( 'Sidebar', 'Zhane' ),
 # array('sidebar_generator', 'edit_form'),
 # wpml-name: 219ff7705d67d0c798779951dcf82e95
 msgid "Sidebar"
@@ -35,7 +35,7 @@ msgid "Set Thumbnail"
 msgstr ""
 
 # <label for="edit-menu-item-megamenu-icon-<?php echo $item_id; ?>">
-# <?php _e( 'Mega Menu Icon (use full font awesome name)', 'Avada' ); ?>
+# <?php _e( 'Mega Menu Icon (use full font awesome name)', 'Zhane' ); ?>
 # <input type="text" id="edit-menu-item-megamenu-icon-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-icon" name="menu-item-fusion-megamenu-icon[<?php echo $item_id; ?>]" value="<?php echo $item->fusion_megamenu_icon; ?>" />
 # wpml-name: ed337b2d405b51264196ba53c363a9f3
 msgid "Mega Menu Icon (use full font awesome name)"
@@ -48,7 +48,7 @@ msgid "Mega Menu Widget Area"
 msgstr ""
 
 # <input type="checkbox" id="edit-menu-item-megamenu-title-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-title" name="menu-item-fusion-megamenu-title[<?php echo $item_id; ?>]" value="disabled" <?php checked( $item->fusion_megamenu_title, 'disabled' ); ?> />
-# <?php _e( 'Disable Mega Menu Column Title', 'Avada' ); ?>
+# <?php _e( 'Disable Mega Menu Column Title', 'Zhane' ); ?>
 # </label>
 # wpml-name: 327be4f1954415dad7cc90cbdffe2ff4
 msgid "Disable Mega Menu Column Title"
@@ -61,14 +61,14 @@ msgid "Mega Menu Number of Columns"
 msgstr ""
 
 # <input type="checkbox" id="edit-menu-item-megamenu-width-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-width" name="menu-item-fusion-megamenu-width[<?php echo $item_id; ?>]" value="fullwidth" <?php checked( $item->fusion_megamenu_width, 'fullwidth' ); ?> />
-# <?php _e( 'Full Width Mega Menu', 'Avada' ); ?>
+# <?php _e( 'Full Width Mega Menu', 'Zhane' ); ?>
 # </label>
 # wpml-name: 9e2661888f17b075b9ebd47f834268df
 msgid "Full Width Mega Menu"
 msgstr ""
 
 # <input type="checkbox" id="edit-menu-item-megamenu-status-<?php echo $item_id; ?>" class="widefat code edit-menu-item-megamenu-status" name="menu-item-fusion-megamenu-status[<?php echo $item_id; ?>]" value="enabled" <?php checked( $item->fusion_megamenu_status, 'enabled' ); ?> />
-# <strong><?php _e( 'Enable Fusion Mega Menu', 'Avada' ); ?></strong>
+# <strong><?php _e( 'Enable Fusion Mega Menu', 'Zhane' ); ?></strong>
 # </label>
 # wpml-name: 1d548d28b4394500d23817f71e43510a
 msgid "Enable Fusion Mega Menu"
@@ -81,7 +81,7 @@ msgid "I have read and accept the"
 msgstr ""
 
 # if( $difference != 1 ) {
-# $periods[$j] .= __( 's', 'Avada' );
+# $periods[$j] .= __( 's', 'Zhane' );
 # }
 # wpml-name: 03c7c0ace395d80182db07ae2c30f034
 msgid "s"
@@ -91,56 +91,56 @@ msgid "ago"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 2787910b1b16428d65412fca2718a92e
 msgid "decade"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 84cdc76cabf41bd7c961f6ab12f117d8
 msgid "year"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 7436f942d5ea836cb84f1bb2527d8286
 msgid "month"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 172a8327fcd3685ab3c0f740d031da09
 msgid "week"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 628b7db04235f228d40adc671413a8c8
 msgid "day"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 896c55cc5e46fab38ce9f51ebf7bfcd3
 msgid "hour"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: 0a7d55be9d12a369a6a8da0fb517fba4
 msgid "minute"
 msgstr ""
 
 # function ago( $time ) {
-# $periods = array( __( 'second', 'Avada' ), __( 'minute', 'Avada' ), __( 'hour', 'Avada' ), __( 'day', 'Avada' ), __( 'week', 'Avada' ), __( 'month', 'Avada' ), __( 'year', 'Avada' ), __( 'decade', 'Avada' ) );
+# $periods = array( __( 'second', 'Zhane' ), __( 'minute', 'Zhane' ), __( 'hour', 'Zhane' ), __( 'day', 'Zhane' ), __( 'week', 'Zhane' ), __( 'month', 'Zhane' ), __( 'year', 'Zhane' ), __( 'decade', 'Zhane' ) );
 # $lengths = array( '60', '60', '24', '7', '4.35', '12', '10' );
 # wpml-name: a9f0e61a137d86aa9db53465e0801612
 msgid "second"
@@ -162,7 +162,7 @@ msgid "Fax:"
 msgstr "GPS:"
 
 # <?php if($instance['mobile']): ?>
-# <p class="mobile"><?php _e('Mobile:', 'Avada'); ?> <?php echo $instance['mobile']; ?></p>
+# <p class="mobile"><?php _e('Mobile:', 'Zhane'); ?> <?php echo $instance['mobile']; ?></p>
 # <?php endif; ?>
 msgid "Mobile:"
 msgstr "Mobilní telefon:"
@@ -204,7 +204,7 @@ msgid "Project Description"
 msgstr "Popis produktu"
 
 # <?php if(is_page($post_parent)): ?><?php endif; ?>
-# <li <?php if(is_page($post_parent)): ?>class="current_page_item"<?php endif; ?>><a href="<?php echo get_permalink($post_parent); ?>" title="<?php echo __('Back to Parent Page', 'Avada'); ?>"><?php echo get_the_title($post_parent); ?></a></li>
+# <li <?php if(is_page($post_parent)): ?>class="current_page_item"<?php endif; ?>><a href="<?php echo get_permalink($post_parent); ?>" title="<?php echo __('Back to Parent Page', 'Zhane'); ?>"><?php echo get_the_title($post_parent); ?></a></li>
 # <?php
 # wpml-name: 13a1c246a6d1a5ae1a40f5260a99ac1e
 msgid "Back to Parent Page"
@@ -229,15 +229,15 @@ msgid "Learn More"
 msgstr "Dozvědět se více"
 
 #
-# .woocommerce-invalid:after { content: '<?php echo __('Please enter correct details for this required field.', 'Avada'); ?>'; display: inline-block; margin-top: 7px; color: red; }
+# .woocommerce-invalid:after { content: '<?php echo __('Please enter correct details for this required field.', 'Zhane'); ?>'; display: inline-block; margin-top: 7px; color: red; }
 # </style>
 # wpml-name: 158f1bc10f611d14543e1426abfed743
 msgid "Please enter correct details for this required field."
 msgstr ""
 
-# 'portfolio_loading_text' => '<em>'. __('Loading Portfolio Items...', 'Avada').'</em>',
-# 'faqs_loading_text' => '<em>'. __('Loading FAQ Items...', 'Avada').'</em>',
-# 'order_actions' =>  __('Details', 'Avada')
+# 'portfolio_loading_text' => '<em>'. __('Loading Portfolio Items...', 'Zhane').'</em>',
+# 'faqs_loading_text' => '<em>'. __('Loading FAQ Items...', 'Zhane').'</em>',
+# 'order_actions' =>  __('Details', 'Zhane')
 # wpml-name: 3b340ac59e178c70f764a4c1313b6a0a
 msgid "Loading FAQ Items..."
 msgstr ""
@@ -254,8 +254,8 @@ msgstr ""
 msgid "Shopping Cart"
 msgstr "Nákupní košík"
 
-# wp_localize_script('avada', 'js_local_vars', array(
-# 'dropdown_goto' => __('Go to...', 'Avada')
+# wp_localize_script('zhane', 'js_local_vars', array(
+# 'dropdown_goto' => __('Go to...', 'Zhane')
 # )
 msgid "Go to..."
 msgstr "Go to..."
@@ -318,13 +318,13 @@ msgid "You Have %d Items In Your Cart"
 msgstr "Máte %d položek ve Vašem nákupním košíku"
 
 # <i class="fontawesome-icon medium circle-yes icon-envelope-alt"></i>
-# <span><?php echo __('Mail This', 'Avada'); ?></span><?php echo __('Product', 'Avada'); ?>
+# <span><?php echo __('Mail This', 'Zhane'); ?></span><?php echo __('Product', 'Zhane'); ?>
 # </a>
 msgid "Mail This"
 msgstr "Poslat emailem"
 
 # <i class="fontawesome-icon medium circle-yes icon-pinterest"></i>
-# <span><?php echo __('Pin This', 'Avada'); ?></span><?php echo __('Product', 'Avada'); ?>
+# <span><?php echo __('Pin This', 'Zhane'); ?></span><?php echo __('Product', 'Zhane'); ?>
 # </a>
 msgid "Pin This"
 msgstr "Připnout"
@@ -333,13 +333,13 @@ msgid "Product"
 msgstr "Produkt"
 
 # <i class="fontawesome-icon medium circle-yes icon-twitter"></i>
-# <span><?php echo __('Tweet This', 'Avada'); ?></span><?php echo __('Product', 'Avada'); ?>
+# <span><?php echo __('Tweet This', 'Zhane'); ?></span><?php echo __('Product', 'Zhane'); ?>
 # </a>
 msgid "Tweet This"
 msgstr "Tweetovat"
 
 # <i class="fontawesome-icon medium circle-yes icon-facebook"></i>
-# <span><?php echo __('Share On', 'Avada'); ?></span>Facebook
+# <span><?php echo __('Share On', 'Zhane'); ?></span>Facebook
 # </a>
 msgid "Share On"
 msgstr "Sdílet na"
@@ -398,7 +398,7 @@ msgid "Logout"
 msgstr "Odhlásit"
 
 # <p class="submit">
-# <input type="submit" name="wp-submit" id="wp-submit" class="button small default comment-submit" value="<?php _e('Log In', 'Avada'); ?>">
+# <input type="submit" name="wp-submit" id="wp-submit" class="button small default comment-submit" value="<?php _e('Log In', 'Zhane'); ?>">
 # <input type="hidden" name="redirect_to" value="<?php echo $_SERVER['HTTP_REFERER']; ?>">
 msgid "Log In"
 msgstr "Přihlásit se"
@@ -416,14 +416,14 @@ msgid "Username"
 msgstr "Uživatelské jméno"
 
 # <?php elseif ( is_year() ) : ?>
-# <?php printf( __( 'Yearly Archives: %s', 'Avada' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'Avada' ) ) . '</span>' ); ?>
+# <?php printf( __( 'Yearly Archives: %s', 'Zhane' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'Zhane' ) ) . '</span>' ); ?>
 # <?php elseif ( is_author() ) : ?>
 #, fuzzy
 msgid "Y"
 msgstr "Y"
 
 # <?php elseif ( is_month() ) : ?>
-# <?php printf( __( 'Monthly Archives: %s', 'Avada' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'Avada' ) ) . '</span>' ); ?>
+# <?php printf( __( 'Monthly Archives: %s', 'Zhane' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'Zhane' ) ) . '</span>' ); ?>
 # <?php elseif ( is_year() ) : ?>
 #, fuzzy
 msgid "F Y"
@@ -696,21 +696,21 @@ msgid "This post is password protected. Enter the password to view comments."
 msgstr ""
 "Tento příspěvek je chráněn heslem. Zadejte heslo, abyste zobrazili komentáře."
 
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
-# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Avada' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Zhane' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
 # </div>
 msgid "Replies Created:"
 msgstr "Počet odpovědí:"
 
-# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Avada' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
-# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Avada' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
+# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Zhane' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-reply-count"><span class="bold"><?php printf( __( 'Replies Created:', 'Zhane' )); ?> </span><?php printf(bbp_get_user_reply_count_raw() ); ?></p>
 msgid "Topics Started:"
 msgstr "Zahájená témata:"
 
 #
-# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Avada' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
-# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Avada' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
+# <p class="bbp-user-forum-role"><span class="bold"><?php  printf( __( 'Forum Role:',      'Zhane' )); ?> </span><?php printf(bbp_get_user_display_role() ); ?></p>
+# <p class="bbp-user-topic-count"><span class="bold"><?php printf( __( 'Topics Started:',  'Zhane' )); ?> </span><?php printf(bbp_get_user_topic_count_raw() ); ?></p>
 msgid "Forum Role:"
 msgstr "Role ve fóru:"
 
@@ -718,7 +718,7 @@ msgid "Post count: %s"
 msgstr "Počet příspěvků: %s"
 
 #
-# <?php bbp_topic_tag_list( bbp_get_topic_id(), array( 'before' => '<div class="bbp-topic-tags"><p>' . esc_html__( 'Tags:', 'Avada' ) . '&nbsp;', 'sep'    => ', ', 'after'  => '</p></div>' ) ); ?>
+# <?php bbp_topic_tag_list( bbp_get_topic_id(), array( 'before' => '<div class="bbp-topic-tags"><p>' . esc_html__( 'Tags:', 'Zhane' ) . '&nbsp;', 'sep'    => ', ', 'after'  => '</p></div>' ) ); ?>
 #
 msgid "Tags:"
 msgstr "Tagy:"
@@ -730,19 +730,19 @@ msgid "If you didn't find what you were looking for, try a new search!"
 msgstr "Pokud jste nenalezli co jste hledali, zkuste nové hledání!"
 
 # <div class="search-page-search-form">
-# <h2><?php echo __('Need a new search?', 'Avada'); ?></h2>
-# <p><?php echo __('If you didn\'t find what you were looking for, try a new search!', 'Avada'); ?></p>
+# <h2><?php echo __('Need a new search?', 'Zhane'); ?></h2>
+# <p><?php echo __('If you didn\'t find what you were looking for, try a new search!', 'Zhane'); ?></p>
 msgid "Need a new search?"
 msgstr "Nové hledání?"
 
 # <div class="author_description">
-# <h3 class='author_title'><?php echo __("About",'Avada').' '.$name; ?>
+# <h3 class='author_title'><?php echo __("About",'Zhane').' '.$name; ?>
 # <?php if(current_user_can('edit_users') || get_current_user_id() == $author_id): ?>
 msgid "About"
 msgstr "O"
 
 # if(empty($description)) {
-# $description  = __("This author has not yet filled in any details.",'Avada');
+# $description  = __("This author has not yet filled in any details.",'Zhane');
 # $description .= '</br>'.sprintf( __( 'So far %s has created %s entries.' ), $name, count_user_posts( $author_id ) );
 msgid "This author has not yet filled in any details."
 msgstr "Tento autor ještě nevyplnil žádné detaily."

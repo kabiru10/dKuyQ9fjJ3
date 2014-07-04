@@ -154,7 +154,7 @@ Version 3.4.3 - April 24th, 2014
 - new language files for Russian, Arabic, Italian
 - password protected content fix for all content
 - megamenu positioning variable initialization
-- IE fixes: themefusion slider, text alignments, short code rendering issues
+- IE fixes: idh slider, text alignments, short code rendering issues
 - add icon- to section separator when using generator
 - megamenu no 2nd level title link issue
 - author meta data on single post page 
@@ -555,7 +555,7 @@ Version 3.1.1
 - fixed menu text showing twice on mobile devices
 - updated language files with new strings
 - removed warning message on instal in rare cases
-- Revolution Slider is no longer automatically activated into the theme. It needs to be activated upon install and you will get a big notice about it on wp-admin page. You will not lose any sliders OR slider page settings and revolution slider is and always will be included with the theme. Upon upgrading to v3.1.1 the integrated Revolution Slider plugin will be disabled, and you will see a notification message in the WP admin telling you that the theme requires the installation of the Revolution Slider. Choose to install it, and then activate it. All the other slider plugins (Layer Slider, Elastic Slider, Themefusion Slider, Flexslider) are still integrated. ONLY Revolution Slider is not integrated.
+- Revolution Slider is no longer automatically activated into the theme. It needs to be activated upon install and you will get a big notice about it on wp-admin page. You will not lose any sliders OR slider page settings and revolution slider is and always will be included with the theme. Upon upgrading to v3.1.1 the integrated Revolution Slider plugin will be disabled, and you will see a notification message in the WP admin telling you that the theme requires the installation of the Revolution Slider. Choose to install it, and then activate it. All the other slider plugins (Layer Slider, Elastic Slider, idh Slider, Flexslider) are still integrated. ONLY Revolution Slider is not integrated.
 
 
 -----------------------------------------------------------------------------------------
@@ -723,7 +723,7 @@ Version 3.0
 - fixed half width portfolio issue when using "auto" for width
 - adjust layer slider thumbnail issue
 - fixed IE10 issue with zoom icon
-- lifted 10 slide limit for Themefusion slider and fixed slider bug
+- lifted 10 slide limit for idh slider and fixed slider bug
 - fixed side nav issue of pages not staying together in a set in specific instances
 - portfolio excerpt value now also controls portfolio category pages
 - removed any notices/errors when wp-debug mode is on
@@ -836,7 +836,7 @@ Version 2.1.1
 - fixed issue of using more than 8 tabs
 - fixed issue of using slider widget in footer
 - fixed issue of lightbox on ipad not covering full width, and corner alignment
-- fixed responsiveness of themefusion slider
+- fixed responsiveness of idh slider
 - fixed some issues in header.php file and conflict with jQuery
 - updated various descriptions in theme options
 - fixed issue of sublayers not linking correctly on Rev Slider
@@ -866,13 +866,13 @@ Version 2.1
 - NEW FEATURE: Zhane is now Retina Ready!
 - NEW FEATURE: includes the super cool Elastic Slider!
 - NEW FEATURE: 4 new header design options (social icons and text) all easily accessed via theme options
-- NEW FEATURE: new theme options for ThemeFusion Slider; speed, animation, autoplay
+- NEW FEATURE: new theme options for idh Slider; speed, animation, autoplay
 - fixed the duplicate image showing up in lightbox for blog posts
 - all featured images in post slideshows open in lightbox
 - post type order plugin works, please check "auto sort" to sort portfolio and blog posts
 - when image rollovers are turned off, the related posts thumbnails link to post page
 - includes updated Rev Slider Plugin 2.2.4
-- fixed issue of captions in ThemeFusion slider being cut off on right side by the edge
+- fixed issue of captions in idh slider being cut off on right side by the edge
 - tested for WP 3.5.1
 - fixed the empty image border in person shortcode
 - removed small arrow next to flexslider sidebar widget

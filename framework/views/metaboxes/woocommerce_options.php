@@ -133,7 +133,7 @@ $this->select(	'revslider',
 <?php
 $slides_array = array();
 $slides_array[0] = 'Select a slider';
-$slides = get_terms('themefusion_es_groups');
+$slides = get_terms('idh_es_groups');
 if($slides && !isset($slides->errors)){
 $slides = is_array($slides) ? $slides : unserialize($slides);
 foreach($slides as $key => $val){

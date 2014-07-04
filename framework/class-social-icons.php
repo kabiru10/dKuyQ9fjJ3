@@ -7,7 +7,7 @@
  * Add any modifications necessary under a child theme.
  *
  * @package  Fusion/Framework
- * @author   ThemeFusion
+ * @author   idh
  * @link     http://theme-fusion.com
  */
 
@@ -45,7 +45,7 @@ if( ! class_exists( 'Zhane_SocialIcons' ) ) {
          * @return string  The HTML mark up for social icons, incl. wrapping container
          */
 		public function render_social_icons( $args ) {
-			global $smof_data;
+			global $zdata;
 			
 			$this->args = $args;
 
@@ -57,15 +57,15 @@ if( ! class_exists( 'Zhane_SocialIcons' ) ) {
 				$social_networks = $this->get_social_links_array();		
 			}
 			
-			/*if( ! array_key_exists( 'custom', $smof_data['social_icon_ordering'] ) ) {
-				$smof_data['social_icon_ordering']['custom'] = array();
+			/*if( ! array_key_exists( 'custom', $zdata['social_icon_ordering'] ) ) {
+				$zdata['social_icon_ordering']['custom'] = array();
 			}*/
 			
-			//$social_networks = $this->order_array_like_array( $social_networks, $smof_data['social_icon_ordering']['custom'] );
+			//$social_networks = $this->order_array_like_array( $social_networks, $zdata['social_icon_ordering']['custom'] );
 			//
 			
-			if( isset( $smof_data['social_sorter'] ) && $smof_data['social_sorter'] ) {
-				$order = $smof_data['social_sorter'];
+			if( isset( $zdata['social_sorter'] ) && $zdata['social_sorter'] ) {
+				$order = $zdata['social_sorter'];
 				$ordered_array = explode(',', $order);
 
 				if( isset( $ordered_array ) && $ordered_array && is_array( $ordered_array ) ) {
@@ -73,8 +73,8 @@ if( ! class_exists( 'Zhane_SocialIcons' ) ) {
 					$social_networks = array();
 					foreach( $ordered_array as $key => $field_order ) {
 						$field_order_number = str_replace(  'social_sorter_', '', $field_order );
-						$find_the_field = $smof_data['social_sorter_' . $field_order_number];
-						$field_name = str_replace( '_link', '', $smof_data['social_sorter_' . $field_order_number] );
+						$find_the_field = $zdata['social_sorter_' . $field_order_number];
+						$field_name = str_replace( '_link', '', $zdata['social_sorter_' . $field_order_number] );
 
 						if( $field_name == 'google' ) {
 							$field_name = 'googleplus';
@@ -117,9 +117,9 @@ if( ! class_exists( 'Zhane_SocialIcons' ) ) {
 			foreach( $social_networks as $network => $link ) {
 				$custom = '';
 				if( $network == 'custom' ) {
-					$custom = sprintf( '<img src="%s" alt="%s" />', $smof_data['custom_icon_image'], $smof_data['custom_icon_name'] );
+					$custom = sprintf( '<img src="%s" alt="%s" />', $zdata['custom_icon_image'], $zdata['custom_icon_name'] );
 
-					$network = 'custom_' . $smof_data['custom_icon_name'];
+					$network = 'custom_' . $zdata['custom_icon_name'];
 
 				}
 
@@ -162,7 +162,7 @@ if( ! class_exists( 'Zhane_SocialIcons' ) ) {
 		} 	
 
 		function icon_attr( $args ) {
-			global $smof_data;
+			global $zdata;
 
 			$attr = array();
 			$attr['class'] = '';
@@ -184,7 +184,7 @@ if( ! class_exists( 'Zhane_SocialIcons' ) ) {
 				$attr['target'] = '_blank';
 			}
 
-			if( $smof_data['nofollow_social_links'] ) {
+			if( $zdata['nofollow_social_links'] ) {
 				$attr['rel'] = 'nofollow';
 			}
 
@@ -225,87 +225,87 @@ if( ! class_exists( 'Zhane_SocialIcons' ) ) {
          * @return array  The social links array containing the social media and links to them.
          */
 		function get_social_links_array() {
-			global $smof_data;
+			global $zdata;
 
 			$social_links_array = array();
 
-			if( isset( $smof_data['facebook_link'] ) && $smof_data['facebook_link'] ) {
-				$social_links_array['facebook'] = $smof_data['facebook_link'];
+			if( isset( $zdata['facebook_link'] ) && $zdata['facebook_link'] ) {
+				$social_links_array['facebook'] = $zdata['facebook_link'];
 			}
-			if( isset( $smof_data['twitter_link'] ) && $smof_data['twitter_link'] ) {
-				$social_links_array['twitter'] = $smof_data['twitter_link'];
+			if( isset( $zdata['twitter_link'] ) && $zdata['twitter_link'] ) {
+				$social_links_array['twitter'] = $zdata['twitter_link'];
 			}
-			if( isset( $smof_data['linkedin_link'] ) && $smof_data['linkedin_link'] ) {
-				$social_links_array['linkedin'] = $smof_data['linkedin_link'];
+			if( isset( $zdata['linkedin_link'] ) && $zdata['linkedin_link'] ) {
+				$social_links_array['linkedin'] = $zdata['linkedin_link'];
 			}
-			if( isset( $smof_data['dribbble_link'] ) && $smof_data['dribbble_link'] ) {
-				$social_links_array['dribbble'] = $smof_data['dribbble_link'];
+			if( isset( $zdata['dribbble_link'] ) && $zdata['dribbble_link'] ) {
+				$social_links_array['dribbble'] = $zdata['dribbble_link'];
 			}
-			if( isset( $smof_data['rss_link'] ) && $smof_data['rss_link'] ) {
-				$social_links_array['rss'] = $smof_data['rss_link'];
+			if( isset( $zdata['rss_link'] ) && $zdata['rss_link'] ) {
+				$social_links_array['rss'] = $zdata['rss_link'];
 			}
-			if( isset( $smof_data['youtube_link'] ) && $smof_data['youtube_link'] ) {
-				$social_links_array['youtube'] = $smof_data['youtube_link'];
+			if( isset( $zdata['youtube_link'] ) && $zdata['youtube_link'] ) {
+				$social_links_array['youtube'] = $zdata['youtube_link'];
 			}
-			if( isset( $smof_data['instagram_link'] ) && $smof_data['instagram_link'] ) {
-				$social_links_array['instagram'] = $smof_data['instagram_link'];
+			if( isset( $zdata['instagram_link'] ) && $zdata['instagram_link'] ) {
+				$social_links_array['instagram'] = $zdata['instagram_link'];
 			}			
-			if( isset( $smof_data['pinterest_link'] ) && $smof_data['pinterest_link'] ) {
-				$social_links_array['pinterest'] = $smof_data['pinterest_link'];
+			if( isset( $zdata['pinterest_link'] ) && $zdata['pinterest_link'] ) {
+				$social_links_array['pinterest'] = $zdata['pinterest_link'];
 			}
-			if( isset( $smof_data['flickr_link'] ) && $smof_data['flickr_link'] ) {
-				$social_links_array['flickr'] = $smof_data['flickr_link'];
+			if( isset( $zdata['flickr_link'] ) && $zdata['flickr_link'] ) {
+				$social_links_array['flickr'] = $zdata['flickr_link'];
 			}
-			if( isset( $smof_data['vimeo_link'] ) && $smof_data['vimeo_link'] ) {
-				$social_links_array['vimeo'] = $smof_data['vimeo_link'];
+			if( isset( $zdata['vimeo_link'] ) && $zdata['vimeo_link'] ) {
+				$social_links_array['vimeo'] = $zdata['vimeo_link'];
 			}
-			if( isset( $smof_data['tumblr_link'] ) && $smof_data['tumblr_link'] ) {
-				$social_links_array['tumblr'] = $smof_data['tumblr_link'];
+			if( isset( $zdata['tumblr_link'] ) && $zdata['tumblr_link'] ) {
+				$social_links_array['tumblr'] = $zdata['tumblr_link'];
 			}
-			if( isset( $smof_data['google_link'] ) && $smof_data['google_link'] ) {
-				$social_links_array['googleplus'] = $smof_data['google_link'];
+			if( isset( $zdata['google_link'] ) && $zdata['google_link'] ) {
+				$social_links_array['googleplus'] = $zdata['google_link'];
 			}  
-			if( isset( $smof_data['digg_link'] ) && $smof_data['digg_link'] ) {
-				$social_links_array['digg'] = $smof_data['digg_link'];
+			if( isset( $zdata['digg_link'] ) && $zdata['digg_link'] ) {
+				$social_links_array['digg'] = $zdata['digg_link'];
 			}
-			if( isset( $smof_data['blogger_link'] ) && $smof_data['blogger_link'] ) {
-				$social_links_array['blogger'] = $smof_data['blogger_link'];
+			if( isset( $zdata['blogger_link'] ) && $zdata['blogger_link'] ) {
+				$social_links_array['blogger'] = $zdata['blogger_link'];
 			}
-			if( isset( $smof_data['skype_link'] ) && $smof_data['skype_link'] ) {
-				$social_links_array['skype'] = $smof_data['skype_link'];
+			if( isset( $zdata['skype_link'] ) && $zdata['skype_link'] ) {
+				$social_links_array['skype'] = $zdata['skype_link'];
 			}
-			if( isset( $smof_data['myspace_link'] ) && $smof_data['myspace_link'] ) {
-				$social_links_array['myspace'] = $smof_data['myspace_link'];
+			if( isset( $zdata['myspace_link'] ) && $zdata['myspace_link'] ) {
+				$social_links_array['myspace'] = $zdata['myspace_link'];
 			}
-			if( isset( $smof_data['deviantart_link'] ) && $smof_data['deviantart_link'] ) {
-				$social_links_array['deviantart'] = $smof_data['deviantart_link'];
+			if( isset( $zdata['deviantart_link'] ) && $zdata['deviantart_link'] ) {
+				$social_links_array['deviantart'] = $zdata['deviantart_link'];
 			}
-			if( isset( $smof_data['yahoo_link'] ) && $smof_data['yahoo_link'] ) {
-				$social_links_array['yahoo'] = $smof_data['yahoo_link'];
+			if( isset( $zdata['yahoo_link'] ) && $zdata['yahoo_link'] ) {
+				$social_links_array['yahoo'] = $zdata['yahoo_link'];
 			}
-			if( isset( $smof_data['reddit_link'] ) && $smof_data['reddit_link'] ) {
-				$social_links_array['reddit'] = $smof_data['reddit_link'];
+			if( isset( $zdata['reddit_link'] ) && $zdata['reddit_link'] ) {
+				$social_links_array['reddit'] = $zdata['reddit_link'];
 			}
-			if( isset( $smof_data['forrst_link'] ) && $smof_data['forrst_link'] ) {
-				$social_links_array['forrst'] = $smof_data['forrst_link'];
+			if( isset( $zdata['forrst_link'] ) && $zdata['forrst_link'] ) {
+				$social_links_array['forrst'] = $zdata['forrst_link'];
 			}
-			if( isset( $smof_data['paypal_link'] ) && $smof_data['paypal_link'] ) {
-				$social_links_array['paypal'] = $smof_data['paypal_link'];
+			if( isset( $zdata['paypal_link'] ) && $zdata['paypal_link'] ) {
+				$social_links_array['paypal'] = $zdata['paypal_link'];
 			}	
-			if( isset( $smof_data['dropbox_link'] ) && $smof_data['dropbox_link'] ) {
-				$social_links_array['dropbox'] = $smof_data['dropbox_link'];
+			if( isset( $zdata['dropbox_link'] ) && $zdata['dropbox_link'] ) {
+				$social_links_array['dropbox'] = $zdata['dropbox_link'];
 			}	
-			if( isset( $smof_data['soundcloud_link'] ) && $smof_data['soundcloud_link'] ) {
-				$social_links_array['soundcloud'] = $smof_data['soundcloud_link'];
+			if( isset( $zdata['soundcloud_link'] ) && $zdata['soundcloud_link'] ) {
+				$social_links_array['soundcloud'] = $zdata['soundcloud_link'];
 			}				
-			if( isset( $smof_data['vk_link'] ) && $smof_data['vk_link'] ) {
-				$social_links_array['vk'] = $smof_data['vk_link'];
+			if( isset( $zdata['vk_link'] ) && $zdata['vk_link'] ) {
+				$social_links_array['vk'] = $zdata['vk_link'];
 			}			
-			if( isset( $smof_data['email_link'] ) && $smof_data['email_link'] ) {
-				$social_links_array['mail'] = $smof_data['email_link'];
+			if( isset( $zdata['email_link'] ) && $zdata['email_link'] ) {
+				$social_links_array['mail'] = $zdata['email_link'];
 			}
-			if( $smof_data['custom_icon_name'] && $smof_data['custom_icon_image'] && $smof_data['custom_icon_link'] ) {
-				$social_links_array['custom'] = $smof_data['custom_icon_link'];
+			if( $zdata['custom_icon_name'] && $zdata['custom_icon_image'] && $zdata['custom_icon_link'] ) {
+				$social_links_array['custom'] = $zdata['custom_icon_link'];
 			}
 
 			return $social_links_array;
@@ -319,46 +319,46 @@ if( ! class_exists( 'Zhane_SocialIcons' ) ) {
          * @return array  The social links array containing the social media and links to them.
          */
 		function get_sharingbox_social_links_array( $args ) {	
-			global $smof_data;
+			global $zdata;
 
 			$social_links_array = array();
 
-				if( $smof_data['sharing_facebook'] ) {
+				if( $zdata['sharing_facebook'] ) {
 					$soical_link = 'http://www.facebook.com/sharer.php?m2w&s=100&p&#91;url&#93;=' . $args['link'] . '&p&#91;images&#93;&#91;0&#93;=http://www.gravatar.com/avatar/2f8ec4a9ad7a39534f764d749e001046.png&p&#91;title&#93;=' . $args['title'];
 					$social_links_array['facebook'] = $soical_link;
 				}
 
-				if( $smof_data['sharing_twitter'] ) {
+				if( $zdata['sharing_twitter'] ) {
 					$soical_link = 'http://twitter.com/home?status=' . $args['title'] . ' ' . $args['link'];
 					$social_links_array['twitter'] = $soical_link;
 				}
 
-				if( $smof_data['sharing_linkedin'] ) {
+				if( $zdata['sharing_linkedin'] ) {
 					$soical_link = 'http://linkedin.com/shareArticle?mini=true&amp;url=' . $args['link'] . '&amp;title=' . $args['title'];
 					$social_links_array['linkedin'] = $soical_link;
 				}
 
-				if( $smof_data['sharing_reddit'] ) {
+				if( $zdata['sharing_reddit'] ) {
 					$soical_link = 'http://reddit.com/submit?url=' . $args['link'] . '&amp;title=' . $args['title'];
 					$social_links_array['reddit'] = $soical_link;
 				}
 
-				if( $smof_data['sharing_tumblr'] ) {
+				if( $zdata['sharing_tumblr'] ) {
 					$soical_link = 'http://www.tumblr.com/share/link?url=' . urlencode( $args['link'] ) . '&amp;name=' . urlencode( $args['title'] ) .'&amp;description=' . urlencode( $args['description'] );
 					$social_links_array['tumblr'] = $soical_link;
 				}
 
-				if( $smof_data['sharing_google'] ) {
+				if( $zdata['sharing_google'] ) {
 					$soical_link = 'https://plus.google.com/share?url=' . $args['link'] . '" onclick="javascript:window.open(this.href,\'\', \'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600\');return false;';
 					$social_links_array['googleplus'] = $soical_link;
 				}
 
-				if( $smof_data['sharing_pinterest'] ) {
+				if( $zdata['sharing_pinterest'] ) {
 					$soical_link = 'http://pinterest.com/pin/create/button/?url=' . urlencode( $args['link'] ) . '&amp;description=' . urlencode( $args['title'] ) . '&amp;media=' . urlencode( $args['pinterest_image'] );
 					$social_links_array['pinterest'] = $soical_link;
 				}
 
-				if( $smof_data['sharing_email'] ) {
+				if( $zdata['sharing_email'] ) {
 					$soical_link = 'mailto:?subject=' . $args['title'] . '&amp;body=' . $args['link'];
 					$social_links_array['mail'] = $soical_link;
 				}
@@ -374,7 +374,7 @@ if( ! class_exists( 'Zhane_SocialIcons' ) ) {
          * @return array  The social links array containing the social media and links to them.
          */
 		function get_authorpage_social_links_array( $args ) {	
-			global $smof_data;
+			global $zdata;
 
 			$social_links_array = array();
 

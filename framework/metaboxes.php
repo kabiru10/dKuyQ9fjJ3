@@ -3,8 +3,8 @@ class PyreThemeFrameworkMetaboxes {
 
 	public function __construct()
 	{
-		global $smof_data;
-		$this->data = $smof_data;
+		global $zdata;
+		$this->data = $zdata;
 
 		add_action('add_meta_boxes', array($this, 'add_meta_boxes'));
 		add_action('save_post', array($this, 'save_meta_boxes'));
@@ -27,7 +27,11 @@ class PyreThemeFrameworkMetaboxes {
 	{
 		$post_types = get_post_types( array( 'public' => true ) );
 
+<<<<<<< HEAD
 		$disallowed = array( 'page', 'post', 'attachment', 'zhane_portfolio', 'themefusion_elastic', 'product', 'wpsc-product', 'slide' );
+=======
+		$disallowed = array( 'page', 'post', 'attachment', 'zhane_portfolio', 'idh_elastic', 'product', 'wpsc-product', 'slide' );
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 
 		foreach ( $post_types as $post_type ) {
 			if ( in_array( $post_type, $disallowed ) )
@@ -42,7 +46,7 @@ class PyreThemeFrameworkMetaboxes {
 
 		$this->add_meta_box('portfolio_options', 'Portfolio Options', 'zhane_portfolio');
 
-		$this->add_meta_box('es_options', 'Elastic Slide Options', 'themefusion_elastic');
+		$this->add_meta_box('es_options', 'Elastic Slide Options', 'idh_elastic');
 
 		$this->add_meta_box('woocommerce_options', 'Product Options', 'product');
 
@@ -74,7 +78,7 @@ class PyreThemeFrameworkMetaboxes {
 
 	public function post_options()
 	{
-		$smof_data = $this->data;
+		$zdata = $this->data;
 		include 'views/metaboxes/style.php';
 		include 'views/metaboxes/post_options.php';
 	}

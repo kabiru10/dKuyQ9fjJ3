@@ -23,7 +23,7 @@ if( ! class_exists( 'ZhaneThemeUpdater' ) ) {
     	
     	function check_for_update( $transient ) {
             global $wp_filesystem;
-            $smof_data = of_get_options();
+            $zdata = of_get_options();
 
         	if( empty( $transient->checked ) )  {
                 return $transient;
@@ -37,8 +37,8 @@ if( ! class_exists( 'ZhaneThemeUpdater' ) ) {
 
             if( $this->api_url == 'http://updates.theme-fusion.com/zhane-theme.php' ) {
                 $request_args['item_code'] = '2833226';
-                $request_args['envato_username'] = $smof_data['tf_username'];
-                $request_args['api_key'] = $smof_data['tf_api'];
+                $request_args['envato_username'] = $zdata['tf_username'];
+                $request_args['api_key'] = $zdata['tf_api'];
             }
 
             $filename = trailingslashit( get_template_directory() ) . 'log.txt';            

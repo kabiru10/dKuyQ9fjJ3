@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 	<?php
-	global $smof_data;
+	global $zdata;
 	if(get_post_meta($post->ID, 'pyre_width', true) == 'half') {
 		$portfolio_width = 'half';
 	} else {
 		$portfolio_width = 'full';
 	}
-	if( ! $smof_data['portfolio_featured_images'] && 
+	if( ! $zdata['portfolio_featured_images'] && 
 		$portfolio_width == 'half' 
 	) {
 		$portfolio_width = 'full';
@@ -30,10 +30,10 @@
 		$sidebar_css = 'float:right;';
 		$class = 'with-sidebar';
 	} elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'default') {
-		if($smof_data['default_sidebar_pos'] == 'Left') {
+		if($zdata['default_sidebar_pos'] == 'Left') {
 			$content_css = 'float:right;';
 			$sidebar_css = 'float:left;';
-		} elseif($smof_data['default_sidebar_pos'] == 'Right') {
+		} elseif($zdata['default_sidebar_pos'] == 'Right') {
 			$content_css = 'float:left;';
 			$sidebar_css = 'float:right;';
 		}
@@ -63,7 +63,7 @@
 			$nav_categories = $categoryID;
 		}
 		?>
-		<?php if(!$smof_data['portfolio_pn_nav']): ?>
+		<?php if(!$zdata['portfolio_pn_nav']): ?>
 		<div class="single-navigation clearfix">
 			<?php
 			if($portfolioID || $categoryID) {
@@ -107,11 +107,11 @@
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<?php
 			if( ! post_password_required($post->ID) ):
-			if( $smof_data['portfolio_featured_images'] ):
-			if($smof_data['legacy_posts_slideshow']):
+			if( $zdata['portfolio_featured_images'] ):
+			if($zdata['legacy_posts_slideshow']):
 			$args = array(
 			    'post_type' => 'attachment',
-			    'numberposts' => $smof_data['posts_slideshow_number']-1,
+			    'numberposts' => $zdata['posts_slideshow_number']-1,
 			    'post_status' => null,
 			    'post_parent' => $post->ID,
 				'orderby' => 'menu_order',
@@ -124,7 +124,7 @@
 			?>
 			<div class="fusion-flexslider flexslider post-slideshow">
 				<ul class="slides">
-					<?php if(!$smof_data['posts_slideshow'] || (get_post_meta($post->ID, 'pyre_video', true) && get_post_meta($post->ID, 'pyre_show_first_featured_image', true) == 'no')): ?>
+					<?php if(!$zdata['posts_slideshow'] || (get_post_meta($post->ID, 'pyre_video', true) && get_post_meta($post->ID, 'pyre_show_first_featured_image', true) == 'no')): ?>
 					<?php if(get_post_meta($post->ID, 'pyre_video', true)): ?>
 					<li>
 						<div class="full-video">
@@ -136,7 +136,7 @@
 					<?php $full_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full'); ?>
 					<?php $attachment_data = wp_get_attachment_metadata(get_post_thumbnail_id()); ?>
 					<li>
-						<?php if( ! $smof_data['status_lightbox'] && ! $smof_data['status_lightbox_single'] ): ?>
+						<?php if( ! $zdata['status_lightbox'] && ! $zdata['status_lightbox_single'] ): ?>
 						<a href="<?php echo $full_image[0]; ?>" rel="prettyPhoto[gallery<?php the_ID(); ?>]" title="<?php echo get_post_field('post_excerpt', get_post_thumbnail_id()); ?>"><img src="<?php echo $attachment_image[0]; ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>" /></a>
 						<?php else: ?>
 						<img src="<?php echo $attachment_image[0]; ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>" />
@@ -156,7 +156,7 @@
 					<?php $full_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full'); ?>
 					<?php $attachment_data = wp_get_attachment_metadata(get_post_thumbnail_id()); ?>
 					<li>
-						<?php if( ! $smof_data['status_lightbox'] && ! $smof_data['status_lightbox_single'] ): ?>
+						<?php if( ! $zdata['status_lightbox'] && ! $zdata['status_lightbox_single'] ): ?>
 						<a href="<?php echo $full_image[0]; ?>" rel="prettyPhoto[gallery<?php the_ID(); ?>]" title="<?php echo get_post_field('post_excerpt', get_post_thumbnail_id()); ?>"><img src="<?php echo $attachment_image[0]; ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>" /></a>
 						<?php else: ?>
 						<img src="<?php echo $attachment_image[0]; ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>" />
@@ -168,7 +168,7 @@
 					<?php $full_image = wp_get_attachment_image_src($attachment->ID, 'full'); ?>
 					<?php $attachment_data = wp_get_attachment_metadata($attachment->ID); ?>
 					<li>
-						<?php if( ! $smof_data['status_lightbox'] && ! $smof_data['status_lightbox_single'] ): ?>
+						<?php if( ! $zdata['status_lightbox'] && ! $zdata['status_lightbox_single'] ): ?>
 						<a href="<?php echo $full_image[0]; ?>" rel="prettyPhoto[gallery<?php the_ID(); ?>]" title="<?php echo get_post_field('post_excerpt', $attachment->ID); ?>"><img src="<?php echo $attachment_image[0]; ?>" alt="<?php echo get_post_meta($attachment->ID, '_wp_attachment_image_alt', true); ?>" /></a>
 						<?php else: ?>
 						<img src="<?php echo $attachment_image[0]; ?>" alt="<?php echo get_post_meta($attachment->ID, '_wp_attachment_image_alt', true); ?>" />
@@ -185,7 +185,7 @@
 			?>
 			<div class="fusion-flexslider flexslider post-slideshow">
 				<ul class="slides">
-					<?php if(!$smof_data['posts_slideshow'] || (get_post_meta($post->ID, 'pyre_video', true) && get_post_meta($post->ID, 'pyre_show_first_featured_image', true) == 'no')): ?>
+					<?php if(!$zdata['posts_slideshow'] || (get_post_meta($post->ID, 'pyre_video', true) && get_post_meta($post->ID, 'pyre_show_first_featured_image', true) == 'no')): ?>
 					<?php if(get_post_meta($post->ID, 'pyre_video', true)): ?>
 					<li>
 						<div class="full-video">
@@ -197,7 +197,7 @@
 					<?php $full_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full'); ?>
 					<?php $attachment_data = wp_get_attachment_metadata(get_post_thumbnail_id()); ?>
 					<li>
-						<?php if( ! $smof_data['status_lightbox'] && ! $smof_data['status_lightbox_single'] ): ?>
+						<?php if( ! $zdata['status_lightbox'] && ! $zdata['status_lightbox_single'] ): ?>
 						<a href="<?php echo $full_image[0]; ?>" rel="prettyPhoto[gallery<?php the_ID(); ?>]" title="<?php echo get_post_field('post_excerpt', get_post_thumbnail_id()); ?>"><img src="<?php echo $attachment_image[0]; ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>" /></a>
 						<?php else: ?>
 						<img src="<?php echo $attachment_image[0]; ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>" />
@@ -217,7 +217,7 @@
 					<?php $full_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full'); ?>
 					<?php $attachment_data = wp_get_attachment_metadata(get_post_thumbnail_id()); ?>
 					<li>
-						<?php if( ! $smof_data['status_lightbox'] && ! $smof_data['status_lightbox_single'] ): ?>
+						<?php if( ! $zdata['status_lightbox'] && ! $zdata['status_lightbox_single'] ): ?>
 						<a href="<?php echo $full_image[0]; ?>" rel="prettyPhoto[gallery<?php the_ID(); ?>]" title="<?php echo get_post_field('post_excerpt', get_post_thumbnail_id()); ?>"><img src="<?php echo $attachment_image[0]; ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>" /></a>
 						<?php else: ?>
 						<img src="<?php echo $attachment_image[0]; ?>" alt="<?php echo get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true); ?>" />
@@ -226,7 +226,11 @@
 					<?php endif; ?>
 					<?php
 					$i = 2;
+<<<<<<< HEAD
 					while($i <= $smof_data['posts_slideshow_number']):
+=======
+					while($i <= $zdata['posts_slideshow_number']):
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 					$attachment_new_id = kd_mfi_get_featured_image_id('featured-image-'.$i, 'zhane_portfolio');
 					if($attachment_new_id):
 					?>
@@ -234,7 +238,7 @@
 					<?php $full_image = wp_get_attachment_image_src($attachment_new_id, 'full'); ?>
 					<?php $attachment_data = wp_get_attachment_metadata($attachment_new_id); ?>
 					<li>
-						<?php if( ! $smof_data['status_lightbox'] && ! $smof_data['status_lightbox_single'] ): ?>
+						<?php if( ! $zdata['status_lightbox'] && ! $zdata['status_lightbox_single'] ): ?>
 						<a href="<?php echo $full_image[0]; ?>" rel="prettyPhoto[gallery<?php the_ID(); ?>]" title="<?php echo get_post_field('post_excerpt', $attachment_new_id); ?>"><img src="<?php echo $attachment_image[0]; ?>" alt="<?php echo get_post_meta($attachment_new_id, '_wp_attachment_image_alt', true); ?>" /></a>
 						<?php else: ?>
 						<img src="<?php echo $attachment_image[0]; ?>" alt="<?php echo get_post_meta($attachment_new_id, '_wp_attachment_image_alt', true); ?>" />
@@ -311,7 +315,7 @@
 						<span><a href="<?php echo get_post_meta($post->ID, 'pyre_copy_url', true); ?>"><?php echo get_post_meta($post->ID, 'pyre_copy_url_text', true); ?></a></span>
 					</div>
 					<?php endif; ?>
-					<?php if($smof_data['portfolio_author']): ?>
+					<?php if($zdata['portfolio_author']): ?>
 					<div class="project-info-box vcard">
 						<h4><?php echo __('By', 'Zhane'); ?>:</h4><span class="fn"><?php the_author_posts_link(); ?></span>
 					</div>
@@ -321,15 +325,15 @@
 			</div>
 			<div class="portfolio-sep"></div>
 			<?php if( ! post_password_required($post->ID) ): ?>
-			<?php if( $smof_data['portfolio_social_sharing_box'] ):
+			<?php if( $zdata['portfolio_social_sharing_box'] ):
 
 				$sharingbox_soical_icon_options = array (
 					'sharingbox'		=> 'yes',
-					'icon_colors' 		=> $smof_data['sharing_social_links_icon_color'],
-					'box_colors' 		=> $smof_data['sharing_social_links_box_color'],
-					'icon_boxed' 		=> $smof_data['sharing_social_links_boxed'],
-					'icon_boxed_radius' => $smof_data['sharing_social_links_boxed_radius'],
-					'tooltip_placement'	=> $smof_data['sharing_social_links_tooltip_placement'],
+					'icon_colors' 		=> $zdata['sharing_social_links_icon_color'],
+					'box_colors' 		=> $zdata['sharing_social_links_box_color'],
+					'icon_boxed' 		=> $zdata['sharing_social_links_boxed'],
+					'icon_boxed_radius' => $zdata['sharing_social_links_boxed_radius'],
+					'tooltip_placement'	=> $zdata['sharing_social_links_tooltip_placement'],
 					'linktarget'		=> '_blank',
 					'title'				=> urlencode( $post->post_title ),
 					'description'		=> get_the_title( $post->ID ),
@@ -343,9 +347,9 @@
 				</div>
 			<?php endif; ?>
 
-			<?php if( ($smof_data['portfolio_related_posts'] && get_post_meta($post->ID, 'pyre_related_posts', true) != 'no' ) ||
-					  ( ! $smof_data['portfolio_related_posts'] && get_post_meta($post->ID, 'pyre_related_posts', true) == 'yes' ) ): ?>
-			<?php $projects = get_related_projects($post->ID, $smof_data['number_related_posts']); ?>
+			<?php if( ($zdata['portfolio_related_posts'] && get_post_meta($post->ID, 'pyre_related_posts', true) != 'no' ) ||
+					  ( ! $zdata['portfolio_related_posts'] && get_post_meta($post->ID, 'pyre_related_posts', true) == 'yes' ) ): ?>
+			<?php $projects = get_related_projects($post->ID, $zdata['number_related_posts']); ?>
 			<?php if($projects->have_posts() ): ?>
 			<div class="related-posts related-projects">		
 				<div class="fusion-title title"><h2 class="title-heading-left"><?php echo __('Related Projects', 'Zhane'); ?></h2><div class="title-sep-container"><div class="title-sep sep-double"></div></div></div>
@@ -356,7 +360,7 @@
 							<?php if(has_post_thumbnail()): ?>
 							<li>
 								<div class="image" aria-haspopup="true">
-										<?php if($smof_data['image_rollover']): ?>
+										<?php if($zdata['image_rollover']): ?>
 										<?php the_post_thumbnail('related-img'); ?>
 										<?php else: ?>
 										<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('related-img'); ?></a>
@@ -405,7 +409,7 @@
 			</div>
 			<?php endif; ?>
 			<?php endif; ?>
-			<?php if($smof_data['portfolio_comments']): ?>
+			<?php if($zdata['portfolio_comments']): ?>
 				<?php
 				wp_reset_query();
 				comments_template();

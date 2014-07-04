@@ -7,7 +7,7 @@
  * Add any modifications necessary under a child theme.
  *
  * @package  Fusion/Template
- * @author   ThemeFusion
+ * @author   idh
  * @link     http://theme-fusion.com
  */
 
@@ -56,7 +56,7 @@ if( ! class_exists( 'FusionTemplateWoo' ) ) {
     	} // end __construct();
 
 		function before_container() {
-			global $smof_data, $post;
+			global $zdata, $post;
 
 			if(is_shop()) {
 				$pageID = get_option('woocommerce_shop_page_id');
@@ -86,23 +86,23 @@ if( ! class_exists( 'FusionTemplateWoo' ) ) {
 				$content_css = 'float:left;';
 				$sidebar_css = 'float:right;';
 			} elseif(get_post_meta($pageID, 'pyre_sidebar_position', true) == 'default') {
-				if($smof_data['default_sidebar_pos'] == 'Left') {
+				if($zdata['default_sidebar_pos'] == 'Left') {
 					$content_css = 'float:right;';
 					$sidebar_css = 'float:left;';
-				} elseif($smof_data['default_sidebar_pos'] == 'Right') {
+				} elseif($zdata['default_sidebar_pos'] == 'Right') {
 					$content_css = 'float:left;';
 					$sidebar_css = 'float:right;';
 				}
 			}
 			if(is_product_category() || is_product_tag()) {
-				if($smof_data['woocommerce_archive_sidebar'] == 'None') {
+				if($zdata['woocommerce_archive_sidebar'] == 'None') {
 					$content_css = 'width:100%';
 					$sidebar_css = 'display:none';
 				} else {
-					if($smof_data['default_sidebar_pos'] == 'Left') {
+					if($zdata['default_sidebar_pos'] == 'Left') {
 						$content_css = 'float:right;';
 						$sidebar_css = 'float:left;';
-					} elseif($smof_data['default_sidebar_pos'] == 'Right') {
+					} elseif($zdata['default_sidebar_pos'] == 'Right') {
 						$content_css = 'float:left;';
 						$sidebar_css = 'float:right;';
 					}
@@ -121,7 +121,7 @@ if( ! class_exists( 'FusionTemplateWoo' ) ) {
 		}
 
 		function add_sidebar() {
-			global $smof_data, $post;
+			global $zdata, $post;
 
 			if(is_shop()) {
 				$pageID = get_option('woocommerce_shop_page_id');
@@ -150,23 +150,23 @@ if( ! class_exists( 'FusionTemplateWoo' ) ) {
 				$content_css = 'float:left;';
 				$sidebar_css = 'float:right;';
 			} elseif(get_post_meta($pageID, 'pyre_sidebar_position', true) == 'default') {
-				if($smof_data['default_sidebar_pos'] == 'Left') {
+				if($zdata['default_sidebar_pos'] == 'Left') {
 					$content_css = 'float:right;';
 					$sidebar_css = 'float:left;';
-				} elseif($smof_data['default_sidebar_pos'] == 'Right') {
+				} elseif($zdata['default_sidebar_pos'] == 'Right') {
 					$content_css = 'float:left;';
 					$sidebar_css = 'float:right;';
 				}
 			}
 			if(is_product_category() || is_product_tag()) {
-				if($smof_data['woocommerce_archive_sidebar'] == 'None') {
+				if($zdata['woocommerce_archive_sidebar'] == 'None') {
 					$content_css = 'width:100%';
 					$sidebar_css = 'display:none';
 				} else {
-					if($smof_data['default_sidebar_pos'] == 'Left') {
+					if($zdata['default_sidebar_pos'] == 'Left') {
 						$content_css = 'float:right;';
 						$sidebar_css = 'float:left;';
-					} elseif($smof_data['default_sidebar_pos'] == 'Right') {
+					} elseif($zdata['default_sidebar_pos'] == 'Right') {
 						$content_css = 'float:left;';
 						$sidebar_css = 'float:right;';
 					}
@@ -179,7 +179,7 @@ if( ! class_exists( 'FusionTemplateWoo' ) ) {
 			if(is_product()) {
 				generated_dynamic_sidebar();
 			} elseif(is_product_category() || is_product_tag()) {
-				generated_dynamic_sidebar($smof_data['woocommerce_archive_sidebar']);
+				generated_dynamic_sidebar($zdata['woocommerce_archive_sidebar']);
 			} else {
 				$shop_page_id = get_option('woocommerce_shop_page_id');
 				$name = get_post_meta($shop_page_id, 'sbg_selected_sidebar_replacement', true);
@@ -208,7 +208,7 @@ if( ! class_exists( 'FusionTemplateWoo' ) ) {
 }
 new FusionTemplateWoo();
 
-global $smof_data;
+global $zdata;
 
 add_filter( 'get_product_search_form' , 'zhane_product_search_form' );
 
@@ -227,21 +227,29 @@ function zhane_product_search_form( $form )
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 
+<<<<<<< HEAD
 if( ! $smof_data['woocommerce_zhane_ordering'] ) {
+=======
+if( ! $zdata['woocommerce_zhane_ordering'] ) {
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 
 	add_action('woocommerce_before_shop_loop', 'zhane_woocommerce_catalog_ordering', 30);
 }
 function zhane_woocommerce_catalog_ordering() {
+<<<<<<< HEAD
 	global $smof_data;
+=======
+	global $zdata;
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 
 	parse_str($_SERVER['QUERY_STRING'], $params);
 
 	$query_string = '?'.$_SERVER['QUERY_STRING'];
 
 	// replace it with theme option
-	if($smof_data['woo_items']) {
-		$per_page = $smof_data['woo_items'];
+	if($zdata['woo_items']) {
+		$per_page = $zdata['woo_items'];
 	} else {
 		$per_page = 12;
 	}
@@ -321,7 +329,11 @@ function zhane_woocommerce_catalog_ordering() {
 	echo $html;
 }
 
+<<<<<<< HEAD
 if( ! $smof_data['woocommerce_zhane_ordering'] ) {
+=======
+if( ! $zdata['woocommerce_zhane_ordering'] ) {
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 	add_action('woocommerce_get_catalog_ordering_args', 'zhane_woocommerce_get_catalog_ordering_args', 20);
 }
 function zhane_woocommerce_get_catalog_ordering_args($args)
@@ -428,12 +440,12 @@ function fusion_order_by_rating_post_clauses( $args ) {
 add_filter('loop_shop_per_page', 'zhane_loop_shop_per_page');
 function zhane_loop_shop_per_page()
 {
-	global $smof_data;
+	global $zdata;
 
 	parse_str($_SERVER['QUERY_STRING'], $params);
 
-	if($smof_data['woo_items']) {
-		$per_page = $smof_data['woo_items'];
+	if($zdata['woo_items']) {
+		$per_page = $zdata['woo_items'];
 	} else {
 		$per_page = 12;
 	}
@@ -560,14 +572,14 @@ add_action('woocommerce_after_single_product_summary', 'zhane_woocommerce_after_
 function zhane_woocommerce_after_single_product_summary()
 {
 
-	global $smof_data;
+	global $zdata;
 
 	$nofollow = '';
-	if($smof_data['nofollow_social_links']) {
+	if($zdata['nofollow_social_links']) {
 		$nofollow = ' rel="nofollow"';
 	}
 	$social = '<div style="clear:both;"></div>';
-	if($smof_data['woocommerce_social_links']) {
+	if($zdata['woocommerce_social_links']) {
 		$social .= '<ul class="social-share">
 			<li class="facebook">
 				<a href="http://www.facebook.com/sharer.php?s=100&p&#91;url&#93;=' . get_permalink() . '&p&#91;title&#93;=' . get_the_title() .'" target="_blank"' . $nofollow .'>
@@ -827,7 +839,11 @@ function zhane_woocommerce_checkout_coupon_form($args)
 	<?php
 }
 
+<<<<<<< HEAD
 if( ! $smof_data['woocommerce_one_page_checkout'] ) {
+=======
+if( ! $zdata['woocommerce_one_page_checkout'] ) {
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 	add_action('woocommerce_before_checkout_form', 'zhane_woocommerce_before_checkout_form');
 }
 function zhane_woocommerce_before_checkout_form($args)
@@ -872,7 +888,11 @@ function zhane_woocommerce_before_checkout_form($args)
 
 }
 
+<<<<<<< HEAD
 if( ! $smof_data['woocommerce_one_page_checkout'] ) {
+=======
+if( ! $zdata['woocommerce_one_page_checkout'] ) {
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 	add_action('woocommerce_after_checkout_form', 'zhane_woocommerce_after_checkout_form');
 }
 function zhane_woocommerce_after_checkout_form($args)
@@ -885,12 +905,16 @@ function zhane_woocommerce_after_checkout_form($args)
 
 }
 
+<<<<<<< HEAD
 if( $smof_data['woocommerce_one_page_checkout'] ) {
+=======
+if( $zdata['woocommerce_one_page_checkout'] ) {
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 	add_action('woocommerce_checkout_before_customer_details', 'zhane_woocommerce_checkout_before_customer_details');
 }
 function zhane_woocommerce_checkout_before_customer_details($args)
 {
-	global $smof_data, $woocommerce;
+	global $zdata, $woocommerce;
 
 	if ( WC()->cart->needs_shipping() && ! WC()->cart->ship_to_billing_address_only() ||
 			   apply_filters( 'woocommerce_enable_order_notes_field', get_option( 'woocommerce_enable_order_comments', 'yes' ) === 'yes' ) && ( ! WC()->cart->needs_shipping() || WC()->cart->ship_to_billing_address_only() )
@@ -906,12 +930,16 @@ function zhane_woocommerce_checkout_before_customer_details($args)
 
 }
 
+<<<<<<< HEAD
 if( $smof_data['woocommerce_one_page_checkout'] ) {
+=======
+if( $zdata['woocommerce_one_page_checkout'] ) {
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 	add_action('woocommerce_checkout_after_customer_details', 'zhane_woocommerce_checkout_after_customer_details');
 }
 function zhane_woocommerce_checkout_after_customer_details($args)
 {
-	global $smof_data, $woocommerce;
+	global $zdata, $woocommerce;
 
 	if ( WC()->cart->needs_shipping() && ! WC()->cart->ship_to_billing_address_only() ||
 			   apply_filters( 'woocommerce_enable_order_notes_field', get_option( 'woocommerce_enable_order_comments', 'yes' ) === 'yes' ) && ( ! WC()->cart->needs_shipping() || WC()->cart->ship_to_billing_address_only() )
@@ -936,7 +964,7 @@ function zhane_woocommerce_checkout_after_customer_details($args)
 add_action('woocommerce_checkout_billing', 'zhane_woocommerce_checkout_billing', 20);
 function zhane_woocommerce_checkout_billing($args)
 {
-	global $smof_data, $woocommerce;
+	global $zdata, $woocommerce;
 
 	if ( WC()->cart->needs_shipping() && ! WC()->cart->ship_to_billing_address_only() ||
 			   apply_filters( 'woocommerce_enable_order_notes_field', get_option( 'woocommerce_enable_order_comments', 'yes' ) === 'yes' ) && ( ! WC()->cart->needs_shipping() || WC()->cart->ship_to_billing_address_only() )
@@ -946,7 +974,7 @@ function zhane_woocommerce_checkout_billing($args)
 		$data_name = '#order_review';
 	}
 
-	if( ! $smof_data['woocommerce_one_page_checkout'] ) {
+	if( ! $zdata['woocommerce_one_page_checkout'] ) {
 	?>
 
 	<a data-name="<?php echo $data_name; ?>" href="#" class="fusion-button button-default button-medium  button default medium continue-checkout"><?php _e('Continue', 'Zhane'); ?></a>
@@ -960,9 +988,9 @@ function zhane_woocommerce_checkout_billing($args)
 add_action('woocommerce_checkout_shipping', 'zhane_woocommerce_checkout_shipping', 20);
 function zhane_woocommerce_checkout_shipping($args)
 {
-	global $smof_data;
+	global $zdata;
 
-	if( ! $smof_data['woocommerce_one_page_checkout'] ) {
+	if( ! $zdata['woocommerce_one_page_checkout'] ) {
 	?>
 
 	<a data-name="#order_review" href="#" class="fusion-button button-default button-medium continue-checkout button default medium"><?php _e('Continue', 'Zhane'); ?></a>
@@ -976,9 +1004,13 @@ function zhane_woocommerce_checkout_shipping($args)
 
 add_filter('woocommerce_enable_order_notes_field', 'zhane_enable_order_notes_field');
 function zhane_enable_order_notes_field() {
+<<<<<<< HEAD
 	global $smof_data;
+=======
+	global $zdata;
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 
-	if( ! $smof_data['woocommerce_enable_order_notes'] ) {
+	if( ! $zdata['woocommerce_enable_order_notes'] ) {
 		return 0;
 	}
 
@@ -986,7 +1018,11 @@ function zhane_enable_order_notes_field() {
 
 }
 
+<<<<<<< HEAD
 if( $smof_data['woocommerce_one_page_checkout'] ) {
+=======
+if( $zdata['woocommerce_one_page_checkout'] ) {
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 	add_action('woocommerce_review_order_after_payment', 'zhane_woocommerce_review_order_after_payment');
 }
 function zhane_woocommerce_review_order_after_payment() {
@@ -1039,7 +1075,7 @@ function zhane_woocommerce_after_customer_login_form()
 add_action('woocommerce_before_my_account', 'zhane_woocommerce_before_my_account');
 function zhane_woocommerce_before_my_account( $order_count, $edit_address = false)
 {
-	global $smof_data, $woocommerce, $current_user;
+	global $zdata, $woocommerce, $current_user;
 	$edit_address = is_wc_endpoint_url('edit-address');
 	?>
 	<p class="zhane_myaccount_user">
@@ -1052,14 +1088,14 @@ function zhane_woocommerce_before_my_account( $order_count, $edit_address = fals
 			);
 			?>
 			</span>
-			<?php if($smof_data['woo_acc_msg_1']): ?>
+			<?php if($zdata['woo_acc_msg_1']): ?>
 			<span class="msg">
-				<?php echo $smof_data['woo_acc_msg_1']; ?>
+				<?php echo $zdata['woo_acc_msg_1']; ?>
 			</span>
 			<?php endif; ?>
-			<?php if($smof_data['woo_acc_msg_2']): ?>
+			<?php if($zdata['woo_acc_msg_2']): ?>
 			<span class="msg">
-				<?php echo $smof_data['woo_acc_msg_2']; ?>
+				<?php echo $zdata['woo_acc_msg_2']; ?>
 			</span>
 			<?php endif; ?>
 			<span class="view-cart">

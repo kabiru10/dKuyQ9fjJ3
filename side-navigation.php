@@ -15,10 +15,10 @@ get_header(); ?>
 		$content_css = 'float:left;';
 		$sidebar_css = 'float:right;';
 	} elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'default') {
-		if($smof_data['default_sidebar_pos'] == 'Left') {
+		if($zdata['default_sidebar_pos'] == 'Left') {
 			$content_css = 'float:right;';
 			$sidebar_css = 'float:left;';
-		} elseif($smof_data['default_sidebar_pos'] == 'Right') {
+		} elseif($zdata['default_sidebar_pos'] == 'Right') {
 			$content_css = 'float:left;';
 			$sidebar_css = 'float:right;';
 		}
@@ -30,9 +30,9 @@ get_header(); ?>
 			<span class="entry-title" style="display: none;"><?php the_title(); ?></span>
 			<span class="vcard" style="display: none;"><span class="fn"><?php the_author_posts_link(); ?></span></span>
 			<span class="updated" style="display:none;"><?php the_modified_time( 'c' ); ?></span>
-			<?php global $smof_data;
+			<?php global $zdata;
 			if( ! post_password_required($post->ID) ):
-			if(!$smof_data['featured_images_pages'] && has_post_thumbnail()): ?>
+			if(!$zdata['featured_images_pages'] && has_post_thumbnail()): ?>
 			<div class="image">
 				<?php the_post_thumbnail('blog-large'); ?>
 			</div>
@@ -43,7 +43,7 @@ get_header(); ?>
 				<?php wp_link_pages(); ?>
 			</div>
 			<?php if( ! post_password_required($post->ID) ): ?>
-			<?php if($smof_data['comments_pages']): ?>
+			<?php if($zdata['comments_pages']): ?>
 				<?php
 				wp_reset_query();
 				comments_template();

@@ -1,6 +1,6 @@
 		</div>
 	</div>
-	<?php global $smof_data, $social_icons; ?>
+	<?php global $zdata, $social_icons; ?>
 	<?php
 	$object_id = get_queried_object_id();
 	if((get_option('show_on_front') && get_option('page_for_posts') && is_home()) ||
@@ -19,14 +19,19 @@
 	}
 	?>
 	<?php if(!is_page_template('blank.php')): ?>
-	<?php if( ($smof_data['footer_widgets'] && get_post_meta($c_pageID, 'pyre_display_footer', true) != 'no') ||
-			  ( ! $smof_data['footer_widgets'] && get_post_meta($c_pageID, 'pyre_display_footer', true) == 'yes') ): ?>
+	<?php if( ($zdata['footer_widgets'] && get_post_meta($c_pageID, 'pyre_display_footer', true) != 'no') ||
+			  ( ! $zdata['footer_widgets'] && get_post_meta($c_pageID, 'pyre_display_footer', true) == 'yes') ): ?>
 	<footer class="footer-area">
 		<div class="zhane-row">
+<<<<<<< HEAD
 			<section class="fusion-columns row fusion-columns-<?php echo $smof_data['footer_widgets_columns']; ?> columns columns-<?php echo $smof_data['footer_widgets_columns']; ?>">
 				<?php $column_width = 12 / $smof_data['footer_widgets_columns']; ?>
+=======
+			<section class="fusion-columns row fusion-columns-<?php echo $zdata['footer_widgets_columns']; ?> columns columns-<?php echo $zdata['footer_widgets_columns']; ?>">
+				<?php $column_width = 12 / $zdata['footer_widgets_columns']; ?>
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 			
-				<?php if( $smof_data['footer_widgets_columns'] >= 1 ): ?>
+				<?php if( $zdata['footer_widgets_columns'] >= 1 ): ?>
 				<article class="fusion-column col <?php echo sprintf( 'col-lg-%s col-md-%s col-sm-%s', $column_width, $column_width, $column_width ); ?> ">
 				<?php
 				if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Widget 1')):
@@ -35,7 +40,7 @@
 				</article>
 				<?php endif; ?>
 				
-				<?php if( $smof_data['footer_widgets_columns'] >= 2 ): ?>
+				<?php if( $zdata['footer_widgets_columns'] >= 2 ): ?>
 				<article class="fusion-column col <?php echo sprintf( 'col-lg-%s col-md-%s col-sm-%s', $column_width, $column_width, $column_width ); ?>">
 				<?php
 				if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Widget 2')):
@@ -44,7 +49,7 @@
 				</article>
 				<?php endif; ?>
 				
-				<?php if( $smof_data['footer_widgets_columns'] >= 3 ): ?>
+				<?php if( $zdata['footer_widgets_columns'] >= 3 ): ?>
 				<article class="fusion-column col <?php echo sprintf( 'col-lg-%s col-md-%s col-sm-%s', $column_width, $column_width, $column_width ); ?>">
 				<?php
 				if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Widget 3')):
@@ -53,7 +58,7 @@
 				</article>
 				<?php endif; ?>
 				
-				<?php if( $smof_data['footer_widgets_columns'] >= 4 ): ?>
+				<?php if( $zdata['footer_widgets_columns'] >= 4 ): ?>
 				<article class="fusion-column col last <?php echo sprintf( 'col-lg-%s col-md-%s col-sm-%s', $column_width, $column_width, $column_width ); ?>">
 				<?php
 				if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Widget 4')):
@@ -66,24 +71,24 @@
 		</div>
 	</footer>
 	<?php endif; ?>
-	<?php if( ($smof_data['footer_copyright'] && get_post_meta($c_pageID, 'pyre_display_copyright', true) != 'no') ||
-			  ( ! $smof_data['footer_copyright'] && get_post_meta($c_pageID, 'pyre_display_copyright', true) == 'yes') ): ?>
+	<?php if( ($zdata['footer_copyright'] && get_post_meta($c_pageID, 'pyre_display_copyright', true) != 'no') ||
+			  ( ! $zdata['footer_copyright'] && get_post_meta($c_pageID, 'pyre_display_copyright', true) == 'yes') ): ?>
 	<footer id="footer">
 		<div class="zhane-row">
 			<div class="copyright-area-content">
 				<div class="copyright">
-					<div><?php echo $smof_data['footer_text'] ?></div>
+					<div><?php echo $zdata['footer_text'] ?></div>
 				</div>
 				<div class="fusion-social-links-footer">
-				<?php if($smof_data['icons_footer']) {
+				<?php if($zdata['icons_footer']) {
 
 					$footer_soical_icon_options = array (
-						'icon_colors' 		=> $smof_data['footer_social_links_icon_color'],
-						'box_colors' 		=> $smof_data['footer_social_links_box_color'],
-						'icon_boxed' 		=> $smof_data['footer_social_links_boxed'],
-						'icon_boxed_radius' => $smof_data['footer_social_links_boxed_radius'],
-						'tooltip_placement'	=> $smof_data['footer_social_links_tooltip_placement'],
-						'linktarget'		=> $smof_data['social_icons_new']
+						'icon_colors' 		=> $zdata['footer_social_links_icon_color'],
+						'box_colors' 		=> $zdata['footer_social_links_box_color'],
+						'icon_boxed' 		=> $zdata['footer_social_links_boxed'],
+						'icon_boxed_radius' => $zdata['footer_social_links_boxed_radius'],
+						'tooltip_placement'	=> $zdata['footer_social_links_tooltip_placement'],
+						'linktarget'		=> $zdata['social_icons_new']
 					);
 
 					//$footer_social_icons = new Zhane_SocialIcons( $footer_soical_icon_options );
@@ -103,7 +108,7 @@
 
 	<?php wp_footer(); ?>
 
-	<?php echo $smof_data['space_body']; ?>
+	<?php echo $zdata['space_body']; ?>
 
 	<!--[if lte IE 8]>
 	<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/respond.js"></script>

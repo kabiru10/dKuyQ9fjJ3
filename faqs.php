@@ -15,10 +15,10 @@ get_header(); ?>
 		$content_css = 'float:left;';
 		$sidebar_css = 'float:right;';
 	} elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'default') {
-		if($smof_data['default_sidebar_pos'] == 'Left') {
+		if($zdata['default_sidebar_pos'] == 'Left') {
 			$content_css = 'float:right;';
 			$sidebar_css = 'float:left;';
-		} elseif($smof_data['default_sidebar_pos'] == 'Right') {
+		} elseif($zdata['default_sidebar_pos'] == 'Right') {
 			$content_css = 'float:left;';
 			$sidebar_css = 'float:right;';
 		}
@@ -77,7 +77,7 @@ get_header(); ?>
 						<div id="collapse-<?php the_ID(); ?>" class="panel-collapse collapse">
 							<div class="panel-body toggle-content post-content">
 								<?php
-								if($smof_data['faq_featured_image']):
+								if($zdata['faq_featured_image']):
 								if(has_post_thumbnail()):
 								?>
 								<div class="flexslider post-slideshow">

@@ -1,9 +1,9 @@
 <?php 
 /**
- * SMOF Interface
+ * zindh Interface
  *
  * @package     WordPress
- * @subpackage  SMOF
+ * @subpackage  zindh
  * @since       1.4.0
  * @author      Syamil MJ
  */
@@ -28,30 +28,30 @@ function optionsframework_admin_init()
 		of_save_options($options_machine->Defaults);
 	}
 	
-	$smof_data = of_get_options();
-	$data = $smof_data;
+	$zdata = of_get_options();
+	$data = $zdata;
 
 	do_action('optionsframework_admin_init_before', array(
 			'of_options'		=> $of_options,
 			'options_machine'	=> $options_machine,
-			'smof_data'			=> $smof_data
+			'zdata'			=> $zdata
 		));
 	do_action('optionsframework_admin_init_after', array(
 			'of_options'		=> $of_options,
 			'options_machine'	=> $options_machine,
-			'smof_data'			=> $smof_data
+			'zdata'			=> $zdata
 		));
 
 	$new_fields = false;
 	foreach( $options_machine->Defaults as $field_name => $field_default ) {
-		if( ! isset( $smof_data[$field_name] ) ) {
+		if( ! isset( $zdata[$field_name] ) ) {
 			$new_fields = true;
-			$smof_data[$field_name] = $field_default;
+			$zdata[$field_name] = $field_default;
 		}
 	}
 
 	if( $new_fields == true ) {
-		of_save_options( $smof_data );
+		of_save_options( $zdata );
 	}
 
 }
@@ -87,8 +87,8 @@ function optionsframework_options_page(){
 	/*
 	//for debugging
 
-	$smof_data = of_get_options();
-	print_r($smof_data);
+	$zdata = of_get_options();
+	print_r($zdata);
 
 	*/	
 	
@@ -125,7 +125,7 @@ function of_style_only(){
  */
 function of_load_only() 
 {
-	//add_action('admin_head', 'smof_admin_head');
+	//add_action('admin_head', 'zindh_admin_head');
 	
 	wp_enqueue_script('jquery-ui-core');
 	wp_enqueue_script('jquery-ui-sortable');
@@ -134,12 +134,12 @@ function of_load_only()
 	wp_enqueue_script('tipsy', ADMIN_DIR .'assets/js/jquery.tipsy.js', array( 'jquery' ));
 	//wp_enqueue_script('color-picker', ADMIN_DIR .'assets/js/colorpicker.js', array('jquery'));
 	wp_enqueue_script('cookie', ADMIN_DIR . 'assets/js/cookie.js', 'jquery');
-	wp_enqueue_script('smof', ADMIN_DIR .'assets/js/smof.js', array( 'jquery' ));
+	wp_enqueue_script('zindh', ADMIN_DIR .'assets/js/zindh.js', array( 'jquery' ));
 	if(defined('ICL_LANGUAGE_CODE')) {
 	    $vars = array(
 	        'wpml_custom_current_lang' => ICL_LANGUAGE_CODE,
 	    );
-	    wp_localize_script('smof', 'smof_wpml', $vars );
+	    wp_localize_script('zindh', 'zindh_wpml', $vars );
 	}
 
 	// Enqueue colorpicker scripts for versions below 3.5 for compatibility
@@ -231,19 +231,19 @@ function of_ajax_callback()
 	elseif($save_type == 'restore_options')
 	{
 			
-		$smof_data = get_option(BACKUPS);
+		$zdata = get_option(BACKUPS);
 
-		update_option(OPTIONS, $smof_data);
+		update_option(OPTIONS, $zdata);
 
-		of_save_options($smof_data);
+		of_save_options($zdata);
 		
 		die('1'); 
 	}
 	elseif($save_type == 'import_options'){
 
 		$imported_data = $_POST['data'];
-		$smof_data = unserialize(base64_decode($imported_data)); //100% safe - ignore theme check nag
-		of_save_options($smof_data);
+		$zdata = unserialize(base64_decode($imported_data)); //100% safe - ignore theme check nag
+		of_save_options($zdata);
 
 		
 		die('1'); 
@@ -251,10 +251,10 @@ function of_ajax_callback()
 	elseif ($save_type == 'save')
 	{
 
-		wp_parse_str(stripslashes($_POST['data']), $smof_data);
-		unset($smof_data['security']);
-		unset($smof_data['of_save']);
-		of_save_options($smof_data);
+		wp_parse_str(stripslashes($_POST['data']), $zdata);
+		unset($zdata['security']);
+		unset($zdata['of_save']);
+		of_save_options($zdata);
 		
 		
 		die('1');

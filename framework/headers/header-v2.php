@@ -1,26 +1,26 @@
-<?php global $smof_data; ?>
+<?php global $zdata; ?>
 <div class="header-v2">
-	<?php if($smof_data['header_left_content'] != 'Leave Empty' || $smof_data['header_right_content'] != 'Leave Empty'): ?>
+	<?php if($zdata['header_left_content'] != 'Leave Empty' || $zdata['header_right_content'] != 'Leave Empty'): ?>
 	<div class="header-social">
 		<div class="zhane-row">
 			<div class="alignleft">
 				<?php
-				if($smof_data['header_left_content'] == 'Contact Info') {
+				if($zdata['header_left_content'] == 'Contact Info') {
 					get_template_part('framework/headers/header-info');
-				} elseif($smof_data['header_left_content'] == 'Social Links') {
+				} elseif($zdata['header_left_content'] == 'Social Links') {
 					get_template_part('framework/headers/header-social');
-				} elseif($smof_data['header_left_content'] == 'Navigation') {
+				} elseif($zdata['header_left_content'] == 'Navigation') {
 					get_template_part('framework/headers/header-menu');
 				}
 				?>
 			</div>
 			<div class="alignright">
 				<?php
-				if($smof_data['header_right_content'] == 'Contact Info') {
+				if($zdata['header_right_content'] == 'Contact Info') {
 					get_template_part('framework/headers/header-info');
-				} elseif($smof_data['header_right_content'] == 'Social Links') {
+				} elseif($zdata['header_right_content'] == 'Social Links') {
 					get_template_part('framework/headers/header-social');
-				} elseif($smof_data['header_right_content'] == 'Navigation') {
+				} elseif($zdata['header_right_content'] == 'Navigation') {
 					get_template_part('framework/headers/header-menu');
 				}
 				?>
@@ -29,21 +29,26 @@
 	</div>
 	<?php endif; ?>
 	<header id="header">
+<<<<<<< HEAD
 		<div class="zhane-row" style="padding-top:<?php echo $smof_data['margin_header_top']; ?>;padding-bottom:<?php echo $smof_data['margin_header_bottom']; ?>;">
 			<div class="logo" data-margin-right="<?php echo $smof_data['margin_logo_right']; ?>" data-margin-left="<?php echo $smof_data['margin_logo_left']; ?>" data-margin-top="<?php echo $smof_data['margin_logo_top']; ?>" data-margin-bottom="<?php echo $smof_data['margin_logo_bottom']; ?>" style="margin-right:<?php echo $smof_data['margin_logo_right']; ?>;margin-top:<?php echo $smof_data['margin_logo_top']; ?>;margin-left:<?php echo $smof_data['margin_logo_left']; ?>;margin-bottom:<?php echo $smof_data['margin_logo_bottom']; ?>;">
+=======
+		<div class="zhane-row" style="padding-top:<?php echo $zdata['margin_header_top']; ?>;padding-bottom:<?php echo $zdata['margin_header_bottom']; ?>;">
+			<div class="logo" data-margin-right="<?php echo $zdata['margin_logo_right']; ?>" data-margin-left="<?php echo $zdata['margin_logo_left']; ?>" data-margin-top="<?php echo $zdata['margin_logo_top']; ?>" data-margin-bottom="<?php echo $zdata['margin_logo_bottom']; ?>" style="margin-right:<?php echo $zdata['margin_logo_right']; ?>;margin-top:<?php echo $zdata['margin_logo_top']; ?>;margin-left:<?php echo $zdata['margin_logo_left']; ?>;margin-bottom:<?php echo $zdata['margin_logo_bottom']; ?>;">
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 				<a href="<?php bloginfo('url'); ?>">
-					<img src="<?php echo $smof_data['logo']; ?>" alt="<?php bloginfo('name'); ?>" class="normal_logo" />
-					<?php if($smof_data['logo_retina'] && $smof_data['retina_logo_width'] && $smof_data['retina_logo_height']): ?>
+					<img src="<?php echo $zdata['logo']; ?>" alt="<?php bloginfo('name'); ?>" class="normal_logo" />
+					<?php if($zdata['logo_retina'] && $zdata['retina_logo_width'] && $zdata['retina_logo_height']): ?>
 					<?php
 					$pixels ="";
-					if(is_numeric($smof_data['retina_logo_width']) && is_numeric($smof_data['retina_logo_height'])):
+					if(is_numeric($zdata['retina_logo_width']) && is_numeric($zdata['retina_logo_height'])):
 					$pixels ="px";
 					endif; ?>
-					<img src="<?php echo $smof_data["logo_retina"]; ?>" alt="<?php bloginfo('name'); ?>" style="width:<?php echo $smof_data["retina_logo_width"].$pixels; ?>;max-height:<?php echo $smof_data["retina_logo_height"].$pixels; ?>; height: auto !important" class="retina_logo" />
+					<img src="<?php echo $zdata["logo_retina"]; ?>" alt="<?php bloginfo('name'); ?>" style="width:<?php echo $zdata["retina_logo_width"].$pixels; ?>;max-height:<?php echo $zdata["retina_logo_height"].$pixels; ?>; height: auto !important" class="retina_logo" />
 					<?php endif; ?>
 				</a>
 			</div>
-			<?php if($smof_data['ubermenu']): ?>
+			<?php if($zdata['ubermenu']): ?>
 			<nav id="nav-uber">
 			<?php else: ?>
 			<nav id="nav" class="nav-holder">

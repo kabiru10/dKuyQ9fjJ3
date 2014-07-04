@@ -1,9 +1,9 @@
-<?php global $smof_data, $woocommerce, $main_menu; ?>
-<?php if(!$smof_data['ubermenu']): ?>
+<?php global $zdata, $woocommerce, $main_menu; ?>
+<?php if(!$zdata['ubermenu']): ?>
 <ul class="navigation menu fusion-navbar-nav">
 <?php endif; ?>
 	<?php
-	if(!$smof_data['ubermenu']) {
+	if(!$zdata['ubermenu']) {
 		echo $main_menu;
 	} else {
 		if( function_exists( 'uberMenu_direct' ) ) {
@@ -11,8 +11,8 @@
 		}
 	}
 	?>
-	<?php if(class_exists('Woocommerce') && !$smof_data['ubermenu']): ?>
-	<?php if($smof_data['woocommerce_acc_link_main_nav']): ?>
+	<?php if(class_exists('Woocommerce') && !$zdata['ubermenu']): ?>
+	<?php if($zdata['woocommerce_acc_link_main_nav']): ?>
 	<li class="my-account">
 		<a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>" class="my-account-link"><?php _e('My Account', 'Zhane'); ?></a>
 		<?php if(!is_user_logged_in()): ?>
@@ -45,7 +45,7 @@
 		<?php endif; ?>
 	</li>
 	<?php endif; ?>
-	<?php if($smof_data['woocommerce_cart_link_main_nav']): ?>
+	<?php if($zdata['woocommerce_cart_link_main_nav']): ?>
 	<li class="cart">
 		<?php if(!$woocommerce->cart->cart_contents_count): ?>
 		<a class="my-cart-link" href="<?php echo get_permalink(get_option('woocommerce_cart_page_id')); ?>"></a>
@@ -73,7 +73,7 @@
 	</li>
 	<?php endif; ?>
 	<?php endif; ?>
-	<?php if($smof_data['main_nav_search_icon'] && !$smof_data['ubermenu']): ?>
+	<?php if($zdata['main_nav_search_icon'] && !$zdata['ubermenu']): ?>
 	<li class="main-nav-search">
 		<a id="main-nav-search-link" class="search-link"></a>
 		<div id="main-nav-search-form" class="main-nav-search-form">
@@ -90,6 +90,6 @@
 		</div>
 	</li>
 	<?php endif; ?>
-<?php if(!$smof_data['ubermenu']): ?>
+<?php if(!$zdata['ubermenu']): ?>
 </ul>
 <?php endif; ?>

@@ -23,11 +23,11 @@ get_header(); ?>
 		$sidebar_exists = true;
 	} elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'default') {
 		$content_class = 'portfolio-four-sidebar';
-		if($smof_data['default_sidebar_pos'] == 'Left') {
+		if($zdata['default_sidebar_pos'] == 'Left') {
 			$content_css = 'float:right;';
 			$sidebar_css = 'float:left;';
 			$sidebar_exists = true;
-		} elseif($smof_data['default_sidebar_pos'] == 'Right') {
+		} elseif($zdata['default_sidebar_pos'] == 'Right') {
 			$content_css = 'float:left;';
 			$sidebar_css = 'float:right;';
 			$sidebar_exists = true;
@@ -56,7 +56,7 @@ get_header(); ?>
 		$args = array(
 			'post_type' => 'zhane_portfolio',
 			'paged' => $paged,
-			'posts_per_page' => $smof_data['portfolio_items'],
+			'posts_per_page' => $zdata['portfolio_items'],
 		);
 		$pcats = get_post_meta(get_the_ID(), 'pyre_portfolio_category', true);
 		if($pcats && $pcats[0] == 0) {
@@ -133,7 +133,7 @@ get_header(); ?>
 				<span class="updated" style="display: none;"><?php the_time('c'); ?></span>
 				<?php if(has_post_thumbnail()): ?>
 				<div class="image" aria-haspopup="true">
-					<?php if($smof_data['image_rollover']): ?>
+					<?php if($zdata['image_rollover']): ?>
 					<?php the_post_thumbnail('portfolio-four'); ?>
 					<?php else: ?>
 					<a href="<?php echo $permalink; ?>"><?php the_post_thumbnail('portfolio-four'); ?></a>
@@ -182,7 +182,7 @@ get_header(); ?>
 			</div>
 			<?php endif; endwhile; ?>
 		</div>
-		<?php themefusion_pagination($gallery->max_num_pages, $range = 2); ?>
+		<?php idh_pagination($gallery->max_num_pages, $range = 2); ?>
 		<?php endif; // password check ?>
 	</div>
 	<?php if( $sidebar_exists == true ): ?>

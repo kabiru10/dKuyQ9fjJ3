@@ -19,7 +19,7 @@ class Pyre_Tabs_Widget extends WP_Widget {
 
 	function widget($args, $instance)
 	{
-		global $smof_data, $post;
+		global $zdata, $post;
 
 		extract($args);
 
@@ -76,7 +76,7 @@ class Pyre_Tabs_Widget extends WP_Widget {
 								<div class="post-holder">
 									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 									<div class="meta">
-										<?php the_time($smof_data['date_format']); ?>
+										<?php the_time($zdata['date_format']); ?>
 									</div>
 								</div>
 							</li>
@@ -104,7 +104,7 @@ class Pyre_Tabs_Widget extends WP_Widget {
 								<div class="post-holder">
 									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 									<div class="meta">
-										<?php the_time($smof_data['date_format']); ?>
+										<?php the_time($zdata['date_format']); ?>
 									</div>
 								</div>
 							</li>

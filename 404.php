@@ -16,7 +16,7 @@
 						<h3><?php echo __('Here are some useful links:', 'Zhane'); ?></h3>
 
 						<?php
-						if( $smof_data['checklist_circle'] ) {
+						if( $zdata['checklist_circle'] ) {
 							$circle_class = 'circle-yes';
 						} else {
 							$circle_class = 'circle-no';

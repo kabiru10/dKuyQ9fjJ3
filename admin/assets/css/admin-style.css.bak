@@ -1,7 +1,7 @@
 /*-----------------------------------------------------------------------------------
 /* Admin styles
 /*-----------------------------------------------------------------------------------*/
-.smof_footer_info{
+.zindh_footer_info{
 	width: 785px;
 	margin: 0 15px;
 	font-size: 11px;
@@ -189,7 +189,7 @@ border-radius: 2px;
 #of_container #of-nav li.blog a{ background-image:url(../images/icon-docs.png);}
 #of_container #of-nav li.portfolio a{ background-image:url(../images/icon-portfolio.png);}
 //#of_container #of-nav li.socialmedia a, #of_container #of-nav li.socialsharingoptions a{ background-image:url(../images/icon-social.png);}
-#of_container #of-nav li.themefusionslider a{ background-image:url(../images/icon-slider.png);}
+#of_container #of-nav li.idhslider a{ background-image:url(../images/icon-slider.png);}
 #of_container #of-nav li.backup a {background: url(../images/icon-backup.png) no-repeat;}
 #of_container #of-nav li.lightbox a {background: url(../images/wrench16.png) no-repeat;}
 #of_container #of-nav li.socialsharingbox a {background: url(../images/social_sharing.png) no-repeat;}

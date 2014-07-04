@@ -19,7 +19,7 @@ class Social_Links_Widget extends WP_Widget {
 
 	function widget($args, $instance)
 	{
-		global $smof_data;
+		global $zdata;
 
 		extract($args);
 		$title = apply_filters('widget_title', $instance['title']);
@@ -33,23 +33,23 @@ class Social_Links_Widget extends WP_Widget {
 		$style = '';
 
 		if( ! isset( $instance['tooltip_pos'] ) || ! $instance['tooltip_pos'] ) {
-			$instance['tooltip_pos'] = $smof_data['social_links_tooltip_placement'];
+			$instance['tooltip_pos'] = $zdata['social_links_tooltip_placement'];
 		}
 
 		if( ! isset( $instance['icon_color'] ) || ! $instance['icon_color'] ) {
-			$instance['icon_color'] = $smof_data['social_links_icon_color'];
+			$instance['icon_color'] = $zdata['social_links_icon_color'];
 		}
 
 		if( ! isset( $instance['boxed_icon'] ) || ! $instance['boxed_icon'] ) {
-			$instance['boxed_icon'] = $smof_data['social_links_boxed'];
+			$instance['boxed_icon'] = $zdata['social_links_boxed'];
 		}
 
 		if( ! isset( $instance['boxed_color'] ) || ! $instance['boxed_color'] ) {
-			$instance['boxed_color'] = $smof_data['social_links_box_color'];
+			$instance['boxed_color'] = $zdata['social_links_box_color'];
 		}
 
 		if( ! isset( $instance['boxed_icon_radius'] ) || ! $instance['boxed_icon_radius'] ) {
-			$instance['boxed_icon_radius'] = $smof_data['social_links_boxed_radius'];
+			$instance['boxed_icon_radius'] = $zdata['social_links_boxed_radius'];
 		}
 
 		if(!isset($instance['linktarget'])) {
@@ -57,7 +57,7 @@ class Social_Links_Widget extends WP_Widget {
 		}
 
 		$nofollow = '';
-		if($smof_data['nofollow_social_links']) {
+		if($zdata['nofollow_social_links']) {
 			$nofollow = ' rel="nofollow"';
 		}
 
@@ -89,8 +89,8 @@ class Social_Links_Widget extends WP_Widget {
 			}
 		}
 
-		if( isset( $smof_data['social_sorter'] ) && $smof_data['social_sorter'] ) {
-			$order = $smof_data['social_sorter'];
+		if( isset( $zdata['social_sorter'] ) && $zdata['social_sorter'] ) {
+			$order = $zdata['social_sorter'];
 			$ordered_array = explode(',', $order);
 			
 			if( isset( $ordered_array ) && $ordered_array && is_array( $ordered_array ) ) {
@@ -98,8 +98,8 @@ class Social_Links_Widget extends WP_Widget {
 				$social_networks = array();
 				foreach( $ordered_array as $key => $field_order ) {
 					$field_order_number = str_replace(  'social_sorter_', '', $field_order );
-					$find_the_field = $smof_data['social_sorter_' . $field_order_number];
-					$field_name = str_replace( '_link', '', $smof_data['social_sorter_' . $field_order_number] );
+					$find_the_field = $zdata['social_sorter_' . $field_order_number];
+					$field_name = str_replace( '_link', '', $zdata['social_sorter_' . $field_order_number] );
 					
 					if( $field_name == 'email' ) {
 						$field_name = 'mail';
@@ -135,8 +135,8 @@ class Social_Links_Widget extends WP_Widget {
 				endif;
 			endforeach;
 			?>
-			<?php if( isset($instance['show_custom']) && $instance['show_custom'] == 'Yes' && $smof_data['custom_icon_name'] && $smof_data['custom_icon_image'] ): ?>
-			<a class="fusion-social-network-icon fusion-tooltip" target="<?php echo $instance['linktarget']; ?>" href="<?php echo $smof_data['custom_icon_link']; ?>"<?php echo $nofollow; ?> data-placement="<?php echo strtolower( $instance['tooltip_pos'] ); ?>" data-title="<?php echo $smof_data['custom_icon_name']; ?>" data-toggle="tooltip" data-original-title="" title="" style="<?php echo $style; ?>"><img src="<?php echo $smof_data['custom_icon_image']; ?>" alt="<?php echo $smof_data['custom_icon_name']; ?>" /></a>
+			<?php if( isset($instance['show_custom']) && $instance['show_custom'] == 'Yes' && $zdata['custom_icon_name'] && $zdata['custom_icon_image'] ): ?>
+			<a class="fusion-social-network-icon fusion-tooltip" target="<?php echo $instance['linktarget']; ?>" href="<?php echo $zdata['custom_icon_link']; ?>"<?php echo $nofollow; ?> data-placement="<?php echo strtolower( $instance['tooltip_pos'] ); ?>" data-title="<?php echo $zdata['custom_icon_name']; ?>" data-toggle="tooltip" data-original-title="" title="" style="<?php echo $style; ?>"><img src="<?php echo $zdata['custom_icon_image']; ?>" alt="<?php echo $zdata['custom_icon_name']; ?>" /></a>
 			<?php endif; ?>
 		</ul>
 		<?php

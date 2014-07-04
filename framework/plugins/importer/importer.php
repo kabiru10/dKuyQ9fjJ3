@@ -94,8 +94,8 @@ function fusion_importer() {
             // Import Theme Options
             $theme_options_txt = get_template_directory_uri() . '/framework/plugins/importer/data/theme_options.txt'; // theme options data file
             $theme_options_txt = wp_remote_get( $theme_options_txt );
-            $smof_data = unserialize( base64_decode( $theme_options_txt['body'])  );
-            update_option( OPTIONS, $smof_data ); // update theme options
+            $zdata = unserialize( base64_decode( $theme_options_txt['body'])  );
+            update_option( OPTIONS, $zdata ); // update theme options
 
             // Add sidebar widget areas
             $sidebars = array(

@@ -81,6 +81,10 @@
 	</form>
 	
 	<div style="clear:both;"></div>
+<<<<<<< HEAD
 	<?php // Zhane Edit (killed SMOF notice) ?>
+=======
+	<?php // Zhane Edit (killed zindh notice) ?>
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 
 </div><!--wrap-->

@@ -1,8 +1,8 @@
 /**
- * SMOF js
+ * zindh js
  *
  * contains the core functionalities to be used
- * inside SMOF
+ * inside zindh
  */
 
 jQuery.noConflict();
@@ -289,8 +289,8 @@ jQuery(document).ready(function($){
 				security: nonce
 			};
 
-			if( typeof(smof_wpml) != 'undefined' && smof_wpml.wpml_custom_current_lang ) {
-				data.wpml = smof_wpml.wpml_custom_current_lang;
+			if( typeof(zindh_wpml) != 'undefined' && zindh_wpml.wpml_custom_current_lang ) {
+				data.wpml = zindh_wpml.wpml_custom_current_lang;
 			}
 
 			$.post(ajaxurl, data, function(response) {
@@ -340,8 +340,8 @@ jQuery(document).ready(function($){
 				security: nonce
 			};
 
-			if( typeof(smof_wpml) != 'undefined' && smof_wpml.wpml_custom_current_lang ) {
-				data.wpml = smof_wpml.wpml_custom_current_lang;
+			if( typeof(zindh_wpml) != 'undefined' && zindh_wpml.wpml_custom_current_lang ) {
+				data.wpml = zindh_wpml.wpml_custom_current_lang;
 			}
 
 			$.post(ajaxurl, data, function(response) {
@@ -394,8 +394,8 @@ jQuery(document).ready(function($){
 				data: import_data
 			};
 
-			if( typeof(smof_wpml) != 'undefined' && smof_wpml.wpml_custom_current_lang ) {
-				data.wpml = smof_wpml.wpml_custom_current_lang;
+			if( typeof(zindh_wpml) != 'undefined' && zindh_wpml.wpml_custom_current_lang ) {
+				data.wpml = zindh_wpml.wpml_custom_current_lang;
 			}
 
 			$.post(ajaxurl, data, function(response) {
@@ -446,8 +446,8 @@ jQuery(document).ready(function($){
 			data: serializedReturn
 		};
 
-		if( typeof(smof_wpml) != 'undefined' && smof_wpml.wpml_custom_current_lang ) {
-			data.wpml = smof_wpml.wpml_custom_current_lang;
+		if( typeof(zindh_wpml) != 'undefined' && zindh_wpml.wpml_custom_current_lang ) {
+			data.wpml = zindh_wpml.wpml_custom_current_lang;
 		}
 
 		$.post(ajaxurl, data, function(response) {
@@ -493,8 +493,8 @@ jQuery(document).ready(function($){
 				security: nonce,
 			};
 
-			if( typeof(smof_wpml) != 'undefined' && smof_wpml.wpml_custom_current_lang ) {
-				data.wpml = smof_wpml.wpml_custom_current_lang;
+			if( typeof(zindh_wpml) != 'undefined' && zindh_wpml.wpml_custom_current_lang ) {
+				data.wpml = zindh_wpml.wpml_custom_current_lang;
 			}
 
 			$.post(ajaxurl, data, function(response) {
@@ -544,7 +544,7 @@ jQuery(document).ready(function($){
 	  * Feature added by : Smartik - http://smartik.ws/
 	  * Date 			 : 03.17.2013
 	  */
-	jQuery('.smof_sliderui').each(function() {
+	jQuery('.zindh_sliderui').each(function() {
 
 		var obj   = jQuery(this);
 		var sId   = "#" + obj.data('id');

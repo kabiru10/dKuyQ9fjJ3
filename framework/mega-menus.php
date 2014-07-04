@@ -8,7 +8,7 @@
  *
  * @version: 1.0.0
  * @package  Fusion/Template
- * @author   ThemeFusion
+ * @author   idh
  * @link     http://theme-fusion.com
  */
 
@@ -161,7 +161,7 @@ if( ! class_exists( 'FusionCoreFrontendWalker' ) ) {
 		 * @param object $args
 		 */
 		public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-			global $smof_data;
+			global $zdata;
 
 			$item_output = $class_columns = '';
 			$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';

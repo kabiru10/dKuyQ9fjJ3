@@ -41,12 +41,12 @@ define("RECAPTCHA_VERIFY_SERVER", "www.google.com");
 
 /**
  * Encodes the given data into a query string format
- * @param $smof_data - array of string elements to be encoded
+ * @param $zdata - array of string elements to be encoded
  * @return string - encoded request
  */
-function _recaptcha_qsencode ($smof_data) {
+function _recaptcha_qsencode ($zdata) {
         $req = "";
-        foreach ( $smof_data as $key => $value )
+        foreach ( $zdata as $key => $value )
                 $req .= $key . '=' . urlencode( stripslashes($value) ) . '&';
 
         // Cut the last '&'
@@ -60,13 +60,13 @@ function _recaptcha_qsencode ($smof_data) {
  * Submits an HTTP POST to a reCAPTCHA server
  * @param string $host
  * @param string $path
- * @param array $smof_data
+ * @param array $zdata
  * @param int port
  * @return array response
  */
-function _recaptcha_http_post($host, $path, $smof_data, $port = 80) {
+function _recaptcha_http_post($host, $path, $zdata, $port = 80) {
 
-        $req = _recaptcha_qsencode ($smof_data);
+        $req = _recaptcha_qsencode ($zdata);
 
         $http_request  = "POST $path HTTP/1.0\r\n";
         $http_request .= "Host: $host\r\n";

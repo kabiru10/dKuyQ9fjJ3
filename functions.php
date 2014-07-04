@@ -68,7 +68,7 @@ require_once( get_template_directory() . '/framework/class-social-icons.php' );
 global $social_icons;
 $social_icons = new Zhane_SocialIcons();
 
-if(! $smof_data['disable_megamenu']) {
+if(! $zdata['disable_megamenu']) {
 	// Initialize the mega menu framework
 	require_once( get_template_directory() . '/framework/mega-menu-framework.php' );
 
@@ -250,10 +250,14 @@ function zhane_comment($comment, $args, $depth) { ?>
 <?php }
 
 function zhane_set_post_filters( $query ) {
+<<<<<<< HEAD
 	global $smof_data;
+=======
+	global $zdata;
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 
 	if( is_tax( 'portfolio_category' ) || is_tax( 'portfolio_skills' ) || is_tax( 'portfolio_tags') ) {
-		$query->set( 'posts_per_page', $smof_data['portfolio_items'] );
+		$query->set( 'posts_per_page', $zdata['portfolio_items'] );
 	}
 
 	return $query;
@@ -271,10 +275,10 @@ function zhane_pretty($content) {
 require_once(get_template_directory().'/slideshow.php');
 new FusionTemplateSlideshow();
 
-if( class_exists( 'kdMultipleFeaturedImages' )  && !$smof_data['legacy_posts_slideshow']) {
+if( class_exists( 'kdMultipleFeaturedImages' )  && !$zdata['legacy_posts_slideshow']) {
 		$i = 2;
 
-		while($i <= $smof_data['posts_slideshow_number']) {
+		while($i <= $zdata['posts_slideshow_number']) {
 	        $args = array(
 	                'id' => 'featured-image-'.$i,
 	                'post_type' => 'post',      // Set this to post or page
@@ -320,10 +324,14 @@ if( class_exists( 'kdMultipleFeaturedImages' )  && !$smof_data['legacy_posts_sli
 }
 
 function zhane_excerpt_length( $length ) {
+<<<<<<< HEAD
 	global $smof_data;
+=======
+	global $zdata;
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 
-	if(isset($smof_data['excerpt_length_blog'])) {
-		return $smof_data['excerpt_length_blog'];
+	if(isset($zdata['excerpt_length_blog'])) {
+		return $zdata['excerpt_length_blog'];
 	}
 }
 add_filter('excerpt_length', 'zhane_excerpt_length', 999);
@@ -332,7 +340,11 @@ function zhane_admin_bar_render() {
 	global $wp_admin_bar;
 	$wp_admin_bar->add_menu( array(
 		'parent' => 'site-name', // use 'false' for a root menu, or pass the ID of the parent menu
+<<<<<<< HEAD
 		'id' => 'smof_options', // link ID, defaults to a sanitized title value
+=======
+		'id' => 'zindh_options', // link ID, defaults to a sanitized title value
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 		'title' => __('Theme Options', 'Zhane'), // link title
 		'href' => admin_url( 'themes.php?page=optionsframework'), // name of file
 		'meta' => false // array of any of the following options: array( 'html' => '', 'class' => '', 'onclick' => '', target => '', title => '' );
@@ -366,7 +378,7 @@ function zhane_process_tag( $m ) {
 
 if( ! function_exists('tf_content') ) {
 	function tf_content($limit, $strip_html) {
-		global $smof_data, $more;
+		global $zdata, $more;
 
 		$content = '';
 
@@ -390,13 +402,13 @@ if( ! function_exists('tf_content') ) {
 
 		$pos = strpos($post->post_content, '<!--more-->');
 
-		if($smof_data['link_read_more']) {
+		if($zdata['link_read_more']) {
 			$readmore = ' <a href="'.get_permalink( get_the_ID() ).'">&#91;...&#93;</a>';
 		} else {
 			$readmore = ' &#91;...&#93;';
 		}
 
-		if($smof_data['disable_excerpts']) {
+		if($zdata['disable_excerpts']) {
 			$readmore = '';
 		}
 
@@ -425,21 +437,21 @@ if( ! function_exists('tf_content') ) {
 			$pattern = get_shortcode_regex();
 			$content = preg_replace_callback("/$pattern/s", 'zhane_process_tag', $raw_content);
 
-			if( $smof_data['excerpt_base'] == 'Characters' ) {
+			if( $zdata['excerpt_base'] == 'Characters' ) {
 				$content = mb_substr($content, 0, $limit);
-				if($limit != 0 && !$smof_data['disable_excerpts']) {
+				if($limit != 0 && !$zdata['disable_excerpts']) {
 					$content .= $readmore;
 				}
 			} else {
 				$content = explode(' ', $content, $limit);
 				if(count($content)>=$limit) {
 					array_pop($content);
-					if($smof_data['disable_excerpts']) {
+					if($zdata['disable_excerpts']) {
 						$content = implode(" ",$content);
 					} else {
 						$content = implode(" ",$content);
 						if($limit != 0) {
-							if($smof_data['link_read_more']) {
+							if($zdata['link_read_more']) {
 								$content .= $readmore;
 							} else {
 								$content .= $readmore;
@@ -488,9 +500,9 @@ if ( is_search() ) {
 }
 
 function search_excerpt_length( $length ) {
-	global $smof_data;
+	global $zdata;
 
-	return $smof_data['excerpt_length_blog'];
+	return $zdata['excerpt_length_blog'];
 }
 
 function zhane_font_awesome_name_handler( $icon ) {
@@ -659,7 +671,7 @@ function zhane_font_awesome_name_handler( $icon ) {
 
 function zhane_scripts() {
 	if ( ! is_admin() && ! in_array( $GLOBALS['pagenow'], array( 'wp-login.php', 'wp-register.php' ) ) ) {
-		global $smof_data, $wp_styles;
+		global $zdata, $wp_styles;
 
 		$theme_info = wp_get_theme();
 
@@ -705,7 +717,7 @@ function zhane_scripts() {
 		wp_enqueue_script( 'jquery.carouFredSel' );
 
 		if ( class_exists( 'Woocommerce' ) ) {
-			if(!$smof_data['status_lightbox'] && !is_woocommerce() || !$smof_data['status_lightbox'] && is_woocommerce() && is_shop()) {
+			if(!$zdata['status_lightbox'] && !is_woocommerce() || !$zdata['status_lightbox'] && is_woocommerce() && is_shop()) {
 				wp_deregister_script( 'jquery.prettyPhoto' );
 				wp_register_script( 'jquery.prettyPhoto', $template_directory . '/js/jquery.prettyPhoto-min.js', array(), null, true);
 				wp_enqueue_script( 'jquery.prettyPhoto' );
@@ -714,7 +726,7 @@ function zhane_scripts() {
 			wp_dequeue_script('wc-add-to-cart-variation');
 			wp_enqueue_script( 'wc-add-to-cart-variation', $template_directory . '/woocommerce/js/add-to-cart-variation-min.js' , array( 'jquery' ), false, true );
 		} else {
-			if(!$smof_data['status_lightbox']) {
+			if(!$zdata['status_lightbox']) {
 				wp_deregister_script( 'jquery.prettyPhoto' );
 				wp_register_script( 'jquery.prettyPhoto', $template_directory . '/js/jquery.prettyPhoto-min.js', array(), null, true);
 				wp_enqueue_script( 'jquery.prettyPhoto' );
@@ -729,7 +741,7 @@ function zhane_scripts() {
 	    wp_register_script( 'jquery.fitvids', $template_directory . '/js/jquery.fitvids-min.js', array(), null, true);
 		wp_enqueue_script( 'jquery.fitvids' );
 
-		if(!$smof_data['status_gmap']) {
+		if(!$zdata['status_gmap']) {
 			$map_api = 'http' . ( ( is_ssl() ) ? 's' : '' ) . '://maps.googleapis.com/maps/api/js?sensor=false&amp;language=' . substr(get_locale(), 0, 2);
 			wp_register_script( 'google-maps-api', $map_api );
 			wp_register_script( 'google-maps-infobox', 'http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js', array(), null, false);
@@ -748,22 +760,22 @@ function zhane_scripts() {
 		if(get_post_meta($c_pageID, 'pyre_fimg_width', true) == 'auto' && get_post_meta($c_pageID, 'pyre_width', true) == 'half') {
 			$flex_smoothHeight = 'true';
 		} else {
-			if($smof_data["slideshow_smooth_height"]) {
+			if($zdata["slideshow_smooth_height"]) {
 				$flex_smoothHeight = 'true';
 			} else {
 				$flex_smoothHeight = 'false';
 			}
 		}
 
-		$db_vars = $smof_data;
+		$db_vars = $zdata;
 
-		if( ! $smof_data['slideshow_autoplay'] ) {
+		if( ! $zdata['slideshow_autoplay'] ) {
 			$db_vars['slideshow_autoplay'] = false;
 		} else {
 			$db_vars['slideshow_autoplay'] = true;
 		}
 
-		if( ! $smof_data['slideshow_speed'] ) {
+		if( ! $zdata['slideshow_speed'] ) {
 			$db_vars['slideshow_speed'] = 7000;
 		}
 
@@ -785,6 +797,7 @@ function zhane_scripts() {
 				'portfolio_loading_text' 		=> '<em>'. __('Loading Portfolio Items...', 'Zhane').'</em>',
 				'faqs_loading_text' 			=> '<em>'. __('Loading FAQ Items...', 'Zhane').'</em>',
 				'order_actions' 				=>  __('Details', 'Zhane'),
+<<<<<<< HEAD
 				'testimonials_speed' 			=> $smof_data['testimonials_speed'],
 				'logo_alignment'				=> $smof_data['logo_alignment'],
 				'submenu_slideout'				=> $smof_data['mobile_nav_submenu_slideout'],
@@ -798,6 +811,21 @@ function zhane_scripts() {
 				'lightbox_title'				=> $smof_data['lightbox_title'],
 				'lightbox_desc'					=> $smof_data['lightbox_desc'],
 				'sidenav_behavior'				=> $smof_data['sidenav_behavior'],
+=======
+				'testimonials_speed' 			=> $zdata['testimonials_speed'],
+				'logo_alignment'				=> $zdata['logo_alignment'],
+				'submenu_slideout'				=> $zdata['mobile_nav_submenu_slideout'],
+				'lightbox_animation_speed'		=> $zdata['lightbox_animation_speed'],
+				'lightbox_slideshow_speed'		=> $zdata['lightbox_slideshow_speed'],
+				'lightbox_opacity'				=> $zdata['lightbox_opacity'],
+				'lightbox_social'				=> $zdata['lightbox_social'],
+				'lightbox_post_images'			=> $zdata['lightbox_post_images'],
+				'lightbox_gallery'				=> $zdata['lightbox_gallery'],
+				'lightbox_gallery'				=> $zdata['lightbox_autoplay'],
+				'lightbox_title'				=> $zdata['lightbox_title'],
+				'lightbox_desc'					=> $zdata['lightbox_desc'],
+				'sidenav_behavior'				=> $zdata['sidenav_behavior'],
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 			) + $db_vars
 		);
 
@@ -812,7 +840,11 @@ function zhane_scripts() {
 		wp_enqueue_style( 'zhane-shortcodes', $template_directory . '/shortcodes.css', array(), $theme_info->get( 'Version' ) );
 		$wp_styles->add_data( 'zhane-shortcodes', 'conditional', 'lte IE 9' );
 
+<<<<<<< HEAD
 		if( ! $smof_data['use_animate_css'] ) {
+=======
+		if( ! $zdata['use_animate_css'] ) {
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 			wp_enqueue_style( 'zhane-animations', $template_directory . '/css/animations.css', array(), $theme_info->get( 'Version' ) );
 		}
 
@@ -822,10 +854,17 @@ function zhane_scripts() {
 		wp_enqueue_style( 'zhane-IE', $template_directory . '/css/ie.css', array(), $theme_info->get( 'Version' ) );
 		$wp_styles->add_data( 'zhane-IE', 'conditional', 'IE' );
 
+<<<<<<< HEAD
 		if( $smof_data['responsive'] ) {
 			wp_enqueue_style( 'zhane-media', $template_directory . '/css/media.css', array(), $theme_info->get( 'Version' ) );
 
 			if( ! $smof_data['ipad_potrait'] ) {
+=======
+		if( $zdata['responsive'] ) {
+			wp_enqueue_style( 'zhane-media', $template_directory . '/css/media.css', array(), $theme_info->get( 'Version' ) );
+
+			if( ! $zdata['ipad_potrait'] ) {
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 				wp_enqueue_style( 'zhane-ipad', $template_directory . '/css/ipad.css', array(), $theme_info->get( 'Version' ) );
 			}
 		}
@@ -877,13 +916,17 @@ remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
 
 add_filter('pre_get_posts','zhane_SearchFilter');
 function zhane_SearchFilter($query) {
+<<<<<<< HEAD
 	global $smof_data;
+=======
+	global $zdata;
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 	if(is_search() && $query->is_search) {
-		if($smof_data['search_content'] == 'Only Posts') {
+		if($zdata['search_content'] == 'Only Posts') {
 			$query->set('post_type', 'post');
 		}
 
-		if($smof_data['search_content'] == 'Only Pages') {
+		if($zdata['search_content'] == 'Only Pages') {
 			$query->set('post_type', 'page');
 		}
 	}
@@ -926,7 +969,7 @@ function add_opengraph_doctype( $output ) {
 add_filter('language_attributes', 'add_opengraph_doctype');
 
 function fusion_insert_og_meta() {
-    global $smof_data, $post;
+    global $zdata, $post;
     
     if ( !is_singular() ) 
         return;
@@ -936,8 +979,8 @@ function fusion_insert_og_meta() {
 	echo sprintf( '<meta property="og:url" content="%s"/>', get_permalink() );
 	echo sprintf( '<meta property="og:site_name" content="%s"/>', get_bloginfo('name') );
     if( ! has_post_thumbnail( $post->ID ) ) { 
-    	if(  $smof_data['logo'] ) {
-        	echo sprintf( '<meta property="og:image" content="%s"/>', $smof_data['logo'] );
+    	if(  $zdata['logo'] ) {
+        	echo sprintf( '<meta property="og:image" content="%s"/>', $zdata['logo'] );
         }
     } else {
         $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
@@ -973,11 +1016,11 @@ add_action('admin_head', 'zhane_custom_admin_styles');
 add_action('wp_ajax_zhane_style_selector', 'tf_style_selector');
 add_action('wp_ajax_nopriv_zhane_style_selector', 'tf_style_selector');
 function tf_style_selector() {
-	global $smof_data;
+	global $zdata;
 
 	$color = $_POST['color'];
 
-	$smof_data = array_merge($smof_data, $color);
+	$zdata = array_merge($zdata, $color);
 
 	ob_start();
 	include(locate_template('style_selector_style.php', false));
@@ -989,7 +1032,11 @@ function tf_style_selector() {
 }
 
 /* Display a notice that can be dismissed */
+<<<<<<< HEAD
 if($smof_data['ubermenu']) {
+=======
+if($zdata['ubermenu']) {
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 	update_option('zhane_ubermenu_notice', true);
 } elseif(!get_option('zhane_ubermenu_notice_hidden')) {
 	update_option('zhane_ubermenu_notice', false);
@@ -1106,12 +1153,16 @@ include $importer;
  add_filter( 'the_password_form', 'zhane_get_the_password_form' );
 
 function zhane_get_the_password_form() {
+<<<<<<< HEAD
 	global $smof_data, $post;
+=======
+	global $zdata, $post;
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 
 	$label = 'pwbox-' . ( empty($post->ID) ? rand() : $post->ID );
 	$output = '<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" class="post-password-form" method="post">
 	<p>' . __( 'This content is password protected. To view it please enter your password below:' ) . '</p>
-	<p><label for="' . $label . '">' . __( 'Password:' ) . '</label><input class="password" name="post_password" id="' . $label . '" type="password" size="20" /><input class="' . sprintf( 'btn btn-default button small fusion-button button-small button-default button-%s button-%s', strtolower( $smof_data['button_shape'] ), strtolower( $smof_data['button_type'] ) ) . '"  type="submit" name="Submit" value="' . esc_attr__( 'Submit' ) . '" /></p></form>
+	<p><label for="' . $label . '">' . __( 'Password:' ) . '</label><input class="password" name="post_password" id="' . $label . '" type="password" size="20" /><input class="' . sprintf( 'btn btn-default button small fusion-button button-small button-default button-%s button-%s', strtolower( $zdata['button_shape'] ), strtolower( $zdata['button_type'] ) ) . '"  type="submit" name="Submit" value="' . esc_attr__( 'Submit' ) . '" /></p></form>
 	';
 	return $output;
 }
@@ -1271,16 +1322,6 @@ function zhane_register_required_plugins() {
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
 		),
 		array(
-			'name'     				=> 'Fusion Core', // The plugin name
-			'slug'     				=> 'fusion-core', // The plugin slug (typically the folder name)
-			'source'   				=> get_template_directory() . '/framework/plugins/fusion-core.zip', // The plugin source
-			'required' 				=> true, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '1.4', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		),
-		array(
 			'name'     				=> 'LayerSlider WP', // The plugin name
 			'slug'     				=> 'LayerSlider', // The plugin slug (typically the folder name)
 			'source'   				=> get_template_directory() . '/framework/plugins/LayerSlider.zip', // The plugin source
@@ -1353,9 +1394,13 @@ function woocommerce_product_archive_description() {
  * Auto Updater Code
  */
 function zhane_auto_updater() {
+<<<<<<< HEAD
 	global $smof_data;
+=======
+	global $zdata;
+>>>>>>> c581f49f3d8b06169e9c9bfa25ca3e30db15ac0e
 	
-	if( $smof_data['tf_username'] && $smof_data['tf_api'] && $smof_data['tf_purchase_code'] ) {
+	if( $zdata['tf_username'] && $zdata['tf_api'] && $zdata['tf_purchase_code'] ) {
 		$theme_info = wp_get_theme();
 		if( $theme_info->parent_theme ) {
 			$template_dir =  basename( get_template_directory() );
